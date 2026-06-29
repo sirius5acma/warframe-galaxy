@@ -11,6 +11,22 @@ Promise.all([
 .then(([rawData, i18nData]) => {
   document.getElementById('loader').style.display = 'none';
 
+  // 🌟 終極殺招：全自動反向字典 (English -> TC / SC)
+  const enToTcMap = {};
+  const enToScMap = {};
+
+  // 在一開始就把整個 i18n 掃過一遍，建立英文對應中文的翻譯網
+  Object.values(i18nData).forEach(langs => {
+    if (langs.en && langs.en.name) {
+      const enName = langs.en.name.toLowerCase();
+      if (langs.tc && langs.tc.name) enToTcMap[enName] = langs.tc.name;
+      else if (langs['zh-hant'] && langs['zh-hant'].name) enToTcMap[enName] = langs['zh-hant'].name;
+
+      if (langs.zh && langs.zh.name) enToScMap[enName] = langs.zh.name;
+      else if (langs['zh-hans'] && langs['zh-hans'].name) enToScMap[enName] = langs['zh-hans'].name;
+    }
+  });
+
   const nodes = [];
   const links = [];
   const nodeSet = new Set();
@@ -18,21 +34,19 @@ Promise.all([
   const warframes = rawData.filter(item => item.category === 'Warframes' && !item.name.includes('Specter'));
 
   warframes.forEach(wf => {
-    // 🌟 正確的 i18n 讀取邏輯：先找物品 ID，再找語言 tc
     const wfI18n = i18nData[wf.uniqueName] || {};
     const tcInfo = wfI18n.tc || wfI18n['zh-hant'] || {};
     const scInfo = wfI18n.zh || wfI18n['zh-hans'] || {};
     
-    // 優先用正中，沒有才用簡中，再沒有用英文
-    const finalName = tcInfo.name || scInfo.name || wf.name;
+    const finalWfName = tcInfo.name || scInfo.name || wf.name;
     const finalDesc = tcInfo.description || scInfo.description || wf.description;
-    const searchKeywords = `${finalName} ${scInfo.name || ''} ${wf.name}`.toLowerCase();
+    const searchKeywords = `${finalWfName} ${scInfo.name || ''} ${wf.name}`.toLowerCase();
 
     // A. 建立「主戰甲」節點
     if (!nodeSet.has(wf.uniqueName)) {
       nodes.push({
         id: wf.uniqueName,
-        name: finalName,
+        name: finalWfName,
         searchKeywords: searchKeywords,
         type: 'warframe',
         mr: wf.masteryReq || 0,
@@ -51,22 +65,41 @@ Promise.all([
 
         const compId = wf.uniqueName + '_' + comp.name;
 
-        // 🌟 直接拿部件專屬的 uniqueName 去 i18n 裡面找官方翻譯
-        const compI18n = i18nData[comp.uniqueName] || {};
-        const compTc = compI18n.tc || compI18n['zh-hant'] || {};
-        const compSc = compI18n.zh || compI18n['zh-hans'] || {};
-        
-        const finalCompName = compTc.name || compSc.name || comp.name;
-        const finalCompDesc = compTc.description || compSc.description || comp.description || '戰甲製造所需的核心組件。';
-        const compSearchKeywords = `${finalCompName} ${compSc.name || ''} ${comp.name}`.toLowerCase();
+        // 🌟 破解 DE 的 ID 迷宮：直接還原英文全名來反查！
+        const exactEn = comp.name.toLowerCase(); // 例如："orokin cell"
+        const fullEn = `${wf.name} ${comp.name}`.toLowerCase(); // 例如："volt chassis"
+
+        let tcNameRaw = comp.name;
+        let scNameRaw = comp.name;
+
+        // 優先找全名 (Volt Chassis)，找不到再找單字 (Orokin Cell)，最後再用 ID 查
+        if (enToTcMap[fullEn]) tcNameRaw = enToTcMap[fullEn];
+        else if (enToTcMap[exactEn]) tcNameRaw = enToTcMap[exactEn];
+        else {
+          const compI18n = i18nData[comp.uniqueName] || {};
+          if (compI18n.tc && compI18n.tc.name) tcNameRaw = compI18n.tc.name;
+        }
+
+        if (enToScMap[fullEn]) scNameRaw = enToScMap[fullEn];
+        else if (enToScMap[exactEn]) scNameRaw = enToScMap[exactEn];
+        else {
+          const compI18n = i18nData[comp.uniqueName] || {};
+          if (compI18n.zh && compI18n.zh.name) scNameRaw = compI18n.zh.name;
+        }
+
+        // 🌟 淨化名稱：把翻譯好的 "Limbo 頭部神經光元" 前面的 "Limbo " 拔掉，讓星圖保持乾淨
+        const cleanTcName = tcNameRaw.replace(new RegExp(finalWfName, 'ig'), '').replace(new RegExp(wf.name, 'ig'), '').trim();
+        const cleanScName = scNameRaw.replace(new RegExp(scInfo.name || finalWfName, 'ig'), '').replace(new RegExp(wf.name, 'ig'), '').trim();
+
+        const compSearchKeywords = `${cleanTcName} ${cleanScName} ${comp.name}`.toLowerCase();
 
         if (!nodeSet.has(compId)) {
           nodes.push({
             id: compId,
-            name: finalCompName,
+            name: cleanTcName,
             searchKeywords: compSearchKeywords,
             type: 'component',
-            description: finalCompDesc,
+            description: comp.description || '戰甲製造所需的核心組件。',
             size: 4,
             color: '#e2e8f0'
           });

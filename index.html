@@ -60,6 +60,35 @@
       background: rgba(15, 23, 42, 0.95);
     }
 
+    /* 搜尋下拉選單 */
+    #search-results {
+      position: absolute;
+      top: 45px;
+      left: 0;
+      width: 280px;
+      background: rgba(15, 23, 42, 0.95);
+      border: 1px solid #1e293b;
+      border-radius: 6px;
+      display: none; /* 預設隱藏 */
+      flex-direction: column;
+      z-index: 20;
+      overflow: hidden;
+    }
+    .search-item {
+      padding: 10px 14px;
+      color: #cbd5e1;
+      cursor: pointer;
+      font-size: 14px;
+      border-bottom: 1px solid #1e293b;
+    }
+    .search-item:hover {
+      background: rgba(56, 189, 248, 0.2);
+      color: #fff;
+    }
+    .search-item:last-child {
+      border-bottom: none;
+    }
+
     /* 右側資訊卡片 */
     #info-panel {
       position: absolute;
@@ -129,7 +158,11 @@
   <div id="ui-container">
     <h1>WARFRAME 戰甲星系製造網</h1>
     <div class="subtitle">點擊星體聚焦觀看部件關係網</div>
-    <input type="text" id="search-input" placeholder="搜尋戰甲（例如：Excalibur 或 Wisp）...">
+    <!-- 把 input 包起來，並加上搜尋結果的 div -->
+    <div style="position: relative;">
+      <input type="text" id="search-input" placeholder="搜尋（例如：Ex 或 Wisp）...">
+      <div id="search-results"></div>
+    </div>
   </div>
 
   <div id="info-panel">
@@ -205,23 +238,11 @@
           }
         });
 
-        // 3. 初始化圖表引擎
-        const Graph = ForceGraph()(document.getElementById('graph'))
-          .graphData({ nodes, links })
-          .nodeId('id')
-          .nodeLabel('name')
-          .nodeColor(node => node.color)
-          .linkWidth(1)
-          .linkColor(() => 'rgba(255, 255, 255, 0.08)')
-          // 調整物理引擎參數，防止星座互撞黏在一起
-          .d3Force('charge').strength(-80)
-          
-        // 點擊星體互動
-        Graph.onNodeClick(node => {
+        // 獨立出一個函數：用來處理「拉近視角與顯示右側面板」的邏輯 (搜尋和點擊都能共用)
+        function focusAndShowPanel(node) {
           Graph.centerAt(node.x, node.y, 1000);
           Graph.zoom(3.5, 1000);
 
-          // 填寫右側面板資料
           document.getElementById('item-name').innerText = node.name;
           document.getElementById('item-unique').innerText = node.id.split('_')[0]; 
           document.getElementById('item-type').innerText = node.type === 'warframe' ? '天之刃戰甲' : '製造部件';
@@ -230,7 +251,6 @@
             document.getElementById('item-mr').innerText = node.mr + ' 段';
             document.getElementById('item-stats').innerText = node.stats;
             document.getElementById('item-desc').innerText = node.description || '暫無簡介';
-            // 如果是 Prime，邊框換成金色
             document.getElementById('info-panel').style.borderTopColor = node.name.includes('Prime') ? '#f59e0b' : '#38bdf8';
           } else {
             document.getElementById('item-mr').innerText = '無限制';
@@ -238,37 +258,77 @@
             document.getElementById('item-desc').innerText = node.description;
             document.getElementById('info-panel').style.borderTopColor = '#e2e8f0';
           }
-          
           document.getElementById('info-panel').style.display = 'block';
-        });
+        }
 
-        // 渲染優化：讓戰甲名稱直接漂浮在球體上方
-        Graph.nodeCanvasObject((node, ctx, globalScale) => {
-          ctx.beginPath();
-          ctx.arc(node.x, node.y, node.size, 0, 2 * Math.PI, false);
-          ctx.fillStyle = node.color;
-          ctx.fill();
+        // 3. 初始化圖表引擎
+        const Graph = ForceGraph()(document.getElementById('graph'))
+          .graphData({ nodes, links })
+          .nodeId('id')
+          .nodeLabel('name')
+          .nodeColor(node => node.color)
+          .linkWidth(1)
+          .linkColor(() => 'rgba(255, 255, 255, 0.08)')
+          // 這裡修正了：把點擊事件正確串接回來
+          .onNodeClick(node => {
+            focusAndShowPanel(node);
+          })
+          .nodeCanvasObject((node, ctx, globalScale) => {
+            ctx.beginPath();
+            ctx.arc(node.x, node.y, node.size, 0, 2 * Math.PI, false);
+            ctx.fillStyle = node.color;
+            ctx.fill();
 
-          // 當放大到一定程度時才顯示文字，避免拉遠時畫面密密麻麻
-          if (globalScale > 1.2) {
-            const label = node.name;
-            const fontSize = node.type === 'warframe' ? 12 / globalScale : 9 / globalScale;
-            ctx.font = `${fontSize}px Sans-Serif`;
-            ctx.fillStyle = node.type === 'warframe' ? '#fff' : '#94a3b8';
-            ctx.textAlign = 'center';
-            ctx.fillText(label, node.x, node.y - node.size - 4);
-          }
-        });
+            if (globalScale > 1.2) {
+              const label = node.name;
+              const fontSize = node.type === 'warframe' ? 12 / globalScale : 9 / globalScale;
+              ctx.font = `${fontSize}px Sans-Serif`;
+              ctx.fillStyle = node.type === 'warframe' ? '#fff' : '#94a3b8';
+              ctx.textAlign = 'center';
+              ctx.fillText(label, node.x, node.y - node.size - 4);
+            }
+          });
 
-        // 4. 搜尋引擎連動
-        document.getElementById('search-input').addEventListener('input', e => {
-          const value = e.target.value.toLowerCase();
-          if (!value) return;
+        // 正確的寫法：將物理排斥力單獨拉出來設定，不要打斷圖表引擎的串接
+        Graph.d3Force('charge').strength(-80);
+
+        // 4. 具備智能下拉選單的搜尋引擎
+        const searchInput = document.getElementById('search-input');
+        const searchResults = document.getElementById('search-results');
+
+        searchInput.addEventListener('input', e => {
+          const value = e.target.value.toLowerCase().trim();
+          searchResults.innerHTML = ''; // 清空舊結果
           
-          const targetNode = nodes.find(n => n.name.toLowerCase().includes(value) && n.type === 'warframe');
-          if (targetNode) {
-            Graph.centerAt(targetNode.x, targetNode.y, 800);
-            Graph.zoom(3.5, 800);
+          if (!value) {
+            searchResults.style.display = 'none';
+            return;
+          }
+
+          // 找出最多 5 筆符合的節點 (包含戰甲或部件)
+          const matchedNodes = nodes.filter(n => n.name.toLowerCase().includes(value)).slice(0, 5);
+
+          if (matchedNodes.length > 0) {
+            searchResults.style.display = 'flex';
+            matchedNodes.forEach(node => {
+              const div = document.createElement('div');
+              div.className = 'search-item';
+              
+              // 在選單中標示是戰甲還是部件，讓玩家更清楚
+              const typeLabel = node.type === 'warframe' ? '[戰甲]' : '[部件]';
+              div.innerText = `${typeLabel} ${node.name}`;
+              
+              // 當玩家點擊選單中的某個項目
+              div.addEventListener('click', () => {
+                focusAndShowPanel(node); // 拉近視角並顯示面板
+                searchResults.style.display = 'none'; // 隱藏選單
+                searchInput.value = ''; // 清空輸入框
+              });
+              
+              searchResults.appendChild(div);
+            });
+          } else {
+            searchResults.style.display = 'none';
           }
         });
 

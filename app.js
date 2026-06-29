@@ -1,7 +1,8 @@
 // 1. 定義三種語言的 wfcd 資料庫網址
-const URL_TC = 'https://raw.githubusercontent.com/wfcd/warframe-items/master/data/json/zh-hant/Warframes.json'; // 正體中文 (介面顯示用)
-const URL_SC = 'https://raw.githubusercontent.com/wfcd/warframe-items/master/data/json/zh-hans/Warframes.json'; // 簡體中文 (搜尋用)
-const URL_EN = 'https://raw.githubusercontent.com/wfcd/warframe-items/master/data/json/Warframes.json';         // 英文原版 (搜尋用)
+// 1. 改用 wfcd 官方維護的動態 API，直接透過 language 參數請求不同語言
+const URL_TC = 'https://api.warframestat.us/warframes?language=tc'; // 正體中文 (tc)
+const URL_SC = 'https://api.warframestat.us/warframes?language=zh'; // 簡體中文 (zh)
+const URL_EN = 'https://api.warframestat.us/warframes?language=en'; // 英文原版 (en)
 
 document.getElementById('loader').innerText = '正在同步正中、簡中與英文資料庫...';
 

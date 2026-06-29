@@ -1,47 +1,49 @@
-// 1. 定義三種語言的 wfcd 資料庫網址
-// 1. 改用 wfcd 官方維護的動態 API，直接透過 language 參數請求不同語言
-const URL_TC = 'https://api.warframestat.us/warframes?language=tc'; // 正體中文 (tc)
-const URL_SC = 'https://api.warframestat.us/warframes?language=zh'; // 簡體中文 (zh)
-const URL_EN = 'https://api.warframestat.us/warframes?language=en'; // 英文原版 (en)
+// 1. 直連 wfcd 原始資料庫，放棄繞路的 API
+const URL_WARFRAMES = 'https://raw.githubusercontent.com/wfcd/warframe-items/master/data/json/Warframes.json';
+const URL_I18N = 'https://raw.githubusercontent.com/wfcd/warframe-items/master/data/json/i18n.json';
 
-document.getElementById('loader').innerText = '正在同步正中、簡中與英文資料庫...';
+document.getElementById('loader').innerText = '正在下載底層數據庫與 i18n 多國語言包...';
 
-// 2. 利用 Promise.all 一口氣平行下載三份資料
+// 2. 一口氣平行下載英文主檔與全語系翻譯包
 Promise.all([
-  fetch(URL_TC).then(res => res.json()),
-  fetch(URL_SC).then(res => res.json()),
-  fetch(URL_EN).then(res => res.json())
+  fetch(URL_WARFRAMES).then(res => res.json()),
+  fetch(URL_I18N).then(res => res.json())
 ])
-.then(([tcData, scData, enData]) => {
+.then(([rawData, i18nData]) => {
   document.getElementById('loader').style.display = 'none';
+
+  // 🌟 核心：從 i18n.json 提取我們需要的字典
+  // wfcd 的語言代碼可能會是 tc, zh-hant, zh-hans 等，我們做個兼容包底
+  const tcDict = i18nData['zh-hant'] || i18nData['tc'] || {};
+  const scDict = i18nData['zh-hans'] || i18nData['zh'] || {};
 
   const nodes = [];
   const links = [];
   const nodeSet = new Set();
 
-  // 為了快速對照，我們把簡中和英文的資料做成「字典」，用 uniqueName 當鑰匙
-  const scDict = Object.fromEntries(scData.map(item => [item.uniqueName, item]));
-  const enDict = Object.fromEntries(enData.map(item => [item.uniqueName, item]));
-
-  // 過濾正體中文的資料作為主軸
-  const warframes = tcData.filter(item => item.category === 'Warframes' && !item.name.includes('Specter'));
+  const warframes = rawData.filter(item => item.category === 'Warframes' && !item.name.includes('Specter'));
 
   warframes.forEach(wf => {
-    // 從字典裡抓出這隻戰甲的簡中與英文名字
-    const scName = scDict[wf.uniqueName] ? scDict[wf.uniqueName].name : '';
-    const enName = enDict[wf.uniqueName] ? enDict[wf.uniqueName].name : '';
-    // 把三個語言拼成一個隱藏的搜尋關鍵字字串
-    const searchKeywords = `${wf.name} ${scName} ${enName}`.toLowerCase();
+    // 🌟 透過 uniqueName 直接去 i18n 查翻譯 (主戰甲)
+    const tcInfo = tcDict[wf.uniqueName] || {};
+    const scInfo = scDict[wf.uniqueName] || {};
+    
+    // 邏輯：正中優先 ➡️ 沒有就用簡中 ➡️ 再沒有才用英文原名
+    const finalName = tcInfo.name || scInfo.name || wf.name;
+    const finalDesc = tcInfo.description || scInfo.description || wf.description;
+    
+    // 把三種語言拼起來，當作隱藏搜尋字串
+    const searchKeywords = `${finalName} ${scInfo.name || ''} ${wf.name}`.toLowerCase();
 
     // A. 建立「主戰甲」節點
     if (!nodeSet.has(wf.uniqueName)) {
       nodes.push({
         id: wf.uniqueName,
-        name: wf.name, // 畫面上只顯示正中
-        searchKeywords: searchKeywords, // 隱藏屬性，給搜尋引擎用的
+        name: finalName,
+        searchKeywords: searchKeywords,
         type: 'warframe',
         mr: wf.masteryReq || 0,
-        description: wf.description, // 顯示正中簡介
+        description: finalDesc,
         stats: `血量: ${wf.health} | 護甲: ${wf.armor} | 護盾: ${wf.shield}`,
         size: wf.name.includes('Prime') ? 9 : 7, 
         color: wf.name.includes('Prime') ? '#f59e0b' : '#38bdf8' 
@@ -49,37 +51,28 @@ Promise.all([
       nodeSet.add(wf.uniqueName);
     }
 
-   // B. 建立「部件」節點
+    // B. 建立「部件」節點
     if (wf.components && wf.components.length > 0) {
-      // 🌟 建立一個微型翻譯機，專門對付 wfcd 沒翻到的常見部件
-      const translateComp = (enName) => {
-        return enName
-          .replace(/Neuroptics/ig, '頭部神經光元')
-          .replace(/Chassis/ig, '機體')
-          .replace(/Systems/ig, '系統')
-          .replace(/Blueprint/ig, '藍圖')
-          .trim();
-      };
-
-      wf.components.forEach((comp, index) => {
+      wf.components.forEach(comp => {
         if (comp.name === wf.name) return; 
 
         const compId = wf.uniqueName + '_' + comp.name;
-        
-        // 🌟 使用微型翻譯機處理部件名稱
-        const tcCompName = translateComp(comp.name);
 
-        const scCompName = (scDict[wf.uniqueName] && scDict[wf.uniqueName].components) ? scDict[wf.uniqueName].components[index].name : '';
-        const enCompName = (enDict[wf.uniqueName] && enDict[wf.uniqueName].components) ? enDict[wf.uniqueName].components[index].name : '';
-        const compSearchKeywords = `${tcCompName} ${comp.name} ${scCompName} ${enCompName}`.toLowerCase();
+        // 🌟 重頭戲：用部件自帶的 uniqueName 去 i18n 裡面拿官方翻譯！
+        const compTc = tcDict[comp.uniqueName] || {};
+        const compSc = scDict[comp.uniqueName] || {};
+        
+        const finalCompName = compTc.name || compSc.name || comp.name;
+        const finalCompDesc = compTc.description || compSc.description || comp.description || '戰甲製造所需的核心組件。';
+        const compSearchKeywords = `${finalCompName} ${compSc.name || ''} ${comp.name}`.toLowerCase();
 
         if (!nodeSet.has(compId)) {
           nodes.push({
             id: compId,
-            name: tcCompName, // 🌟 畫面上強制顯示我們自己翻譯的正中名稱
+            name: finalCompName,
             searchKeywords: compSearchKeywords,
             type: 'component',
-            description: comp.description || '戰甲製造所需的核心組件。',
+            description: finalCompDesc,
             size: 4,
             color: '#e2e8f0'
           });
@@ -95,22 +88,26 @@ Promise.all([
     }
   });
 
-  // ========== 以下為圖表與 UI 邏輯 (與之前幾乎相同) ==========
+  // ========== 以下為圖表與 UI 邏輯 ==========
 
   function focusAndShowPanel(node) {
     Graph.centerAt(node.x, node.y, 1000);
     Graph.zoom(3.5, 1000);
 
-    document.getElementById('item-name').innerText = node.name; // 這裡出來的絕對是正中
+    document.getElementById('item-name').innerText = node.name;
     document.getElementById('item-unique').innerText = node.id.split('_')[0]; 
-    document.getElementById('item-type').innerText = node.type === 'warframe' ? '天之刃戰甲' : '製造部件';
     
+    // 依據節點的原本 id (uniqueName) 來判斷是不是 Prime，比較準確
+    const isPrime = node.id.includes('Prime');
+
     if (node.type === 'warframe') {
+      document.getElementById('item-type').innerText = isPrime ? 'Prime 戰甲' : '普版戰甲';
       document.getElementById('item-mr').innerText = node.mr + ' 段';
       document.getElementById('item-stats').innerText = node.stats;
-      document.getElementById('item-desc').innerText = node.description || '暫無簡介'; // 正中簡介
-      document.getElementById('info-panel').style.borderTopColor = node.name.includes('Prime') ? '#f59e0b' : '#38bdf8';
+      document.getElementById('item-desc').innerText = node.description || '暫無簡介';
+      document.getElementById('info-panel').style.borderTopColor = isPrime ? '#f59e0b' : '#38bdf8';
     } else {
+      document.getElementById('item-type').innerText = '製造材料 / 部件';
       document.getElementById('item-mr').innerText = '無限制';
       document.getElementById('item-stats').innerText = 'N/A';
       document.getElementById('item-desc').innerText = node.description;
@@ -145,7 +142,7 @@ Promise.all([
 
   Graph.d3Force('charge').strength(-80);
 
-  // 3. 搜尋引擎強化：現在比對的是「隱藏的三語系字串」
+  // 搜尋引擎
   const searchInput = document.getElementById('search-input');
   const searchResults = document.getElementById('search-results');
   let currentTopMatch = null; 
@@ -160,10 +157,9 @@ Promise.all([
       return;
     }
 
-    // 🌟 先過濾出符合的，接著依照字母 A-Z (或筆畫) 排序，最後才取前 5 個
     const matchedNodes = nodes
       .filter(n => n.searchKeywords.includes(value))
-      .sort((a, b) => a.name.localeCompare(b.name, 'zh-TW')) 
+      .sort((a, b) => a.name.localeCompare(b.name, 'zh-TW'))
       .slice(0, 5);
 
     if (matchedNodes.length > 0) {
@@ -174,7 +170,6 @@ Promise.all([
         const div = document.createElement('div');
         div.className = 'search-item';
         const typeLabel = node.type === 'warframe' ? '[戰甲]' : '[部件]';
-        // 下拉選單顯示依然是正中，確保玩家視覺統一
         div.innerText = `${typeLabel} ${node.name}`; 
         
         div.addEventListener('click', () => {
@@ -201,6 +196,6 @@ Promise.all([
 
 })
 .catch(err => {
-  document.getElementById('loader').innerText = '資料庫同步失敗，請檢查網路。';
+  document.getElementById('loader').innerText = '資源庫讀取失敗，請檢查網路。';
   console.error(err);
 });

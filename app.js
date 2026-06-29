@@ -1,21 +1,15 @@
-// 1. 直連 wfcd 原始資料庫，放棄繞路的 API
+// 1. 直連 wfcd 原始資料庫與 i18n 多國語言包
 const URL_WARFRAMES = 'https://raw.githubusercontent.com/wfcd/warframe-items/master/data/json/Warframes.json';
 const URL_I18N = 'https://raw.githubusercontent.com/wfcd/warframe-items/master/data/json/i18n.json';
 
 document.getElementById('loader').innerText = '正在下載底層數據庫與 i18n 多國語言包...';
 
-// 2. 一口氣平行下載英文主檔與全語系翻譯包
 Promise.all([
   fetch(URL_WARFRAMES).then(res => res.json()),
   fetch(URL_I18N).then(res => res.json())
 ])
 .then(([rawData, i18nData]) => {
   document.getElementById('loader').style.display = 'none';
-
-  // 🌟 核心：從 i18n.json 提取我們需要的字典
-  // wfcd 的語言代碼可能會是 tc, zh-hant, zh-hans 等，我們做個兼容包底
-  const tcDict = i18nData['zh-hant'] || i18nData['tc'] || {};
-  const scDict = i18nData['zh-hans'] || i18nData['zh'] || {};
 
   const nodes = [];
   const links = [];
@@ -24,15 +18,14 @@ Promise.all([
   const warframes = rawData.filter(item => item.category === 'Warframes' && !item.name.includes('Specter'));
 
   warframes.forEach(wf => {
-    // 🌟 透過 uniqueName 直接去 i18n 查翻譯 (主戰甲)
-    const tcInfo = tcDict[wf.uniqueName] || {};
-    const scInfo = scDict[wf.uniqueName] || {};
+    // 🌟 正確的 i18n 讀取邏輯：先找物品 ID，再找語言 tc
+    const wfI18n = i18nData[wf.uniqueName] || {};
+    const tcInfo = wfI18n.tc || wfI18n['zh-hant'] || {};
+    const scInfo = wfI18n.zh || wfI18n['zh-hans'] || {};
     
-    // 邏輯：正中優先 ➡️ 沒有就用簡中 ➡️ 再沒有才用英文原名
+    // 優先用正中，沒有才用簡中，再沒有用英文
     const finalName = tcInfo.name || scInfo.name || wf.name;
     const finalDesc = tcInfo.description || scInfo.description || wf.description;
-    
-    // 把三種語言拼起來，當作隱藏搜尋字串
     const searchKeywords = `${finalName} ${scInfo.name || ''} ${wf.name}`.toLowerCase();
 
     // A. 建立「主戰甲」節點
@@ -58,9 +51,10 @@ Promise.all([
 
         const compId = wf.uniqueName + '_' + comp.name;
 
-        // 🌟 重頭戲：用部件自帶的 uniqueName 去 i18n 裡面拿官方翻譯！
-        const compTc = tcDict[comp.uniqueName] || {};
-        const compSc = scDict[comp.uniqueName] || {};
+        // 🌟 直接拿部件專屬的 uniqueName 去 i18n 裡面找官方翻譯
+        const compI18n = i18nData[comp.uniqueName] || {};
+        const compTc = compI18n.tc || compI18n['zh-hant'] || {};
+        const compSc = compI18n.zh || compI18n['zh-hans'] || {};
         
         const finalCompName = compTc.name || compSc.name || comp.name;
         const finalCompDesc = compTc.description || compSc.description || comp.description || '戰甲製造所需的核心組件。';
@@ -88,7 +82,7 @@ Promise.all([
     }
   });
 
-  // ========== 以下為圖表與 UI 邏輯 ==========
+  // ========== UI 與圖表邏輯 ==========
 
   function focusAndShowPanel(node) {
     Graph.centerAt(node.x, node.y, 1000);
@@ -97,7 +91,6 @@ Promise.all([
     document.getElementById('item-name').innerText = node.name;
     document.getElementById('item-unique').innerText = node.id.split('_')[0]; 
     
-    // 依據節點的原本 id (uniqueName) 來判斷是不是 Prime，比較準確
     const isPrime = node.id.includes('Prime');
 
     if (node.type === 'warframe') {
@@ -142,7 +135,7 @@ Promise.all([
 
   Graph.d3Force('charge').strength(-80);
 
-  // 搜尋引擎
+  // ========== 搜尋引擎 ==========
   const searchInput = document.getElementById('search-input');
   const searchResults = document.getElementById('search-results');
   let currentTopMatch = null; 

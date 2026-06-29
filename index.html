@@ -69,11 +69,13 @@
       background: rgba(15, 23, 42, 0.95);
       border: 1px solid #1e293b;
       border-radius: 6px;
-      display: none; /* 預設隱藏 */
+      display: none; 
       flex-direction: column;
       z-index: 20;
       overflow: hidden;
+      pointer-events: auto; /* 🌟 加入這一行！把滑鼠點擊權限搶回來 */
     }
+    
     .search-item {
       padding: 10px 14px;
       color: #cbd5e1;
@@ -289,46 +291,56 @@
             }
           });
 
-        // 正確的寫法：將物理排斥力單獨拉出來設定，不要打斷圖表引擎的串接
-        Graph.d3Force('charge').strength(-80);
-
         // 4. 具備智能下拉選單的搜尋引擎
         const searchInput = document.getElementById('search-input');
         const searchResults = document.getElementById('search-results');
+        
+        let currentTopMatch = null; // 用來記住目前搜尋結果的第一名
 
+        // 監聽「輸入文字」的動作，生成選單
         searchInput.addEventListener('input', e => {
           const value = e.target.value.toLowerCase().trim();
-          searchResults.innerHTML = ''; // 清空舊結果
+          searchResults.innerHTML = ''; 
+          currentTopMatch = null;
           
           if (!value) {
             searchResults.style.display = 'none';
             return;
           }
 
-          // 找出最多 5 筆符合的節點 (包含戰甲或部件)
           const matchedNodes = nodes.filter(n => n.name.toLowerCase().includes(value)).slice(0, 5);
 
           if (matchedNodes.length > 0) {
             searchResults.style.display = 'flex';
+            currentTopMatch = matchedNodes[0]; // 把第一名存起來，給 Enter 鍵用
+
             matchedNodes.forEach(node => {
               const div = document.createElement('div');
               div.className = 'search-item';
-              
-              // 在選單中標示是戰甲還是部件，讓玩家更清楚
               const typeLabel = node.type === 'warframe' ? '[戰甲]' : '[部件]';
               div.innerText = `${typeLabel} ${node.name}`;
               
-              // 當玩家點擊選單中的某個項目
               div.addEventListener('click', () => {
-                focusAndShowPanel(node); // 拉近視角並顯示面板
-                searchResults.style.display = 'none'; // 隱藏選單
-                searchInput.value = ''; // 清空輸入框
+                focusAndShowPanel(node); 
+                searchResults.style.display = 'none'; 
+                searchInput.value = ''; 
               });
               
               searchResults.appendChild(div);
             });
           } else {
             searchResults.style.display = 'none';
+          }
+        });
+
+        // 🌟 監聽「按下鍵盤」的動作 (解決 Enter 沒反應的問題)
+        searchInput.addEventListener('keydown', e => {
+          if (e.key === 'Enter' && currentTopMatch) {
+            // 如果按下 Enter，且有搜尋結果，直接聚焦第一名
+            focusAndShowPanel(currentTopMatch);
+            searchResults.style.display = 'none'; // 隱藏選單
+            searchInput.value = ''; // 清空輸入框
+            searchInput.blur(); // 取消輸入框的游標駐留，讓玩家可以用滑鼠滾輪直接縮放星圖
           }
         });
 

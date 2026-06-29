@@ -49,22 +49,34 @@ Promise.all([
       nodeSet.add(wf.uniqueName);
     }
 
-    // B. 建立「部件」節點
+   // B. 建立「部件」節點
     if (wf.components && wf.components.length > 0) {
+      // 🌟 建立一個微型翻譯機，專門對付 wfcd 沒翻到的常見部件
+      const translateComp = (enName) => {
+        return enName
+          .replace(/Neuroptics/ig, '頭部神經光元')
+          .replace(/Chassis/ig, '機體')
+          .replace(/Systems/ig, '系統')
+          .replace(/Blueprint/ig, '藍圖')
+          .trim();
+      };
+
       wf.components.forEach((comp, index) => {
         if (comp.name === wf.name) return; 
 
         const compId = wf.uniqueName + '_' + comp.name;
+        
+        // 🌟 使用微型翻譯機處理部件名稱
+        const tcCompName = translateComp(comp.name);
 
-        // 嘗試去抓同一個位子（index）的簡中和英文部件名稱
         const scCompName = (scDict[wf.uniqueName] && scDict[wf.uniqueName].components) ? scDict[wf.uniqueName].components[index].name : '';
         const enCompName = (enDict[wf.uniqueName] && enDict[wf.uniqueName].components) ? enDict[wf.uniqueName].components[index].name : '';
-        const compSearchKeywords = `${comp.name} ${scCompName} ${enCompName}`.toLowerCase();
+        const compSearchKeywords = `${tcCompName} ${comp.name} ${scCompName} ${enCompName}`.toLowerCase();
 
         if (!nodeSet.has(compId)) {
           nodes.push({
             id: compId,
-            name: comp.name, // 正中部件名
+            name: tcCompName, // 🌟 畫面上強制顯示我們自己翻譯的正中名稱
             searchKeywords: compSearchKeywords,
             type: 'component',
             description: comp.description || '戰甲製造所需的核心組件。',
@@ -148,8 +160,11 @@ Promise.all([
       return;
     }
 
-    // 🌟 改變在這裡：我們不是比對 node.name，而是比對我們綁上去的 searchKeywords
-    const matchedNodes = nodes.filter(n => n.searchKeywords.includes(value)).slice(0, 5);
+    // 🌟 先過濾出符合的，接著依照字母 A-Z (或筆畫) 排序，最後才取前 5 個
+    const matchedNodes = nodes
+      .filter(n => n.searchKeywords.includes(value))
+      .sort((a, b) => a.name.localeCompare(b.name, 'zh-TW')) 
+      .slice(0, 5);
 
     if (matchedNodes.length > 0) {
       searchResults.style.display = 'flex';

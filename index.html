@@ -3,82 +3,110 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Warframe 網狀資源星圖 (方案4 概念驗證)</title>
+  <title>Warframe 戰甲星系製造網 (方案4)</title>
   
-  <!-- 引入 Force-Graph 拓撲圖庫 (支援 Canvas 畫布，效能極佳) -->
+  <!-- 引入 Force-Graph 拓撲圖庫 -->
   <script src="https://unpkg.com/force-graph"></script>
   
   <style>
     body {
       margin: 0;
       padding: 0;
-      background-color: #0b0e14;
+      background-color: #05080c;
       color: #ecf0f1;
       font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
       overflow: hidden;
     }
 
-    /* 頂部標題與搜尋欄 */
+    /* 頂部 UI */
     #ui-container {
       position: absolute;
       top: 20px;
       left: 20px;
       z-index: 10;
-      pointer-events: none; /* 讓滑鼠可以穿透點擊後方的星圖 */
+      pointer-events: none;
     }
 
     h1 {
-      margin: 0 0 10px 0;
-      font-size: 20px;
+      margin: 0 0 5px 0;
+      font-size: 22px;
       letter-spacing: 1px;
-      color: #4fc3f7;
-      text-shadow: 0 0 10px rgba(79, 195, 247, 0.5);
+      color: #38bdf8;
+      text-shadow: 0 0 10px rgba(56, 189, 248, 0.4);
+    }
+
+    .subtitle {
+      margin: 0 0 15px 0;
+      font-size: 12px;
+      color: #64748b;
     }
 
     input {
-      background: rgba(20, 30, 45, 0.8);
-      border: 1px solid #4fc3f7;
-      padding: 8px 12px;
+      background: rgba(10, 15, 26, 0.85);
+      border: 1px solid #38bdf8;
+      padding: 10px 14px;
       color: #fff;
-      border-radius: 4px;
-      width: 250px;
-      pointer-events: auto; /* 恢復輸入框的點擊事件 */
+      border-radius: 6px;
+      width: 280px;
+      pointer-events: auto;
       outline: none;
-      box-shadow: 0 0 15px rgba(0,0,0,0.5);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+      font-size: 14px;
+      transition: all 0.3s;
     }
 
-    /* 側邊資訊卡片 */
+    input:focus {
+      box-shadow: 0 0 12px rgba(56, 189, 248, 0.6);
+      background: rgba(15, 23, 42, 0.95);
+    }
+
+    /* 右側資訊卡片 */
     #info-panel {
       position: absolute;
-      bottom: 20px;
+      top: 20px;
       right: 20px;
-      width: 300px;
-      background: rgba(15, 23, 36, 0.9);
-      border-left: 4px solid #4fc3f7;
-      padding: 15px;
-      border-radius: 4px;
-      box-shadow: 0 4px 20px rgba(0,0,0,0.8);
+      width: 320px;
+      background: rgba(10, 15, 30, 0.9);
+      border: 1px solid #1e293b;
+      border-top: 4px solid #38bdf8;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.7);
       z-index: 10;
-      display: none; /* 預設隱藏，點擊節點後顯示 */
-      max-height: 50vh;
+      display: none;
+      max-height: 80vh;
       overflow-y: auto;
+      backdrop-filter: blur(4px);
     }
 
     .panel-title {
-      font-size: 18px;
+      font-size: 20px;
       color: #fff;
       margin-top: 0;
-      border-bottom: 1px solid #34495e;
-      padding-bottom: 8px;
+      margin-bottom: 5px;
+    }
+
+    .panel-unique {
+      font-size: 11px;
+      color: #475569;
+      font-family: monospace;
+      margin-bottom: 15px;
+      word-break: break-all;
     }
 
     .data-row {
-      margin: 8px 0;
-      font-size: 13px;
+      margin: 12px 0;
+      font-size: 14px;
+      line-height: 1.5;
     }
 
     .data-label {
-      color: #7f8c8d;
+      color: #94a3b8;
+      font-weight: bold;
+    }
+
+    .data-val {
+      color: #f1f5f9;
     }
 
     /* 載入中動畫 */
@@ -87,143 +115,166 @@
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
-      font-size: 18px;
-      color: #4fc3f7;
+      font-size: 16px;
+      color: #38bdf8;
       z-index: 5;
+      letter-spacing: 1px;
     }
   </style>
 </head>
 <body>
 
-  <div id="loader">正在直連 wfcd 讀取 Warframe 最新數據...</div>
+  <div id="loader">正在直連 wfcd 讀取天之刃最新戰甲數據庫...</div>
 
   <div id="ui-container">
-    <h1>WARFRAME 網狀資源星圖</h1>
-    <input type="text" id="search-input" placeholder="輸入關鍵字搜尋（如：Braton）...">
+    <h1>WARFRAME 戰甲星系製造網</h1>
+    <div class="subtitle">點擊星體聚焦觀看部件關係網</div>
+    <input type="text" id="search-input" placeholder="搜尋戰甲（例如：Excalibur 或 Wisp）...">
   </div>
 
   <div id="info-panel">
-    <h2 class="panel-title" id="item-name">武器名稱</h2>
-    <div class="data-row"><span class="data-label">類型：</span><span id="item-type">-</span></div>
-    <div class="data-row"><span class="data-label">段位限制：</span><span id="item-mr">-</span></div>
-    <div class="data-row"><span class="data-label">敘述：</span><span id="item-desc">-</span></div>
+    <h2 class="panel-title" id="item-name">戰甲名稱</h2>
+    <div id="item-unique" class="panel-unique">uniqueName</div>
+    <div class="data-row"><span class="data-label">類型：</span><span class="data-val" id="item-type">-</span></div>
+    <div class="data-row"><span class="data-label">段位限制：</span><span class="data-val" id="item-mr">-</span></div>
+    <div class="data-row"><span class="data-label">健康 / 護甲 / 護盾：</span><br><span class="data-val" id="item-stats">-</span></div>
+    <div class="data-row"><span class="data-label">簡介：</span><br><span class="data-val" id="item-desc" style="color:#cbd5e1; font-size:13px;">-</span></div>
   </div>
 
-  <!-- 星圖渲染容器 -->
   <div id="graph"></div>
 
   <script>
-    // 1. 直連 wfcd 放在 GitHub Pages CDN 上的真實主要武器 JSON 資料
-    const WFCD_URL = 'https://raw.githubusercontent.com/wfcd/warframe-items/master/data/json/Primary.json';
+    // 直連 wfcd 官方即時更新的 Warframes.json
+    const WFCD_URL = 'https://raw.githubusercontent.com/wfcd/warframe-items/master/data/json/Warframes.json';
 
     fetch(WFCD_URL)
       .then(res => res.json())
       .then(rawData => {
         document.getElementById('loader').style.display = 'none';
 
-        // 2. 解析 JSON，把 wfcd 的資料結構，轉換成圖表庫看得懂的「節點(Nodes)」與「連線(Links)」
         const nodes = [];
         const links = [];
-        const nodeSet = new Set(); // 避免重複加入節點
+        const nodeSet = new Set();
 
-        // 為了讓 CodePen 跑得順畅，我們只拿前 120 筆資料來織網（wfcd 總共有數千筆）
-        const slicedData = rawData.slice(0, 120);
+        // 過濾資料：只保留真正的戰甲主體（排除技能、魅影等雜訊）
+        const warframes = rawData.filter(item => item.category === 'Warframes' && !item.name.includes('Specter'));
 
-        slicedData.forEach(item => {
-          // A. 建立武器本體節點
-          if (!nodeSet.has(item.uniqueName)) {
+        warframes.forEach(wf => {
+          // 1. 建立「主戰甲」大節點
+          if (!nodeSet.has(wf.uniqueName)) {
             nodes.push({
-              id: item.uniqueName,
-              name: item.name,
-              type: 'weapon',
-              mr: item.masteryReq || 0,
-              description: item.description || '暫無敘述'
+              id: wf.uniqueName,
+              name: wf.name,
+              type: 'warframe',
+              mr: wf.masteryReq || 0,
+              description: wf.description,
+              stats: `血量: ${wf.health} | 護甲: ${wf.armor} | 護盾: ${wf.shield}`,
+              size: wf.name.includes('Prime') ? 9 : 7, // Prime 戰甲更大顆一點
+              color: wf.name.includes('Prime') ? '#f59e0b' : '#38bdf8' // Prime 金色，普通藍色
             });
-            nodeSet.add(item.uniqueName);
+            nodeSet.add(wf.uniqueName);
           }
 
-          // B. 建立「部件/關聯」節點。如果這把武器有不同的變體（例如 Prime, Wraith, Kuva）
-          // 我們就讓變體武器連線到原版武器，織出網狀關係
-          if (item.name.includes('Prime') || item.name.includes('Wraith') || item.name.includes('Kuva') || item.name.includes('Prisma')) {
-            // 尋找名字裡不帶變體詞的原版武器作為「核心母節點」
-            const baseName = item.name.replace(' Prime', '').replace(' Wraith', '').replace(' Kuva ', '').replace(' Prisma ', '');
-            const baseItem = slicedData.find(i => i.name === baseName);
-            
-            if (baseItem) {
+          // 2. 建立「部件」衛星節點
+          if (wf.components && wf.components.length > 0) {
+            wf.components.forEach(comp => {
+              // 排除大腦不需要重複顯示的「總體藍圖」自身，只抓系統、機體、頭部
+              if (comp.name === wf.name) return; 
+
+              const compId = wf.uniqueName + '_' + comp.name;
+
+              if (!nodeSet.has(compId)) {
+                nodes.push({
+                  id: compId,
+                  name: comp.name,
+                  type: 'component',
+                  description: comp.description || '戰甲製造所需的核心組件。',
+                  size: 4,
+                  color: '#e2e8f0' // 部件一律用乾淨的灰白色
+                });
+                nodeSet.add(compId);
+              }
+
+              // 建立主戰甲指向部件的引力連線
               links.push({
-                source: item.uniqueName,
-                target: baseItem.uniqueName,
-                val: 2 // 連線粗細
+                source: wf.uniqueName,
+                target: compId,
+                distance: 30 // 設定部件貼近主戰甲
               });
-            }
+            });
           }
-          
-          // C. 如果武器有特定掉落物或派系標籤（這裡拿傳奇/一般來當分類節點示範）
-          const groupTag = item.productCategory || 'Primary';
-          if (!nodeSet.has(groupTag)) {
-            nodes.push({ id: groupTag, name: '【類別】' + groupTag, type: 'group' });
-            nodeSet.add(groupTag);
-          }
-          links.push({ source: item.uniqueName, target: groupTag, val: 1 });
         });
 
-        const graphData = { nodes, links };
-
-        // 3. 初始化 Force-Graph 圖表庫
+        // 3. 初始化圖表引擎
         const Graph = ForceGraph()(document.getElementById('graph'))
-          .graphData(graphData)
+          .graphData({ nodes, links })
           .nodeId('id')
-          .nodeLabel('name') // 滑鼠移上去時顯示的名字
-          .nodeAutoColorBy('type') // 根據節點類型自動上色
-          .linkWidth(link => link.val)
-          .linkColor(() => 'rgba(255,255,255,0.15)') // 線條顏色
-          .onNodeClick(node => {
-            // 4. 點擊節點的互動邏輯：平移視角 + 彈出右下角資訊卡片
-            Graph.centerAt(node.x, node.y, 1000);
-            Graph.zoom(2.5, 1000);
-
-            if(node.type === 'weapon') {
-              document.getElementById('item-name').innerText = node.name;
-              document.getElementById('item-type').innerText = '主要武器';
-              document.getElementById('item-mr').innerText = node.mr + ' 段';
-              document.getElementById('item-desc').innerText = node.description;
-              document.getElementById('info-panel').style.display = 'block';
-            } else {
-              document.getElementById('info-panel').style.display = 'none';
-            }
-          });
-
-        // 自訂節點外觀：讓文字直接顯示在圓圈旁邊，更有科技感
-        Graph.nodeCanvasObject((node, ctx, globalScale) => {
-          const label = node.name;
-          const fontSize = node.type === 'group' ? 16 / globalScale : 12 / globalScale;
-          ctx.font = `${fontSize}px Sans-Serif`;
+          .nodeLabel('name')
+          .nodeColor(node => node.color)
+          .linkWidth(1)
+          .linkColor(() => 'rgba(255, 255, 255, 0.08)')
+          // 調整物理引擎參數，防止星座互撞黏在一起
+          .d3Force('charge').strength(-80)
           
-          // 畫圓圈節點
-          const r = node.type === 'group' ? 8 : 4;
+        // 點擊星體互動
+        Graph.onNodeClick(node => {
+          Graph.centerAt(node.x, node.y, 1000);
+          Graph.zoom(3.5, 1000);
+
+          // 填寫右側面板資料
+          document.getElementById('item-name').innerText = node.name;
+          document.getElementById('item-unique').innerText = node.id.split('_')[0]; 
+          document.getElementById('item-type').innerText = node.type === 'warframe' ? '天之刃戰甲' : '製造部件';
+          
+          if (node.type === 'warframe') {
+            document.getElementById('item-mr').innerText = node.mr + ' 段';
+            document.getElementById('item-stats').innerText = node.stats;
+            document.getElementById('item-desc').innerText = node.description || '暫無簡介';
+            // 如果是 Prime，邊框換成金色
+            document.getElementById('info-panel').style.borderTopColor = node.name.includes('Prime') ? '#f59e0b' : '#38bdf8';
+          } else {
+            document.getElementById('item-mr').innerText = '無限制';
+            document.getElementById('item-stats').innerText = 'N/A';
+            document.getElementById('item-desc').innerText = node.description;
+            document.getElementById('info-panel').style.borderTopColor = '#e2e8f0';
+          }
+          
+          document.getElementById('info-panel').style.display = 'block';
+        });
+
+        // 渲染優化：讓戰甲名稱直接漂浮在球體上方
+        Graph.nodeCanvasObject((node, ctx, globalScale) => {
           ctx.beginPath();
-          ctx.arc(node.x, node.y, r, 0, 2 * Math.PI, false);
+          ctx.arc(node.x, node.y, node.size, 0, 2 * Math.PI, false);
           ctx.fillStyle = node.color;
           ctx.fill();
 
-          // 畫文字標籤
-          ctx.fillStyle = node.type === 'group' ? '#4fc3f7' : '#bdc3c7';
-          ctx.fillText(label, node.x + r + 2, node.y + 3);
+          // 當放大到一定程度時才顯示文字，避免拉遠時畫面密密麻麻
+          if (globalScale > 1.2) {
+            const label = node.name;
+            const fontSize = node.type === 'warframe' ? 12 / globalScale : 9 / globalScale;
+            ctx.font = `${fontSize}px Sans-Serif`;
+            ctx.fillStyle = node.type === 'warframe' ? '#fff' : '#94a3b8';
+            ctx.textAlign = 'center';
+            ctx.fillText(label, node.x, node.y - node.size - 4);
+          }
         });
 
-        // 5. 搜尋功能連動
+        // 4. 搜尋引擎連動
         document.getElementById('search-input').addEventListener('input', e => {
           const value = e.target.value.toLowerCase();
-          const targetNode = graphData.nodes.find(n => n.name.toLowerCase().includes(value));
-          if (targetNode && value.length > 1) {
+          if (!value) return;
+          
+          const targetNode = nodes.find(n => n.name.toLowerCase().includes(value) && n.type === 'warframe');
+          if (targetNode) {
             Graph.centerAt(targetNode.x, targetNode.y, 800);
-            Graph.zoom(3, 800);
+            Graph.zoom(3.5, 800);
           }
         });
 
       })
       .catch(err => {
-        document.getElementById('loader').innerText = '資料讀取失敗，請檢查網路連線。';
+        document.getElementById('loader').innerText = '無法直連庫存，請檢查網路。';
         console.error(err);
       });
   </script>

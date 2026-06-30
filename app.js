@@ -11,8 +11,8 @@ Promise.all([
 .then(([rawData, i18nData]) => {
   document.getElementById('loader').style.display = 'none';
 
-  const nodes = [];
-  const links = [];
+  const allNodes = [];
+  const allLinks = [];
   const nodeSet = new Set();
 
   const i18nNameMap = {};
@@ -41,9 +41,8 @@ Promise.all([
     const finalWfDesc = wfI18n.tc.description || wfI18n.sc.description || wf.description;
     const searchKeywords = `${finalWfName} ${wfI18n.sc.name || ''} ${wf.name}`.toLowerCase();
 
-    // A. 建立「主戰甲」節點
     if (!nodeSet.has(wf.uniqueName)) {
-      nodes.push({
+      allNodes.push({
         id: wf.uniqueName,
         name: finalWfName,
         searchKeywords: searchKeywords,
@@ -66,8 +65,7 @@ Promise.all([
       parentItem.components.forEach(dep => {
         if (dep.name === parentItem.name) return;
 
-        // 🌟 關鍵修改：強制讓 ID 綁定父節點 (parentId)，這樣電池就不會共用，會變成獨立的小衛星！
-        const depId = parentId + '_' + (dep.uniqueName || dep.name); 
+        const depId = dep.uniqueName || dep.name; 
         
         const isPart = /(Chassis|Systems|Neuroptics|Blueprint)/i.test(dep.name);
         const nodeType = isPart ? 'component' : 'resource';
@@ -75,7 +73,6 @@ Promise.all([
         const depI18n = resolveI18n(dep);
         let finalDepName = depI18n.tc.name || depI18n.sc.name || dep.name;
 
-        // 修復英文漏網之魚
         if (finalDepName === dep.name && isPart) {
           finalDepName = finalDepName
             .replace(/Neuroptics/ig, '頭部神經光元')
@@ -84,7 +81,6 @@ Promise.all([
             .replace(/Blueprint/ig, '藍圖');
         }
 
-        // 修正 Chroma 命名 Bug
         if (finalDepName === 'Blueprint' || finalDepName === '藍圖') {
           finalDepName = `${pName} 藍圖`;
         }
@@ -103,7 +99,7 @@ Promise.all([
         const compSearchKeywords = `${finalDepName} ${depI18n.sc.name || ''} ${dep.name}`.toLowerCase();
 
         if (!nodeSet.has(depId)) {
-          nodes.push({
+          allNodes.push({
             id: depId,
             name: finalDepName,
             searchKeywords: compSearchKeywords,
@@ -115,10 +111,10 @@ Promise.all([
           nodeSet.add(depId);
         }
 
-        links.push({
+        allLinks.push({
           source: parentId,
           target: depId,
-          distance: nodeType === 'component' ? 45 : 25 // 稍微拉開一點距離，讓大字體不會擠在一起
+          distance: nodeType === 'component' ? 40 : 20 
         });
 
         if (isLayer2) {
@@ -130,19 +126,13 @@ Promise.all([
     processDependencies(wf, wf.uniqueName, true);
   });
 
-  // ========== UI, 圖表與聚光燈邏輯 ==========
-  let highlightNodes = new Set();
-  let highlightLinks = new Set();
+  // ========== UI, 圖表與兩階段點擊邏輯 ==========
+  
+  let currentPreviewNode = null; 
 
-  function focusAndShowPanel(node) {
-    Graph.centerAt(node.x, node.y, 1000);
-    // 把畫面稍微拉遠一點，讓整朵花都能進到視線裡
-    Graph.zoom(3.0, 1000);
-
+  function updatePanelInfo(node) {
     document.getElementById('item-name').innerText = node.name;
-    // 因為 ID 變長了，面板上我們只顯示最乾淨的原始物品 ID
     document.getElementById('item-unique').innerText = node.id.split('_').pop(); 
-    
     const isPrime = node.id.includes('Prime');
 
     if (node.type === 'warframe') {
@@ -165,92 +155,108 @@ Promise.all([
       document.getElementById('info-panel').style.borderTopColor = '#10b981'; 
     }
     document.getElementById('info-panel').style.display = 'block';
-
-    // 🌟 全新聚光燈邏輯：因為變回獨立花朵了，查找邏輯變得非常乾淨
-    highlightNodes.clear();
-    highlightLinks.clear();
-    
-    if (node) {
-      highlightNodes.add(node);
-      
-      // 步驟 1：找直系親屬
-      links.forEach(l => {
-        const sId = typeof l.source === 'object' ? l.source.id : l.source;
-        const tId = typeof l.target === 'object' ? l.target.id : l.target;
-        if (sId === node.id || tId === node.id) {
-          highlightLinks.add(l);
-          highlightNodes.add(typeof l.source === 'object' ? l.source : nodes.find(n => n.id === sId));
-          highlightNodes.add(typeof l.target === 'object' ? l.target : nodes.find(n => n.id === tId));
-        }
-      });
-
-      // 步驟 2：如果是主戰甲，把孫子（材料）也抓進來點亮
-      if (node.type === 'warframe') {
-        const componentIds = Array.from(highlightNodes).filter(n => n.type === 'component').map(n => n.id);
-        links.forEach(l => {
-          const sId = typeof l.source === 'object' ? l.source.id : l.source;
-          const tId = typeof l.target === 'object' ? l.target.id : l.target;
-          if (componentIds.includes(sId) || componentIds.includes(tId)) {
-            highlightLinks.add(l);
-            highlightNodes.add(typeof l.source === 'object' ? l.source : nodes.find(n => n.id === sId));
-            highlightNodes.add(typeof l.target === 'object' ? l.target : nodes.find(n => n.id === tId));
-          }
-        });
-      }
-    }
   }
 
+  function isolateSubGraph(node) {
+    const subNodes = new Set([node]);
+    const subLinks = new Set();
+
+    function getChildren(targetNodeId) {
+      allLinks.forEach(l => {
+        const sId = typeof l.source === 'object' ? l.source.id : l.source;
+        const tId = typeof l.target === 'object' ? l.target.id : l.target;
+        if (sId === targetNodeId) {
+          subLinks.add(l);
+          subNodes.add(typeof l.source === 'object' ? l.source : allNodes.find(n => n.id === sId));
+          subNodes.add(typeof l.target === 'object' ? l.target : allNodes.find(n => n.id === tId));
+        }
+      });
+    }
+
+    function getParents(targetNodeId) {
+      allLinks.forEach(l => {
+        const sId = typeof l.source === 'object' ? l.source.id : l.source;
+        const tId = typeof l.target === 'object' ? l.target.id : l.target;
+        if (tId === targetNodeId) {
+          subLinks.add(l);
+          subNodes.add(typeof l.source === 'object' ? l.source : allNodes.find(n => n.id === sId));
+          subNodes.add(typeof l.target === 'object' ? l.target : allNodes.find(n => n.id === tId));
+        }
+      });
+    }
+
+    if (node.type === 'warframe') {
+      getChildren(node.id);
+      const comps = Array.from(subNodes).filter(n => n.type === 'component');
+      comps.forEach(c => getChildren(c.id));
+    } else if (node.type === 'component') {
+      getParents(node.id);
+      getChildren(node.id);
+    } else if (node.type === 'resource') {
+      getParents(node.id);
+      const comps = Array.from(subNodes).filter(n => n.type === 'component');
+      comps.forEach(c => getParents(c.id));
+    }
+
+    Graph.graphData({ 
+      nodes: Array.from(subNodes), 
+      links: Array.from(subLinks) 
+    });
+
+    setTimeout(() => {
+      Graph.centerAt(node.x, node.y, 1000);
+      Graph.zoom(3.5, 1000);
+    }, 100); 
+  }
+
+  // 初始化圖表
   const Graph = ForceGraph()(document.getElementById('graph'))
-    .graphData({ nodes, links })
+    .graphData({ nodes: allNodes, links: allLinks })
     .nodeId('id')
     .nodeLabel('name')
-    .linkColor(link => {
-      if (highlightNodes.size === 0) return 'rgba(255, 255, 255, 0.08)'; 
-      return highlightLinks.has(link) ? 'rgba(255, 255, 255, 0.9)' : 'rgba(255, 255, 255, 0.01)'; 
+    .linkColor(() => 'rgba(255, 255, 255, 0.4)')
+    .linkWidth(2) 
+    .minZoom(0.2) // 🌟 限制縮小極限，保護你不掉進宇宙邊緣
+    .maxZoom(6)   // 🌟 限制放大極限
+    .onNodeClick(node => {
+      if (currentPreviewNode === node) {
+        isolateSubGraph(node);
+      } else {
+        currentPreviewNode = node;
+        updatePanelInfo(node);
+        Graph.centerAt(node.x, node.y, 1000);
+      }
     })
-    .linkWidth(link => highlightLinks.has(link) ? 2 : 1) 
-    .onNodeClick(node => focusAndShowPanel(node))
     .onBackgroundClick(() => {
-      highlightNodes.clear();
-      highlightLinks.clear();
+      currentPreviewNode = null;
+      Graph.graphData({ nodes: allNodes, links: allLinks });
       document.getElementById('info-panel').style.display = 'none';
+      Graph.zoomToFit(1000, 50); 
     })
     .nodeCanvasObject((node, ctx, globalScale) => {
-      const isHighlighted = highlightNodes.has(node);
-      const opacity = highlightNodes.size === 0 ? 1 : (isHighlighted ? 1 : 0.02); 
-
-      ctx.globalAlpha = opacity;
       ctx.beginPath();
       ctx.arc(node.x, node.y, node.size, 0, 2 * Math.PI, false);
       ctx.fillStyle = node.color;
       ctx.fill();
 
-      // 🌟 字體全面加大並新增黑框：戰甲 18px，部件/資源 13px (會隨滾輪縮放)
-      if (globalScale > 0.8 || isHighlighted) {
+      if (globalScale > 0.6 || (currentPreviewNode && currentPreviewNode.id === node.id)) {
         const label = node.name;
-        const fontSize = node.type === 'warframe' ? 18 / globalScale : 13 / globalScale;
-        
-        ctx.save(); // 🌟 儲存畫筆狀態（把畫筆先收好，避免黑色沾到別的地方）
-        
-        ctx.font = `${fontSize}px Sans-Serif`;
+        const fontSize = node.type === 'warframe' ? 26 / globalScale : 18 / globalScale;
+        ctx.font = `bold ${fontSize}px Sans-Serif`;
         ctx.textAlign = 'center';
-        const textY = node.y + node.size + (8 / globalScale);
+        
+        const textY = node.y + node.size + (12 / globalScale);
 
-        // 畫上黑色邊框 (Stroke)
-        ctx.lineWidth = 3 / globalScale; 
-        ctx.strokeStyle = 'rgba(0, 0, 0, 0.8)'; 
+        ctx.lineWidth = 6 / globalScale; 
+        ctx.strokeStyle = 'rgba(0, 0, 0, 1)'; 
         ctx.strokeText(label, node.x, textY);
         
-        // 畫上原本的字體顏色 (Fill)
         ctx.fillStyle = node.type === 'warframe' ? '#ffffff' : '#cbd5e1';
         ctx.fillText(label, node.x, textY);
-        
-        ctx.restore(); // 🌟 恢復畫筆狀態（把畫筆洗乾淨，還給連線引擎）
       }
     });
 
-  // 引力調回舒適的距離
-  Graph.d3Force('charge').strength(-100);
+  Graph.d3Force('charge').strength(-120);
 
   // ========== 搜尋引擎 ==========
   const searchInput = document.getElementById('search-input');
@@ -267,7 +273,7 @@ Promise.all([
       return;
     }
 
-    const matchedNodes = nodes
+    const matchedNodes = allNodes
       .filter(n => n.searchKeywords.includes(value))
       .sort((a, b) => a.name.localeCompare(b.name, 'zh-TW'))
       .slice(0, 5);
@@ -288,7 +294,9 @@ Promise.all([
         div.innerText = `${typeLabel} ${node.name}`; 
         
         div.addEventListener('click', () => {
-          focusAndShowPanel(node); 
+          currentPreviewNode = node;
+          updatePanelInfo(node);
+          isolateSubGraph(node); 
           searchResults.style.display = 'none'; 
           searchInput.value = ''; 
         });
@@ -302,7 +310,9 @@ Promise.all([
 
   searchInput.addEventListener('keydown', e => {
     if (e.key === 'Enter' && currentTopMatch) {
-      focusAndShowPanel(currentTopMatch);
+      currentPreviewNode = currentTopMatch;
+      updatePanelInfo(currentTopMatch);
+      isolateSubGraph(currentTopMatch);
       searchResults.style.display = 'none'; 
       searchInput.value = ''; 
       searchInput.blur(); 
@@ -311,6 +321,15 @@ Promise.all([
 
 })
 .catch(err => {
-  document.getElementById('loader').innerText = '資源庫讀取失敗，請檢查網路。';
+  document.getElementById('loader').innerText = `資源庫讀取失敗：${err.message}`;
   console.error(err);
+});
+
+// ========== 視窗縮放自動適應 ==========
+window.addEventListener('resize', () => {
+  const graphElement = document.getElementById('graph');
+  if (graphElement) {
+    Graph.width(graphElement.clientWidth);
+    Graph.height(graphElement.clientHeight);
+  }
 });

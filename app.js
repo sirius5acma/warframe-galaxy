@@ -53,6 +53,13 @@ Promise.all([
 
         // 🌟 直接拿部件專屬的 uniqueName 去 i18n 裡面找官方翻譯
         const compI18n = i18nData[comp.uniqueName] || {};
+        if (!compI18n.name && !compI18n.tc) {
+  console.log("找不到部件翻譯", {
+    name: comp.name,
+    uniqueName: comp.uniqueName,
+    exists: i18nData.hasOwnProperty(comp.uniqueName)
+  });
+}
         const compTc = compI18n.tc || compI18n['zh-hant'] || {};
         const compSc = compI18n.zh || compI18n['zh-hans'] || {};
         

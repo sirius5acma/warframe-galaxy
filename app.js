@@ -15,18 +15,42 @@ Promise.all([
   const links = [];
   const nodeSet = new Set();
 
+  // 🌟 1. 建立名稱反查字典 (Name -> i18nEntry)
+  const i18nNameMap = {};
+  Object.keys(i18nData).forEach(key => {
+    const entry = i18nData[key];
+    if (entry.en && entry.en.name) {
+      i18nNameMap[entry.en.name.toLowerCase()] = entry;
+    }
+  });
+
+  // 🌟 2. 獨立封裝：多層級 i18n 解析器
+  function resolveI18n(comp) {
+    // 優先順序：Recipe ID -> Item ID -> 英文名稱反查
+    let match = i18nData[comp.uniqueName];
+    
+    if (!match && comp.itemUniqueName) {
+      match = i18nData[comp.itemUniqueName];
+    }
+    
+    if (!match && comp.name) {
+      match = i18nNameMap[comp.name.toLowerCase()];
+    }
+
+    const tc = (match && (match.tc || match['zh-hant'])) || {};
+    const sc = (match && (match.zh || match['zh-hans'])) || {};
+
+    return { tc, sc };
+  }
+
   const warframes = rawData.filter(item => item.category === 'Warframes' && !item.name.includes('Specter'));
 
   warframes.forEach(wf => {
-    // 🌟 正確的 i18n 讀取邏輯：先找物品 ID，再找語言 tc
-    const wfI18n = i18nData[wf.uniqueName] || {};
-    const tcInfo = wfI18n.tc || wfI18n['zh-hant'] || {};
-    const scInfo = wfI18n.zh || wfI18n['zh-hans'] || {};
-    
-    // 優先用正中，沒有才用簡中，再沒有用英文
-    const finalName = tcInfo.name || scInfo.name || wf.name;
-    const finalDesc = tcInfo.description || scInfo.description || wf.description;
-    const searchKeywords = `${finalName} ${scInfo.name || ''} ${wf.name}`.toLowerCase();
+    // 處理主戰甲
+    const wfI18n = resolveI18n(wf);
+    const finalName = wfI18n.tc.name || wfI18n.sc.name || wf.name;
+    const finalDesc = wfI18n.tc.description || wfI18n.sc.description || wf.description;
+    const searchKeywords = `${finalName} ${wfI18n.sc.name || ''} ${wf.name}`.toLowerCase();
 
     // A. 建立「主戰甲」節點
     if (!nodeSet.has(wf.uniqueName)) {
@@ -51,22 +75,31 @@ Promise.all([
 
         const compId = wf.uniqueName + '_' + comp.name;
 
-        // 🌟 直接拿部件專屬的 uniqueName 去 i18n 裡面找官方翻譯
-        const compI18n = i18nData[comp.uniqueName] || {};
-        console.log(
-  "component:",
-  comp.name,
-  "\nuniqueName:",
-  comp.uniqueName,
-  "\ni18n:",
-  i18nData[comp.uniqueName]
-);
-        const compTc = compI18n.tc || compI18n['zh-hant'] || {};
-        const compSc = compI18n.zh || compI18n['zh-hans'] || {};
+        // 🌟 3. 呼叫解析器，自動搞定複雜的三層結構查找
+        const compI18n = resolveI18n(comp);
         
-        const finalCompName = compTc.name || compSc.name || comp.name;
-        const finalCompDesc = compTc.description || compSc.description || comp.description || '戰甲製造所需的核心組件。';
-        const compSearchKeywords = `${finalCompName} ${compSc.name || ''} ${comp.name}`.toLowerCase();
+        let finalCompName = compI18n.tc.name || compI18n.sc.name || comp.name;
+        
+        // 防呆機制：如果遇到官方真的連中文都沒給的漏網之魚（例如特殊 Prime 藍圖）
+        if (finalCompName === comp.name) {
+          finalCompName = finalCompName
+            .replace(/Neuroptics/ig, '頭部神經光元')
+            .replace(/Chassis/ig, '機體')
+            .replace(/Systems/ig, '系統')
+            .replace(/Blueprint/ig, '藍圖');
+        }
+
+        // 處理描述：藍圖繼承戰甲，無描述則給預設
+        let finalCompDesc = compI18n.tc.description || compI18n.sc.description;
+        if (!finalCompDesc) {
+          if (comp.description === wf.description) {
+            finalCompDesc = finalDesc; 
+          } else {
+            finalCompDesc = '戰甲製造所需的核心組件。';
+          }
+        }
+
+        const compSearchKeywords = `${finalCompName} ${compI18n.sc.name || ''} ${comp.name}`.toLowerCase();
 
         if (!nodeSet.has(compId)) {
           nodes.push({

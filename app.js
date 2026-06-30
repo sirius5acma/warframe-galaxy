@@ -15,7 +15,6 @@ Promise.all([
   const links = [];
   const nodeSet = new Set();
 
-  // 🌟 1. 建立名稱反查字典 (Name -> i18nEntry)
   const i18nNameMap = {};
   Object.keys(i18nData).forEach(key => {
     const entry = i18nData[key];
@@ -24,113 +23,125 @@ Promise.all([
     }
   });
 
-  // 🌟 2. 獨立封裝：多層級 i18n 解析器
-  function resolveI18n(comp) {
-    // 優先順序：Recipe ID -> Item ID -> 英文名稱反查
-    let match = i18nData[comp.uniqueName];
+  function resolveI18n(item) {
+    let match = i18nData[item.uniqueName];
+    if (!match && item.itemUniqueName) match = i18nData[item.itemUniqueName];
+    if (!match && item.name) match = i18nNameMap[item.name.toLowerCase()];
     
-    if (!match && comp.itemUniqueName) {
-      match = i18nData[comp.itemUniqueName];
-    }
-    
-    if (!match && comp.name) {
-      match = i18nNameMap[comp.name.toLowerCase()];
-    }
-
     const tc = (match && (match.tc || match['zh-hant'])) || {};
     const sc = (match && (match.zh || match['zh-hans'])) || {};
-
     return { tc, sc };
   }
 
   const warframes = rawData.filter(item => item.category === 'Warframes' && !item.name.includes('Specter'));
 
   warframes.forEach(wf => {
-    // 處理主戰甲
     const wfI18n = resolveI18n(wf);
-    const finalName = wfI18n.tc.name || wfI18n.sc.name || wf.name;
-    const finalDesc = wfI18n.tc.description || wfI18n.sc.description || wf.description;
-    const searchKeywords = `${finalName} ${wfI18n.sc.name || ''} ${wf.name}`.toLowerCase();
+    const finalWfName = wfI18n.tc.name || wfI18n.sc.name || wf.name;
+    const finalWfDesc = wfI18n.tc.description || wfI18n.sc.description || wf.description;
+    const searchKeywords = `${finalWfName} ${wfI18n.sc.name || ''} ${wf.name}`.toLowerCase();
 
     // A. 建立「主戰甲」節點
     if (!nodeSet.has(wf.uniqueName)) {
       nodes.push({
         id: wf.uniqueName,
-        name: finalName,
+        name: finalWfName,
         searchKeywords: searchKeywords,
         type: 'warframe',
         mr: wf.masteryReq || 0,
-        description: finalDesc,
+        description: finalWfDesc,
         stats: `血量: ${wf.health} | 護甲: ${wf.armor} | 護盾: ${wf.shield}`,
-        size: wf.name.includes('Prime') ? 9 : 7, 
+        size: wf.name.includes('Prime') ? 10 : 8, 
         color: wf.name.includes('Prime') ? '#f59e0b' : '#38bdf8' 
       });
       nodeSet.add(wf.uniqueName);
     }
 
-    // B. 建立「部件」節點
-    if (wf.components && wf.components.length > 0) {
-      wf.components.forEach(comp => {
-        if (comp.name === wf.name) return; 
+    function processDependencies(parentItem, parentId, isLayer2) {
+      if (!parentItem.components || parentItem.components.length === 0) return;
 
-        const compId = wf.uniqueName + '_' + comp.name;
+      const parentI18n = resolveI18n(parentItem);
+      const pName = parentI18n.tc.name || parentI18n.sc.name || parentItem.name;
 
-        // 🌟 3. 呼叫解析器，自動搞定複雜的三層結構查找
-        const compI18n = resolveI18n(comp);
+      parentItem.components.forEach(dep => {
+        if (dep.name === parentItem.name) return;
+
+        // 🌟 關鍵修改：強制讓 ID 綁定父節點 (parentId)，這樣電池就不會共用，會變成獨立的小衛星！
+        const depId = parentId + '_' + (dep.uniqueName || dep.name); 
         
-        let finalCompName = compI18n.tc.name || compI18n.sc.name || comp.name;
-        
-        // 防呆機制：如果遇到官方真的連中文都沒給的漏網之魚（例如特殊 Prime 藍圖）
-        if (finalCompName === comp.name) {
-          finalCompName = finalCompName
+        const isPart = /(Chassis|Systems|Neuroptics|Blueprint)/i.test(dep.name);
+        const nodeType = isPart ? 'component' : 'resource';
+
+        const depI18n = resolveI18n(dep);
+        let finalDepName = depI18n.tc.name || depI18n.sc.name || dep.name;
+
+        // 修復英文漏網之魚
+        if (finalDepName === dep.name && isPart) {
+          finalDepName = finalDepName
             .replace(/Neuroptics/ig, '頭部神經光元')
             .replace(/Chassis/ig, '機體')
             .replace(/Systems/ig, '系統')
             .replace(/Blueprint/ig, '藍圖');
         }
 
-        // 處理描述：藍圖繼承戰甲，無描述則給預設
-        let finalCompDesc = compI18n.tc.description || compI18n.sc.description;
-        if (!finalCompDesc) {
-          if (comp.description === wf.description) {
-            finalCompDesc = finalDesc; 
+        // 修正 Chroma 命名 Bug
+        if (finalDepName === 'Blueprint' || finalDepName === '藍圖') {
+          finalDepName = `${pName} 藍圖`;
+        }
+
+        let finalDepDesc = depI18n.tc.description || depI18n.sc.description;
+        if (!finalDepDesc) {
+          if (isPart && dep.description === wf.description) {
+            finalDepDesc = finalWfDesc; 
+          } else if (isPart) {
+            finalDepDesc = '戰甲製造所需的核心組件。';
           } else {
-            finalCompDesc = '戰甲製造所需的核心組件。';
+            finalDepDesc = '用於製造裝備的基礎資源。';
           }
         }
 
-        const compSearchKeywords = `${finalCompName} ${compI18n.sc.name || ''} ${comp.name}`.toLowerCase();
+        const compSearchKeywords = `${finalDepName} ${depI18n.sc.name || ''} ${dep.name}`.toLowerCase();
 
-        if (!nodeSet.has(compId)) {
+        if (!nodeSet.has(depId)) {
           nodes.push({
-            id: compId,
-            name: finalCompName,
+            id: depId,
+            name: finalDepName,
             searchKeywords: compSearchKeywords,
-            type: 'component',
-            description: finalCompDesc,
-            size: 4,
-            color: '#e2e8f0'
+            type: nodeType,
+            description: finalDepDesc,
+            size: nodeType === 'component' ? 4 : 2.5,
+            color: nodeType === 'component' ? '#e2e8f0' : '#10b981'
           });
-          nodeSet.add(compId);
+          nodeSet.add(depId);
         }
 
         links.push({
-          source: wf.uniqueName,
-          target: compId,
-          distance: 30 
+          source: parentId,
+          target: depId,
+          distance: nodeType === 'component' ? 45 : 25 // 稍微拉開一點距離，讓大字體不會擠在一起
         });
+
+        if (isLayer2) {
+          processDependencies(dep, depId, false);
+        }
       });
     }
+
+    processDependencies(wf, wf.uniqueName, true);
   });
 
-  // ========== UI 與圖表邏輯 ==========
+  // ========== UI, 圖表與聚光燈邏輯 ==========
+  let highlightNodes = new Set();
+  let highlightLinks = new Set();
 
   function focusAndShowPanel(node) {
     Graph.centerAt(node.x, node.y, 1000);
-    Graph.zoom(3.5, 1000);
+    // 把畫面稍微拉遠一點，讓整朵花都能進到視線裡
+    Graph.zoom(3.0, 1000);
 
     document.getElementById('item-name').innerText = node.name;
-    document.getElementById('item-unique').innerText = node.id.split('_')[0]; 
+    // 因為 ID 變長了，面板上我們只顯示最乾淨的原始物品 ID
+    document.getElementById('item-unique').innerText = node.id.split('_').pop(); 
     
     const isPrime = node.id.includes('Prime');
 
@@ -140,41 +151,106 @@ Promise.all([
       document.getElementById('item-stats').innerText = node.stats;
       document.getElementById('item-desc').innerText = node.description || '暫無簡介';
       document.getElementById('info-panel').style.borderTopColor = isPrime ? '#f59e0b' : '#38bdf8';
-    } else {
-      document.getElementById('item-type').innerText = '製造材料 / 部件';
+    } else if (node.type === 'component') {
+      document.getElementById('item-type').innerText = '戰甲部件';
       document.getElementById('item-mr').innerText = '無限制';
       document.getElementById('item-stats').innerText = 'N/A';
       document.getElementById('item-desc').innerText = node.description;
       document.getElementById('info-panel').style.borderTopColor = '#e2e8f0';
+    } else if (node.type === 'resource') { 
+      document.getElementById('item-type').innerText = '基礎資源 / 材料';
+      document.getElementById('item-mr').innerText = '無限制';
+      document.getElementById('item-stats').innerText = 'N/A';
+      document.getElementById('item-desc').innerText = node.description;
+      document.getElementById('info-panel').style.borderTopColor = '#10b981'; 
     }
     document.getElementById('info-panel').style.display = 'block';
+
+    // 🌟 全新聚光燈邏輯：因為變回獨立花朵了，查找邏輯變得非常乾淨
+    highlightNodes.clear();
+    highlightLinks.clear();
+    
+    if (node) {
+      highlightNodes.add(node);
+      
+      // 步驟 1：找直系親屬
+      links.forEach(l => {
+        const sId = typeof l.source === 'object' ? l.source.id : l.source;
+        const tId = typeof l.target === 'object' ? l.target.id : l.target;
+        if (sId === node.id || tId === node.id) {
+          highlightLinks.add(l);
+          highlightNodes.add(typeof l.source === 'object' ? l.source : nodes.find(n => n.id === sId));
+          highlightNodes.add(typeof l.target === 'object' ? l.target : nodes.find(n => n.id === tId));
+        }
+      });
+
+      // 步驟 2：如果是主戰甲，把孫子（材料）也抓進來點亮
+      if (node.type === 'warframe') {
+        const componentIds = Array.from(highlightNodes).filter(n => n.type === 'component').map(n => n.id);
+        links.forEach(l => {
+          const sId = typeof l.source === 'object' ? l.source.id : l.source;
+          const tId = typeof l.target === 'object' ? l.target.id : l.target;
+          if (componentIds.includes(sId) || componentIds.includes(tId)) {
+            highlightLinks.add(l);
+            highlightNodes.add(typeof l.source === 'object' ? l.source : nodes.find(n => n.id === sId));
+            highlightNodes.add(typeof l.target === 'object' ? l.target : nodes.find(n => n.id === tId));
+          }
+        });
+      }
+    }
   }
 
   const Graph = ForceGraph()(document.getElementById('graph'))
     .graphData({ nodes, links })
     .nodeId('id')
     .nodeLabel('name')
-    .nodeColor(node => node.color)
-    .linkWidth(1)
-    .linkColor(() => 'rgba(255, 255, 255, 0.08)')
+    .linkColor(link => {
+      if (highlightNodes.size === 0) return 'rgba(255, 255, 255, 0.08)'; 
+      return highlightLinks.has(link) ? 'rgba(255, 255, 255, 0.9)' : 'rgba(255, 255, 255, 0.01)'; 
+    })
+    .linkWidth(link => highlightLinks.has(link) ? 2 : 1) 
     .onNodeClick(node => focusAndShowPanel(node))
+    .onBackgroundClick(() => {
+      highlightNodes.clear();
+      highlightLinks.clear();
+      document.getElementById('info-panel').style.display = 'none';
+    })
     .nodeCanvasObject((node, ctx, globalScale) => {
+      const isHighlighted = highlightNodes.has(node);
+      const opacity = highlightNodes.size === 0 ? 1 : (isHighlighted ? 1 : 0.02); 
+
+      ctx.globalAlpha = opacity;
       ctx.beginPath();
       ctx.arc(node.x, node.y, node.size, 0, 2 * Math.PI, false);
       ctx.fillStyle = node.color;
       ctx.fill();
 
-      if (globalScale > 1.2) {
+      // 🌟 字體全面加大並新增黑框：戰甲 18px，部件/資源 13px (會隨滾輪縮放)
+      if (globalScale > 0.8 || isHighlighted) {
         const label = node.name;
-        const fontSize = node.type === 'warframe' ? 12 / globalScale : 9 / globalScale;
+        const fontSize = node.type === 'warframe' ? 18 / globalScale : 13 / globalScale;
+        
+        ctx.save(); // 🌟 儲存畫筆狀態（把畫筆先收好，避免黑色沾到別的地方）
+        
         ctx.font = `${fontSize}px Sans-Serif`;
-        ctx.fillStyle = node.type === 'warframe' ? '#fff' : '#94a3b8';
         ctx.textAlign = 'center';
-        ctx.fillText(label, node.x, node.y - node.size - 4);
+        const textY = node.y + node.size + (8 / globalScale);
+
+        // 畫上黑色邊框 (Stroke)
+        ctx.lineWidth = 3 / globalScale; 
+        ctx.strokeStyle = 'rgba(0, 0, 0, 0.8)'; 
+        ctx.strokeText(label, node.x, textY);
+        
+        // 畫上原本的字體顏色 (Fill)
+        ctx.fillStyle = node.type === 'warframe' ? '#ffffff' : '#cbd5e1';
+        ctx.fillText(label, node.x, textY);
+        
+        ctx.restore(); // 🌟 恢復畫筆狀態（把畫筆洗乾淨，還給連線引擎）
       }
     });
 
-  Graph.d3Force('charge').strength(-80);
+  // 引力調回舒適的距離
+  Graph.d3Force('charge').strength(-100);
 
   // ========== 搜尋引擎 ==========
   const searchInput = document.getElementById('search-input');
@@ -203,7 +279,12 @@ Promise.all([
       matchedNodes.forEach(node => {
         const div = document.createElement('div');
         div.className = 'search-item';
-        const typeLabel = node.type === 'warframe' ? '[戰甲]' : '[部件]';
+        
+        let typeLabel = '[未知]';
+        if (node.type === 'warframe') typeLabel = '[戰甲]';
+        else if (node.type === 'component') typeLabel = '[部件]';
+        else if (node.type === 'resource') typeLabel = '[資源]';
+        
         div.innerText = `${typeLabel} ${node.name}`; 
         
         div.addEventListener('click', () => {

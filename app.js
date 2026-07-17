@@ -1,4 +1,34 @@
-// 從網址列抓取 ?frame=後面的名字，如果沒抓到就預設顯示 Volt 防呆
+// --- 動態注入「返回秘典大廳」按鈕 ---
+const backBtn = document.createElement('div');
+backBtn.innerHTML = '&#8592; 返回大廳';
+backBtn.style.cssText = `
+  position: fixed; 
+  top: 20px; 
+  left: 20px; 
+  background: rgba(12,14,18,0.9); 
+  border: 1px solid #c5a059; 
+  color: #ffdf73; 
+  padding: 10px 20px; 
+  border-radius: 6px; 
+  cursor: pointer; 
+  z-index: 9999; 
+  font-weight: bold;
+  letter-spacing: 1px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.8);
+  transition: all 0.3s ease;
+`;
+backBtn.onmouseover = () => {
+  backBtn.style.background = 'rgba(212,175,55,0.2)';
+  backBtn.style.transform = 'translateX(-3px)';
+};
+backBtn.onmouseout = () => {
+  backBtn.style.background = 'rgba(12,14,18,0.9)';
+  backBtn.style.transform = 'translateX(0)';
+};
+backBtn.onclick = () => window.location.href = 'index.html';
+document.body.appendChild(backBtn);
+// -------------------------------------
+
 const urlParams = new URLSearchParams(window.location.search);
 const TARGET_ITEM_NAME = urlParams.get('frame') || 'Volt';
 
@@ -19,10 +49,28 @@ for (let i = 0; i < accordions.length; i++) {
   });
 }
 
+// 🌟 核心升級：專屬快取引擎 (Cache API)
+async function fetchWithCache(url) {
+  const cache = await caches.open('warframe-data-cache-v1');
+  const cachedResponse = await cache.match(url);
+  
+  if (cachedResponse) {
+    return cachedResponse.json();
+  }
+  
+  const response = await fetch(url);
+  if (response.ok) {
+    cache.put(url, response.clone());
+    return response.json();
+  }
+  throw new Error(`網路請求失敗: ${response.status}`);
+}
+
+// 將原本的 fetch 改用 fetchWithCache
 Promise.all([
-  fetch(URL_WARFRAMES).then(res => res.json()),
-  fetch(URL_I18N).then(res => res.json()),
-  fetch(URL_EXPORT_RECIPES).then(res => res.json())
+  fetchWithCache(URL_WARFRAMES),
+  fetchWithCache(URL_I18N),
+  fetchWithCache(URL_EXPORT_RECIPES)
 ])
 .then(([rawData, i18nData, recipeRawData]) => {
   document.getElementById('loader').style.display = 'none';
@@ -138,7 +186,6 @@ Promise.all([
       const nodeSize = isPart ? 6 : 4;
       const nodeType = isPart ? 'component' : 'resource';
 
-      // 🌟 補丁 1：把直接依附在戰甲身上的數量 (itemCount) 也抓出來
       const compCount = dep.itemCount || 1;
 
       nodes.push({ id: depId, name: finalDepName, type: nodeType, size: nodeSize, color: nodeColor, count: compCount, desc: dep.description || '' });
@@ -208,7 +255,6 @@ Promise.all([
     .nodeId('id')
     .nodeLabel(node => {
       if (node.type === 'resource') {
-        // 🌟 補丁 2：防呆！只有在 node.count 真的存在且是數字時，才去呼叫 toLocaleString()
         const countHtml = node.count ? `<span style="color: #10b981; font-weight: bold; font-size: 1.1em; margin-left: 15px;">x ${Number(node.count).toLocaleString()}</span>` : '';
         
         return `

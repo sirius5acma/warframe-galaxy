@@ -16,8 +16,55 @@
       color: #d4af37; 
       letter-spacing: 4px; 
       font-size: 2em;
-      margin-bottom: 40px;
+      margin-bottom: 20px;
     }
+    
+    .controls {
+      max-width: 1200px;
+      margin: 0 auto 40px auto;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 15px;
+    }
+    #searchInput {
+      width: 100%;
+      max-width: 500px;
+      padding: 12px 20px;
+      background: rgba(255,255,255,0.05);
+      border: 1px solid #c5a059;
+      border-radius: 25px;
+      color: #fdfbf7;
+      font-size: 1.1em;
+      outline: none;
+      transition: all 0.3s;
+    }
+    #searchInput:focus {
+      background: rgba(255,255,255,0.1);
+      box-shadow: 0 0 15px rgba(212,175,55,0.3);
+    }
+    .filters {
+      display: flex;
+      gap: 10px;
+    }
+    .filter-btn {
+      background: rgba(12,14,18,0.8);
+      border: 1px solid #c5a059;
+      color: #c5a059;
+      padding: 8px 20px;
+      border-radius: 20px;
+      cursor: pointer;
+      transition: all 0.3s;
+      font-weight: bold;
+    }
+    .filter-btn:hover {
+      background: rgba(212,175,55,0.1);
+    }
+    .filter-btn.active {
+      background: #c5a059;
+      color: #0c0e12;
+    }
+
     #grid { 
       display: grid; 
       grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); 
@@ -75,6 +122,16 @@
 </head>
 <body>
   <h1>WARFRAME 秘典終端機</h1>
+  
+  <div class="controls" id="controls" style="display: none;">
+    <input type="text" id="searchInput" placeholder="搜尋戰甲名稱 (支援中英文)...">
+    <div class="filters">
+      <button class="filter-btn active" data-type="all">全部戰甲</button>
+      <button class="filter-btn" data-type="prime">Prime 系列</button>
+      <button class="filter-btn" data-type="normal">普版系列</button>
+    </div>
+  </div>
+
   <div id="loader">正在從中樞系統載入戰甲資料...</div>
   <div id="grid"></div>
 
@@ -82,14 +139,36 @@
     const URL_WARFRAMES = 'https://raw.githubusercontent.com/wfcd/warframe-items/master/data/json/Warframes.json';
     const URL_I18N = 'https://raw.githubusercontent.com/wfcd/warframe-items/master/data/json/i18n.json';
 
+    let allFramesData = []; 
+    let currentFilterType = 'all';
+
+    // 🌟 核心升級：專屬快取引擎 (Cache API)
+    async function fetchWithCache(url) {
+      const cache = await caches.open('warframe-data-cache-v1');
+      const cachedResponse = await cache.match(url);
+      
+      // 如果快取裡有資料，直接秒退回資料！
+      if (cachedResponse) {
+        return cachedResponse.json();
+      }
+      
+      // 如果沒有，才去下載，並把結果存進快取裡
+      const response = await fetch(url);
+      if (response.ok) {
+        cache.put(url, response.clone());
+        return response.json();
+      }
+      throw new Error(`網路請求失敗: ${response.status}`);
+    }
+
+    // 將原本的 fetch 改用我們寫好的 fetchWithCache
     Promise.all([
-      fetch(URL_WARFRAMES).then(res => res.json()),
-      fetch(URL_I18N).then(res => res.json())
+      fetchWithCache(URL_WARFRAMES),
+      fetchWithCache(URL_I18N)
     ]).then(([warframes, i18nData]) => {
       document.getElementById('loader').style.display = 'none';
-      const grid = document.getElementById('grid');
+      document.getElementById('controls').style.display = 'flex';
 
-      // 建立翻譯字典 (保留你的繁中堅持！)
       const i18nNameMap = {};
       Object.keys(i18nData).forEach(key => {
         if (i18nData[key].en && i18nData[key].en.name) {
@@ -98,35 +177,71 @@
         }
       });
 
-      // 過濾出真正的戰甲 (排除雜兵、開發者測試用代碼)
       const validFrames = warframes.filter(w => w.productCategory === 'Suits' && !w.name.includes('Dev '));
 
-      validFrames.forEach(wf => {
+      allFramesData = validFrames.map(wf => {
         let tcName = wf.name;
-        
-        // 抓翻譯
         let match = i18nData[wf.uniqueName] || i18nData[wf.itemUniqueName] || i18nNameMap[wf.name.toLowerCase()];
         if (match) {
           const trans = match.tc || match['zh-hant'] || match.zh || {};
           tcName = trans.name || tcName;
         }
+        wf.tcName = tcName;
+        wf.isPrime = wf.name.includes('Prime');
+        return wf;
+      });
 
+      renderGrid(allFramesData);
+    }).catch(err => {
+      console.error(err);
+      document.getElementById('loader').innerText = '載入失敗，請檢查網路連線。';
+    });
+
+    function renderGrid(framesToRender) {
+      const grid = document.getElementById('grid');
+      grid.innerHTML = ''; 
+      
+      framesToRender.forEach(wf => {
         const card = document.createElement('div');
         card.className = 'card';
-        // 🌟 核心：點擊後帶著名字跳轉到詳細頁面！
         card.onclick = () => window.location.href = `detail.html?frame=${encodeURIComponent(wf.name)}`;
         
         const imgUrl = wf.imageName ? `https://cdn.warframestat.us/img/${wf.imageName}` : '';
         
         card.innerHTML = `
           ${imgUrl ? `<img src="${imgUrl}" alt="${wf.name}" onerror="this.style.display='none'">` : ''}
-          <div class="card-title">${tcName}</div>
+          <div class="card-title">${wf.tcName}</div>
           <div class="card-subtitle">${wf.name}</div>
         `;
         grid.appendChild(card);
       });
-    }).catch(err => {
-      document.getElementById('loader').innerText = '載入失敗，請檢查網路連線。';
+    }
+
+    function applyFilters() {
+      const searchTerm = document.getElementById('searchInput').value.toLowerCase();
+      
+      const filtered = allFramesData.filter(wf => {
+        if (currentFilterType === 'prime' && !wf.isPrime) return false;
+        if (currentFilterType === 'normal' && wf.isPrime) return false;
+        if (searchTerm) {
+          const matchEn = wf.name.toLowerCase().includes(searchTerm);
+          const matchTc = wf.tcName.toLowerCase().includes(searchTerm);
+          if (!matchEn && !matchTc) return false;
+        }
+        return true;
+      });
+      renderGrid(filtered);
+    }
+
+    document.getElementById('searchInput').addEventListener('input', applyFilters);
+
+    document.querySelectorAll('.filter-btn').forEach(btn => {
+      btn.addEventListener('click', (e) => {
+        document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+        e.target.classList.add('active');
+        currentFilterType = e.target.getAttribute('data-type');
+        applyFilters();
+      });
     });
   </script>
 </body>

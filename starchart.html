@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <title>Warframe 星圖檢索系統</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 40px 20px;
+      background-color: #0c0e12;
+      color: #fdfbf7;
+      font-family: sans-serif;
+    }
+
+    /* --- 頂部控制列 --- */
+    .top-bar {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      max-width: 1200px;
+      margin: 0 auto 40px auto;
+      position: relative;
+    }
+    
+    .back-btn {
+      position: absolute;
+      left: 0;
+      top: 0;
+      background: rgba(12,14,18,0.9);
+      border: 1px solid #c5a059;
+      color: #ffdf73;
+      padding: 10px 20px;
+      border-radius: 6px;
+      cursor: pointer;
+      font-weight: bold;
+      letter-spacing: 1px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.8);
+      transition: all 0.3s ease;
+    }
+    .back-btn:hover {
+      background: rgba(212,175,55,0.2);
+      transform: translateX(-3px);
+    }
+
+    h1 {
+      color: #d4af37;
+      letter-spacing: 6px;
+      font-size: 2em;
+      margin: 0 0 20px 0;
+      text-shadow: 0 2px 10px rgba(0,0,0,0.9);
+      text-align: center;
+    }
+
+    .search-container {
+      width: 100%;
+      max-width: 500px;
+    }
+    #searchInput {
+      width: 100%;
+      box-sizing: border-box;
+      padding: 12px 20px;
+      background: rgba(255,255,255,0.05);
+      border: 1px solid #c5a059;
+      border-radius: 25px;
+      color: #fdfbf7;
+      font-size: 1.1em;
+      outline: none;
+      transition: all 0.3s;
+    }
+    #searchInput:focus {
+      background: rgba(255,255,255,0.1);
+      box-shadow: 0 0 15px rgba(212,175,55,0.3);
+    }
+
+    /* --- 卡片網格佈局 --- */
+    #grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+      gap: 25px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    .card {
+      background: rgba(255,255,255,0.03);
+      border: 1px solid #c5a059;
+      border-radius: 8px;
+      padding: 20px;
+      text-align: center;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.5);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .card:hover {
+      background: rgba(212, 175, 55, 0.1);
+      transform: translateY(-8px);
+      box-shadow: 0 8px 20px rgba(212,175,55,0.4);
+      border-color: #ffdf73;
+    }
+    
+    .planet-img {
+      width: 120px;
+      height: 120px;
+      object-fit: contain;
+      margin-bottom: 15px;
+      filter: drop-shadow(0 4px 10px rgba(0,0,0,0.8));
+    }
+    
+    .planet-placeholder {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      background: radial-gradient(circle at 30% 30%, #334155, #0f172a);
+      margin-bottom: 15px;
+      box-shadow: inset -10px -10px 20px rgba(0,0,0,0.5), 0 4px 10px rgba(0,0,0,0.5);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: #64748b;
+      font-size: 0.8em;
+    }
+
+    .card-title {
+      color: #ffdf73;
+      font-weight: bold;
+      font-size: 1.4em;
+      letter-spacing: 2px;
+    }
+    .card-subtitle {
+      font-size: 0.9em;
+      color: #a0aec0;
+      margin-top: 8px;
+    }
+
+    /* --- 側邊面板 (任務清單) --- */
+    #side-panel {
+      position: fixed;
+      top: 0;
+      right: -500px;
+      width: 450px;
+      max-width: 100vw;
+      height: 100vh;
+      background: rgba(12, 14, 18, 0.98);
+      border-left: 2px solid #c5a059;
+      box-shadow: -5px 0 20px rgba(0,0,0,0.9);
+      transition: right 0.4s cubic-bezier(0.1, 0.7, 0.1, 1);
+      z-index: 2000;
+      padding: 30px;
+      box-sizing: border-box;
+      overflow-y: auto;
+    }
+    #side-panel.open {
+      right: 0;
+    }
+    .panel-close {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      color: #a0aec0;
+      cursor: pointer;
+      font-size: 1.5em;
+    }
+    .panel-close:hover {
+      color: #ffdf73;
+    }
+    .panel-title {
+      color: #38bdf8;
+      font-size: 2em;
+      letter-spacing: 2px;
+      margin-bottom: 20px;
+      display: flex;
+      align-items: center;
+      gap: 15px;
+    }
+    .panel-img {
+      width: 50px;
+      height: 50px;
+      object-fit: contain;
+    }
+    .node-list {
+      margin-top: 20px;
+    }
+    .node-item {
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(255,255,255,0.1);
+      padding: 12px;
+      margin-bottom: 10px;
+      border-radius: 4px;
+    }
+    .node-name {
+      color: #ffdf73;
+      font-weight: bold;
+      font-size: 1.1em;
+      display: flex;
+      justify-content: space-between;
+    }
+    .node-type {
+      color: #10b981;
+      font-size: 0.85em;
+    }
+    .node-enemy {
+      color: #ef4444;
+      font-size: 0.85em;
+      margin-top: 5px;
+    }
+
+    #loader {
+      text-align: center;
+      color: #38bdf8;
+      font-size: 1.2em;
+      letter-spacing: 2px;
+      animation: pulse 1.5s infinite;
+      margin-top: 50px;
+    }
+    @keyframes pulse {
+      0% { opacity: 0.5; }
+      50% { opacity: 1; }
+      100% { opacity: 0.5; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="top-bar">
+    <div class="back-btn" onclick="window.location.href='home.html'">&#8592; 返回樞紐</div>
+    <h1>WARFRAME 星圖檢索系統</h1>
+    <div class="search-container">
+      <input type="text" id="searchInput" placeholder="搜尋星球、節點名稱 (如: Mot) 或任務類型 (如: 生存)..." autocomplete="off">
+    </div>
+  </div>
+
+  <div id="loader">正在連線至中樞系統載入星圖...</div>
+  
+  <div id="grid"></div>
+
+  <div id="side-panel">
+    <div class="panel-close" onclick="closePanel()">✕</div>
+    <div class="panel-title">
+      <img id="panel-image" class="panel-img" src="" onerror="this.style.display='none'">
+      <span id="panel-title-text">星球名稱</span>
+    </div>
+    <div style="color: #ffdf73; font-weight: bold; border-bottom: 1px solid #c5a059; padding-bottom: 5px;">
+      任務節點清單 (<span id="node-count">0</span>)
+    </div>
+    <div class="node-list" id="panel-nodes">
+      <!-- 節點資料動態插入 -->
+    </div>
+  </div>
+
+  <script>
+    const URL_SOL_NODES = 'https://raw.githubusercontent.com/wfcd/warframe-worldstate-data/master/data/solNodes.json';
+    const URL_I18N = 'https://raw.githubusercontent.com/wfcd/warframe-items/master/data/json/i18n.json';
+
+    let allPlanets = {}; 
+    let allPlanetsArray = []; 
+
+    // 🌟 完全指向你的本機圖片資料夾
+    const planetImages = {
+      "Earth": "images/Earth.png",
+      "Venus": "images/Venus.png",
+      "Mars": "images/Mars.png",
+      "Jupiter": "images/Jupiter.png",
+      "Saturn": "images/Saturn.png",
+      "Uranus": "images/Uranus.png",
+      "Neptune": "images/Neptune.png",
+      "Pluto": "images/Pluto.png",
+      "Sedna": "images/Sedna.png",
+      "Ceres": "images/Ceres.png",
+      "Eris": "images/Eris.png",
+      "Phobos": "images/Phobos.png",
+      "Europa": "images/Europa.png",
+      "Mercury": "images/Mercury.png",
+      "Void": "images/Void.png",
+      "Derelict": "images/Derelict.png",
+      "Lua": "images/Lua.png",
+      "Kuva Fortress": "images/Kuva_Fortress.png",
+      "Deimos": "images/Deimos.png",
+      "Zariman": "images/New_Zariman.png",
+      "Duviri": "images/Duviri.png"
+    };
+
+    // 🌟 系統翻譯字典 (填補 i18n.json 的不足)
+    const basicPlanets = { 
+      "earth": "地球", "venus": "金星", "mars": "火星", "jupiter": "木星", 
+      "saturn": "土星", "uranus": "天王星", "neptune": "海王星", "pluto": "冥王星", 
+      "ceres": "穀神星", "eris": "鬩神星", "sedna": "賽德娜", "europa": "歐羅巴", 
+      "lua": "月球", "kuva fortress": "赤毒要塞", "void": "虛空", "deimos": "火衛二", 
+      "zariman": "扎日曼", "phobos": "火衛一", "mercury": "水星", 
+      "veil": "毗鄰星", 
+      "dojo": "道場", "duviri": "渡域" 
+    };
+
+    const missionTypes = {
+      "Survival": "生存", "Defense": "防禦", "Capture": "捕獲", 
+      "Extermination": "殲滅", "Interception": "攔截", "Assassination": "刺殺",
+      "Excavation": "挖掘", "Spy": "間諜", "Mobile Defense": "移動防禦",
+      "Sabotage": "破壞", "Rescue": "救援", "Hijack": "劫持",
+      "Free Roam": "開放世界", "Assault": "突擊", "Pursuit": "追擊(Archwing)",
+      "Rush": "突襲(Archwing)", "Arena": "競技場", "Defection": "叛逃",
+      "Disruption": "中斷", "Void Armageddon": "虛空末日", 
+      "Void Cascade": "虛空連瀑", "Void Flood": "虛空洪潮",
+      "Alchemy": "鍊金術", "Netracells": "衰退室", "Assassination (VIP)": "刺殺",
+      "Skirmish": "前哨戰", "Orphix": "奧菲斯"
+    };
+
+    const enemyTypes = {
+      "Grineer": "Grineer", "Corpus": "Corpus", "Infested": "Infested",
+      "Corrupted": "Corrupted", "Orokin": "Orokin", "Sentient": "Sentient",
+      "Narmer": "Narmer", "Murmur": "Murmur"
+    };
+
+    async function fetchWithCache(url) {
+      const cache = await caches.open('warframe-data-cache-v1');
+      const cachedResponse = await cache.match(url);
+      if (cachedResponse) return cachedResponse.json();
+      
+      const response = await fetch(url);
+      if (response.ok) {
+        cache.put(url, response.clone());
+        return response.json();
+      }
+      throw new Error(`網路請求失敗: ${response.status}`);
+    }
+
+    Promise.all([
+      fetchWithCache(URL_SOL_NODES),
+      fetchWithCache(URL_I18N)
+    ]).then(([nodesData, i18nData]) => {
+      document.getElementById('loader').style.display = 'none';
+
+      const i18nNameMap = {};
+      Object.keys(i18nData).forEach(key => {
+        if (i18nData[key].en && i18nData[key].en.name) {
+          i18nNameMap[i18nData[key].en.name.toLowerCase()] = i18nData[key];
+        }
+      });
+
+      function getTcTranslation(englishName, type) {
+        if (!englishName) return "未知";
+        let lower = englishName.toLowerCase();
+        
+        // 先去 i18n.json 裡面找 (確保擴充性)
+        let match = i18nNameMap[lower];
+        if (match) {
+          return match.tc?.name || match['zh-hant']?.name || match.zh?.name || englishName;
+        }
+
+        // 如果 i18n 找不到，再用我們的系統字典補齊
+        if (type === 'planet') return basicPlanets[lower] || englishName;
+        if (type === 'mission') return missionTypes[englishName] || englishName;
+        if (type === 'faction') return enemyTypes[englishName] || englishName;
+
+        return englishName;
+      }
+
+      Object.keys(nodesData).forEach(nodeId => {
+        const node = nodesData[nodeId];
+        if (!node || !node.value || node.type === 'Relay' || node.type === 'Clan Dojo') return;
+
+        const match = node.value.match(/\(([^)]+)\)/);
+        if (!match) return;
+
+        const planetNameEn = match[1]; 
+        const rawNodeName = node.value.replace(/\s*\(.*?\)\s*/g, ''); 
+
+        if (!allPlanets[planetNameEn]) {
+          allPlanets[planetNameEn] = {
+            nameEn: planetNameEn,
+            nameTc: getTcTranslation(planetNameEn, 'planet'),
+            imgUrl: planetImages[planetNameEn] || '',
+            nodes: []
+          };
+        }
+        
+        allPlanets[planetNameEn].nodes.push({
+          id: nodeId,
+          name: getTcTranslation(rawNodeName, 'node'),
+          type: getTcTranslation(node.type, 'mission'),
+          enemy: getTcTranslation(node.enemy, 'faction')
+        });
+      });
+
+      allPlanetsArray = Object.values(allPlanets);
+      
+      // 🌟 定義星球的開圖順序權重 (數字越小排越前面)
+      const planetOrder = {
+        "earth": 1, "venus": 2, "mercury": 3, "mars": 4, "phobos": 5,
+        "deimos": 6, "ceres": 7, "jupiter": 8, "europa": 9, "saturn": 10,
+        "uranus": 11, "neptune": 12, "pluto": 13, "sedna": 14, "eris": 15,
+        "void": 16, "lua": 17, "kuva fortress": 18, "zariman": 19,
+        "derelict": 20 // 雖然併入火衛二了，但抓到舊資料就放這
+      };
+
+      // 🌟 執行新的自訂排序邏輯
+      allPlanetsArray.sort((a, b) => {
+        let aName = a.nameEn.toLowerCase();
+        let bName = b.nameEn.toLowerCase();
+
+        // 判斷是否為渡域 (雙衍王境)
+        let aIsDuviri = aName === 'duviri';
+        let bIsDuviri = bName === 'duviri';
+
+        // 判斷是否為毗鄰星 (包含 Veil 或名稱裡有 Proxima)
+        let aIsProxima = aName.includes('proxima') || aName === 'veil';
+        let bIsProxima = bName.includes('proxima') || bName === 'veil';
+
+        // 預設權重設定為 50 (沒定義到的未知星球會排在中間偏後)
+        let aWeight = planetOrder[aName] || 50; 
+        let bWeight = planetOrder[bName] || 50;
+
+        // 如果是特殊區域，強制賦予極高的權重，把它們踢到最後面
+        if (aIsDuviri) aWeight = 100;
+        if (aIsProxima) aWeight = 101; 
+        
+        if (bIsDuviri) bWeight = 100;
+        if (bIsProxima) bWeight = 101;
+
+        // 依權重排序；如果權重一樣 (例如都是毗鄰星)，則按照英文字母排
+        if (aWeight !== bWeight) {
+          return aWeight - bWeight;
+        }
+        return a.nameEn.localeCompare(b.nameEn);
+      });
+      
+      renderGrid(allPlanetsArray);
+      
+      renderGrid(allPlanetsArray);
+
+    }).catch(err => {
+      console.error(err);
+      document.getElementById('loader').innerText = '載入失敗，請檢查網路連線。';
+    });
+
+    function renderGrid(planetsToRender) {
+      const grid = document.getElementById('grid');
+      grid.innerHTML = ''; 
+      
+      if (planetsToRender.length === 0) {
+        grid.innerHTML = '<div style="grid-column: 1/-1; text-align: center; color: #a0aec0;">找不到符合條件的星球或節點。</div>';
+        return;
+      }
+
+      planetsToRender.forEach(planet => {
+        const card = document.createElement('div');
+        card.className = 'card';
+        
+        const imgHtml = planet.imgUrl 
+          ? `<img src="${planet.imgUrl}" class="planet-img" onerror="this.outerHTML='<div class=\\'planet-placeholder\\'>無圖片</div>';">`
+          : `<div class="planet-placeholder">無圖片</div>`;
+        
+        card.innerHTML = `
+          ${imgHtml}
+          <div class="card-title">${planet.nameTc}</div>
+          <div class="card-subtitle">${planet.nameEn}</div>
+          <div class="card-subtitle" style="color: #10b981; margin-top: 15px;">${planet.nodes.length} 個節點</div>
+        `;
+        
+        card.onclick = () => openPanel(planet);
+        grid.appendChild(card);
+      });
+    }
+
+    document.getElementById('searchInput').addEventListener('input', (e) => {
+      const term = e.target.value.toLowerCase().trim();
+      
+      const filtered = allPlanetsArray.filter(planet => {
+        if (planet.nameEn.toLowerCase().includes(term) || planet.nameTc.toLowerCase().includes(term)) return true;
+        const hasMatchingNode = planet.nodes.some(node => 
+          node.name.toLowerCase().includes(term) || 
+          node.type.toLowerCase().includes(term) || 
+          node.enemy.toLowerCase().includes(term)
+        );
+        return hasMatchingNode;
+      });
+      renderGrid(filtered);
+    });
+
+    const sidePanel = document.getElementById('side-panel');
+    function openPanel(planet) {
+      document.getElementById('panel-title-text').innerText = planet.nameTc;
+      document.getElementById('node-count').innerText = planet.nodes.length;
+      
+      const panelImg = document.getElementById('panel-image');
+      if (planet.imgUrl) {
+        panelImg.src = planet.imgUrl;
+        panelImg.style.display = 'block';
+      } else {
+        panelImg.style.display = 'none';
+      }
+      
+      const nodesContainer = document.getElementById('panel-nodes');
+      nodesContainer.innerHTML = '';
+      
+      planet.nodes.sort((a, b) => a.name.localeCompare(b.name)).forEach(node => {
+        nodesContainer.innerHTML += `
+          <div class="node-item">
+            <div class="node-name">
+              <span>${node.name}</span>
+              <span class="node-type">${node.type}</span>
+            </div>
+            <div class="node-enemy">派系：${node.enemy}</div>
+          </div>
+        `;
+      });
+      
+      sidePanel.classList.add('open');
+    }
+
+    function closePanel() {
+      sidePanel.classList.remove('open');
+    }
+  </script>
+</body>
+</html>

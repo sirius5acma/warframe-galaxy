@@ -25,7 +25,7 @@ backBtn.onmouseout = () => {
   backBtn.style.background = 'rgba(12,14,18,0.9)';
   backBtn.style.transform = 'translateX(0)';
 };
-backBtn.onclick = () => window.location.href = 'index.html';
+backBtn.onclick = () => window.location.href = 'warframes.html';
 document.body.appendChild(backBtn);
 // -------------------------------------
 

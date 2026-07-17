@@ -11,12 +11,36 @@
       margin: 0; 
       padding: 40px 20px; 
     }
+
+    /* 🌟 這裡就是我們剛剛學的返回按鈕 CSS */
+    .back-btn {
+      position: fixed;
+      top: 20px;
+      left: 20px;
+      background: rgba(12,14,18,0.9);
+      border: 1px solid #c5a059;
+      color: #ffdf73;
+      padding: 10px 20px;
+      border-radius: 6px;
+      cursor: pointer;
+      z-index: 9999;
+      font-weight: bold;
+      letter-spacing: 1px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.8);
+      transition: all 0.3s ease;
+    }
+    .back-btn:hover {
+      background: rgba(212,175,55,0.2);
+      transform: translateX(-3px);
+    }
+
     h1 { 
       text-align: center; 
       color: #d4af37; 
       letter-spacing: 4px; 
       font-size: 2em;
       margin-bottom: 20px;
+      margin-top: 30px; /* 稍微往下推一點，避免跟返回按鈕太擠 */
     }
     
     .controls {
@@ -27,9 +51,16 @@
       align-items: center;
       gap: 15px;
     }
-    #searchInput {
+    
+    .search-container {
+      position: relative;
       width: 100%;
       max-width: 500px;
+    }
+
+    #searchInput {
+      width: 100%;
+      box-sizing: border-box;
       padding: 12px 20px;
       background: rgba(255,255,255,0.05);
       border: 1px solid #c5a059;
@@ -42,7 +73,36 @@
     #searchInput:focus {
       background: rgba(255,255,255,0.1);
       box-shadow: 0 0 15px rgba(212,175,55,0.3);
+      border-radius: 15px 15px 0 0;
     }
+
+    .suggestions-box {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      right: 0;
+      background: #0c0e12;
+      border: 1px solid #c5a059;
+      border-top: none;
+      border-radius: 0 0 15px 15px;
+      z-index: 1000;
+      display: none;
+      overflow: hidden;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.8);
+    }
+    .suggestion-item {
+      padding: 12px 20px;
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      transition: background 0.2s;
+    }
+    .suggestion-item:hover {
+      background: rgba(212,175,55,0.2);
+      color: #ffdf73;
+    }
+
     .filters {
       display: flex;
       gap: 10px;
@@ -121,10 +181,18 @@
   </style>
 </head>
 <body>
+  
+  <!-- 🌟 這裡就是我們剛剛學的返回按鈕 HTML -->
+  <div class="back-btn" onclick="window.location.href='home.html'">&#8592; 返回首頁</div>
+
   <h1>WARFRAME 秘典終端機</h1>
   
   <div class="controls" id="controls" style="display: none;">
-    <input type="text" id="searchInput" placeholder="搜尋戰甲名稱 (支援中英文)...">
+    <div class="search-container">
+      <input type="text" id="searchInput" placeholder="搜尋戰甲名稱 (支援中英文)..." autocomplete="off">
+      <div id="suggestionsBox" class="suggestions-box"></div>
+    </div>
+    
     <div class="filters">
       <button class="filter-btn active" data-type="all">全部戰甲</button>
       <button class="filter-btn" data-type="prime">Prime 系列</button>
@@ -142,17 +210,14 @@
     let allFramesData = []; 
     let currentFilterType = 'all';
 
-    // 🌟 核心升級：專屬快取引擎 (Cache API)
     async function fetchWithCache(url) {
       const cache = await caches.open('warframe-data-cache-v1');
       const cachedResponse = await cache.match(url);
       
-      // 如果快取裡有資料，直接秒退回資料！
       if (cachedResponse) {
         return cachedResponse.json();
       }
       
-      // 如果沒有，才去下載，並把結果存進快取裡
       const response = await fetch(url);
       if (response.ok) {
         cache.put(url, response.clone());
@@ -161,7 +226,6 @@
       throw new Error(`網路請求失敗: ${response.status}`);
     }
 
-    // 將原本的 fetch 改用我們寫好的 fetchWithCache
     Promise.all([
       fetchWithCache(URL_WARFRAMES),
       fetchWithCache(URL_I18N)
@@ -219,7 +283,6 @@
 
     function applyFilters() {
       const searchTerm = document.getElementById('searchInput').value.toLowerCase();
-      
       const filtered = allFramesData.filter(wf => {
         if (currentFilterType === 'prime' && !wf.isPrime) return false;
         if (currentFilterType === 'normal' && wf.isPrime) return false;
@@ -233,7 +296,56 @@
       renderGrid(filtered);
     }
 
-    document.getElementById('searchInput').addEventListener('input', applyFilters);
+    const searchInput = document.getElementById('searchInput');
+    const suggestionsBox = document.getElementById('suggestionsBox');
+
+    searchInput.addEventListener('input', (e) => {
+      const term = e.target.value.toLowerCase().trim();
+      applyFilters();
+
+      if (!term) {
+        suggestionsBox.style.display = 'none';
+        searchInput.style.borderRadius = '25px';
+        return;
+      }
+
+      let matches = allFramesData.filter(wf => {
+        const matchEn = wf.name.toLowerCase().includes(term);
+        const matchTc = wf.tcName.toLowerCase().includes(term);
+        return matchEn || matchTc;
+      });
+
+      matches.sort((a, b) => a.name.localeCompare(b.name));
+      matches = matches.slice(0, 5);
+
+      if (matches.length === 0) {
+        suggestionsBox.style.display = 'none';
+        searchInput.style.borderRadius = '25px';
+        return;
+      }
+
+      suggestionsBox.innerHTML = '';
+      matches.forEach(wf => {
+        const item = document.createElement('div');
+        item.className = 'suggestion-item';
+        item.innerHTML = `
+          <strong style="color: #ffdf73; letter-spacing: 1px;">${wf.tcName}</strong>
+          <span style="color: #a0aec0; font-size: 0.85em;">${wf.name}</span>
+        `;
+        item.onclick = () => window.location.href = `detail.html?frame=${encodeURIComponent(wf.name)}`;
+        suggestionsBox.appendChild(item);
+      });
+
+      suggestionsBox.style.display = 'block';
+      searchInput.style.borderRadius = '15px 15px 0 0';
+    });
+
+    document.addEventListener('click', (e) => {
+      if (!e.target.closest('.search-container')) {
+        suggestionsBox.style.display = 'none';
+        searchInput.style.borderRadius = '25px';
+      }
+    });
 
     document.querySelectorAll('.filter-btn').forEach(btn => {
       btn.addEventListener('click', (e) => {

@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <title>Warframe 中樞樞紐</title>
+  <style>
+    body {
+      background-color: #05070a;
+      background-image: radial-gradient(circle at center, #111827 0%, #000000 100%);
+      color: #fdfbf7;
+      font-family: sans-serif;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+    }
+    h1 {
+      color: #d4af37;
+      letter-spacing: 6px;
+      font-size: 2.8em;
+      margin-bottom: 50px;
+      text-shadow: 0 0 20px rgba(212, 175, 55, 0.5);
+    }
+    
+    /* 樞紐網格排版 */
+    .hub-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 30px;
+      max-width: 1000px;
+      width: 90%;
+    }
+    
+    /* 啟用狀態的框框 */
+    .hub-card {
+      height: 280px;
+      background: rgba(12, 14, 18, 0.8);
+      border: 2px solid #c5a059;
+      border-radius: 12px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      text-decoration: none;
+      color: inherit;
+      position: relative;
+      overflow: hidden;
+    }
+    .hub-card:hover {
+      transform: translateY(-10px);
+      background: rgba(212, 175, 55, 0.1);
+      box-shadow: 0 10px 30px rgba(212, 175, 55, 0.4);
+      border-color: #ffdf73;
+    }
+    
+    /* 框框發光特效 */
+    .hub-card::before {
+      content: '';
+      position: absolute;
+      top: -50%; left: -50%; width: 200%; height: 200%;
+      background: linear-gradient(45deg, transparent, rgba(212,175,55,0.1), transparent);
+      transform: rotate(45deg);
+      transition: all 0.5s ease;
+      opacity: 0;
+    }
+    .hub-card:hover::before {
+      opacity: 1;
+      left: 100%;
+    }
+
+    .hub-title {
+      font-size: 1.8em;
+      font-weight: bold;
+      color: #ffdf73;
+      margin-bottom: 15px;
+      letter-spacing: 2px;
+    }
+    .hub-desc {
+      color: #a0aec0;
+      font-size: 1em;
+      text-align: center;
+      padding: 0 20px;
+      line-height: 1.5;
+    }
+
+    /* 未啟用 (施工中) 的框框 */
+    .hub-card.disabled {
+      border: 2px dashed #334155;
+      background: rgba(12, 14, 18, 0.4);
+      cursor: not-allowed;
+    }
+    .hub-card.disabled:hover {
+      transform: none;
+      box-shadow: none;
+      background: rgba(12, 14, 18, 0.4);
+      border-color: #334155;
+    }
+    .hub-card.disabled .hub-title {
+      color: #475569;
+    }
+    .hub-card.disabled .hub-desc {
+      color: #334155;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>WARFRAME 終端系統</h1>
+  
+  <div class="hub-container">
+    <!-- 戰甲圖鑑 (連結到我們做好的大廳) -->
+    <a href="warframes.html" class="hub-card">
+      <div class="hub-title">戰甲圖鑑</div>
+      <div class="hub-desc">查詢全戰甲技能、素質與配方關聯圖</div>
+    </a>
+
+    <!-- 星圖導航 (連結到我們剛寫好的星圖) -->
+    <a href="starchart.html" class="hub-card">
+      <div class="hub-title">星圖導航</div>
+      <div class="hub-desc">探索太陽系節點與資源產出</div>
+    </a>
+
+    <!-- 預留擴充位 -->
+    <div class="hub-card disabled">
+      <div class="hub-title">虛空遺物</div>
+      <div class="hub-desc">系統建置中...</div>
+    </div>
+
+    <!-- 預留擴充位 -->
+    <div class="hub-card disabled">
+      <div class="hub-title">軍械武器庫</div>
+      <div class="hub-desc">系統建置中...</div>
+    </div>
+  </div>
+
+</body>
+</html>

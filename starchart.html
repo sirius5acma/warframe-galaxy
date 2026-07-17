@@ -249,6 +249,10 @@
     </div>
   </div>
 
+  <!-- 🌟 1. 在這裡引入我們剛剛獨立出去的翻譯檔案 -->
+  <script src="translations.js"></script>
+
+  <!-- 2. 下面是乾淨俐落的主程式 -->
   <script>
     const URL_SOL_NODES = 'https://raw.githubusercontent.com/wfcd/warframe-worldstate-data/master/data/solNodes.json';
     const URL_I18N = 'https://raw.githubusercontent.com/wfcd/warframe-items/master/data/json/i18n.json';
@@ -256,59 +260,28 @@
     let allPlanets = {}; 
     let allPlanetsArray = []; 
 
-    // 🌟 完全指向你的本機圖片資料夾
     const planetImages = {
-      "Earth": "images/Earth.png",
-      "Venus": "images/Venus.png",
+      "Earth": "images/Earth.png", 
+      "Venus": "images/Venus.png", 
       "Mars": "images/Mars.png",
-      "Jupiter": "images/Jupiter.png",
-      "Saturn": "images/Saturn.png",
+      "Jupiter": "images/Jupiter.png", 
+      "Saturn": "images/Saturn.png", 
       "Uranus": "images/Uranus.png",
-      "Neptune": "images/Neptune.png",
-      "Pluto": "images/Pluto.png",
+      "Neptune": "images/Neptune.png", 
+      "Pluto": "images/Pluto.png", 
       "Sedna": "images/Sedna.png",
-      "Ceres": "images/Ceres.png",
-      "Eris": "images/Eris.png",
+      "Ceres": "images/Ceres.png", 
+      "Eris": "images/Eris.png", 
       "Phobos": "images/Phobos.png",
-      "Europa": "images/Europa.png",
-      "Mercury": "images/Mercury.png",
+      "Europa": "images/Europa.png", 
+      "Mercury": "images/Mercury.png", 
       "Void": "images/Void.png",
-      "Derelict": "images/Derelict.png",
-      "Lua": "images/Lua.png",
+      "Derelict": "images/Derelict.png", 
+      "Lua": "images/Lua.png", 
       "Kuva Fortress": "images/Kuva_Fortress.png",
-      "Deimos": "images/Deimos.png",
-      "Zariman": "images/New_Zariman.png",
+      "Deimos": "images/Deimos.png", 
+      "Zariman": "images/New_Zariman.png", 
       "Duviri": "images/Duviri.png"
-    };
-
-    // 🌟 系統翻譯字典 (填補 i18n.json 的不足)
-    const basicPlanets = { 
-      "earth": "地球", "venus": "金星", "mars": "火星", "jupiter": "木星", 
-      "saturn": "土星", "uranus": "天王星", "neptune": "海王星", "pluto": "冥王星", 
-      "ceres": "穀神星", "eris": "鬩神星", "sedna": "賽德娜", "europa": "歐羅巴", 
-      "lua": "月球", "kuva fortress": "赤毒要塞", "void": "虛空", "deimos": "火衛二", 
-      "zariman": "扎日曼", "phobos": "火衛一", "mercury": "水星", 
-      "veil": "毗鄰星", 
-      "dojo": "道場", "duviri": "渡域" 
-    };
-
-    const missionTypes = {
-      "Survival": "生存", "Defense": "防禦", "Capture": "捕獲", 
-      "Extermination": "殲滅", "Interception": "攔截", "Assassination": "刺殺",
-      "Excavation": "挖掘", "Spy": "間諜", "Mobile Defense": "移動防禦",
-      "Sabotage": "破壞", "Rescue": "救援", "Hijack": "劫持",
-      "Free Roam": "開放世界", "Assault": "突擊", "Pursuit": "追擊(Archwing)",
-      "Rush": "突襲(Archwing)", "Arena": "競技場", "Defection": "叛逃",
-      "Disruption": "中斷", "Void Armageddon": "虛空末日", 
-      "Void Cascade": "虛空連瀑", "Void Flood": "虛空洪潮",
-      "Alchemy": "鍊金術", "Netracells": "衰退室", "Assassination (VIP)": "刺殺",
-      "Skirmish": "前哨戰", "Orphix": "奧菲斯"
-    };
-
-    const enemyTypes = {
-      "Grineer": "Grineer", "Corpus": "Corpus", "Infested": "Infested",
-      "Corrupted": "Corrupted", "Orokin": "Orokin", "Sentient": "Sentient",
-      "Narmer": "Narmer", "Murmur": "Murmur"
     };
 
     async function fetchWithCache(url) {
@@ -341,16 +314,32 @@
         if (!englishName) return "未知";
         let lower = englishName.toLowerCase();
         
-        // 先去 i18n.json 裡面找 (確保擴充性)
         let match = i18nNameMap[lower];
         if (match) {
           return match.tc?.name || match['zh-hant']?.name || match.zh?.name || englishName;
         }
 
-        // 如果 i18n 找不到，再用我們的系統字典補齊
+        // 🌟 這裡可以直接讀取 translations.js 裡的變數！
         if (type === 'planet') return basicPlanets[lower] || englishName;
-        if (type === 'mission') return missionTypes[englishName] || englishName;
         if (type === 'faction') return enemyTypes[englishName] || englishName;
+        if (type === 'node') return customNodes[englishName] || englishName; // 讓自訂節點字典生效
+
+        if (type === 'mission') {
+          let text = englishName;
+          
+          text = text.replace(/Dark Sector/gi, ""); // 直接把黑區拔掉
+          text = text.replace(/Crossfire/gi, "交火");
+          
+          const sortedKeys = Object.keys(missionTypes).sort((a, b) => b.length - a.length);
+          sortedKeys.forEach(key => {
+            const regex = new RegExp(key, "gi");
+            text = text.replace(regex, missionTypes[key]);
+          });
+          
+          text = text.replace(/^\s+|\s+$/g, ""); // 清理頭尾多餘空白
+          text = text.replace(/交火\s+/g, "交火");
+          return text || "未知";
+        }
 
         return englishName;
       }
@@ -358,6 +347,9 @@
       Object.keys(nodesData).forEach(nodeId => {
         const node = nodesData[nodeId];
         if (!node || !node.value || node.type === 'Relay' || node.type === 'Clan Dojo') return;
+
+        // 🌟 無情超渡「Ancient Retribution」幽靈節點
+        if (node.type === 'Ancient Retribution' || node.enemy === 'Ancient Retribution') return;
 
         const match = node.value.match(/\(([^)]+)\)/);
         if (!match) return;
@@ -384,47 +376,36 @@
 
       allPlanetsArray = Object.values(allPlanets);
       
-      // 🌟 定義星球的開圖順序權重 (數字越小排越前面)
       const planetOrder = {
         "earth": 1, "venus": 2, "mercury": 3, "mars": 4, "phobos": 5,
         "deimos": 6, "ceres": 7, "jupiter": 8, "europa": 9, "saturn": 10,
         "uranus": 11, "neptune": 12, "pluto": 13, "sedna": 14, "eris": 15,
         "void": 16, "lua": 17, "kuva fortress": 18, "zariman": 19,
-        "derelict": 20 // 雖然併入火衛二了，但抓到舊資料就放這
+        "derelict": 20
       };
 
-      // 🌟 執行新的自訂排序邏輯
       allPlanetsArray.sort((a, b) => {
         let aName = a.nameEn.toLowerCase();
         let bName = b.nameEn.toLowerCase();
 
-        // 判斷是否為渡域 (雙衍王境)
         let aIsDuviri = aName === 'duviri';
         let bIsDuviri = bName === 'duviri';
 
-        // 判斷是否為毗鄰星 (包含 Veil 或名稱裡有 Proxima)
         let aIsProxima = aName.includes('proxima') || aName === 'veil';
         let bIsProxima = bName.includes('proxima') || bName === 'veil';
 
-        // 預設權重設定為 50 (沒定義到的未知星球會排在中間偏後)
         let aWeight = planetOrder[aName] || 50; 
         let bWeight = planetOrder[bName] || 50;
 
-        // 如果是特殊區域，強制賦予極高的權重，把它們踢到最後面
         if (aIsDuviri) aWeight = 100;
         if (aIsProxima) aWeight = 101; 
         
         if (bIsDuviri) bWeight = 100;
         if (bIsProxima) bWeight = 101;
 
-        // 依權重排序；如果權重一樣 (例如都是毗鄰星)，則按照英文字母排
-        if (aWeight !== bWeight) {
-          return aWeight - bWeight;
-        }
+        if (aWeight !== bWeight) return aWeight - bWeight;
         return a.nameEn.localeCompare(b.nameEn);
       });
-      
-      renderGrid(allPlanetsArray);
       
       renderGrid(allPlanetsArray);
 

@@ -1,8 +1,10 @@
+// 從網址列抓取 ?frame=後面的名字，如果沒抓到就預設顯示 Volt 防呆
+const urlParams = new URLSearchParams(window.location.search);
+const TARGET_ITEM_NAME = urlParams.get('frame') || 'Volt';
+
 const URL_WARFRAMES = 'https://raw.githubusercontent.com/wfcd/warframe-items/master/data/json/Warframes.json';
 const URL_I18N = 'https://raw.githubusercontent.com/wfcd/warframe-items/master/data/json/i18n.json';
 const URL_EXPORT_RECIPES = 'https://raw.githubusercontent.com/calamity-inc/warframe-public-export-plus/master/ExportRecipes.json';
-
-const TARGET_ITEM_NAME = 'Volt'; 
 
 const accordions = document.getElementsByClassName("accordion");
 for (let i = 0; i < accordions.length; i++) {
@@ -46,7 +48,7 @@ Promise.all([
   }
 
   const targetWf = rawData.find(item => item.name === TARGET_ITEM_NAME);
-  if (!targetWf) return alert('找不到該物品！');
+  if (!targetWf) return alert('找不到該物品！請回首頁重新選擇。');
 
   const wfI18n = resolveI18n(targetWf);
   const finalWfName = wfI18n.tc.name || wfI18n.sc.name || targetWf.name;
@@ -136,7 +138,10 @@ Promise.all([
       const nodeSize = isPart ? 6 : 4;
       const nodeType = isPart ? 'component' : 'resource';
 
-      nodes.push({ id: depId, name: finalDepName, type: nodeType, size: nodeSize, color: nodeColor });
+      // 🌟 補丁 1：把直接依附在戰甲身上的數量 (itemCount) 也抓出來
+      const compCount = dep.itemCount || 1;
+
+      nodes.push({ id: depId, name: finalDepName, type: nodeType, size: nodeSize, color: nodeColor, count: compCount, desc: dep.description || '' });
       links.push({ source: targetWf.uniqueName, target: depId });
 
       if (isPart) {
@@ -150,10 +155,8 @@ Promise.all([
             let rawMatName = matPath.split('/').pop(); 
             let readableName = rawMatName.replace(/([A-Z])/g, ' $1').trim();
             
-            // 🌟 1. 絕對路徑精準查字典 (直接比對 uniqueName)
             let matI18nMatch = i18nData[matPath] || i18nData[matPath + 's'] || i18nData[matPath.replace(/s$/, '')];
 
-            // 🌟 2. 如果絕對路徑沒中，再退回名稱模糊搜尋
             if (!matI18nMatch) {
               let searchKeys = [
                 readableName.toLowerCase(),
@@ -175,7 +178,6 @@ Promise.all([
             let finalMatDesc = "";
 
             if (matI18nMatch) {
-              // 🌟 3. 開放權限：只要官方庫裡有寫，管它是 tc 還是 zh，全部抓出來！
               const trans = matI18nMatch.tc || matI18nMatch['zh-hant'] || matI18nMatch.zh || matI18nMatch['zh-hans'] || {};
               finalMatName = trans.name || finalMatName;
               finalMatDesc = trans.description || (matI18nMatch.en && matI18nMatch.en.description) || "";
@@ -206,11 +208,14 @@ Promise.all([
     .nodeId('id')
     .nodeLabel(node => {
       if (node.type === 'resource') {
+        // 🌟 補丁 2：防呆！只有在 node.count 真的存在且是數字時，才去呼叫 toLocaleString()
+        const countHtml = node.count ? `<span style="color: #10b981; font-weight: bold; font-size: 1.1em; margin-left: 15px;">x ${Number(node.count).toLocaleString()}</span>` : '';
+        
         return `
           <div style="max-width: 280px; text-align: left; background: rgba(12, 14, 18, 0.95); padding: 12px; border: 1px solid #c5a059; border-radius: 4px; box-shadow: 0 4px 20px rgba(0,0,0,0.9); color: #fdfbf7; font-family: sans-serif;">
             <div style="display: flex; justify-content: space-between; align-items: flex-end;">
               <strong style="color: #ffdf73; font-size: 1.1em; letter-spacing: 1px;">${node.name}</strong>
-              <span style="color: #10b981; font-weight: bold; font-size: 1.1em; margin-left: 15px;">x ${node.count.toLocaleString()}</span>
+              ${countHtml}
             </div>
             <div style="font-size: 0.9em; margin-top: 8px; line-height: 1.6; color: #d1cbbd; font-weight: 300;">
               ${node.desc || '系統庫中暫無詳細資料。'}

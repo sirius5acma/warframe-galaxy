@@ -66,7 +66,6 @@ async function fetchWithCache(url) {
   throw new Error(`網路請求失敗: ${response.status}`);
 }
 
-// 將原本的 fetch 改用 fetchWithCache
 Promise.all([
   fetchWithCache(URL_WARFRAMES),
   fetchWithCache(URL_I18N),
@@ -230,15 +229,20 @@ Promise.all([
               finalMatDesc = trans.description || (matI18nMatch.en && matI18nMatch.en.description) || "";
             }
 
+            // 🌟 修復核心：把地點抽出來，並把英文原版的 Location 從描述中剃除乾淨
+            let extractedLocation = "";
             const locMatch = finalMatDesc ? finalMatDesc.match(/Location:\s*(.+)/i) : null;
             if (locMatch) {
-              finalMatDesc += `<br><br><span style="color: #38bdf8; font-weight: bold;">🌍 掉落星球：</span><span style="color: #e2e8f0;">${locMatch[1]}</span>`;
+              extractedLocation = locMatch[1].trim();
+              // 清理掉描述中混雜的英文 Location 文字
+              finalMatDesc = finalMatDesc.replace(/<br>\s*Location:\s*.+/i, '').replace(/Location:\s*.+/i, '').trim();
             }
 
             const uniqueMatId = `${depId}_${matPath}`;
 
             if (!nodes.find(n => n.id === uniqueMatId)) {
-              nodes.push({ id: uniqueMatId, name: finalMatName, desc: finalMatDesc, count: itemCount, type: 'resource', size: 4, color: '#10b981' });
+              // 🌟 這裡把 extractedLocation 存進去 node 裡了
+              nodes.push({ id: uniqueMatId, name: finalMatName, desc: finalMatDesc, count: itemCount, type: 'resource', size: 4, color: '#10b981', location: extractedLocation });
             }
             links.push({ source: depId, target: uniqueMatId });
           });
@@ -257,19 +261,38 @@ Promise.all([
       if (node.type === 'resource') {
         const countHtml = node.count ? `<span style="color: #10b981; font-weight: bold; font-size: 1.1em; margin-left: 15px;">x ${Number(node.count).toLocaleString()}</span>` : '';
         
+        // 🌟 獨立出來的地點資訊區塊
+        const locationHtml = node.location 
+          ? `<div style="margin-top: 15px; padding-top: 10px; border-top: 1px dashed rgba(197, 160, 89, 0.5); color: #38bdf8; font-weight: bold; font-size: 1.1em; text-align: center;">
+               📍 掉落點：${node.location} <br><span style="font-size: 0.8em; color: #a0aec0;">(點擊節點前往星圖)</span>
+             </div>` 
+          : '';
+
         return `
           <div style="max-width: 280px; text-align: left; background: rgba(12, 14, 18, 0.95); padding: 12px; border: 1px solid #c5a059; border-radius: 4px; box-shadow: 0 4px 20px rgba(0,0,0,0.9); color: #fdfbf7; font-family: sans-serif;">
             <div style="display: flex; justify-content: space-between; align-items: flex-end;">
               <strong style="color: #ffdf73; font-size: 1.1em; letter-spacing: 1px;">${node.name}</strong>
               ${countHtml}
             </div>
-            <div style="font-size: 0.9em; margin-top: 8px; line-height: 1.6; color: #d1cbbd; font-weight: 300;">
+            
+            <div style="font-size: 1.15em; margin-top: 8px; line-height: 1.6; color: #d1cbbd; font-weight: 300;">
               ${node.desc || '系統庫中暫無詳細資料。'}
             </div>
+            
+            ${locationHtml}
           </div>
         `;
       }
+      
+      // 🌟 其他非資源節點 (如戰甲或部件) 的顯示樣式
       return `<div style="background: rgba(12, 14, 18, 0.9); padding: 6px 12px; border: 1px solid #d4af37; border-radius: 4px; color: #ffdf73; letter-spacing: 1px;">${node.name}</div>`;
+    })
+    .onNodeClick(node => {
+      // 🌟 當點擊擁有「掉落點」的資源時，直接帶你去星圖！
+      if (node.location) {
+        // 小彩蛋：把地點當作參數傳過去，未來可以讓星圖自動搜尋這個地點
+        window.location.href = `starchart.html?search=${encodeURIComponent(node.location)}`;
+      }
     })
     .linkColor(() => 'rgba(255, 255, 255, 0.3)')
     .linkWidth(2)

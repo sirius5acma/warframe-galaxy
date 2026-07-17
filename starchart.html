@@ -36,6 +36,7 @@
       letter-spacing: 1px;
       box-shadow: 0 4px 10px rgba(0,0,0,0.8);
       transition: all 0.3s ease;
+      z-index: 100;
     }
     .back-btn:hover {
       background: rgba(212,175,55,0.2);
@@ -49,6 +50,15 @@
       margin: 0 0 20px 0;
       text-shadow: 0 2px 10px rgba(0,0,0,0.9);
       text-align: center;
+    }
+    
+    /* 動態標題，用來顯示目前在哪個星圖 */
+    #sub-title {
+      color: #38bdf8;
+      font-size: 1.2em;
+      letter-spacing: 3px;
+      margin-bottom: 20px;
+      text-shadow: 0 2px 5px rgba(0,0,0,0.8);
     }
 
     .search-container {
@@ -100,6 +110,19 @@
       border-color: #ffdf73;
     }
     
+    /* 特別給九重天卡片一個炫酷的外框發光效果 */
+    .card.empyrean-card {
+      border-color: #38bdf8;
+      background: rgba(56, 189, 248, 0.05);
+    }
+    .card.empyrean-card:hover {
+      border-color: #7dd3fc;
+      box-shadow: 0 8px 20px rgba(56, 189, 248, 0.4);
+    }
+    .card.empyrean-card .card-title {
+      color: #38bdf8;
+    }
+
     .planet-img {
       width: 120px;
       height: 120px;
@@ -224,10 +247,12 @@
 <body>
 
   <div class="top-bar">
-    <div class="back-btn" onclick="window.location.href='home.html'">&#8592; 返回樞紐</div>
+    <!-- 導航按鈕，ID 綁定方便動態修改 -->
+    <div class="back-btn" id="backBtn" onclick="handleBack()">&#8592; 返回樞紐</div>
     <h1>WARFRAME 星圖檢索系統</h1>
+    <div id="sub-title">一般星圖</div>
     <div class="search-container">
-      <input type="text" id="searchInput" placeholder="搜尋星球、節點名稱 (如: Mot) 或任務類型 (如: 生存)..." autocomplete="off">
+      <input type="text" id="searchInput" placeholder="搜尋星球、節點名稱或任務類型..." autocomplete="off">
     </div>
   </div>
 
@@ -249,39 +274,38 @@
     </div>
   </div>
 
-  <!-- 🌟 1. 在這裡引入我們剛剛獨立出去的翻譯檔案 -->
+  <!-- 引入你的獨立翻譯檔案 -->
   <script src="translations.js"></script>
 
-  <!-- 2. 下面是乾淨俐落的主程式 -->
   <script>
     const URL_SOL_NODES = 'https://raw.githubusercontent.com/wfcd/warframe-worldstate-data/master/data/solNodes.json';
     const URL_I18N = 'https://raw.githubusercontent.com/wfcd/warframe-items/master/data/json/i18n.json';
 
-    let allPlanets = {}; 
-    let allPlanetsArray = []; 
+    // 🌟 雙層星圖狀態管理
+    let currentView = 'normal'; // 'normal' = 一般星圖, 'proxima' = 九重天星圖
+    let normalPlanets = {}; 
+    let proximaPlanets = {};
+    let normalPlanetsArray = []; 
+    let proximaPlanetsArray = [];
 
     const planetImages = {
-      "Earth": "images/Earth.png", 
-      "Venus": "images/Venus.png", 
-      "Mars": "images/Mars.png",
-      "Jupiter": "images/Jupiter.png", 
-      "Saturn": "images/Saturn.png", 
-      "Uranus": "images/Uranus.png",
-      "Neptune": "images/Neptune.png", 
-      "Pluto": "images/Pluto.png", 
-      "Sedna": "images/Sedna.png",
-      "Ceres": "images/Ceres.png", 
-      "Eris": "images/Eris.png", 
-      "Phobos": "images/Phobos.png",
-      "Europa": "images/Europa.png", 
-      "Mercury": "images/Mercury.png", 
-      "Void": "images/Void.png",
-      "Derelict": "images/Derelict.png", 
-      "Lua": "images/Lua.png", 
-      "Kuva Fortress": "images/Kuva_Fortress.png",
-      "Deimos": "images/Deimos.png", 
-      "Zariman": "images/New_Zariman.png", 
-      "Duviri": "images/Duviri.png"
+      "Earth": "images/Earth.png", "Venus": "images/Venus.png", "Mars": "images/Mars.png",
+      "Jupiter": "images/Jupiter.png", "Saturn": "images/Saturn.png", "Uranus": "images/Uranus.png",
+      "Neptune": "images/Neptune.png", "Pluto": "images/Pluto.png", "Sedna": "images/Sedna.png",
+      "Ceres": "images/Ceres.png", "Eris": "images/Eris.png", "Phobos": "images/Phobos.png",
+      "Europa": "images/Europa.png", "Mercury": "images/Mercury.png", "Void": "images/Void.png",
+      "Derelict": "images/Derelict.png", "Lua": "images/Lua.png", "Kuva Fortress": "images/KuvaFortress.png",
+      "Deimos": "images/Deimos.png", "Zariman": "images/Zariman.png", "Duviri": "images/Duviri.png",
+      "Veil": "images/Void.png" // 面紗毗鄰星借用虛空的圖，或你可以自己加 Veil.png
+    };
+
+    // 🌟 定義星球的開圖順序權重
+    const planetOrder = {
+      "earth": 1, "venus": 2, "mercury": 3, "mars": 4, "phobos": 5,
+      "deimos": 6, "ceres": 7, "jupiter": 8, "europa": 9, "saturn": 10,
+      "uranus": 11, "neptune": 12, "pluto": 13, "sedna": 14, "eris": 15,
+      "void": 16, "lua": 17, "kuva fortress": 18, "zariman": 19,
+      "derelict": 20, "duviri": 100, "veil": 101
     };
 
     async function fetchWithCache(url) {
@@ -319,15 +343,24 @@
           return match.tc?.name || match['zh-hant']?.name || match.zh?.name || englishName;
         }
 
-        // 🌟 這裡可以直接讀取 translations.js 裡的變數！
-        if (type === 'planet') return basicPlanets[lower] || englishName;
+        if (type === 'planet') {
+           // 動態產生「XX毗鄰星」的翻譯，不需要手動在字典寫死地球毗鄰星
+           if (lower.includes('proxima')) {
+               let baseName = lower.replace(' proxima', '');
+               if (baseName === 'veil') return "面紗毗鄰星";
+               return (basicPlanets[baseName] || englishName.split(' ')[0]) + "毗鄰星";
+           }
+           return basicPlanets[lower] || englishName;
+        }
+        
         if (type === 'faction') return enemyTypes[englishName] || englishName;
-        if (type === 'node') return customNodes[englishName] || englishName; // 讓自訂節點字典生效
+        if (typeof customNodes !== 'undefined' && type === 'node') {
+            return customNodes[englishName] || englishName;
+        }
 
         if (type === 'mission') {
           let text = englishName;
-          
-          text = text.replace(/Dark Sector/gi, ""); // 直接把黑區拔掉
+          text = text.replace(/Dark Sector/gi, ""); 
           text = text.replace(/Crossfire/gi, "交火");
           
           const sortedKeys = Object.keys(missionTypes).sort((a, b) => b.length - a.length);
@@ -336,7 +369,7 @@
             text = text.replace(regex, missionTypes[key]);
           });
           
-          text = text.replace(/^\s+|\s+$/g, ""); // 清理頭尾多餘空白
+          text = text.replace(/^\s+|\s+$/g, ""); 
           text = text.replace(/交火\s+/g, "交火");
           return text || "未知";
         }
@@ -347,26 +380,43 @@
       Object.keys(nodesData).forEach(nodeId => {
         const node = nodesData[nodeId];
         if (!node || !node.value || node.type === 'Relay' || node.type === 'Clan Dojo') return;
-
-        // 🌟 無情超渡「Ancient Retribution」幽靈節點
         if (node.type === 'Ancient Retribution' || node.enemy === 'Ancient Retribution') return;
 
         const match = node.value.match(/\(([^)]+)\)/);
         if (!match) return;
 
-        const planetNameEn = match[1]; 
+        const rawPlanetNameEn = match[1]; 
         const rawNodeName = node.value.replace(/\s*\(.*?\)\s*/g, ''); 
 
-        if (!allPlanets[planetNameEn]) {
-          allPlanets[planetNameEn] = {
-            nameEn: planetNameEn,
-            nameTc: getTcTranslation(planetNameEn, 'planet'),
-            imgUrl: planetImages[planetNameEn] || '',
-            nodes: []
-          };
+        // 🌟 核心過濾器：判斷是否為航道星艦節點
+        const rjMissionTypes = ['Skirmish', 'Orphix', 'Volatile']; // 這些是絕對的空戰任務
+        const isProxima = rawPlanetNameEn === 'Veil' || rjMissionTypes.includes(node.type);
+
+        let targetDict, finalPlanetNameEn, imgKey;
+
+        if (isProxima) {
+            targetDict = proximaPlanets;
+            // 給他們冠上 Proxima 姓氏 (除了原本就是 Veil 的)
+            finalPlanetNameEn = rawPlanetNameEn === 'Veil' ? 'Veil Proxima' : `${rawPlanetNameEn} Proxima`;
+            // 圖片繼承原本星球的圖片
+            imgKey = rawPlanetNameEn === 'Veil' ? 'Veil' : rawPlanetNameEn;
+        } else {
+            targetDict = normalPlanets;
+            finalPlanetNameEn = rawPlanetNameEn;
+            imgKey = rawPlanetNameEn;
+        }
+
+        // 初始化星球資料夾
+        if (!targetDict[finalPlanetNameEn]) {
+            targetDict[finalPlanetNameEn] = {
+                nameEn: finalPlanetNameEn,
+                nameTc: getTcTranslation(finalPlanetNameEn, 'planet'),
+                imgUrl: planetImages[imgKey] || '', 
+                nodes: []
+            };
         }
         
-        allPlanets[planetNameEn].nodes.push({
+        targetDict[finalPlanetNameEn].nodes.push({
           id: nodeId,
           name: getTcTranslation(rawNodeName, 'node'),
           type: getTcTranslation(node.type, 'mission'),
@@ -374,45 +424,51 @@
         });
       });
 
-      allPlanetsArray = Object.values(allPlanets);
-      
-      const planetOrder = {
-        "earth": 1, "venus": 2, "mercury": 3, "mars": 4, "phobos": 5,
-        "deimos": 6, "ceres": 7, "jupiter": 8, "europa": 9, "saturn": 10,
-        "uranus": 11, "neptune": 12, "pluto": 13, "sedna": 14, "eris": 15,
-        "void": 16, "lua": 17, "kuva fortress": 18, "zariman": 19,
-        "derelict": 20
-      };
+      // 轉換並排序一般星圖
+      normalPlanetsArray = Object.values(normalPlanets);
+      normalPlanetsArray.sort((a, b) => {
+        let aBase = a.nameEn.toLowerCase();
+        let bBase = b.nameEn.toLowerCase();
+        let aWeight = planetOrder[aBase] || 50; 
+        let bWeight = planetOrder[bBase] || 50;
+        if (aWeight !== bWeight) return aWeight - bWeight;
+        return a.nameEn.localeCompare(b.nameEn);
+      });
 
-      allPlanetsArray.sort((a, b) => {
-        let aName = a.nameEn.toLowerCase();
-        let bName = b.nameEn.toLowerCase();
-
-        let aIsDuviri = aName === 'duviri';
-        let bIsDuviri = bName === 'duviri';
-
-        let aIsProxima = aName.includes('proxima') || aName === 'veil';
-        let bIsProxima = bName.includes('proxima') || bName === 'veil';
-
-        let aWeight = planetOrder[aName] || 50; 
-        let bWeight = planetOrder[bName] || 50;
-
-        if (aIsDuviri) aWeight = 100;
-        if (aIsProxima) aWeight = 101; 
-        
-        if (bIsDuviri) bWeight = 100;
-        if (bIsProxima) bWeight = 101;
-
+      // 轉換並排序九重天星圖
+      proximaPlanetsArray = Object.values(proximaPlanets);
+      proximaPlanetsArray.sort((a, b) => {
+        let aBase = a.nameEn.toLowerCase().replace(' proxima', '');
+        let bBase = b.nameEn.toLowerCase().replace(' proxima', '');
+        let aWeight = planetOrder[aBase] || 50; 
+        let bWeight = planetOrder[bBase] || 50;
         if (aWeight !== bWeight) return aWeight - bWeight;
         return a.nameEn.localeCompare(b.nameEn);
       });
       
-      renderGrid(allPlanetsArray);
+      // 預設渲染一般星圖
+      renderGrid(normalPlanetsArray);
 
     }).catch(err => {
       console.error(err);
       document.getElementById('loader').innerText = '載入失敗，請檢查網路連線。';
     });
+
+    // 🌟 返回按鈕邏輯：根據目前視圖切換
+    function handleBack() {
+      if (currentView === 'proxima') {
+          // 在九重天內點擊返回 -> 回到一般星圖
+          currentView = 'normal';
+          document.getElementById('backBtn').innerHTML = '&#8592; 返回樞紐';
+          document.getElementById('sub-title').innerText = '一般星圖';
+          document.getElementById('searchInput').value = '';
+          closePanel();
+          renderGrid(normalPlanetsArray);
+      } else {
+          // 在一般星圖內點擊返回 -> 回到網站首頁 (index.html)
+          window.location.href = 'index.html'; 
+      }
+    }
 
     function renderGrid(planetsToRender) {
       const grid = document.getElementById('grid');
@@ -441,19 +497,45 @@
         card.onclick = () => openPanel(planet);
         grid.appendChild(card);
       });
+
+      // 🌟 當我們在一般星圖時，手動把「九重天 (Empyrean)」卡片加在最後面！
+      if (currentView === 'normal') {
+          const rjCard = document.createElement('div');
+          rjCard.className = 'card empyrean-card'; // 加上專屬特效
+          rjCard.innerHTML = `
+            <!-- 這裡就是吃你剛下載好的 railjack.png -->
+            <img src="images/railjack.png" class="planet-img" onerror="this.outerHTML='<div class=\\'planet-placeholder\\'>無圖片</div>';">
+            <div class="card-title">九重天</div>
+            <div class="card-subtitle">Empyrean</div>
+            <div class="card-subtitle" style="color: #38bdf8; margin-top: 15px; font-weight:bold;">點擊進入銳捷號星圖</div>
+          `;
+          
+          rjCard.onclick = () => {
+              // 切換視圖至九重天
+              currentView = 'proxima';
+              document.getElementById('backBtn').innerHTML = '&#8592; 返回一般星圖';
+              document.getElementById('sub-title').innerText = '九重天 (銳捷號星圖)';
+              document.getElementById('searchInput').value = '';
+              renderGrid(proximaPlanetsArray);
+          };
+          grid.appendChild(rjCard);
+      }
     }
 
+    // 搜尋功能也做雙層適配
     document.getElementById('searchInput').addEventListener('input', (e) => {
       const term = e.target.value.toLowerCase().trim();
       
-      const filtered = allPlanetsArray.filter(planet => {
+      // 根據目前的視圖去搜尋對應的陣列
+      const activeArray = currentView === 'normal' ? normalPlanetsArray : proximaPlanetsArray;
+
+      const filtered = activeArray.filter(planet => {
         if (planet.nameEn.toLowerCase().includes(term) || planet.nameTc.toLowerCase().includes(term)) return true;
-        const hasMatchingNode = planet.nodes.some(node => 
+        return planet.nodes.some(node => 
           node.name.toLowerCase().includes(term) || 
           node.type.toLowerCase().includes(term) || 
           node.enemy.toLowerCase().includes(term)
         );
-        return hasMatchingNode;
       });
       renderGrid(filtered);
     });

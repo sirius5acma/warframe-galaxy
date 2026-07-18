@@ -449,6 +449,30 @@
       // 預設渲染一般星圖
       renderGrid(normalPlanetsArray);
 
+      // 預設渲染一般星圖
+      renderGrid(normalPlanetsArray);
+
+      // 🌟 新增：讀取雙參數，執行超精準過濾
+      const urlParams = new URLSearchParams(window.location.search);
+      const resourceName = urlParams.get('resource'); // 例如：鐵氧體
+      const targetLocations = urlParams.get('targets'); // 例如：地球, 土星, 海王星
+      
+      if (resourceName && targetLocations) {
+        const searchInput = document.getElementById('searchInput');
+        // 在搜尋框顯示帥氣的提示文字，讓玩家知道現在正在找什麼
+        searchInput.value = `📍 尋找素材：${resourceName}`;
+        
+        // 核心邏輯：利用傳過來的 targetLocations 字串，直接過濾出符合的星球
+        const filteredPlanets = normalPlanetsArray.filter(planet => {
+            // 只要這顆星球的「英文名」或「中文名」有出現在掉落字串裡，就保留它
+            return targetLocations.toLowerCase().includes(planet.nameEn.toLowerCase()) || 
+                   targetLocations.includes(planet.nameTc);
+        });
+        
+        // 強制渲染這些被篩選出來的星球
+        renderGrid(filteredPlanets);
+      }
+
     }).catch(err => {
       console.error(err);
       document.getElementById('loader').innerText = '載入失敗，請檢查網路連線。';

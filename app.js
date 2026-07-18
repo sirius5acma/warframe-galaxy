@@ -229,20 +229,32 @@ Promise.all([
               finalMatDesc = trans.description || (matI18nMatch.en && matI18nMatch.en.description) || "";
             }
 
-            // 🌟 修復核心：把地點抽出來，並把英文原版的 Location 從描述中剃除乾淨
+            // 🌟 極簡狙擊版：專門抓取「地點：」或「Location:」後面的文字
             let extractedLocation = "";
-            const locMatch = finalMatDesc ? finalMatDesc.match(/Location:\s*(.+)/i) : null;
+            const locRegex = /(?:地點|Location)\s*[:：]\s*(.+)/i;
+            const locMatch = finalMatDesc ? finalMatDesc.match(locRegex) : null;
+            
             if (locMatch) {
               extractedLocation = locMatch[1].trim();
-              // 清理掉描述中混雜的英文 Location 文字
-              finalMatDesc = finalMatDesc.replace(/<br>\s*Location:\s*.+/i, '').replace(/Location:\s*.+/i, '').trim();
+              // 清理掉原描述中的地點文字，避免懸浮窗裡重複顯示兩次
+              finalMatDesc = finalMatDesc.replace(/<br>\s*(?:地點|Location)\s*[:：]\s*.+/i, '')
+                                         .replace(/(?:地點|Location)\s*[:：]\s*.+/i, '')
+                                         .trim();
             }
 
             const uniqueMatId = `${depId}_${matPath}`;
 
             if (!nodes.find(n => n.id === uniqueMatId)) {
-              // 🌟 這裡把 extractedLocation 存進去 node 裡了
-              nodes.push({ id: uniqueMatId, name: finalMatName, desc: finalMatDesc, count: itemCount, type: 'resource', size: 4, color: '#10b981', location: extractedLocation });
+              nodes.push({ 
+                id: uniqueMatId, 
+                name: finalMatName, 
+                desc: finalMatDesc, 
+                count: itemCount, 
+                type: 'resource', 
+                size: 4, 
+                color: '#10b981', 
+                location: extractedLocation 
+              });
             }
             links.push({ source: depId, target: uniqueMatId });
           });
@@ -251,6 +263,25 @@ Promise.all([
     });
   }
 
+  // 🌟 1. 在畫布前，動態創建一個點擊選單 (Action Menu)
+  const nodeMenu = document.createElement('div');
+  nodeMenu.id = 'node-action-menu';
+  nodeMenu.style.cssText = `
+    position: absolute;
+    display: none;
+    background: rgba(12, 14, 18, 0.98);
+    border: 1px solid #c5a059;
+    border-radius: 8px;
+    padding: 12px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.9);
+    z-index: 10000;
+    min-width: 160px;
+    flex-direction: column;
+    gap: 10px;
+  `;
+  document.body.appendChild(nodeMenu);
+
+  // 🌟 2. 開始設定你的力導向圖
   const graphContainer = document.getElementById('graph-container');
   const Graph = ForceGraph()(document.getElementById('graph'))
     .width(graphContainer.clientWidth)
@@ -260,11 +291,9 @@ Promise.all([
     .nodeLabel(node => {
       if (node.type === 'resource') {
         const countHtml = node.count ? `<span style="color: #10b981; font-weight: bold; font-size: 1.1em; margin-left: 15px;">x ${Number(node.count).toLocaleString()}</span>` : '';
-        
-        // 🌟 獨立出來的地點資訊區塊
         const locationHtml = node.location 
           ? `<div style="margin-top: 15px; padding-top: 10px; border-top: 1px dashed rgba(197, 160, 89, 0.5); color: #38bdf8; font-weight: bold; font-size: 1.1em; text-align: center;">
-               📍 掉落點：${node.location} <br><span style="font-size: 0.8em; color: #a0aec0;">(點擊節點前往星圖)</span>
+               📍 掉落點：${node.location} <br><span style="font-size: 0.8em; color: #a0aec0;">(點擊節點開啟選單)</span>
              </div>` 
           : '';
 
@@ -274,25 +303,63 @@ Promise.all([
               <strong style="color: #ffdf73; font-size: 1.1em; letter-spacing: 1px;">${node.name}</strong>
               ${countHtml}
             </div>
-            
             <div style="font-size: 1.15em; margin-top: 8px; line-height: 1.6; color: #d1cbbd; font-weight: 300;">
               ${node.desc || '系統庫中暫無詳細資料。'}
             </div>
-            
             ${locationHtml}
           </div>
         `;
       }
-      
-      // 🌟 其他非資源節點 (如戰甲或部件) 的顯示樣式
       return `<div style="background: rgba(12, 14, 18, 0.9); padding: 6px 12px; border: 1px solid #d4af37; border-radius: 4px; color: #ffdf73; letter-spacing: 1px;">${node.name}</div>`;
     })
-    .onNodeClick(node => {
-      // 🌟 當點擊擁有「掉落點」的資源時，直接帶你去星圖！
+    // 🌟 3. 改寫點擊事件：彈出選單而不是直接跳轉
+    .onNodeClick((node, event) => {
+      // 🌟 1. 解決重疊：強制隱藏 ForceGraph 預設的懸浮提示框
+      const tooltip = document.querySelector('.scene-tooltip');
+      if (tooltip) tooltip.style.display = 'none';
+
+      // 清空舊選單內容
+      nodeMenu.innerHTML = '';
+      
+      const title = document.createElement('div');
+      title.style.cssText = 'color: #ffdf73; font-weight: bold; font-size: 1.1em; border-bottom: 1px solid rgba(197, 160, 89, 0.5); padding-bottom: 8px; text-align: center;';
+      title.innerText = node.name;
+      nodeMenu.appendChild(title);
+
       if (node.location) {
-        // 小彩蛋：把地點當作參數傳過去，未來可以讓星圖自動搜尋這個地點
-        window.location.href = `starchart.html?search=${encodeURIComponent(node.location)}`;
+        const starChartBtn = document.createElement('button');
+        starChartBtn.innerHTML = '🌍 前往對應星圖';
+        starChartBtn.style.cssText = `
+          background: rgba(56, 189, 248, 0.1); border: 1px solid #38bdf8; color: #38bdf8; 
+          padding: 8px; border-radius: 4px; cursor: pointer; transition: all 0.2s; font-weight: bold;
+        `;
+        starChartBtn.onmouseover = () => { starChartBtn.style.background = 'rgba(56, 189, 248, 0.3)'; starChartBtn.style.color = '#fff'; };
+        starChartBtn.onmouseout = () => { starChartBtn.style.background = 'rgba(56, 189, 248, 0.1)'; starChartBtn.style.color = '#38bdf8'; };
+        
+        starChartBtn.onclick = () => {
+          // 🌟 2. 雙參數魔術：同時傳遞「資源名稱」與「掉落星球字串」
+          window.location.href = `starchart.html?resource=${encodeURIComponent(node.name)}&targets=${encodeURIComponent(node.location)}`;
+        };
+        nodeMenu.appendChild(starChartBtn);
+      } else {
+        const noAction = document.createElement('div');
+        noAction.innerText = '目前無可用動作';
+        noAction.style.cssText = 'color: #a0aec0; text-align: center; font-size: 0.9em; padding: 5px;';
+        nodeMenu.appendChild(noAction);
       }
+
+      // 讓選單稍微偏離鼠標，避免擋住點擊
+      nodeMenu.style.left = (event.pageX + 20) + 'px';
+      nodeMenu.style.top = (event.pageY + 20) + 'px';
+      nodeMenu.style.display = 'flex';
+    })
+    .onBackgroundClick(() => {
+      // 點擊空白處關閉選單
+      nodeMenu.style.display = 'none';
+      
+      // 🌟 恢復原本的懸浮提示框功能
+      const tooltip = document.querySelector('.scene-tooltip');
+      if (tooltip) tooltip.style.display = '';
     })
     .linkColor(() => 'rgba(255, 255, 255, 0.3)')
     .linkWidth(2)

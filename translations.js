@@ -27,7 +27,8 @@ const basicPlanets = {
 
 const missionTypes = {
   "Survival": "生存", 
-  "Defense": "防禦", 
+  "Defense": "防禦",
+  "Mirror Defense": "鏡像防禦",
   "Capture": "捕獲", 
   "Extermination": "殲滅", 
   "Interception": "攔截", 

@@ -52,7 +52,6 @@
       text-align: center;
     }
     
-    /* 動態標題，用來顯示目前在哪個星圖 */
     #sub-title {
       color: #38bdf8;
       font-size: 1.2em;
@@ -82,7 +81,7 @@
       box-shadow: 0 0 15px rgba(212,175,55,0.3);
     }
 
-    /* --- 卡片網格佈局 --- */
+    /* --- 第一層：卡片網格佈局 (主星圖) --- */
     #grid {
       display: grid;
       grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
@@ -110,7 +109,6 @@
       border-color: #ffdf73;
     }
     
-    /* 特別給九重天卡片一個炫酷的外框發光效果 */
     .card.empyrean-card {
       border-color: #38bdf8;
       background: rgba(56, 189, 248, 0.05);
@@ -157,76 +155,135 @@
       margin-top: 8px;
     }
 
-    /* --- 側邊面板 (任務清單) --- */
-    #side-panel {
-      position: fixed;
-      top: 0;
-      right: -500px;
-      width: 450px;
-      max-width: 100vw;
-      height: 100vh;
-      background: rgba(12, 14, 18, 0.98);
-      border-left: 2px solid #c5a059;
-      box-shadow: -5px 0 20px rgba(0,0,0,0.9);
-      transition: right 0.4s cubic-bezier(0.1, 0.7, 0.1, 1);
-      z-index: 2000;
-      padding: 30px;
-      box-sizing: border-box;
-      overflow-y: auto;
+    /* --- 🌟 第二層：星球專屬大頁面 (預設隱藏) --- */
+    #planet-detail-view {
+      display: none;
+      max-width: 1200px;
+      margin: 0 auto;
+      animation: fadeIn 0.4s cubic-bezier(0.1, 0.7, 0.1, 1);
     }
-    #side-panel.open {
-      right: 0;
+    
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
     }
-    .panel-close {
-      position: absolute;
-      top: 20px;
-      right: 20px;
-      color: #a0aec0;
-      cursor: pointer;
-      font-size: 1.5em;
-    }
-    .panel-close:hover {
-      color: #ffdf73;
-    }
-    .panel-title {
-      color: #38bdf8;
-      font-size: 2em;
-      letter-spacing: 2px;
-      margin-bottom: 20px;
+
+    .planet-header {
       display: flex;
       align-items: center;
-      gap: 15px;
+      justify-content: center;
+      gap: 30px;
+      border-bottom: 2px solid #c5a059;
+      padding-bottom: 30px;
+      margin-bottom: 40px;
     }
-    .panel-img {
-      width: 50px;
-      height: 50px;
+    .planet-header img {
+      width: 150px;
+      height: 150px;
       object-fit: contain;
+      filter: drop-shadow(0 0 25px rgba(56, 189, 248, 0.6));
     }
-    .node-list {
-      margin-top: 20px;
+    .planet-header-text h2 {
+      color: #38bdf8;
+      font-size: 3em;
+      margin: 0 0 10px 0;
+      letter-spacing: 5px;
+      text-shadow: 0 2px 10px rgba(0,0,0,0.9);
     }
-    .node-item {
-      background: rgba(255,255,255,0.05);
+    .planet-header-text p {
+      color: #a0aec0;
+      font-size: 1.4em;
+      margin: 0;
+      letter-spacing: 2px;
+    }
+
+    /* 掉落物區塊 */
+    .drops-section {
+      background: rgba(255,255,255,0.03);
+      border: 1px dashed rgba(197, 160, 89, 0.5);
+      border-radius: 12px;
+      padding: 25px;
+      margin-bottom: 50px;
+    }
+    .drops-title {
+      color: #ffdf73;
+      font-size: 1.3em;
+      font-weight: bold;
+      margin-bottom: 20px;
+      text-align: center;
+      letter-spacing: 2px;
+    }
+    .drops-grid {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+    .drop-item {
+      background: rgba(16, 185, 129, 0.1);
+      border: 1px solid #10b981;
+      color: #10b981;
+      padding: 10px 24px;
+      border-radius: 30px;
+      font-weight: bold;
+      font-size: 1.15em;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+      transition: all 0.3s;
+    }
+    .drop-item:hover {
+      background: rgba(16, 185, 129, 0.3);
+      transform: translateY(-3px);
+      box-shadow: 0 6px 15px rgba(16, 185, 129, 0.4);
+    }
+
+    /* 節點網格 (取代原本側邊欄的清單) */
+    .nodes-section-title {
+      color: #ffdf73;
+      font-size: 1.8em;
+      margin-bottom: 25px;
+      border-left: 5px solid #38bdf8;
+      padding-left: 15px;
+      letter-spacing: 2px;
+    }
+    .nodes-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 20px;
+    }
+    .node-card {
+      background: rgba(12, 14, 18, 0.9);
       border: 1px solid rgba(255,255,255,0.1);
-      padding: 12px;
-      margin-bottom: 10px;
-      border-radius: 4px;
+      border-left: 4px solid #c5a059;
+      padding: 20px;
+      border-radius: 8px;
+      transition: all 0.3s;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.6);
+    }
+    .node-card:hover {
+      background: rgba(255, 255, 255, 0.05);
+      border-left-color: #38bdf8;
+      transform: translateX(5px);
+      box-shadow: 0 6px 15px rgba(56, 189, 248, 0.2);
     }
     .node-name {
       color: #ffdf73;
       font-weight: bold;
-      font-size: 1.1em;
+      font-size: 1.3em;
+      margin-bottom: 10px;
       display: flex;
       justify-content: space-between;
+      align-items: center;
     }
     .node-type {
-      color: #10b981;
+      color: #38bdf8;
       font-size: 0.85em;
+      background: rgba(56, 189, 248, 0.1);
+      padding: 4px 8px;
+      border-radius: 4px;
     }
-    .node-enemy {
+    .node-faction {
       color: #ef4444;
-      font-size: 0.85em;
-      margin-top: 5px;
+      font-size: 1em;
     }
 
     #loader {
@@ -247,42 +304,55 @@
 <body>
 
   <div class="top-bar">
-    <!-- 導航按鈕，ID 綁定方便動態修改 -->
     <div class="back-btn" id="backBtn" onclick="handleBack()">&#8592; 返回樞紐</div>
     <h1>WARFRAME 星圖檢索系統</h1>
     <div id="sub-title">一般星圖</div>
-    <div class="search-container">
+    <div class="search-container" id="searchBoxContainer">
       <input type="text" id="searchInput" placeholder="搜尋星球、節點名稱或任務類型..." autocomplete="off">
     </div>
   </div>
 
   <div id="loader">正在連線至中樞系統載入星圖...</div>
   
+  <!-- 第一層：主星圖 -->
   <div id="grid"></div>
 
-  <div id="side-panel">
-    <div class="panel-close" onclick="closePanel()">✕</div>
-    <div class="panel-title">
-      <img id="panel-image" class="panel-img" src="" onerror="this.style.display='none'">
-      <span id="panel-title-text">星球名稱</span>
+  <!-- 第二層：星球專屬大頁面 (預設隱藏) -->
+  <div id="planet-detail-view">
+    <div class="planet-header">
+      <img id="detail-img" src="" alt="星球圖片" onerror="this.style.display='none'">
+      <div class="planet-header-text">
+        <h2 id="detail-name-tc">星球名稱</h2>
+        <p id="detail-name-en">Planet Name</p>
+      </div>
     </div>
-    <div style="color: #ffdf73; font-weight: bold; border-bottom: 1px solid #c5a059; padding-bottom: 5px;">
-      任務節點清單 (<span id="node-count">0</span>)
+
+    <!-- 🌟 未來的擴充重點：這裡先放佔位假資料 -->
+    <div class="drops-section">
+      <div class="drops-title">💎 本星域特產資源 (佔位測試)</div>
+      <div class="drops-grid" id="detail-drops">
+        <div class="drop-item">鐵氧體</div>
+        <div class="drop-item">紅化結晶</div>
+        <div class="drop-item">神經元</div>
+        <div class="drop-item">大地萃取物</div>
+      </div>
     </div>
-    <div class="node-list" id="panel-nodes">
-      <!-- 節點資料動態插入 -->
-    </div>
+
+    <div class="nodes-section-title">任務節點清單 (<span id="detail-node-count">0</span>)</div>
+    
+    <!-- 節點資料動態插入在這裡 -->
+    <div class="nodes-grid" id="detail-nodes"></div>
   </div>
 
-  <!-- 引入你的獨立翻譯檔案 -->
   <script src="translations.js"></script>
 
   <script>
     const URL_SOL_NODES = 'https://raw.githubusercontent.com/wfcd/warframe-worldstate-data/master/data/solNodes.json';
     const URL_I18N = 'https://raw.githubusercontent.com/wfcd/warframe-items/master/data/json/i18n.json';
 
-    // 🌟 雙層星圖狀態管理
-    let currentView = 'normal'; // 'normal' = 一般星圖, 'proxima' = 九重天星圖
+    let currentView = 'normal'; // 'normal', 'proxima', 或 'detail'
+    let previousView = 'normal'; // 記錄進入大頁面前的狀態，方便返回
+    
     let normalPlanets = {}; 
     let proximaPlanets = {};
     let normalPlanetsArray = []; 
@@ -296,16 +366,39 @@
       "Europa": "images/Europa.png", "Mercury": "images/Mercury.png", "Void": "images/Void.png",
       "Derelict": "images/Derelict.png", "Lua": "images/Lua.png", "Kuva Fortress": "images/KuvaFortress.png",
       "Deimos": "images/Deimos.png", "Zariman": "images/Zariman.png", "Duviri": "images/Duviri.png",
-      "Veil": "images/Void.png" // 面紗毗鄰星借用虛空的圖，或你可以自己加 Veil.png
+      "Veil": "images/Void.png"
     };
 
-    // 🌟 定義星球的開圖順序權重
     const planetOrder = {
       "earth": 1, "venus": 2, "mercury": 3, "mars": 4, "phobos": 5,
       "deimos": 6, "ceres": 7, "jupiter": 8, "europa": 9, "saturn": 10,
       "uranus": 11, "neptune": 12, "pluto": 13, "sedna": 14, "eris": 15,
       "void": 16, "lua": 17, "kuva fortress": 18, "zariman": 19,
       "derelict": 20, "duviri": 100, "veil": 101
+    };
+
+    // 🌟 星球專屬掉落物字典
+    const planetDrops = {
+      "Earth": ["鐵氧體", "紅化結晶", "神經元", "爆燃安瓿"],
+      "Venus": ["合金板", "聚合物束", "電路", "電磁力場裝置樣本"], 
+      "Mercury": ["非晶態合金", "鐵氧體", "聚合物束", "爆燃安瓿"],
+      "Mars": ["鎵", "非晶態合金", "回收金屬", "電磁力場裝置"],
+      "Phobos": ["紅化結晶", "非晶態合金", "生物質", "合金板"],
+      "Ceres": ["合金板", "電路", "Orokin電池", "爆燃安瓿"],
+      "Jupiter": ["回收金屬", "神經傳感器", "生物質", "電磁力場裝置"],
+      "Europa": ["非晶態合金", "紅化結晶", "控制模塊", "電磁力場裝置"],
+      "Saturn": ["奈米孢子", "生物質", "Orokin電池", "爆燃安瓿"],
+      "Uranus": ["聚合物束", "生物質", "鎵", "爆燃安瓿"],
+      "Neptune": ["奈米孢子", "鐵氧體", "控制模塊", "電磁力場裝置"],
+      "Pluto": ["紅化結晶", "非晶態合金", "生物質", "合金板"],
+      "Sedna": ["紅化結晶", "合金板", "回收金屬", "爆燃安瓿"],
+      "Eris": ["奈米孢子", "生物質", "神經元", "突變原樣本"],
+      "Void": ["氬結晶", "控制模塊", "奈米孢子", "鐵氧體"],
+      "Kuva Fortress": ["赤毒", "聚合物束", "回收金屬", "神經元"],
+      "Lua": ["紅化結晶", "鐵氧體", "神經元", "爆燃安瓿"],
+      "Deimos": ["奈米孢子", "突變原樣本", "神經元", "Orokin電池"],
+      "Zariman": ["虛空翎羽", "源拓氏燈籠", "合金板", "鐵氧體"],
+      "Duviri": ["哀悲標置", "龍焏", "肉葉結節", "密聲冷石"]
     };
 
     async function fetchWithCache(url) {
@@ -344,7 +437,6 @@
         }
 
         if (type === 'planet') {
-           // 動態產生「XX毗鄰星」的翻譯，不需要手動在字典寫死地球毗鄰星
            if (lower.includes('proxima')) {
                let baseName = lower.replace(' proxima', '');
                if (baseName === 'veil') return "面紗毗鄰星";
@@ -363,11 +455,13 @@
           text = text.replace(/Dark Sector/gi, ""); 
           text = text.replace(/Crossfire/gi, "交火");
           
-          const sortedKeys = Object.keys(missionTypes).sort((a, b) => b.length - a.length);
-          sortedKeys.forEach(key => {
-            const regex = new RegExp(key, "gi");
-            text = text.replace(regex, missionTypes[key]);
-          });
+          if(typeof missionTypes !== 'undefined'){
+              const sortedKeys = Object.keys(missionTypes).sort((a, b) => b.length - a.length);
+              sortedKeys.forEach(key => {
+                const regex = new RegExp(key, "gi");
+                text = text.replace(regex, missionTypes[key]);
+              });
+          }
           
           text = text.replace(/^\s+|\s+$/g, ""); 
           text = text.replace(/交火\s+/g, "交火");
@@ -388,17 +482,14 @@
         const rawPlanetNameEn = match[1]; 
         const rawNodeName = node.value.replace(/\s*\(.*?\)\s*/g, ''); 
 
-        // 🌟 核心過濾器：判斷是否為航道星艦節點
-        const rjMissionTypes = ['Skirmish', 'Orphix', 'Volatile']; // 這些是絕對的空戰任務
+        const rjMissionTypes = ['Skirmish', 'Orphix', 'Volatile']; 
         const isProxima = rawPlanetNameEn === 'Veil' || rjMissionTypes.includes(node.type);
 
         let targetDict, finalPlanetNameEn, imgKey;
 
         if (isProxima) {
             targetDict = proximaPlanets;
-            // 給他們冠上 Proxima 姓氏 (除了原本就是 Veil 的)
             finalPlanetNameEn = rawPlanetNameEn === 'Veil' ? 'Veil Proxima' : `${rawPlanetNameEn} Proxima`;
-            // 圖片繼承原本星球的圖片
             imgKey = rawPlanetNameEn === 'Veil' ? 'Veil' : rawPlanetNameEn;
         } else {
             targetDict = normalPlanets;
@@ -406,7 +497,6 @@
             imgKey = rawPlanetNameEn;
         }
 
-        // 初始化星球資料夾
         if (!targetDict[finalPlanetNameEn]) {
             targetDict[finalPlanetNameEn] = {
                 nameEn: finalPlanetNameEn,
@@ -424,7 +514,6 @@
         });
       });
 
-      // 轉換並排序一般星圖
       normalPlanetsArray = Object.values(normalPlanets);
       normalPlanetsArray.sort((a, b) => {
         let aBase = a.nameEn.toLowerCase();
@@ -435,7 +524,6 @@
         return a.nameEn.localeCompare(b.nameEn);
       });
 
-      // 轉換並排序九重天星圖
       proximaPlanetsArray = Object.values(proximaPlanets);
       proximaPlanetsArray.sort((a, b) => {
         let aBase = a.nameEn.toLowerCase().replace(' proxima', '');
@@ -449,27 +537,20 @@
       // 預設渲染一般星圖
       renderGrid(normalPlanetsArray);
 
-      // 預設渲染一般星圖
-      renderGrid(normalPlanetsArray);
-
-      // 🌟 新增：讀取雙參數，執行超精準過濾
+      // 🌟 讀取網址的雙參數，執行超精準過濾
       const urlParams = new URLSearchParams(window.location.search);
-      const resourceName = urlParams.get('resource'); // 例如：鐵氧體
-      const targetLocations = urlParams.get('targets'); // 例如：地球, 土星, 海王星
+      const resourceName = urlParams.get('resource'); 
+      const targetLocations = urlParams.get('targets'); 
       
       if (resourceName && targetLocations) {
         const searchInput = document.getElementById('searchInput');
-        // 在搜尋框顯示帥氣的提示文字，讓玩家知道現在正在找什麼
         searchInput.value = `📍 尋找素材：${resourceName}`;
         
-        // 核心邏輯：利用傳過來的 targetLocations 字串，直接過濾出符合的星球
         const filteredPlanets = normalPlanetsArray.filter(planet => {
-            // 只要這顆星球的「英文名」或「中文名」有出現在掉落字串裡，就保留它
             return targetLocations.toLowerCase().includes(planet.nameEn.toLowerCase()) || 
                    targetLocations.includes(planet.nameTc);
         });
         
-        // 強制渲染這些被篩選出來的星球
         renderGrid(filteredPlanets);
       }
 
@@ -478,18 +559,31 @@
       document.getElementById('loader').innerText = '載入失敗，請檢查網路連線。';
     });
 
-    // 🌟 返回按鈕邏輯：根據目前視圖切換
+    // 🌟 導航返回邏輯
     function handleBack() {
-      if (currentView === 'proxima') {
-          // 在九重天內點擊返回 -> 回到一般星圖
+      if (currentView === 'detail') {
+          // 從星球專屬頁面退回：恢復主星圖與搜尋框
+          currentView = previousView;
+          document.getElementById('planet-detail-view').style.display = 'none';
+          document.getElementById('grid').style.display = 'grid';
+          document.getElementById('searchBoxContainer').style.display = 'block';
+          
+          if (currentView === 'normal') {
+              document.getElementById('backBtn').innerHTML = '&#8592; 返回樞紐';
+              document.getElementById('sub-title').innerText = '一般星圖';
+          } else {
+              document.getElementById('backBtn').innerHTML = '&#8592; 返回一般星圖';
+              document.getElementById('sub-title').innerText = '九重天 (銳捷號星圖)';
+          }
+      } else if (currentView === 'proxima') {
+          // 從九重天退回一般星圖
           currentView = 'normal';
           document.getElementById('backBtn').innerHTML = '&#8592; 返回樞紐';
           document.getElementById('sub-title').innerText = '一般星圖';
           document.getElementById('searchInput').value = '';
-          closePanel();
           renderGrid(normalPlanetsArray);
       } else {
-          // 在一般星圖內點擊返回 -> 回到網站首頁 (index.html)
+          // 從一般星圖退回網站首頁
           window.location.href = 'index.html'; 
       }
     }
@@ -518,16 +612,15 @@
           <div class="card-subtitle" style="color: #10b981; margin-top: 15px;">${planet.nodes.length} 個節點</div>
         `;
         
-        card.onclick = () => openPanel(planet);
+        // 🌟 改成點擊後開啟專屬大頁面
+        card.onclick = () => openPlanetDetail(planet);
         grid.appendChild(card);
       });
 
-      // 🌟 當我們在一般星圖時，手動把「九重天 (Empyrean)」卡片加在最後面！
       if (currentView === 'normal') {
           const rjCard = document.createElement('div');
-          rjCard.className = 'card empyrean-card'; // 加上專屬特效
+          rjCard.className = 'card empyrean-card';
           rjCard.innerHTML = `
-            <!-- 這裡就是吃你剛下載好的 railjack.png -->
             <img src="images/railjack.png" class="planet-img" onerror="this.outerHTML='<div class=\\'planet-placeholder\\'>無圖片</div>';">
             <div class="card-title">九重天</div>
             <div class="card-subtitle">Empyrean</div>
@@ -535,7 +628,6 @@
           `;
           
           rjCard.onclick = () => {
-              // 切換視圖至九重天
               currentView = 'proxima';
               document.getElementById('backBtn').innerHTML = '&#8592; 返回一般星圖';
               document.getElementById('sub-title').innerText = '九重天 (銳捷號星圖)';
@@ -546,11 +638,73 @@
       }
     }
 
-    // 搜尋功能也做雙層適配
+    // 🌟 進入星球專屬大頁面
+    function openPlanetDetail(planet) {
+      // 紀錄是從哪裡來的
+      previousView = currentView;
+      currentView = 'detail';
+      
+      // 隱藏第一層 UI
+      document.getElementById('grid').style.display = 'none';
+      document.getElementById('searchBoxContainer').style.display = 'none';
+      
+      // 更改導航列狀態
+      document.getElementById('backBtn').innerHTML = previousView === 'normal' ? '&#8592; 返回一般星圖' : '&#8592; 返回銳捷號星圖';
+      document.getElementById('sub-title').innerText = '星域詳細資訊';
+
+      // 顯示第二層大頁面
+      document.getElementById('planet-detail-view').style.display = 'block';
+
+      // 填入頂部星球資訊
+      const detailImg = document.getElementById('detail-img');
+      if (planet.imgUrl) {
+        detailImg.src = planet.imgUrl;
+        detailImg.style.display = 'block';
+      } else {
+        detailImg.style.display = 'none';
+      }
+      document.getElementById('detail-name-tc').innerText = planet.nameTc;
+      document.getElementById('detail-name-en').innerText = planet.nameEn;
+      document.getElementById('detail-node-count').innerText = planet.nodes.length;
+
+      // ... 前面是填入 detail-name-tc 等資訊的代碼 ...
+
+      // 🌟 動態渲染星球掉落物
+      const dropsContainer = document.getElementById('detail-drops');
+      dropsContainer.innerHTML = ''; // 清空假資料
+      
+      // 根據英文星球名稱去字典抓資料
+      const drops = planetDrops[planet.nameEn]; 
+      
+      if (drops && drops.length > 0) {
+        drops.forEach(dropName => {
+          // 如果之後你有資源的圖片，也可以把圖示包在裡面
+          dropsContainer.innerHTML += `<div class="drop-item">${dropName}</div>`;
+        });
+      } else {
+        // 如果是九重天(Proxima)或是還沒建檔的星球，顯示提示
+        dropsContainer.innerHTML = `<div style="color: #a0aec0; font-style: italic;">本星域無常規資源掉落資料。</div>`;
+      }
+      
+      // 渲染下半部的網格節點
+      const nodesContainer = document.getElementById('detail-nodes');
+      nodesContainer.innerHTML = '';
+      
+      planet.nodes.sort((a, b) => a.name.localeCompare(b.name)).forEach(node => {
+        nodesContainer.innerHTML += `
+          <div class="node-card">
+            <div class="node-name">
+              <span>${node.name}</span>
+              <span class="node-type">${node.type}</span>
+            </div>
+            <div class="node-faction">派系：${node.enemy}</div>
+          </div>
+        `;
+      });
+    }
+
     document.getElementById('searchInput').addEventListener('input', (e) => {
       const term = e.target.value.toLowerCase().trim();
-      
-      // 根據目前的視圖去搜尋對應的陣列
       const activeArray = currentView === 'normal' ? normalPlanetsArray : proximaPlanetsArray;
 
       const filtered = activeArray.filter(planet => {
@@ -563,41 +717,6 @@
       });
       renderGrid(filtered);
     });
-
-    const sidePanel = document.getElementById('side-panel');
-    function openPanel(planet) {
-      document.getElementById('panel-title-text').innerText = planet.nameTc;
-      document.getElementById('node-count').innerText = planet.nodes.length;
-      
-      const panelImg = document.getElementById('panel-image');
-      if (planet.imgUrl) {
-        panelImg.src = planet.imgUrl;
-        panelImg.style.display = 'block';
-      } else {
-        panelImg.style.display = 'none';
-      }
-      
-      const nodesContainer = document.getElementById('panel-nodes');
-      nodesContainer.innerHTML = '';
-      
-      planet.nodes.sort((a, b) => a.name.localeCompare(b.name)).forEach(node => {
-        nodesContainer.innerHTML += `
-          <div class="node-item">
-            <div class="node-name">
-              <span>${node.name}</span>
-              <span class="node-type">${node.type}</span>
-            </div>
-            <div class="node-enemy">派系：${node.enemy}</div>
-          </div>
-        `;
-      });
-      
-      sidePanel.classList.add('open');
-    }
-
-    function closePanel() {
-      sidePanel.classList.remove('open');
-    }
   </script>
 </body>
 </html>

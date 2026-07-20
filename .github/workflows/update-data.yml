@@ -3,29 +3,29 @@ name: 自動更新 Warframe 資料索引
 # 什麼時候觸發這個腳本？
 on:
   schedule:
-    - cron: '0 0 * * 1' # 每週一的 UTC 00:00 自動執行一次
-  workflow_dispatch: # 允許我們在 GitHub 網頁上「手動按按鈕」執行
+    - cron: '0 0 * * 1'
+  workflow_dispatch:
+
+# 🌟 關鍵修復：發放寫入權限給機器人，允許它上傳檔案
+permissions:
+  contents: write
 
 jobs:
   build-data:
     runs-on: ubuntu-latest
 
     steps:
-      # 1. 把你的程式碼抓到 GitHub 的伺服器上
       - name: 檢查程式碼 (Checkout repository)
         uses: actions/checkout@v4
 
-      # 2. 安裝 Node.js 環境
       - name: 安裝 Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: '20'
+          node-version: '24' # 🌟 順手升級版本，消滅黃色警告
 
-      # 3. 執行我們寫好的腳本
       - name: 執行資料建構腳本
         run: npm run build
 
-      # 4. 如果 data_index.json 有更新，自動 Commit 並推送到你的 Repo
       - name: 自動提交更新的檔案
         uses: stefanzweifel/git-auto-commit-action@v5
         with:

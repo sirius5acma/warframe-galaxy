@@ -1,0 +1,295 @@
+body {
+  margin: 0;
+  padding: 40px 20px;
+  background-color: #0c0e12;
+  color: #fdfbf7;
+  font-family: sans-serif;
+}
+
+/* --- 頂部控制列 --- */
+.top-bar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto 40px auto;
+  position: relative;
+}
+
+.back-btn {
+  position: absolute;
+  left: 0;
+  top: 0;
+  background: rgba(12,14,18,0.9);
+  border: 1px solid #c5a059;
+  color: #ffdf73;
+  padding: 10px 20px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  letter-spacing: 1px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.8);
+  transition: all 0.3s ease;
+  z-index: 100;
+}
+.back-btn:hover {
+  background: rgba(212,175,55,0.2);
+  transform: translateX(-3px);
+}
+
+h1 {
+  color: #d4af37;
+  letter-spacing: 6px;
+  font-size: 2em;
+  margin: 0 0 20px 0;
+  text-shadow: 0 2px 10px rgba(0,0,0,0.9);
+  text-align: center;
+}
+
+#sub-title {
+  color: #38bdf8;
+  font-size: 1.2em;
+  letter-spacing: 3px;
+  margin-bottom: 20px;
+  text-shadow: 0 2px 5px rgba(0,0,0,0.8);
+}
+
+.search-container {
+  width: 100%;
+  max-width: 500px;
+}
+#searchInput {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 12px 20px;
+  background: rgba(255,255,255,0.05);
+  border: 1px solid #c5a059;
+  border-radius: 25px;
+  color: #fdfbf7;
+  font-size: 1.1em;
+  outline: none;
+  transition: all 0.3s;
+}
+#searchInput:focus {
+  background: rgba(255,255,255,0.1);
+  box-shadow: 0 0 15px rgba(212,175,55,0.3);
+}
+
+/* --- 第一層：卡片網格佈局 (主星圖) --- */
+#grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 25px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.card {
+  background: rgba(255,255,255,0.03);
+  border: 1px solid #c5a059;
+  border-radius: 8px;
+  padding: 20px;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.5);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.card:hover {
+  background: rgba(212, 175, 55, 0.1);
+  transform: translateY(-8px);
+  box-shadow: 0 8px 20px rgba(212,175,55,0.4);
+  border-color: #ffdf73;
+}
+
+.card.empyrean-card {
+  border-color: #38bdf8;
+  background: rgba(56, 189, 248, 0.05);
+}
+.card.empyrean-card:hover {
+  border-color: #7dd3fc;
+  box-shadow: 0 8px 20px rgba(56, 189, 248, 0.4);
+}
+.card.empyrean-card .card-title {
+  color: #38bdf8;
+}
+
+.planet-img {
+  width: 120px;
+  height: 120px;
+  object-fit: contain;
+  margin-bottom: 15px;
+  filter: drop-shadow(0 4px 10px rgba(0,0,0,0.8));
+}
+
+.planet-placeholder {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  background: radial-gradient(circle at 30% 30%, #334155, #0f172a);
+  margin-bottom: 15px;
+  box-shadow: inset -10px -10px 20px rgba(0,0,0,0.5), 0 4px 10px rgba(0,0,0,0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #64748b;
+  font-size: 0.8em;
+}
+
+.card-title {
+  color: #ffdf73;
+  font-weight: bold;
+  font-size: 1.4em;
+  letter-spacing: 2px;
+}
+.card-subtitle {
+  font-size: 0.9em;
+  color: #a0aec0;
+  margin-top: 8px;
+}
+
+/* --- 第二層：星球專屬大頁面 --- */
+#planet-detail-view {
+  display: none;
+  max-width: 1200px;
+  margin: 0 auto;
+  animation: fadeIn 0.4s cubic-bezier(0.1, 0.7, 0.1, 1);
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.planet-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+  border-bottom: 2px solid #c5a059;
+  padding-bottom: 30px;
+  margin-bottom: 40px;
+}
+.planet-header img {
+  width: 150px;
+  height: 150px;
+  object-fit: contain;
+  filter: drop-shadow(0 0 25px rgba(56, 189, 248, 0.6));
+}
+.planet-header-text h2 {
+  color: #38bdf8;
+  font-size: 3em;
+  margin: 0 0 10px 0;
+  letter-spacing: 5px;
+  text-shadow: 0 2px 10px rgba(0,0,0,0.9);
+}
+.planet-header-text p {
+  color: #a0aec0;
+  font-size: 1.4em;
+  margin: 0;
+  letter-spacing: 2px;
+}
+
+/* 掉落物區塊 */
+.drops-section {
+  background: rgba(255,255,255,0.03);
+  border: 1px dashed rgba(197, 160, 89, 0.5);
+  border-radius: 12px;
+  padding: 25px;
+  margin-bottom: 50px;
+}
+.drops-title {
+  color: #ffdf73;
+  font-size: 1.3em;
+  font-weight: bold;
+  margin-bottom: 20px;
+  text-align: center;
+  letter-spacing: 2px;
+}
+.drops-grid {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+.drop-item {
+  background: rgba(16, 185, 129, 0.1);
+  border: 1px solid #10b981;
+  color: #10b981;
+  padding: 10px 24px;
+  border-radius: 30px;
+  font-weight: bold;
+  font-size: 1.15em;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+  transition: all 0.3s;
+}
+.drop-item:hover {
+  background: rgba(16, 185, 129, 0.3);
+  transform: translateY(-3px);
+  box-shadow: 0 6px 15px rgba(16, 185, 129, 0.4);
+}
+
+/* 節點網格 */
+.nodes-section-title {
+  color: #ffdf73;
+  font-size: 1.8em;
+  margin-bottom: 25px;
+  border-left: 5px solid #38bdf8;
+  padding-left: 15px;
+  letter-spacing: 2px;
+}
+.nodes-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+}
+.node-card {
+  background: rgba(12, 14, 18, 0.9);
+  border: 1px solid rgba(255,255,255,0.1);
+  border-left: 4px solid #c5a059;
+  padding: 20px;
+  border-radius: 8px;
+  transition: all 0.3s;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.6);
+}
+.node-card:hover {
+  background: rgba(255, 255, 255, 0.05);
+  border-left-color: #38bdf8;
+  transform: translateX(5px);
+  box-shadow: 0 6px 15px rgba(56, 189, 248, 0.2);
+}
+.node-name {
+  color: #ffdf73;
+  font-weight: bold;
+  font-size: 1.3em;
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.node-type {
+  color: #38bdf8;
+  font-size: 0.85em;
+  background: rgba(56, 189, 248, 0.1);
+  padding: 4px 8px;
+  border-radius: 4px;
+}
+.node-faction {
+  color: #ef4444;
+  font-size: 1em;
+}
+
+#loader {
+  text-align: center;
+  color: #38bdf8;
+  font-size: 1.2em;
+  letter-spacing: 2px;
+  animation: pulse 1.5s infinite;
+  margin-top: 50px;
+}
+@keyframes pulse {
+  0% { opacity: 0.5; }
+  50% { opacity: 1; }
+  100% { opacity: 0.5; }
+}

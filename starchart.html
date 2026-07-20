@@ -349,6 +349,7 @@
   <script>
     const URL_SOL_NODES = 'https://raw.githubusercontent.com/wfcd/warframe-worldstate-data/master/data/solNodes.json';
     const URL_I18N = 'https://raw.githubusercontent.com/wfcd/warframe-items/master/data/json/i18n.json';
+    const URL_RESOURCES = 'https://raw.githubusercontent.com/wfcd/warframe-items/master/data/json/Resources.json';
 
     let currentView = 'normal'; // 'normal', 'proxima', 或 'detail'
     let previousView = 'normal'; // 記錄進入大頁面前的狀態，方便返回
@@ -357,6 +358,7 @@
     let proximaPlanets = {};
     let normalPlanetsArray = []; 
     let proximaPlanetsArray = [];
+    let dynamicPlanetDrops = {};
 
     const planetImages = {
       "Earth": "images/Earth.png", "Venus": "images/Venus.png", "Mars": "images/Mars.png",
@@ -377,30 +379,6 @@
       "derelict": 20, "duviri": 100, "veil": 101
     };
 
-    // 🌟 星球專屬掉落物字典
-    const planetDrops = {
-      "Earth": ["鐵氧體", "紅化結晶", "神經元", "爆燃安瓿"],
-      "Venus": ["合金板", "聚合物束", "電路", "電磁力場裝置樣本"], 
-      "Mercury": ["非晶態合金", "鐵氧體", "聚合物束", "爆燃安瓿"],
-      "Mars": ["鎵", "非晶態合金", "回收金屬", "電磁力場裝置"],
-      "Phobos": ["紅化結晶", "非晶態合金", "生物質", "合金板"],
-      "Ceres": ["合金板", "電路", "Orokin電池", "爆燃安瓿"],
-      "Jupiter": ["回收金屬", "神經傳感器", "生物質", "電磁力場裝置"],
-      "Europa": ["非晶態合金", "紅化結晶", "控制模塊", "電磁力場裝置"],
-      "Saturn": ["奈米孢子", "生物質", "Orokin電池", "爆燃安瓿"],
-      "Uranus": ["聚合物束", "生物質", "鎵", "爆燃安瓿"],
-      "Neptune": ["奈米孢子", "鐵氧體", "控制模塊", "電磁力場裝置"],
-      "Pluto": ["紅化結晶", "非晶態合金", "生物質", "合金板"],
-      "Sedna": ["紅化結晶", "合金板", "回收金屬", "爆燃安瓿"],
-      "Eris": ["奈米孢子", "生物質", "神經元", "突變原樣本"],
-      "Void": ["氬結晶", "控制模塊", "奈米孢子", "鐵氧體"],
-      "Kuva Fortress": ["赤毒", "聚合物束", "回收金屬", "神經元"],
-      "Lua": ["紅化結晶", "鐵氧體", "神經元", "爆燃安瓿"],
-      "Deimos": ["奈米孢子", "突變原樣本", "神經元", "Orokin電池"],
-      "Zariman": ["虛空翎羽", "源拓氏燈籠", "合金板", "鐵氧體"],
-      "Duviri": ["哀悲標置", "龍焏", "肉葉結節", "密聲冷石"]
-    };
-
     async function fetchWithCache(url) {
       const cache = await caches.open('warframe-data-cache-v1');
       const cachedResponse = await cache.match(url);
@@ -416,8 +394,9 @@
 
     Promise.all([
       fetchWithCache(URL_SOL_NODES),
-      fetchWithCache(URL_I18N)
-    ]).then(([nodesData, i18nData]) => {
+      fetchWithCache(URL_I18N),
+      fetchWithCache(URL_RESOURCES)
+    ]).then(([nodesData, i18nData, resourcesData]) => {
       document.getElementById('loader').style.display = 'none';
 
       const i18nNameMap = {};
@@ -426,6 +405,39 @@
           i18nNameMap[i18nData[key].en.name.toLowerCase()] = i18nData[key];
         }
       });
+
+      // 🌟 【全自動字典產生器】開始運作！
+      resourcesData.forEach(resource => {
+        // 取得這個素材的官方繁中翻譯
+        let match = i18nData[resource.uniqueName] || (resource.name && i18nNameMap[resource.name.toLowerCase()]);
+        let tcName = match?.tc?.name || match?.['zh-hant']?.name || resource.name;
+        let tcDesc = match?.tc?.description || match?.['zh-hant']?.description || resource.description || "";
+
+        // 用我們之前寫好的狙擊版正則，去抓描述裡的「地點：」
+        const locRegex = /(?:地點|Location)\s*[:：]\s*(.+)/i;
+        const locMatch = tcDesc.match(locRegex);
+
+        if (locMatch) {
+          // 抓出來的字串可能是 "地球、火星、木星" 或 "Earth, Mars"
+          const locString = locMatch[1];
+          // 把它用頓號、逗號或空白切開成陣列
+          const planets = locString.split(/[、,，]/).map(p => p.trim());
+
+          planets.forEach(pName => {
+            if (!pName) return;
+            // 如果字典裡還沒有這顆星球，就開一個新陣列
+            if (!dynamicPlanetDrops[pName]) {
+              dynamicPlanetDrops[pName] = [];
+            }
+            // 把官方繁中名稱塞進去（避免重複）
+            if (!dynamicPlanetDrops[pName].includes(tcName)) {
+              dynamicPlanetDrops[pName].push(tcName);
+            }
+          });
+        }
+      });
+
+      console.log("自動生成的星球掉落物：", dynamicPlanetDrops);
 
       function getTcTranslation(englishName, type) {
         if (!englishName) return "未知";
@@ -671,19 +683,23 @@
 
       // 🌟 動態渲染星球掉落物
       const dropsContainer = document.getElementById('detail-drops');
-      dropsContainer.innerHTML = ''; // 清空假資料
+      dropsContainer.innerHTML = '';
       
-      // 根據英文星球名稱去字典抓資料
-      const drops = planetDrops[planet.nameEn]; 
+      // 🔍 這裡很關鍵！因為素材描述裡寫的可能是中文「地球」或英文「Earth」
+      // 我們兩個都去我們剛剛自動生成的字典裡找找看，並把結果合併
+      let drops = [];
+      const tcDrops = dynamicPlanetDrops[planet.nameTc] || [];
+      const enDrops = dynamicPlanetDrops[planet.nameEn] || [];
       
-      if (drops && drops.length > 0) {
+      // 把中文跟英文抓到的資源合併，並過濾掉重複的
+      drops = [...new Set([...tcDrops, ...enDrops])];
+      
+      if (drops.length > 0) {
         drops.forEach(dropName => {
-          // 如果之後你有資源的圖片，也可以把圖示包在裡面
           dropsContainer.innerHTML += `<div class="drop-item">${dropName}</div>`;
         });
       } else {
-        // 如果是九重天(Proxima)或是還沒建檔的星球，顯示提示
-        dropsContainer.innerHTML = `<div style="color: #a0aec0; font-style: italic;">本星域無常規資源掉落資料。</div>`;
+        dropsContainer.innerHTML = `<div style="color: #a0aec0; font-style: italic;">資料庫中暫無此星域的常規資源紀錄。</div>`;
       }
       
       // 渲染下半部的網格節點

@@ -1,0 +1,3996 @@
+{
+  "SolNode1": {
+    "id": "SolNode1",
+    "nameEn": "Galatea",
+    "nameTc": "Galatea",
+    "type": "Capture",
+    "faction": "Corpus",
+    "levels": {
+      "normal": "27 - 29",
+      "steelPath": "127 - 129"
+    },
+    "planet": "Neptune",
+    "drops": null
+  },
+  "SolNode2": {
+    "id": "SolNode2",
+    "nameEn": "Aphrodite",
+    "nameTc": "Aphrodite",
+    "type": "Mobile Defense",
+    "faction": "Corpus",
+    "levels": {
+      "normal": "5 - 8",
+      "steelPath": "105 - 108"
+    },
+    "planet": "Venus",
+    "drops": null
+  },
+  "SolNode4": {
+    "id": "SolNode4",
+    "nameEn": "Acheron",
+    "nameTc": "Acheron",
+    "type": "Extermination",
+    "faction": "Corpus",
+    "levels": {
+      "normal": "34 - 38",
+      "steelPath": "134 - 138"
+    },
+    "planet": "Pluto",
+    "drops": null
+  },
+  "SolNode6": {
+    "id": "SolNode6",
+    "nameEn": "Despina",
+    "nameTc": "Despina",
+    "type": "Excavation",
+    "faction": "Corpus",
+    "levels": {
+      "normal": "27 - 32",
+      "steelPath": "127 - 132"
+    },
+    "planet": "Neptune",
+    "drops": null
+  },
+  "SolNode9": {
+    "id": "SolNode9",
+    "nameEn": "Rosalind",
+    "nameTc": "Rosalind",
+    "type": "Spy",
+    "faction": "Grineer",
+    "levels": {
+      "normal": "27 - 29",
+      "steelPath": "127 - 129"
+    },
+    "planet": "Uranus",
+    "drops": null
+  },
+  "SolNode10": {
+    "id": "SolNode10",
+    "nameEn": "Thebe",
+    "nameTc": "Thebe",
+    "type": "Sabotage",
+    "faction": "Corpus",
+    "levels": {
+      "normal": "18 - 20",
+      "steelPath": "118 - 120"
+    },
+    "planet": "Jupiter",
+    "drops": null
+  },
+  "SolNode11": {
+    "id": "SolNode11",
+    "nameEn": "Tharsis",
+    "nameTc": "Tharsis",
+    "type": "Mobile Defense",
+    "faction": "Corpus",
+    "levels": {
+      "normal": "9 - 11",
+      "steelPath": "109 - 111"
+    },
+    "planet": "Mars",
+    "drops": null
+  },
+  "SolNode12": {
+    "id": "SolNode12",
+    "nameEn": "Elion",
+    "nameTc": "Elion",
+    "type": "Capture",
+    "faction": "Grineer",
+    "levels": {
+      "normal": "7 - 9",
+      "steelPath": "107 - 109"
+    },
+    "planet": "Mercury",
+    "drops": null
+  },
+  "SolNode14": {
+    "id": "SolNode14",
+    "nameEn": "Ultor",
+    "nameTc": "Ultor",
+    "type": "Extermination",
+    "faction": "Crossfire",
+    "levels": {
+      "normal": "11 - 13",
+      "steelPath": "111 - 113"
+    },
+    "planet": "Mars",
+    "drops": null
+  },
+  "SolNode15": {
+    "id": "SolNode15",
+    "nameEn": "Pacific",
+    "nameTc": "Pacific",
+    "type": "Rescue",
+    "faction": "Grineer",
+    "levels": {
+      "normal": "3 - 6",
+      "steelPath": "103 - 106"
+    },
+    "planet": "Earth",
+    "drops": null
+  },
+  "SolNode16": {
+    "id": "SolNode16",
+    "nameEn": "Augustus",
+    "nameTc": "Augustus",
+    "type": "Excavation",
+    "faction": "Grineer",
+    "levels": {
+      "normal": "9 - 11",
+      "steelPath": "109 - 111"
+    },
+    "planet": "Mars",
+    "drops": null
+  },
+  "SolNode17": {
+    "id": "SolNode17",
+    "nameEn": "Proteus",
+    "nameTc": "Proteus",
+    "type": "Defense",
+    "faction": "Corpus",
+    "levels": {
+      "normal": "27 - 32",
+      "steelPath": "127 - 132"
+    },
+    "planet": "Neptune",
+    "drops": null
+  },
+  "SolNode18": {
+    "id": "SolNode18",
+    "nameEn": "Rhea",
+    "nameTc": "Rhea",
+    "type": "Interception",
+    "faction": "Grineer",
+    "levels": {
+      "normal": "21 - 26",
+      "steelPath": "121 - 126"
+    },
+    "planet": "Saturn",
+    "drops": null
+  },
+  "SolNode19": {
+    "id": "SolNode19",
+    "nameEn": "Enceladus",
+    "nameTc": "Enceladus",
+    "type": "Sabotage",
+    "faction": "Grineer",
+    "levels": {
+      "normal": "23 - 25",
+      "steelPath": "123 - 125"
+    },
+    "planet": "Saturn",
+    "drops": null
+  },
+  "SolNode20": {
+    "id": "SolNode20",
+    "nameEn": "Telesto",
+    "nameTc": "Telesto",
+    "type": "Extermination",
+    "faction": "Grineer",
+    "levels": {
+      "normal": "22 - 24",
+      "steelPath": "122 - 124"
+    },
+    "planet": "Saturn",
+    "drops": null
+  },
+  "SolNode21": {
+    "id": "SolNode21",
+    "nameEn": "Narcissus",
+    "nameTc": "Narcissus",
+    "type": "Extermination",
+    "faction": "Corpus",
+    "levels": {
+      "normal": "32 - 36",
+      "steelPath": "132 - 136"
+    },
+    "planet": "Pluto",
+    "drops": null
+  },
+  "SolNode22": {
+    "id": "SolNode22",
+    "nameEn": "Tessera",
+    "nameTc": "Tessera",
+    "type": "Defense",
+    "faction": "Corpus",
+    "levels": {
+      "normal": "3 - 7",
+      "steelPath": "103 - 107"
+    },
+    "planet": "Venus",
+    "drops": null
+  },
+  "SolNode23": {
+    "id": "SolNode23",
+    "nameEn": "Cytherean",
+    "nameTc": "Cytherean",
+    "type": "Interception",
+    "faction": "Corpus",
+    "levels": {
+      "normal": "6 - 8",
+      "steelPath": "106 - 108"
+    },
+    "planet": "Venus",
+    "drops": null
+  },
+  "SolNode24": {
+    "id": "SolNode24",
+    "nameEn": "Oro",
+    "nameTc": "Oro",
+    "type": "Assassination",
+    "faction": "Grineer",
+    "levels": {
+      "normal": "20 - 25",
+      "steelPath": "120 - 125"
+    },
+    "planet": "Earth",
+    "drops": null
+  },
+  "SolNode25": {
+    "id": "SolNode25",
+    "nameEn": "Callisto",
+    "nameTc": "Callisto",
+    "type": "Interception",
+    "faction": "Corpus",
+    "levels": {
+      "normal": "15 - 20",
+      "steelPath": "115 - 120"
+    },
+    "planet": "Jupiter",
+    "drops": null
+  },
+  "SolNode26": {
+    "id": "SolNode26",
+    "nameEn": "Lith",
+    "nameTc": "Lith",
+    "type": "Defense",
+    "faction": "Grineer",
+    "levels": {
+      "normal": "2 - 5",
+      "steelPath": "102 - 105"
+    },
+    "planet": "Earth",
+    "drops": null
+  },
+  "SolNode27": {
+    "id": "SolNode27",
+    "nameEn": "E Prime",
+    "nameTc": "E Prime",
+    "type": "Extermination",
+    "faction": "Grineer",
+    "levels": {
+      "normal": "1 - 3",
+      "steelPath": "101 - 103"
+    },
+    "planet": "Earth",
+    "drops": null
+  },
+  "SolNode28": {
+    "id": "SolNode28",
+    "nameEn": "Terminus",
+    "nameTc": "Terminus",
+    "type": "Sabotage",
+    "faction": "Crossfire",
+    "levels": {
+      "normal": "8 - 10",
+      "steelPath": "108 - 110"
+    },
+    "planet": "Mercury",
+    "drops": null
+  },
+  "SolNode30": {
+    "id": "SolNode30",
+    "nameEn": "Olympus",
+    "nameTc": "Olympus",
+    "type": "Disruption",
+    "faction": "Grineer",
+    "levels": {
+      "normal": "15 - 20",
+      "steelPath": "115 - 120"
+    },
+    "planet": "Mars",
+    "drops": null
+  },
+  "SolNode31": {
+    "id": "SolNode31",
+    "nameEn": "Anthe",
+    "nameTc": "Anthe",
+    "type": "Rescue",
+    "faction": "Grineer",
+    "levels": {
+      "normal": "22 - 24",
+      "steelPath": "122 - 124"
+    },
+    "planet": "Saturn",
+    "drops": null
+  },
+  "SolNode32": {
+    "id": "SolNode32",
+    "nameEn": "Tethys",
+    "nameTc": "Tethys",
+    "type": "Assassination",
+    "faction": "Grineer",
+    "levels": {
+      "normal": "24 - 26",
+      "steelPath": "124 - 126"
+    },
+    "planet": "Saturn",
+    "drops": null
+  },
+  "SolNode33": {
+    "id": "SolNode33",
+    "nameEn": "Ariel",
+    "nameTc": "Ariel",
+    "type": "Capture",
+    "faction": "Grineer",
+    "levels": {
+      "normal": "25 - 27",
+      "steelPath": "125 - 127"
+    },
+    "planet": "Uranus",
+    "drops": null
+  },
+  "SolNode34": {
+    "id": "SolNode34",
+    "nameEn": "Sycorax",
+    "nameTc": "Sycorax",
+    "type": "Extermination",
+    "faction": "Grineer",
+    "levels": {
+      "normal": "24 - 26",
+      "steelPath": "124 - 126"
+    },
+    "planet": "Uranus",
+    "drops": null
+  },
+  "SolNode36": {
+    "id": "SolNode36",
+    "nameEn": "Martialis",
+    "nameTc": "Martialis",
+    "type": "Rescue",
+    "faction": "Grineer",
+    "levels": {
+      "normal": "10 - 12",
+      "steelPath": "110 - 112"
+    },
+    "planet": "Mars",
+    "drops": null
+  },
+  "SolNode38": {
+    "id": "SolNode38",
+    "nameEn": "Minthe",
+    "nameTc": "Minthe",
+    "type": "Mobile Defense",
+    "faction": "Corpus",
+    "levels": {
+      "normal": "30 - 34",
+      "steelPath": "130 - 134"
+    },
+    "planet": "Pluto",
+    "drops": null
+  },
+  "SolNode39": {
+    "id": "SolNode39",
+    "nameEn": "Everest",
+    "nameTc": "Everest",
+    "type": "Excavation",
+    "faction": "Grineer",
+    "levels": {
+      "normal": "1 - 6",
+      "steelPath": "101 - 106"
+    },
+    "planet": "Earth",
+    "drops": null
+  },
+  "SolNode41": {
+    "id": "SolNode41",
+    "nameEn": "Arval",
+    "nameTc": "Arval",
+    "type": "Spy",
+    "faction": "Grineer",
+    "levels": {
+      "normal": "9 - 11",
+      "steelPath": "109 - 111"
+    },
+    "planet": "Mars",
+    "drops": null
+  },
+  "SolNode42": {
+    "id": "SolNode42",
+    "nameEn": "Helene",
+    "nameTc": "Helene",
+    "type": "Defense",
+    "faction": "Grineer",
+    "levels": {
+      "normal": "21 - 26",
+      "steelPath": "121 - 126"
+    },
+    "planet": "Saturn",
+    "drops": null
+  },
+  "SolNode43": {
+    "id": "SolNode43",
+    "nameEn": "Cerberus",
+    "nameTc": "Cerberus",
+    "type": "Interception",
+    "faction": "Corpus",
+    "levels": {
+      "normal": "30 - 40",
+      "steelPath": "130 - 140"
+    },
+    "planet": "Pluto",
+    "drops": null
+  },
+  "SolNode45": {
+    "id": "SolNode45",
+    "nameEn": "Ara",
+    "nameTc": "Ara",
+    "type": "Capture",
+    "faction": "Grineer",
+    "levels": {
+      "normal": "10 - 12",
+      "steelPath": "110 - 112"
+    },
+    "planet": "Mars",
+    "drops": null
+  },
+  "SolNode46": {
+    "id": "SolNode46",
+    "nameEn": "Spear",
+    "nameTc": "Spear",
+    "type": "Defense",
+    "faction": "Grineer",
+    "levels": {
+      "normal": "8 - 12",
+      "steelPath": "108 - 112"
+    },
+    "planet": "Mars",
+    "drops": null
+  },
+  "SolNode48": {
+    "id": "SolNode48",
+    "nameEn": "Regna",
+    "nameTc": "Regna",
+    "type": "Rescue",
+    "faction": "Corpus",
+    "levels": {
+      "normal": "34 - 38",
+      "steelPath": "134 - 138"
+    },
+    "planet": "Pluto",
+    "drops": null
+  },
+  "SolNode49": {
+    "id": "SolNode49",
+    "nameEn": "Larissa",
+    "nameTc": "Larissa",
+    "type": "Mobile Defense",
+    "faction": "Corpus",
+    "levels": {
+      "normal": "29 - 31",
+      "steelPath": "129 - 131"
+    },
+    "planet": "Neptune",
+    "drops": null
+  },
+  "SolNode50": {
+    "id": "SolNode50",
+    "nameEn": "Numa",
+    "nameTc": "Numa",
+    "type": "Rescue",
+    "faction": "Grineer",
+    "levels": {
+      "normal": "22 - 24",
+      "steelPath": "122 - 124"
+    },
+    "planet": "Saturn",
+    "drops": null
+  },
+  "SolNode51": {
+    "id": "SolNode51",
+    "nameEn": "Hades",
+    "nameTc": "Hades",
+    "type": "Assassination",
+    "faction": "Corpus",
+    "levels": {
+      "normal": "35 - 45",
+      "steelPath": "135 - 145"
+    },
+    "planet": "Pluto",
+    "drops": null
+  },
+  "SolNode53": {
+    "id": "SolNode53",
+    "nameEn": "Themisto",
+    "nameTc": "Themisto",
+    "type": "Assassination",
+    "faction": "Corpus",
+    "levels": {
+      "normal": "18 - 20",
+      "steelPath": "118 - 120"
+    },
+    "planet": "Jupiter",
+    "drops": null
+  },
+  "SolNode56": {
+    "id": "SolNode56",
+    "nameEn": "Cypress",
+    "nameTc": "Cypress",
+    "type": "Sabotage",
+    "faction": "Corpus",
+    "levels": {
+      "normal": "34 - 38",
+      "steelPath": "134 - 138"
+    },
+    "planet": "Pluto",
+    "drops": null
+  },
+  "SolNode57": {
+    "id": "SolNode57",
+    "nameEn": "Sao",
+    "nameTc": "Sao",
+    "type": "Sabotage",
+    "faction": "Corpus",
+    "levels": {
+      "normal": "30 - 32",
+      "steelPath": "130 - 132"
+    },
+    "planet": "Neptune",
+    "drops": null
+  },
+  "SolNode58": {
+    "id": "SolNode58",
+    "nameEn": "Hellas",
+    "nameTc": "Hellas",
+    "type": "Extermination",
+    "faction": "Grineer",
+    "levels": {
+      "normal": "8 - 12",
+      "steelPath": "108 - 112"
+    },
+    "planet": "Mars",
+    "drops": null
+  },
+  "SolNode59": {
+    "id": "SolNode59",
+    "nameEn": "Eurasia",
+    "nameTc": "Eurasia",
+    "type": "Mobile Defense",
+    "faction": "Grineer",
+    "levels": {
+      "normal": "3 - 6",
+      "steelPath": "103 - 106"
+    },
+    "planet": "Earth",
+    "drops": null
+  },
+  "SolNode60": {
+    "id": "SolNode60",
+    "nameEn": "Caliban",
+    "nameTc": "Caliban",
+    "type": "Rescue",
+    "faction": "Grineer",
+    "levels": {
+      "normal": "25 - 27",
+      "steelPath": "125 - 127"
+    },
+    "planet": "Uranus",
+    "drops": null
+  },
+  "SolNode61": {
+    "id": "SolNode61",
+    "nameEn": "Ishtar",
+    "nameTc": "Ishtar",
+    "type": "Sabotage",
+    "faction": "Corpus",
+    "levels": {
+      "normal": "6 - 8",
+      "steelPath": "106 - 108"
+    },
+    "planet": "Venus",
+    "drops": null
+  },
+  "SolNode62": {
+    "id": "SolNode62",
+    "nameEn": "Neso",
+    "nameTc": "Neso",
+    "type": "Extermination",
+    "faction": "Corpus",
+    "levels": {
+      "normal": "29 - 31",
+      "steelPath": "129 - 131"
+    },
+    "planet": "Neptune",
+    "drops": null
+  },
+  "SolNode63": {
+    "id": "SolNode63",
+    "nameEn": "Mantle",
+    "nameTc": "Mantle",
+    "type": "Capture",
+    "faction": "Grineer",
+    "levels": {
+      "normal": "2 - 4",
+      "steelPath": "102 - 104"
+    },
+    "planet": "Earth",
+    "drops": null
+  },
+  "SolNode64": {
+    "id": "SolNode64",
+    "nameEn": "Umbriel",
+    "nameTc": "Umbriel",
+    "type": "Interception",
+    "faction": "Grineer",
+    "levels": {
+      "normal": "24 - 29",
+      "steelPath": "124 - 129"
+    },
+    "planet": "Uranus",
+    "drops": null
+  },
+  "SolNode65": {
+    "id": "SolNode65",
+    "nameEn": "Gradivus",
+    "nameTc": "Gradivus",
+    "type": "Sabotage",
+    "faction": "Corpus",
+    "levels": {
+      "normal": "9 - 12",
+      "steelPath": "109 - 112"
+    },
+    "planet": "Mars",
+    "drops": null
+  },
+  "SolNode66": {
+    "id": "SolNode66",
+    "nameEn": "Unda",
+    "nameTc": "Unda",
+    "type": "Spy",
+    "faction": "Corpus",
+    "levels": {
+      "normal": "6 - 8",
+      "steelPath": "106 - 108"
+    },
+    "planet": "Venus",
+    "drops": null
+  },
+  "SolNode67": {
+    "id": "SolNode67",
+    "nameEn": "Dione",
+    "nameTc": "Dione",
+    "type": "Spy",
+    "faction": "Grineer",
+    "levels": {
+      "normal": "21 - 23",
+      "steelPath": "121 - 123"
+    },
+    "planet": "Saturn",
+    "drops": null
+  },
+  "SolNode68": {
+    "id": "SolNode68",
+    "nameEn": "Vallis",
+    "nameTc": "Vallis",
+    "type": "Mobile Defense",
+    "faction": "Grineer",
+    "levels": {
+      "normal": "11 - 13",
+      "steelPath": "111 - 113"
+    },
+    "planet": "Mars",
+    "drops": null
+  },
+  "SolNode69": {
+    "id": "SolNode69",
+    "nameEn": "Ophelia",
+    "nameTc": "Ophelia",
+    "type": "Survival",
+    "faction": "Grineer",
+    "levels": {
+      "normal": "24 - 29",
+      "steelPath": "124 - 129"
+    },
+    "planet": "Uranus",
+    "drops": null
+  },
+  "SolNode70": {
+    "id": "SolNode70",
+    "nameEn": "Cassini",
+    "nameTc": "Cassini",
+    "type": "Capture",
+    "faction": "Grineer",
+    "levels": {
+      "normal": "21 - 23",
+      "steelPath": "121 - 123"
+    },
+    "planet": "Saturn",
+    "drops": null
+  },
+  "SolNode71": {
+    "id": "SolNode71",
+    "nameEn": "Vesper",
+    "nameTc": "Vesper",
+    "type": "Spy",
+    "faction": "Corpus",
+    "levels": {
+      "normal": "未知",
+      "steelPath": "未知"
+    },
+    "planet": "Venus",
+    "drops": null
+  },
+  "SolNode72": {
+    "id": "SolNode72",
+    "nameEn": "Outer Terminus",
+    "nameTc": "Outer Terminus",
+    "type": "Defense",
+    "faction": "Corpus",
+    "levels": {
+      "normal": "30 - 40",
+      "steelPath": "130 - 140"
+    },
+    "planet": "Pluto",
+    "drops": null
+  },
+  "SolNode73": {
+    "id": "SolNode73",
+    "nameEn": "Ananke",
+    "nameTc": "Ananke",
+    "type": "Capture",
+    "faction": "Corpus",
+    "levels": {
+      "normal": "16 - 18",
+      "steelPath": "116 - 118"
+    },
+    "planet": "Jupiter",
+    "drops": null
+  },
+  "SolNode74": {
+    "id": "SolNode74",
+    "nameEn": "Carme",
+    "nameTc": "Carme",
+    "type": "Mobile Defense",
+    "faction": "Corpus",
+    "levels": {
+      "normal": "16 - 18",
+      "steelPath": "116 - 118"
+    },
+    "planet": "Jupiter",
+    "drops": null
+  },
+  "SolNode75": {
+    "id": "SolNode75",
+    "nameEn": "Cervantes",
+    "nameTc": "Cervantes",
+    "type": "Sabotage",
+    "faction": "Grineer",
+    "levels": {
+      "normal": "4 - 6",
+      "steelPath": "104 - 106"
+    },
+    "planet": "Earth",
+    "drops": null
+  },
+  "SolNode76": {
+    "id": "SolNode76",
+    "nameEn": "Hydra",
+    "nameTc": "Hydra",
+    "type": "Capture",
+    "faction": "Corpus",
+    "levels": {
+      "normal": "30 - 34",
+      "steelPath": "130 - 134"
+    },
+    "planet": "Pluto",
+    "drops": null
+  },
+  "SolNode78": {
+    "id": "SolNode78",
+    "nameEn": "Triton",
+    "nameTc": "Triton",
+    "type": "Rescue",
+    "faction": "Corpus",
+    "levels": {
+      "normal": "28 - 30",
+      "steelPath": "128 - 130"
+    },
+    "planet": "Neptune",
+    "drops": null
+  },
+  "SolNode79": {
+    "id": "SolNode79",
+    "nameEn": "Cambria",
+    "nameTc": "Cambria",
+    "type": "Spy",
+    "faction": "Grineer",
+    "levels": {
+      "normal": "3 - 6",
+      "steelPath": "103 - 106"
+    },
+    "planet": "Earth",
+    "drops": null
+  },
+  "SolNode81": {
+    "id": "SolNode81",
+    "nameEn": "Palus",
+    "nameTc": "Palus",
+    "type": "Survival",
+    "faction": "Corpus",
+    "levels": {
+      "normal": "30 - 40",
+      "steelPath": "130 - 140"
+    },
+    "planet": "Pluto",
+    "drops": null
+  },
+  "SolNode82": {
+    "id": "SolNode82",
+    "nameEn": "Calypso",
+    "nameTc": "Calypso",
+    "type": "Sabotage",
+    "faction": "Grineer",
+    "levels": {
+      "normal": "24 - 26",
+      "steelPath": "124 - 126"
+    },
+    "planet": "Saturn",
+    "drops": null
+  },
+  "SolNode83": {
+    "id": "SolNode83",
+    "nameEn": "Cressida",
+    "nameTc": "Cressida",
+    "type": "Mobile Defense",
+    "faction": "Grineer",
+    "levels": {
+      "normal": "27 - 29",
+      "steelPath": "127 - 129"
+    },
+    "planet": "Uranus",
+    "drops": null
+  },
+  "SolNode84": {
+    "id": "SolNode84",
+    "nameEn": "Nereid",
+    "nameTc": "Nereid",
+    "type": "Spy",
+    "faction": "Corpus",
+    "levels": {
+      "normal": "30 - 32",
+      "steelPath": "130 - 132"
+    },
+    "planet": "Neptune",
+    "drops": null
+  },
+  "SolNode85": {
+    "id": "SolNode85",
+    "nameEn": "Gaia",
+    "nameTc": "Gaia",
+    "type": "Interception",
+    "faction": "Grineer",
+    "levels": {
+      "normal": "1 - 6",
+      "steelPath": "101 - 106"
+    },
+    "planet": "Earth",
+    "drops": null
+  },
+  "SolNode87": {
+    "id": "SolNode87",
+    "nameEn": "Ganymede",
+    "nameTc": "Ganymede",
+    "type": "Disruption",
+    "faction": "Corpus",
+    "levels": {
+      "normal": "30 - 35",
+      "steelPath": "130 - 135"
+    },
+    "planet": "Jupiter",
+    "drops": null
+  },
+  "SolNode88": {
+    "id": "SolNode88",
+    "nameEn": "Adrastea",
+    "nameTc": "Adrastea",
+    "type": "Sabotage",
+    "faction": "Corpus",
+    "levels": {
+      "normal": "18 - 20",
+      "steelPath": "118 - 120"
+    },
+    "planet": "Jupiter",
+    "drops": null
+  },
+  "SolNode89": {
+    "id": "SolNode89",
+    "nameEn": "Mariana",
+    "nameTc": "Mariana",
+    "type": "Extermination",
+    "faction": "Grineer",
+    "levels": {
+      "normal": "1 - 3",
+      "steelPath": "101 - 103"
+    },
+    "planet": "Earth",
+    "drops": null
+  },
+  "SolNode93": {
+    "id": "SolNode93",
+    "nameEn": "Keeler",
+    "nameTc": "Keeler",
+    "type": "Mobile Defense",
+    "faction": "Grineer",
+    "levels": {
+      "normal": "23 - 25",
+      "steelPath": "123 - 125"
+    },
+    "planet": "Saturn",
+    "drops": null
+  },
+  "SolNode94": {
+    "id": "SolNode94",
+    "nameEn": "Apollodorus",
+    "nameTc": "Apollodorus",
+    "type": "Survival",
+    "faction": "Infested",
+    "levels": {
+      "normal": "6 - 11",
+      "steelPath": "106 - 111"
+    },
+    "planet": "Mercury",
+    "drops": null
+  },
+  "SolNode96": {
+    "id": "SolNode96",
+    "nameEn": "Titan",
+    "nameTc": "Titan",
+    "type": "Survival",
+    "faction": "Grineer",
+    "levels": {
+      "normal": "21 - 26",
+      "steelPath": "121 - 126"
+    },
+    "planet": "Saturn",
+    "drops": null
+  },
+  "SolNode97": {
+    "id": "SolNode97",
+    "nameEn": "Amalthea",
+    "nameTc": "Amalthea",
+    "type": "Spy",
+    "faction": "Corpus",
+    "levels": {
+      "normal": "17 - 19",
+      "steelPath": "117 - 119"
+    },
+    "planet": "Jupiter",
+    "drops": null
+  },
+  "SolNode98": {
+    "id": "SolNode98",
+    "nameEn": "Desdemona",
+    "nameTc": "Desdemona",
+    "type": "Sabotage (Archwing)",
+    "faction": "Grineer",
+    "levels": {
+      "normal": "26 - 28",
+      "steelPath": "126 - 128"
+    },
+    "planet": "Uranus",
+    "drops": null
+  },
+  "SolNode99": {
+    "id": "SolNode99",
+    "nameEn": "War",
+    "nameTc": "War",
+    "type": "Assassination",
+    "faction": "Grineer",
+    "levels": {
+      "normal": "11 - 13",
+      "steelPath": "111 - 113"
+    },
+    "planet": "Mars",
+    "drops": null
+  },
+  "SolNode100": {
+    "id": "SolNode100",
+    "nameEn": "Elara",
+    "nameTc": "Elara",
+    "type": "Survival",
+    "faction": "Corpus",
+    "levels": {
+      "normal": "15 - 20",
+      "steelPath": "115 - 120"
+    },
+    "planet": "Jupiter",
+    "drops": null
+  },
+  "SolNode101": {
+    "id": "SolNode101",
+    "nameEn": "Kiliken",
+    "nameTc": "Kiliken",
+    "type": "Excavation",
+    "faction": "Corpus",
+    "levels": {
+      "normal": "3 - 7",
+      "steelPath": "103 - 107"
+    },
+    "planet": "Venus",
+    "drops": null
+  },
+  "SolNode102": {
+    "id": "SolNode102",
+    "nameEn": "Oceanum",
+    "nameTc": "Oceanum",
+    "type": "Spy",
+    "faction": "Corpus",
+    "levels": {
+      "normal": "32 - 36",
+      "steelPath": "132 - 136"
+    },
+    "planet": "Pluto",
+    "drops": null
+  },
+  "SolNode103": {
+    "id": "SolNode103",
+    "nameEn": "M Prime",
+    "nameTc": "M Prime",
+    "type": "Extermination",
+    "faction": "Crossfire",
+    "levels": {
+      "normal": "7 - 9",
+      "steelPath": "107 - 109"
+    },
+    "planet": "Mercury",
+    "drops": null
+  },
+  "SolNode104": {
+    "id": "SolNode104",
+    "nameEn": "Fossa",
+    "nameTc": "Fossa",
+    "type": "Assassination",
+    "faction": "Corpus",
+    "levels": {
+      "normal": "6 - 8",
+      "steelPath": "106 - 108"
+    },
+    "planet": "Venus",
+    "drops": null
+  },
+  "SolNode105": {
+    "id": "SolNode105",
+    "nameEn": "Titania",
+    "nameTc": "Titania",
+    "type": "Assassination",
+    "faction": "Grineer",
+    "levels": {
+      "normal": "27 - 29",
+      "steelPath": "127 - 129"
+    },
+    "planet": "Uranus",
+    "drops": null
+  },
+  "SolNode106": {
+    "id": "SolNode106",
+    "nameEn": "Alator",
+    "nameTc": "Alator",
+    "type": "Interception",
+    "faction": "Grineer",
+    "levels": {
+      "normal": "8 - 13",
+      "steelPath": "108 - 113"
+    },
+    "planet": "Mars",
+    "drops": null
+  },
+  "SolNode107": {
+    "id": "SolNode107",
+    "nameEn": "Venera",
+    "nameTc": "Venera",
+    "type": "Capture",
+    "faction": "Corpus",
+    "levels": {
+      "normal": "5 - 7",
+      "steelPath": "105 - 107"
+    },
+    "planet": "Venus",
+    "drops": null
+  },
+  "SolNode108": {
+    "id": "SolNode108",
+    "nameEn": "Tolstoj",
+    "nameTc": "Tolstoj",
+    "type": "Assassination",
+    "faction": "Grineer",
+    "levels": {
+      "normal": "8 - 10",
+      "steelPath": "108 - 110"
+    },
+    "planet": "Mercury",
+    "drops": null
+  },
+  "SolNode109": {
+    "id": "SolNode109",
+    "nameEn": "Linea",
+    "nameTc": "Linea",
+    "type": "Rescue",
+    "faction": "Corpus",
+    "levels": {
+      "normal": "5 - 7",
+      "steelPath": "105 - 107"
+    },
+    "planet": "Venus",
+    "drops": null
+  },
+  "SolNode113": {
+    "id": "SolNode113",
+    "nameEn": "Ares",
+    "nameTc": "Ares",
+    "type": "Sabotage",
+    "faction": "Grineer",
+    "levels": {
+      "normal": "8 - 10",
+      "steelPath": "108 - 110"
+    },
+    "planet": "Mars",
+    "drops": null
+  },
+  "SolNode114": {
+    "id": "SolNode114",
+    "nameEn": "Puck",
+    "nameTc": "Puck",
+    "type": "Extermination",
+    "faction": "Grineer",
+    "levels": {
+      "normal": "27 - 29",
+      "steelPath": "127 - 129"
+    },
+    "planet": "Uranus",
+    "drops": null
+  },
+  "SolNode118": {
+    "id": "SolNode118",
+    "nameEn": "Laomedeia",
+    "nameTc": "Laomedeia",
+    "type": "Disruption",
+    "faction": "Corpus",
+    "levels": {
+      "normal": "25 - 30",
+      "steelPath": "125 - 130"
+    },
+    "planet": "Neptune",
+    "drops": null
+  },
+  "SolNode119": {
+    "id": "SolNode119",
+    "nameEn": "Caloris",
+    "nameTc": "Caloris",
+    "type": "Rescue",
+    "faction": "Grineer",
+    "levels": {
+      "normal": "6 - 8",
+      "steelPath": "106 - 108"
+    },
+    "planet": "Mercury",
+    "drops": null
+  },
+  "SolNode121": {
+    "id": "SolNode121",
+    "nameEn": "Carpo",
+    "nameTc": "Carpo",
+    "type": "Extermination",
+    "faction": "Corpus",
+    "levels": {
+      "normal": "17 - 19",
+      "steelPath": "117 - 119"
+    },
+    "planet": "Jupiter",
+    "drops": null
+  },
+  "SolNode122": {
+    "id": "SolNode122",
+    "nameEn": "Stephano",
+    "nameTc": "Stephano",
+    "type": "Defense",
+    "faction": "Grineer",
+    "levels": {
+      "normal": "24 - 29",
+      "steelPath": "124 - 129"
+    },
+    "planet": "Uranus",
+    "drops": null
+  },
+  "SolNode123": {
+    "id": "SolNode123",
+    "nameEn": "V Prime",
+    "nameTc": "V Prime",
+    "type": "Survival",
+    "faction": "Corpus",
+    "levels": {
+      "normal": "6 - 8",
+      "steelPath": "106 - 108"
+    },
+    "planet": "Venus",
+    "drops": null
+  },
+  "SolNode125": {
+    "id": "SolNode125",
+    "nameEn": "Io",
+    "nameTc": "Io",
+    "type": "Defense",
+    "faction": "Corpus",
+    "levels": {
+      "normal": "15 - 20",
+      "steelPath": "115 - 120"
+    },
+    "planet": "Jupiter",
+    "drops": null
+  },
+  "SolNode126": {
+    "id": "SolNode126",
+    "nameEn": "Metis",
+    "nameTc": "Metis",
+    "type": "Rescue",
+    "faction": "Corpus",
+    "levels": {
+      "normal": "15 - 17",
+      "steelPath": "115 - 117"
+    },
+    "planet": "Jupiter",
+    "drops": null
+  },
+  "SolNode127": {
+    "id": "SolNode127",
+    "nameEn": "Psamathe",
+    "nameTc": "Psamathe",
+    "type": "Assassination",
+    "faction": "Corpus",
+    "levels": {
+      "normal": "30 - 32",
+      "steelPath": "130 - 132"
+    },
+    "planet": "Neptune",
+    "drops": null
+  },
+  "SolNode128": {
+    "id": "SolNode128",
+    "nameEn": "E Gate",
+    "nameTc": "E Gate",
+    "type": "Extermination",
+    "faction": "Corpus",
+    "levels": {
+      "normal": "3 - 5",
+      "steelPath": "103 - 105"
+    },
+    "planet": "Venus",
+    "drops": null
+  },
+  "SolNode129": {
+    "id": "SolNode129",
+    "nameEn": "Orb Vallis",
+    "nameTc": "奧布山谷",
+    "type": "Free Roam",
+    "faction": "Corpus",
+    "levels": {
+      "normal": "10 - 30",
+      "steelPath": "110 - 130"
+    },
+    "planet": "Venus",
+    "drops": null
+  },
+  "SolNode130": {
+    "id": "SolNode130",
+    "nameEn": "Lares",
+    "nameTc": "Lares",
+    "type": "Defense",
+    "faction": "Grineer",
+    "levels": {
+      "normal": "6 - 11",
+      "steelPath": "106 - 111"
+    },
+    "planet": "Mercury",
+    "drops": null
+  },
+  "SolNode131": {
+    "id": "SolNode131",
+    "nameEn": "Pallas",
+    "nameTc": "Pallas",
+    "type": "Extermination",
+    "faction": "Grineer",
+    "levels": {
+      "normal": "12 - 14",
+      "steelPath": "112 - 114"
+    },
+    "planet": "Ceres",
+    "drops": null
+  },
+  "SolNode132": {
+    "id": "SolNode132",
+    "nameEn": "Bode",
+    "nameTc": "Bode",
+    "type": "Spy",
+    "faction": "Grineer",
+    "levels": {
+      "normal": "12 - 14",
+      "steelPath": "112 - 114"
+    },
+    "planet": "Ceres",
+    "drops": null
+  },
+  "SolNode135": {
+    "id": "SolNode135",
+    "nameEn": "Thon",
+    "nameTc": "Thon",
+    "type": "Sabotage",
+    "faction": "Grineer",
+    "levels": {
+      "normal": "15 - 17",
+      "steelPath": "115 - 117"
+    },
+    "planet": "Ceres",
+    "drops": null
+  },
+  "SolNode137": {
+    "id": "SolNode137",
+    "nameEn": "Nuovo",
+    "nameTc": "Nuovo",
+    "type": "Rescue",
+    "faction": "Grineer",
+    "levels": {
+      "normal": "13 - 15",
+      "steelPath": "113 - 115"
+    },
+    "planet": "Ceres",
+    "drops": null
+  },
+  "SolNode138": {
+    "id": "SolNode138",
+    "nameEn": "Ludi",
+    "nameTc": "Ludi",
+    "type": "Hijack",
+    "faction": "Grineer",
+    "levels": {
+      "normal": "15 - 17",
+      "steelPath": "115 - 117"
+    },
+    "planet": "Ceres",
+    "drops": null
+  },
+  "SolNode139": {
+    "id": "SolNode139",
+    "nameEn": "Lex",
+    "nameTc": "Lex",
+    "type": "Capture",
+    "faction": "Grineer",
+    "levels": {
+      "normal": "14 - 16",
+      "steelPath": "114 - 116"
+    },
+    "planet": "Ceres",
+    "drops": null
+  },
+  "SolNode140": {
+    "id": "SolNode140",
+    "nameEn": "Kiste",
+    "nameTc": "Kiste",
+    "type": "Mobile Defense",
+    "faction": "Grineer",
+    "levels": {
+      "normal": "13 - 15",
+      "steelPath": "113 - 115"
+    },
+    "planet": "Ceres",
+    "drops": null
+  },
+  "SolNode141": {
+    "id": "SolNode141",
+    "nameEn": "Ker",
+    "nameTc": "Ker",
+    "type": "Sabotage",
+    "faction": "Grineer",
+    "levels": {
+      "normal": "14 - 16",
+      "steelPath": "114 - 116"
+    },
+    "planet": "Ceres",
+    "drops": null
+  },
+  "SolNode144": {
+    "id": "SolNode144",
+    "nameEn": "Exta",
+    "nameTc": "Exta",
+    "type": "Assassination",
+    "faction": "Grineer",
+    "levels": {
+      "normal": "14 - 16",
+      "steelPath": "114 - 116"
+    },
+    "planet": "Ceres",
+    "drops": null
+  },
+  "SolNode146": {
+    "id": "SolNode146",
+    "nameEn": "Draco",
+    "nameTc": "Draco",
+    "type": "Survival",
+    "faction": "Grineer",
+    "levels": {
+      "normal": "12 - 17",
+      "steelPath": "112 - 117"
+    },
+    "planet": "Ceres",
+    "drops": null
+  },
+  "SolNode147": {
+    "id": "SolNode147",
+    "nameEn": "Cinxia",
+    "nameTc": "Cinxia",
+    "type": "Interception",
+    "faction": "Grineer",
+    "levels": {
+      "normal": "12 - 17",
+      "steelPath": "112 - 117"
+    },
+    "planet": "Ceres",
+    "drops": null
+  },
+  "SolNode148": {
+    "id": "SolNode148",
+    "nameEn": "Cerium",
+    "nameTc": "Cerium",
+    "levels": {
+      "normal": "未知",
+      "steelPath": "未知"
+    },
+    "planet": "Ceres",
+    "drops": null
+  },
+  "SolNode149": {
+    "id": "SolNode149",
+    "nameEn": "Casta",
+    "nameTc": "Casta",
+    "type": "Defense",
+    "faction": "Grineer",
+    "levels": {
+      "normal": "12 - 17",
+      "steelPath": "112 - 117"
+    },
+    "planet": "Ceres",
+    "drops": null
+  },
+  "SolNode153": {
+    "id": "SolNode153",
+    "nameEn": "Brugia",
+    "nameTc": "Brugia",
+    "type": "Rescue",
+    "faction": "Infested",
+    "levels": {
+      "normal": "32 - 36",
+      "steelPath": "132 - 136"
+    },
+    "planet": "Eris",
+    "drops": null
+  },
+  "SolNode162": {
+    "id": "SolNode162",
+    "nameEn": "Isos",
+    "nameTc": "Isos",
+    "type": "Capture",
+    "faction": "Infested",
+    "levels": {
+      "normal": "32 - 36",
+      "steelPath": "132 - 136"
+    },
+    "planet": "Eris",
+    "drops": null
+  },
+  "SolNode163": {
+    "id": "SolNode163",
+    "nameEn": "Ixodes",
+    "nameTc": "Ixodes",
+    "levels": {
+      "normal": "未知",
+      "steelPath": "未知"
+    },
+    "planet": "Eris",
+    "drops": null
+  },
+  "SolNode164": {
+    "id": "SolNode164",
+    "nameEn": "Kala-azar",
+    "nameTc": "Kala-azar",
+    "type": "Defense",
+    "faction": "Infested",
+    "levels": {
+      "normal": "30 - 40",
+      "steelPath": "130 - 140"
+    },
+    "planet": "Eris",
+    "drops": null
+  },
+  "SolNode165": {
+    "id": "SolNode165",
+    "nameEn": "Sporid",
+    "nameTc": "Sporid",
+    "type": "Hive Sabotage",
+    "faction": "Infested",
+    "levels": {
+      "normal": "未知",
+      "steelPath": "未知"
+    },
+    "planet": "Eris",
+    "drops": null
+  },
+  "SolNode166": {
+    "id": "SolNode166",
+    "nameEn": "Nimus",
+    "nameTc": "Nimus",
+    "type": "Survival",
+    "faction": "Infested",
+    "levels": {
+      "normal": "30 - 40",
+      "steelPath": "130 - 140"
+    },
+    "planet": "Eris",
+    "drops": null
+  },
+  "SolNode167": {
+    "id": "SolNode167",
+    "nameEn": "Oestrus",
+    "nameTc": "Oestrus",
+    "type": "Infested Salvage",
+    "faction": "Infested",
+    "levels": {
+      "normal": "34 - 38",
+      "steelPath": "134 - 138"
+    },
+    "planet": "Eris",
+    "drops": null
+  },
+  "SolNode171": {
+    "id": "SolNode171",
+    "nameEn": "Saxis",
+    "nameTc": "Saxis",
+    "type": "Extermination",
+    "faction": "Infested",
+    "levels": {
+      "normal": "34 - 38",
+      "steelPath": "134 - 138"
+    },
+    "planet": "Eris",
+    "drops": null
+  },
+  "SolNode172": {
+    "id": "SolNode172",
+    "nameEn": "Xini",
+    "nameTc": "Xini",
+    "type": "Interception",
+    "faction": "Infested",
+    "levels": {
+      "normal": "30 - 40",
+      "steelPath": "130 - 140"
+    },
+    "planet": "Eris",
+    "drops": null
+  },
+  "SolNode173": {
+    "id": "SolNode173",
+    "nameEn": "Solium",
+    "nameTc": "Solium",
+    "type": "Mobile Defense",
+    "faction": "Infested",
+    "levels": {
+      "normal": "34 - 38",
+      "steelPath": "134 - 138"
+    },
+    "planet": "Eris",
+    "drops": null
+  },
+  "SolNode175": {
+    "id": "SolNode175",
+    "nameEn": "Naeglar",
+    "nameTc": "Naeglar",
+    "type": "Hive",
+    "faction": "Infested",
+    "levels": {
+      "normal": "30 - 34",
+      "steelPath": "130 - 134"
+    },
+    "planet": "Eris",
+    "drops": null
+  },
+  "SolNode177": {
+    "id": "SolNode177",
+    "nameEn": "Kappa",
+    "nameTc": "Kappa",
+    "type": "Disruption",
+    "faction": "Grineer",
+    "levels": {
+      "normal": "34 - 38",
+      "steelPath": "134 - 138"
+    },
+    "planet": "Sedna",
+    "drops": null
+  },
+  "SolNode181": {
+    "id": "SolNode181",
+    "nameEn": "Adaro",
+    "nameTc": "Adaro",
+    "type": "Extermination",
+    "faction": "Grineer",
+    "levels": {
+      "normal": "32 - 36",
+      "steelPath": "132 - 136"
+    },
+    "planet": "Sedna",
+    "drops": null
+  },
+  "SolNode183": {
+    "id": "SolNode183",
+    "nameEn": "Vodyanoi",
+    "nameTc": "Vodyanoi",
+    "type": "Arena",
+    "faction": "Grineer",
+    "levels": {
+      "normal": "85 - 85",
+      "steelPath": "185 - 185"
+    },
+    "planet": "Sedna",
+    "drops": null
+  },
+  "SolNode184": {
+    "id": "SolNode184",
+    "nameEn": "Rusalka",
+    "nameTc": "Rusalka",
+    "type": "Sabotage",
+    "faction": "Grineer",
+    "levels": {
+      "normal": "32 - 36",
+      "steelPath": "132 - 136"
+    },
+    "planet": "Sedna",
+    "drops": null
+  },
+  "SolNode185": {
+    "id": "SolNode185",
+    "nameEn": "Berehynia",
+    "nameTc": "Berehynia",
+    "type": "Interception",
+    "faction": "Grineer",
+    "levels": {
+      "normal": "30 - 40",
+      "steelPath": "130 - 140"
+    },
+    "planet": "Sedna",
+    "drops": null
+  },
+  "SolNode186": {
+    "id": "SolNode186",
+    "nameEn": "Phithale",
+    "nameTc": "Phithale",
+    "type": "Sabotage",
+    "faction": "Grineer",
+    "levels": {
+      "normal": "未知",
+      "steelPath": "未知"
+    },
+    "planet": "Sedna",
+    "drops": null
+  },
+  "SolNode187": {
+    "id": "SolNode187",
+    "nameEn": "Selkie",
+    "nameTc": "Selkie",
+    "type": "Survival",
+    "faction": "Grineer",
+    "levels": {
+      "normal": "30 - 40",
+      "steelPath": "130 - 140"
+    },
+    "planet": "Sedna",
+    "drops": null
+  },
+  "SolNode188": {
+    "id": "SolNode188",
+    "nameEn": "Kelpie",
+    "nameTc": "Kelpie",
+    "type": "Spy",
+    "faction": "Grineer",
+    "levels": {
+      "normal": "35 - 40",
+      "steelPath": "135 - 140"
+    },
+    "planet": "Sedna",
+    "drops": null
+  },
+  "SolNode189": {
+    "id": "SolNode189",
+    "nameEn": "Naga",
+    "nameTc": "Naga",
+    "type": "Rescue",
+    "faction": "Grineer",
+    "levels": {
+      "normal": "30 - 34",
+      "steelPath": "130 - 134"
+    },
+    "planet": "Sedna",
+    "drops": null
+  },
+  "SolNode190": {
+    "id": "SolNode190",
+    "nameEn": "Nakki",
+    "nameTc": "Nakki",
+    "type": "Arena",
+    "faction": "Grineer",
+    "levels": {
+      "normal": "40 - 40",
+      "steelPath": "140 - 140"
+    },
+    "planet": "Sedna",
+    "drops": null
+  },
+  "SolNode191": {
+    "id": "SolNode191",
+    "nameEn": "Marid",
+    "nameTc": "Marid",
+    "type": "Hijack",
+    "faction": "Grineer",
+    "levels": {
+      "normal": "34 - 38",
+      "steelPath": "134 - 138"
+    },
+    "planet": "Sedna",
+    "drops": null
+  },
+  "SolNode192": {
+    "id": "SolNode192",
+    "nameEn": "Tikoloshe",
+    "nameTc": "Tikoloshe",
+    "type": "Spy",
+    "faction": "Grineer",
+    "levels": {
+      "normal": "未知",
+      "steelPath": "未知"
+    },
+    "planet": "Sedna",
+    "drops": null
+  },
+  "SolNode193": {
+    "id": "SolNode193",
+    "nameEn": "Merrow",
+    "nameTc": "Merrow",
+    "type": "Assassination",
+    "faction": "Grineer",
+    "levels": {
+      "normal": "35 - 40",
+      "steelPath": "135 - 140"
+    },
+    "planet": "Sedna",
+    "drops": null
+  },
+  "SolNode195": {
+    "id": "SolNode195",
+    "nameEn": "Hydron",
+    "nameTc": "Hydron",
+    "type": "Defense",
+    "faction": "Grineer",
+    "levels": {
+      "normal": "30 - 40",
+      "steelPath": "130 - 140"
+    },
+    "planet": "Sedna",
+    "drops": null
+  },
+  "SolNode196": {
+    "id": "SolNode196",
+    "nameEn": "Charybdis",
+    "nameTc": "Charybdis",
+    "type": "Mobile Defense",
+    "faction": "Grineer",
+    "levels": {
+      "normal": "34 - 38",
+      "steelPath": "134 - 138"
+    },
+    "planet": "Sedna",
+    "drops": null
+  },
+  "SolNode199": {
+    "id": "SolNode199",
+    "nameEn": "Yam",
+    "nameTc": "Yam",
+    "type": "Arena",
+    "faction": "Grineer",
+    "levels": {
+      "normal": "60 - 60",
+      "steelPath": "160 - 160"
+    },
+    "planet": "Sedna",
+    "drops": null
+  },
+  "SolNode203": {
+    "id": "SolNode203",
+    "nameEn": "Abaddon",
+    "nameTc": "Abaddon",
+    "type": "Capture",
+    "faction": "Corpus",
+    "levels": {
+      "normal": "21 - 23",
+      "steelPath": "121 - 123"
+    },
+    "planet": "Europa",
+    "drops": null
+  },
+  "SolNode204": {
+    "id": "SolNode204",
+    "nameEn": "Armaros",
+    "nameTc": "Armaros",
+    "type": "Extermination",
+    "faction": "Corpus",
+    "levels": {
+      "normal": "18 - 20",
+      "steelPath": "118 - 120"
+    },
+    "planet": "Europa",
+    "drops": null
+  },
+  "SolNode205": {
+    "id": "SolNode205",
+    "nameEn": "Baal",
+    "nameTc": "Baal",
+    "type": "Extermination",
+    "faction": "Corpus",
+    "levels": {
+      "normal": "21 - 23",
+      "steelPath": "121 - 123"
+    },
+    "planet": "Europa",
+    "drops": null
+  },
+  "SolNode206": {
+    "id": "SolNode206",
+    "nameEn": "Eligor",
+    "nameTc": "Eligor",
+    "levels": {
+      "normal": "未知",
+      "steelPath": "未知"
+    },
+    "planet": "Europa",
+    "drops": null
+  },
+  "SolNode209": {
+    "id": "SolNode209",
+    "nameEn": "Morax",
+    "nameTc": "Morax",
+    "type": "Mobile Defense",
+    "faction": "Corpus",
+    "levels": {
+      "normal": "18 - 20",
+      "steelPath": "118 - 120"
+    },
+    "planet": "Europa",
+    "drops": null
+  },
+  "SolNode210": {
+    "id": "SolNode210",
+    "nameEn": "Naamah",
+    "nameTc": "Naamah",
+    "type": "Assassination",
+    "faction": "Corpus",
+    "levels": {
+      "normal": "21 - 23",
+      "steelPath": "121 - 123"
+    },
+    "planet": "Europa",
+    "drops": null
+  },
+  "SolNode211": {
+    "id": "SolNode211",
+    "nameEn": "Ose",
+    "nameTc": "Ose",
+    "type": "Interception",
+    "faction": "Corpus",
+    "levels": {
+      "normal": "18 - 23",
+      "steelPath": "118 - 123"
+    },
+    "planet": "Europa",
+    "drops": null
+  },
+  "SolNode212": {
+    "id": "SolNode212",
+    "nameEn": "Paimon",
+    "nameTc": "Paimon",
+    "type": "Defense",
+    "faction": "Corpus",
+    "levels": {
+      "normal": "18 - 23",
+      "steelPath": "118 - 123"
+    },
+    "planet": "Europa",
+    "drops": null
+  },
+  "SolNode213": {
+    "id": "SolNode213",
+    "nameEn": "Shax",
+    "nameTc": "Shax",
+    "levels": {
+      "normal": "未知",
+      "steelPath": "未知"
+    },
+    "planet": "Europa",
+    "drops": null
+  },
+  "SolNode214": {
+    "id": "SolNode214",
+    "nameEn": "Sorath",
+    "nameTc": "Sorath",
+    "type": "Hijack",
+    "faction": "Corpus",
+    "levels": {
+      "normal": "19 - 21",
+      "steelPath": "119 - 121"
+    },
+    "planet": "Europa",
+    "drops": null
+  },
+  "SolNode215": {
+    "id": "SolNode215",
+    "nameEn": "Valac",
+    "nameTc": "Valac",
+    "type": "Spy",
+    "faction": "Corpus",
+    "levels": {
+      "normal": "18 - 20",
+      "steelPath": "118 - 120"
+    },
+    "planet": "Europa",
+    "drops": null
+  },
+  "SolNode216": {
+    "id": "SolNode216",
+    "nameEn": "Valefor",
+    "nameTc": "Valefor",
+    "type": "Excavation",
+    "faction": "Corpus",
+    "levels": {
+      "normal": "18 - 23",
+      "steelPath": "118 - 123"
+    },
+    "planet": "Europa",
+    "drops": null
+  },
+  "SolNode217": {
+    "id": "SolNode217",
+    "nameEn": "Orias",
+    "nameTc": "Orias",
+    "type": "Rescue",
+    "faction": "Corpus",
+    "levels": {
+      "normal": "20 - 22",
+      "steelPath": "120 - 122"
+    },
+    "planet": "Europa",
+    "drops": null
+  },
+  "SolNode220": {
+    "id": "SolNode220",
+    "nameEn": "Kokabiel",
+    "nameTc": "Kokabiel",
+    "type": "Sabotage",
+    "faction": "Corpus",
+    "levels": {
+      "normal": "20 - 22",
+      "steelPath": "120 - 122"
+    },
+    "planet": "Europa",
+    "drops": null
+  },
+  "SolNode223": {
+    "id": "SolNode223",
+    "nameEn": "Boethius",
+    "nameTc": "Boethius",
+    "type": "Mobile Defense",
+    "faction": "Grineer",
+    "levels": {
+      "normal": "8 - 10",
+      "steelPath": "108 - 110"
+    },
+    "planet": "Mercury",
+    "drops": null
+  },
+  "SolNode224": {
+    "id": "SolNode224",
+    "nameEn": "Odin",
+    "nameTc": "Odin",
+    "type": "Interception",
+    "faction": "Grineer",
+    "levels": {
+      "normal": "6 - 11",
+      "steelPath": "106 - 111"
+    },
+    "planet": "Mercury",
+    "drops": null
+  },
+  "SolNode225": {
+    "id": "SolNode225",
+    "nameEn": "Suisei",
+    "nameTc": "Suisei",
+    "type": "Spy",
+    "faction": "Grineer",
+    "levels": {
+      "normal": "8 - 10",
+      "steelPath": "108 - 110"
+    },
+    "planet": "Mercury",
+    "drops": null
+  },
+  "SolNode226": {
+    "id": "SolNode226",
+    "nameEn": "Pantheon",
+    "nameTc": "Pantheon",
+    "type": "Extermination",
+    "faction": "Grineer",
+    "levels": {
+      "normal": "6 - 8",
+      "steelPath": "106 - 108"
+    },
+    "planet": "Mercury",
+    "drops": null
+  },
+  "SolNode227": {
+    "id": "SolNode227",
+    "nameEn": "Verdi",
+    "nameTc": "Verdi",
+    "levels": {
+      "normal": "未知",
+      "steelPath": "未知"
+    },
+    "planet": "Mercury",
+    "drops": null
+  },
+  "SolNode228": {
+    "id": "SolNode228",
+    "nameEn": "Plains of Eidolon",
+    "nameTc": "夜靈平野",
+    "type": "Free Roam",
+    "faction": "Grineer",
+    "levels": {
+      "normal": "10 - 30",
+      "steelPath": "110 - 130"
+    },
+    "planet": "Earth",
+    "drops": null
+  },
+  "SolNode229": {
+    "id": "SolNode229",
+    "nameEn": "Cambion Drift",
+    "nameTc": "魔裔禁地",
+    "type": "Free Roam",
+    "faction": "Infested",
+    "levels": {
+      "normal": "15 - 30",
+      "steelPath": "115 - 130"
+    },
+    "planet": "Deimos",
+    "drops": null
+  },
+  "SolNode230": {
+    "id": "SolNode230",
+    "nameEn": "Everview Arc",
+    "nameTc": "永景弧域",
+    "type": "Void Flood",
+    "faction": "Crossfire",
+    "levels": {
+      "normal": "50 - 55",
+      "steelPath": "150 - 155"
+    },
+    "planet": "Zariman",
+    "drops": null
+  },
+  "SolNode231": {
+    "id": "SolNode231",
+    "nameEn": "Halako Perimeter",
+    "nameTc": "哈拉科周界",
+    "type": "Extermination",
+    "faction": "Crossfire",
+    "levels": {
+      "normal": "50 - 55",
+      "steelPath": "150 - 155"
+    },
+    "planet": "Zariman",
+    "drops": null
+  },
+  "SolNode232": {
+    "id": "SolNode232",
+    "nameEn": "Tuvul Commons",
+    "nameTc": "Tuvul 公域",
+    "type": "Void Cascade",
+    "faction": "Crossfire",
+    "levels": {
+      "normal": "50 - 55",
+      "steelPath": "150 - 155"
+    },
+    "planet": "Zariman",
+    "drops": null
+  },
+  "SolNode233": {
+    "id": "SolNode233",
+    "nameEn": "Oro Works",
+    "nameTc": "Oro 工場",
+    "type": "Void Armageddon",
+    "faction": "Crossfire",
+    "levels": {
+      "normal": "50 - 55",
+      "steelPath": "150 - 155"
+    },
+    "planet": "Zariman",
+    "drops": null
+  },
+  "SolNode235": {
+    "id": "SolNode235",
+    "nameEn": "The Greenway",
+    "nameTc": "綠色大道",
+    "type": "Mobile Defense",
+    "faction": "Crossfire",
+    "levels": {
+      "normal": "50 - 55",
+      "steelPath": "150 - 155"
+    },
+    "planet": "Zariman",
+    "drops": null
+  },
+  "SolNode236": {
+    "id": "SolNode236",
+    "nameEn": "The Duviri Experience",
+    "nameTc": "渡域體驗",
+    "type": "Free Roam",
+    "faction": "Duviri",
+    "levels": {
+      "normal": "20 - 20",
+      "steelPath": "120 - 120"
+    },
+    "planet": "Duviri",
+    "drops": null
+  },
+  "SolNode237": {
+    "id": "SolNode237",
+    "nameEn": "The Lone Story",
+    "nameTc": "獨孤心事",
+    "type": "Free Roam",
+    "faction": "Duviri",
+    "levels": {
+      "normal": "20 - 20",
+      "steelPath": "120 - 120"
+    },
+    "planet": "Duviri",
+    "drops": null
+  },
+  "SolNode238": {
+    "id": "SolNode238",
+    "nameEn": "The Circuit",
+    "nameTc": "無盡巡迴",
+    "type": "Free Roam",
+    "faction": "Duviri",
+    "levels": {
+      "normal": "35 - 55",
+      "steelPath": "135 - 155"
+    },
+    "planet": "Duviri",
+    "drops": null
+  },
+  "SolNode400": {
+    "id": "SolNode400",
+    "nameEn": "Teshub",
+    "nameTc": "Teshub",
+    "type": "Extermination",
+    "faction": "Orokin",
+    "levels": {
+      "normal": "10 - 15",
+      "steelPath": "110 - 115"
+    },
+    "planet": "Void",
+    "drops": null
+  },
+  "SolNode401": {
+    "id": "SolNode401",
+    "nameEn": "Hepit",
+    "nameTc": "Hepit",
+    "type": "Capture",
+    "faction": "Orokin",
+    "levels": {
+      "normal": "10 - 15",
+      "steelPath": "110 - 115"
+    },
+    "planet": "Void",
+    "drops": null
+  },
+  "SolNode402": {
+    "id": "SolNode402",
+    "nameEn": "Taranis",
+    "nameTc": "Taranis",
+    "type": "Defense",
+    "faction": "Orokin",
+    "levels": {
+      "normal": "10 - 15",
+      "steelPath": "110 - 115"
+    },
+    "planet": "Void",
+    "drops": null
+  },
+  "SolNode403": {
+    "id": "SolNode403",
+    "nameEn": "Tiwaz",
+    "nameTc": "Tiwaz",
+    "type": "Mobile Defense",
+    "faction": "Orokin",
+    "levels": {
+      "normal": "20 - 25",
+      "steelPath": "120 - 125"
+    },
+    "planet": "Void",
+    "drops": null
+  },
+  "SolNode404": {
+    "id": "SolNode404",
+    "nameEn": "Stribog",
+    "nameTc": "Stribog",
+    "type": "Orokin Sabotage",
+    "faction": "Orokin",
+    "levels": {
+      "normal": "20 - 25",
+      "steelPath": "120 - 125"
+    },
+    "planet": "Void",
+    "drops": null
+  },
+  "SolNode405": {
+    "id": "SolNode405",
+    "nameEn": "Ani",
+    "nameTc": "Ani",
+    "type": "Survival",
+    "faction": "Orokin",
+    "levels": {
+      "normal": "20 - 25",
+      "steelPath": "120 - 125"
+    },
+    "planet": "Void",
+    "drops": null
+  },
+  "SolNode406": {
+    "id": "SolNode406",
+    "nameEn": "Ukko",
+    "nameTc": "Ukko",
+    "type": "Capture",
+    "faction": "Orokin",
+    "levels": {
+      "normal": "30 - 35",
+      "steelPath": "130 - 135"
+    },
+    "planet": "Void",
+    "drops": null
+  },
+  "SolNode407": {
+    "id": "SolNode407",
+    "nameEn": "Oxomoco",
+    "nameTc": "Oxomoco",
+    "type": "Extermination",
+    "faction": "Orokin",
+    "levels": {
+      "normal": "30 - 35",
+      "steelPath": "130 - 135"
+    },
+    "planet": "Void",
+    "drops": null
+  },
+  "SolNode408": {
+    "id": "SolNode408",
+    "nameEn": "Belenus",
+    "nameTc": "Belenus",
+    "type": "Defense",
+    "faction": "Orokin",
+    "levels": {
+      "normal": "30 - 35",
+      "steelPath": "130 - 135"
+    },
+    "planet": "Void",
+    "drops": null
+  },
+  "SolNode409": {
+    "id": "SolNode409",
+    "nameEn": "Mot",
+    "nameTc": "Mot",
+    "type": "Survival",
+    "faction": "Orokin",
+    "levels": {
+      "normal": "40 - 45",
+      "steelPath": "140 - 145"
+    },
+    "planet": "Void",
+    "drops": null
+  },
+  "SolNode410": {
+    "id": "SolNode410",
+    "nameEn": "Aten",
+    "nameTc": "Aten",
+    "type": "Mobile Defense",
+    "faction": "Orokin",
+    "levels": {
+      "normal": "40 - 45",
+      "steelPath": "140 - 145"
+    },
+    "planet": "Void",
+    "drops": null
+  },
+  "SolNode411": {
+    "id": "SolNode411",
+    "nameEn": "Marduk",
+    "nameTc": "Marduk",
+    "type": "Sabotage",
+    "faction": "Orokin",
+    "levels": {
+      "normal": "40 - 45",
+      "steelPath": "140 - 145"
+    },
+    "planet": "Void",
+    "drops": null
+  },
+  "SolNode412": {
+    "id": "SolNode412",
+    "nameEn": "Mithra",
+    "nameTc": "Mithra",
+    "type": "Interception",
+    "faction": "Orokin",
+    "levels": {
+      "normal": "40 - 45",
+      "steelPath": "140 - 145"
+    },
+    "planet": "Void",
+    "drops": null
+  },
+  "SolNode450": {
+    "id": "SolNode450",
+    "nameEn": "Tyana Pass",
+    "nameTc": "Tyana Pass",
+    "type": "Mirror Defense",
+    "faction": "Crossfire",
+    "levels": {
+      "normal": "25 - 30",
+      "steelPath": "125 - 130"
+    },
+    "planet": "Mars",
+    "drops": null
+  },
+  "SolNode706": {
+    "id": "SolNode706",
+    "nameEn": "Horend",
+    "nameTc": "Horend",
+    "type": "Capture",
+    "faction": "Infested",
+    "levels": {
+      "normal": "12 - 14",
+      "steelPath": "112 - 114"
+    },
+    "planet": "Deimos",
+    "drops": null
+  },
+  "SolNode707": {
+    "id": "SolNode707",
+    "nameEn": "Hyf",
+    "nameTc": "Hyf",
+    "type": "Defense",
+    "faction": "Infested",
+    "levels": {
+      "normal": "15 - 20",
+      "steelPath": "115 - 120"
+    },
+    "planet": "Deimos",
+    "drops": null
+  },
+  "SolNode708": {
+    "id": "SolNode708",
+    "nameEn": "Phlegyas",
+    "nameTc": "Phlegyas",
+    "type": "Extermination",
+    "faction": "Infested",
+    "levels": {
+      "normal": "13 - 15",
+      "steelPath": "113 - 115"
+    },
+    "planet": "Deimos",
+    "drops": null
+  },
+  "SolNode709": {
+    "id": "SolNode709",
+    "nameEn": "Dirus",
+    "nameTc": "Dirus",
+    "type": "Mobile Defense",
+    "faction": "Infested",
+    "levels": {
+      "normal": "15 - 17",
+      "steelPath": "115 - 117"
+    },
+    "planet": "Deimos",
+    "drops": null
+  },
+  "SolNode710": {
+    "id": "SolNode710",
+    "nameEn": "Formido",
+    "nameTc": "Formido",
+    "type": "Sabotage",
+    "faction": "Infested",
+    "levels": {
+      "normal": "14 - 16",
+      "steelPath": "114 - 116"
+    },
+    "planet": "Deimos",
+    "drops": null
+  },
+  "SolNode711": {
+    "id": "SolNode711",
+    "nameEn": "Terrorem",
+    "nameTc": "Terrorem",
+    "type": "Survival",
+    "faction": "Infested",
+    "levels": {
+      "normal": "25 - 35",
+      "steelPath": "125 - 135"
+    },
+    "planet": "Deimos",
+    "drops": null
+  },
+  "SolNode712": {
+    "id": "SolNode712",
+    "nameEn": "Magnacidium",
+    "nameTc": "Magnacidium",
+    "type": "Assassination",
+    "faction": "Infested",
+    "levels": {
+      "normal": "20 - 25",
+      "steelPath": "120 - 125"
+    },
+    "planet": "Deimos",
+    "drops": null
+  },
+  "SolNode713": {
+    "id": "SolNode713",
+    "nameEn": "Exequias",
+    "nameTc": "Exequias",
+    "type": "Assassination",
+    "faction": "Infested",
+    "levels": {
+      "normal": "30 - 35",
+      "steelPath": "130 - 135"
+    },
+    "planet": "Deimos",
+    "drops": null
+  },
+  "SolNode715": {
+    "id": "SolNode715",
+    "nameEn": "Effervo",
+    "nameTc": "誒沸禍",
+    "type": "Assassination",
+    "faction": "The Murmur",
+    "levels": {
+      "normal": "55 - 60",
+      "steelPath": "155 - 160"
+    },
+    "planet": "Deimos",
+    "drops": null
+  },
+  "SolNode716": {
+    "id": "SolNode716",
+    "nameEn": "Nex",
+    "nameTc": "涅克斯",
+    "type": "Extermination",
+    "faction": "The Murmur",
+    "levels": {
+      "normal": "55 - 60",
+      "steelPath": "155 - 160"
+    },
+    "planet": "Deimos",
+    "drops": null
+  },
+  "SolNode717": {
+    "id": "SolNode717",
+    "nameEn": "Persto",
+    "nameTc": "佩斯托",
+    "type": "Survival",
+    "faction": "The Murmur",
+    "levels": {
+      "normal": "55 - 60",
+      "steelPath": "155 - 160"
+    },
+    "planet": "Deimos",
+    "drops": null
+  },
+  "SolNode718": {
+    "id": "SolNode718",
+    "nameEn": "Cambire",
+    "nameTc": "坎比爾",
+    "type": "Alchemy",
+    "faction": "The Murmur",
+    "levels": {
+      "normal": "55 - 60",
+      "steelPath": "155 - 160"
+    },
+    "planet": "Deimos",
+    "drops": null
+  },
+  "SolNode719": {
+    "id": "SolNode719",
+    "nameEn": "Munio",
+    "nameTc": "穆尼歐",
+    "type": "Mirror Defense",
+    "faction": "The Murmur",
+    "levels": {
+      "normal": "55 - 60",
+      "steelPath": "155 - 160"
+    },
+    "planet": "Deimos",
+    "drops": null
+  },
+  "SolNode720": {
+    "id": "SolNode720",
+    "nameEn": "Testudo",
+    "nameTc": "龜甲庫",
+    "type": "Netracells",
+    "faction": "The Murmur",
+    "levels": {
+      "normal": "220 - 240",
+      "steelPath": "320 - 340"
+    },
+    "planet": "Deimos",
+    "drops": null
+  },
+  "SolNode721": {
+    "id": "SolNode721",
+    "nameEn": "Armatus",
+    "nameTc": "阿馬圖斯",
+    "type": "Disruption",
+    "faction": "The Murmur",
+    "levels": {
+      "normal": "55 - 60",
+      "steelPath": "155 - 160"
+    },
+    "planet": "Deimos",
+    "drops": null
+  },
+  "SolNode251": {
+    "id": "SolNode251",
+    "nameEn": "Dark Refactory",
+    "nameTc": "Dark Refactory",
+    "type": "The Perita Rebellion",
+    "faction": "Anarch",
+    "levels": {
+      "normal": "未知",
+      "steelPath": "未知"
+    },
+    "planet": "Deimos",
+    "drops": null
+  },
+  "SolNode740": {
+    "id": "SolNode740",
+    "nameEn": "The Ropalolyst",
+    "nameTc": "蝠力使",
+    "type": "Assassination",
+    "faction": "Sentient",
+    "levels": {
+      "normal": "40 - 40",
+      "steelPath": "140 - 140"
+    },
+    "planet": "Jupiter",
+    "drops": null
+  },
+  "SolNode741": {
+    "id": "SolNode741",
+    "nameEn": "Koro",
+    "nameTc": "Koro",
+    "type": "Assault",
+    "faction": "Grineer",
+    "levels": {
+      "normal": "29 - 31",
+      "steelPath": "129 - 131"
+    },
+    "planet": "Kuva Fortress",
+    "drops": null
+  },
+  "SolNode742": {
+    "id": "SolNode742",
+    "nameEn": "Nabuk",
+    "nameTc": "Nabuk",
+    "type": "Defense",
+    "faction": "Grineer",
+    "levels": {
+      "normal": "30 - 32",
+      "steelPath": "130 - 132"
+    },
+    "planet": "Kuva Fortress",
+    "drops": null
+  },
+  "SolNode743": {
+    "id": "SolNode743",
+    "nameEn": "Rotuma",
+    "nameTc": "Rotuma",
+    "type": "Mobile Defense",
+    "faction": "Grineer",
+    "levels": {
+      "normal": "30 - 32",
+      "steelPath": "130 - 132"
+    },
+    "planet": "Kuva Fortress",
+    "drops": null
+  },
+  "SolNode744": {
+    "id": "SolNode744",
+    "nameEn": "Taveuni",
+    "nameTc": "Taveuni",
+    "type": "Survival",
+    "faction": "Grineer",
+    "levels": {
+      "normal": "32 - 37",
+      "steelPath": "132 - 137"
+    },
+    "planet": "Kuva Fortress",
+    "drops": null
+  },
+  "SolNode745": {
+    "id": "SolNode745",
+    "nameEn": "Tamu",
+    "nameTc": "Tamu",
+    "type": "Disruption",
+    "faction": "Grineer",
+    "levels": {
+      "normal": "35 - 40",
+      "steelPath": "135 - 140"
+    },
+    "planet": "Kuva Fortress",
+    "drops": null
+  },
+  "SolNode746": {
+    "id": "SolNode746",
+    "nameEn": "Dakata",
+    "nameTc": "Dakata",
+    "type": "Extermination",
+    "faction": "Grineer",
+    "levels": {
+      "normal": "28 - 30",
+      "steelPath": "128 - 130"
+    },
+    "planet": "Kuva Fortress",
+    "drops": null
+  },
+  "SolNode747": {
+    "id": "SolNode747",
+    "nameEn": "Pago",
+    "nameTc": "Pago",
+    "type": "Spy",
+    "faction": "Grineer",
+    "levels": {
+      "normal": "31 - 33",
+      "steelPath": "131 - 133"
+    },
+    "planet": "Kuva Fortress",
+    "drops": null
+  },
+  "SolNode748": {
+    "id": "SolNode748",
+    "nameEn": "Garus",
+    "nameTc": "Garus",
+    "type": "Rescue",
+    "faction": "Grineer",
+    "levels": {
+      "normal": "31 - 33",
+      "steelPath": "131 - 133"
+    },
+    "planet": "Kuva Fortress",
+    "drops": null
+  },
+  "SolNode902": {
+    "id": "SolNode902",
+    "nameEn": "Montes",
+    "nameTc": "Montes",
+    "type": "Extermination (Archwing)",
+    "faction": "Corpus",
+    "levels": {
+      "normal": "3 - 8",
+      "steelPath": "103 - 108"
+    },
+    "planet": "Venus",
+    "drops": null
+  },
+  "SolNode903": {
+    "id": "SolNode903",
+    "nameEn": "Erpo",
+    "nameTc": "Erpo",
+    "type": "Mobile Defense (Archwing)",
+    "faction": "Grineer",
+    "levels": {
+      "normal": "1 - 6",
+      "steelPath": "101 - 106"
+    },
+    "planet": "Earth",
+    "drops": null
+  },
+  "SolNode904": {
+    "id": "SolNode904",
+    "nameEn": "Syrtis",
+    "nameTc": "Syrtis",
+    "type": "Extermination (Archwing)",
+    "faction": "Grineer",
+    "levels": {
+      "normal": "8 - 13",
+      "steelPath": "108 - 113"
+    },
+    "planet": "Mars",
+    "drops": null
+  },
+  "SolNode905": {
+    "id": "SolNode905",
+    "nameEn": "Galilea",
+    "nameTc": "Galilea",
+    "type": "Sabotage (Archwing)",
+    "faction": "Corpus",
+    "levels": {
+      "normal": "15 - 20",
+      "steelPath": "115 - 120"
+    },
+    "planet": "Jupiter",
+    "drops": null
+  },
+  "SolNode906": {
+    "id": "SolNode906",
+    "nameEn": "Pandora",
+    "nameTc": "Pandora",
+    "type": "Pursuit (Archwing)",
+    "faction": "Grineer",
+    "levels": {
+      "normal": "21 - 23",
+      "steelPath": "121 - 123"
+    },
+    "planet": "Saturn",
+    "drops": null
+  },
+  "SolNode907": {
+    "id": "SolNode907",
+    "nameEn": "Caelus",
+    "nameTc": "Caelus",
+    "type": "Interception (Archwing)",
+    "faction": "Grineer",
+    "levels": {
+      "normal": "24 - 29",
+      "steelPath": "124 - 129"
+    },
+    "planet": "Uranus",
+    "drops": null
+  },
+  "SolNode908": {
+    "id": "SolNode908",
+    "nameEn": "Salacia",
+    "nameTc": "Salacia",
+    "type": "Mobile Defense (Archwing)",
+    "faction": "Corpus",
+    "levels": {
+      "normal": "27 - 32",
+      "steelPath": "127 - 132"
+    },
+    "planet": "Neptune",
+    "drops": null
+  },
+  "SolNode300": {
+    "id": "SolNode300",
+    "nameEn": "Plato",
+    "nameTc": "Plato",
+    "type": "Extermination",
+    "faction": "Crossfire",
+    "levels": {
+      "normal": "25 - 30",
+      "steelPath": "125 - 130"
+    },
+    "planet": "Lua",
+    "drops": null
+  },
+  "SolNode301": {
+    "id": "SolNode301",
+    "nameEn": "Grimaldi",
+    "nameTc": "Grimaldi",
+    "type": "Mobile Defense",
+    "faction": "Grineer",
+    "levels": {
+      "normal": "25 - 30",
+      "steelPath": "125 - 130"
+    },
+    "planet": "Lua",
+    "drops": null
+  },
+  "SolNode302": {
+    "id": "SolNode302",
+    "nameEn": "Tycho",
+    "nameTc": "Tycho",
+    "type": "Survival",
+    "faction": "Corpus",
+    "levels": {
+      "normal": "25 - 30",
+      "steelPath": "125 - 130"
+    },
+    "planet": "Lua",
+    "drops": null
+  },
+  "SolNode304": {
+    "id": "SolNode304",
+    "nameEn": "Copernicus",
+    "nameTc": "Copernicus",
+    "type": "Capture",
+    "faction": "Corpus",
+    "levels": {
+      "normal": "25 - 30",
+      "steelPath": "125 - 130"
+    },
+    "planet": "Lua",
+    "drops": null
+  },
+  "SolNode305": {
+    "id": "SolNode305",
+    "nameEn": "Stöfler",
+    "nameTc": "Stöfler",
+    "type": "Defense",
+    "faction": "Grineer",
+    "levels": {
+      "normal": "25 - 30",
+      "steelPath": "125 - 130"
+    },
+    "planet": "Lua",
+    "drops": null
+  },
+  "SolNode306": {
+    "id": "SolNode306",
+    "nameEn": "Pavlov",
+    "nameTc": "Pavlov",
+    "type": "Spy",
+    "faction": "Crossfire",
+    "levels": {
+      "normal": "25 - 30",
+      "steelPath": "125 - 130"
+    },
+    "planet": "Lua",
+    "drops": null
+  },
+  "SolNode307": {
+    "id": "SolNode307",
+    "nameEn": "Zeipel",
+    "nameTc": "Zeipel",
+    "type": "Rescue",
+    "faction": "Corpus",
+    "levels": {
+      "normal": "25 - 30",
+      "steelPath": "125 - 130"
+    },
+    "planet": "Lua",
+    "drops": null
+  },
+  "SolNode308": {
+    "id": "SolNode308",
+    "nameEn": "Apollo",
+    "nameTc": "Apollo",
+    "type": "Disruption",
+    "faction": "Corpus",
+    "levels": {
+      "normal": "35 - 40",
+      "steelPath": "135 - 140"
+    },
+    "planet": "Lua",
+    "drops": null
+  },
+  "SolNode309": {
+    "id": "SolNode309",
+    "nameEn": "Yuvarium",
+    "nameTc": "育承宮",
+    "type": "Survival",
+    "faction": "Orokin",
+    "levels": {
+      "normal": "25 - 30",
+      "steelPath": "125 - 130"
+    },
+    "planet": "Lua",
+    "drops": null
+  },
+  "SolNode310": {
+    "id": "SolNode310",
+    "nameEn": "Circulus",
+    "nameTc": "圓承宮",
+    "type": "Survival",
+    "faction": "Grineer",
+    "levels": {
+      "normal": "80 - 100",
+      "steelPath": "180 - 200"
+    },
+    "planet": "Lua",
+    "drops": null
+  },
+  "SettlementNode1": {
+    "id": "SettlementNode1",
+    "nameEn": "Roche",
+    "nameTc": "Roche",
+    "type": "Extermination",
+    "faction": "Corpus",
+    "levels": {
+      "normal": "10 - 12",
+      "steelPath": "110 - 112"
+    },
+    "planet": "Phobos",
+    "drops": null
+  },
+  "SettlementNode2": {
+    "id": "SettlementNode2",
+    "nameEn": "Skyresh",
+    "nameTc": "Skyresh",
+    "type": "Capture",
+    "faction": "Corpus",
+    "levels": {
+      "normal": "12 - 14",
+      "steelPath": "112 - 114"
+    },
+    "planet": "Phobos",
+    "drops": null
+  },
+  "SettlementNode3": {
+    "id": "SettlementNode3",
+    "nameEn": "Stickney",
+    "nameTc": "Stickney",
+    "type": "Survival",
+    "faction": "Corpus",
+    "levels": {
+      "normal": "10 - 15",
+      "steelPath": "110 - 115"
+    },
+    "planet": "Phobos",
+    "drops": null
+  },
+  "SettlementNode10": {
+    "id": "SettlementNode10",
+    "nameEn": "Kepler",
+    "nameTc": "Kepler",
+    "type": "Rush (Archwing)",
+    "faction": "Corpus",
+    "levels": {
+      "normal": "12 - 14",
+      "steelPath": "112 - 114"
+    },
+    "planet": "Phobos",
+    "drops": null
+  },
+  "SettlementNode11": {
+    "id": "SettlementNode11",
+    "nameEn": "Gulliver",
+    "nameTc": "Gulliver",
+    "type": "Defense",
+    "faction": "Corpus",
+    "levels": {
+      "normal": "10 - 15",
+      "steelPath": "110 - 115"
+    },
+    "planet": "Phobos",
+    "drops": null
+  },
+  "SettlementNode12": {
+    "id": "SettlementNode12",
+    "nameEn": "Monolith",
+    "nameTc": "Monolith",
+    "type": "Rescue",
+    "faction": "Corpus",
+    "levels": {
+      "normal": "13 - 15",
+      "steelPath": "113 - 115"
+    },
+    "planet": "Phobos",
+    "drops": null
+  },
+  "SettlementNode14": {
+    "id": "SettlementNode14",
+    "nameEn": "Shklovsky",
+    "nameTc": "Shklovsky",
+    "type": "Spy",
+    "faction": "Corpus",
+    "levels": {
+      "normal": "11 - 13",
+      "steelPath": "111 - 113"
+    },
+    "planet": "Phobos",
+    "drops": null
+  },
+  "SettlementNode15": {
+    "id": "SettlementNode15",
+    "nameEn": "Sharpless",
+    "nameTc": "Sharpless",
+    "type": "Mobile Defense",
+    "faction": "Corpus",
+    "levels": {
+      "normal": "11 - 13",
+      "steelPath": "111 - 113"
+    },
+    "planet": "Phobos",
+    "drops": null
+  },
+  "SettlementNode20": {
+    "id": "SettlementNode20",
+    "nameEn": "Iliad",
+    "nameTc": "Iliad",
+    "type": "Assassination",
+    "faction": "Corpus",
+    "levels": {
+      "normal": "13 - 15",
+      "steelPath": "113 - 115"
+    },
+    "planet": "Phobos",
+    "drops": null
+  },
+  "EventNode30": {
+    "id": "EventNode30",
+    "nameEn": "Ganymede",
+    "nameTc": "Ganymede",
+    "type": "Disruption",
+    "faction": "Corpus",
+    "levels": {
+      "normal": "30 - 35",
+      "steelPath": "130 - 135"
+    },
+    "planet": "Jupiter",
+    "drops": null
+  },
+  "EventNode31": {
+    "id": "EventNode31",
+    "nameEn": "Ganymede",
+    "nameTc": "Ganymede",
+    "type": "Disruption",
+    "faction": "Corpus",
+    "levels": {
+      "normal": "30 - 35",
+      "steelPath": "130 - 135"
+    },
+    "planet": "Jupiter",
+    "drops": null
+  },
+  "EventNode32": {
+    "id": "EventNode32",
+    "nameEn": "Ganymede",
+    "nameTc": "Ganymede",
+    "type": "Disruption",
+    "faction": "Corpus",
+    "levels": {
+      "normal": "30 - 35",
+      "steelPath": "130 - 135"
+    },
+    "planet": "Jupiter",
+    "drops": null
+  },
+  "EventNode33": {
+    "id": "EventNode33",
+    "nameEn": "Ganymede",
+    "nameTc": "Ganymede",
+    "type": "Disruption",
+    "faction": "Corpus",
+    "levels": {
+      "normal": "30 - 35",
+      "steelPath": "130 - 135"
+    },
+    "planet": "Jupiter",
+    "drops": null
+  },
+  "ClanNode0": {
+    "id": "ClanNode0",
+    "nameEn": "Romula",
+    "nameTc": "Romula",
+    "type": "Dark Sector Defense",
+    "faction": "Infested",
+    "levels": {
+      "normal": "8 - 18",
+      "steelPath": "108 - 118"
+    },
+    "planet": "Venus",
+    "drops": null
+  },
+  "ClanNode1": {
+    "id": "ClanNode1",
+    "nameEn": "Malva",
+    "nameTc": "Malva",
+    "type": "Dark Sector Survival",
+    "faction": "Infested",
+    "levels": {
+      "normal": "8 - 18",
+      "steelPath": "108 - 118"
+    },
+    "planet": "Venus",
+    "drops": null
+  },
+  "ClanNode2": {
+    "id": "ClanNode2",
+    "nameEn": "Coba",
+    "nameTc": "Coba",
+    "type": "Dark Sector Defense",
+    "faction": "Infested",
+    "levels": {
+      "normal": "6 - 16",
+      "steelPath": "106 - 116"
+    },
+    "planet": "Earth",
+    "drops": null
+  },
+  "ClanNode3": {
+    "id": "ClanNode3",
+    "nameEn": "Tikal",
+    "nameTc": "Tikal",
+    "type": "Dark Sector Excavation",
+    "faction": "Infested",
+    "levels": {
+      "normal": "6 - 16",
+      "steelPath": "106 - 116"
+    },
+    "planet": "Earth",
+    "drops": null
+  },
+  "ClanNode4": {
+    "id": "ClanNode4",
+    "nameEn": "Sinai",
+    "nameTc": "Sinai",
+    "type": "Dark Sector Defense",
+    "faction": "Infested",
+    "levels": {
+      "normal": "20 - 30",
+      "steelPath": "120 - 130"
+    },
+    "planet": "Jupiter",
+    "drops": null
+  },
+  "ClanNode5": {
+    "id": "ClanNode5",
+    "nameEn": "Cameria",
+    "nameTc": "Cameria",
+    "type": "Dark Sector Survival",
+    "faction": "Infested",
+    "levels": {
+      "normal": "20 - 30",
+      "steelPath": "120 - 130"
+    },
+    "planet": "Jupiter",
+    "drops": null
+  },
+  "ClanNode6": {
+    "id": "ClanNode6",
+    "nameEn": "Larzac",
+    "nameTc": "Larzac",
+    "type": "Dark Sector Defense",
+    "faction": "Infested",
+    "levels": {
+      "normal": "23 - 33",
+      "steelPath": "123 - 133"
+    },
+    "planet": "Europa",
+    "drops": null
+  },
+  "ClanNode7": {
+    "id": "ClanNode7",
+    "nameEn": "Cholistan",
+    "nameTc": "Cholistan",
+    "type": "Dark Sector Excavation",
+    "faction": "Infested",
+    "levels": {
+      "normal": "23 - 33",
+      "steelPath": "123 - 133"
+    },
+    "planet": "Europa",
+    "drops": null
+  },
+  "ClanNode8": {
+    "id": "ClanNode8",
+    "nameEn": "Kadesh",
+    "nameTc": "Kadesh",
+    "type": "Dark Sector Defense",
+    "faction": "Infested",
+    "levels": {
+      "normal": "10 - 20",
+      "steelPath": "110 - 120"
+    },
+    "planet": "Mars",
+    "drops": null
+  },
+  "ClanNode9": {
+    "id": "ClanNode9",
+    "nameEn": "Wahiba",
+    "nameTc": "Wahiba",
+    "type": "Dark Sector Survival",
+    "faction": "Infested",
+    "levels": {
+      "normal": "10 - 20",
+      "steelPath": "110 - 120"
+    },
+    "planet": "Mars",
+    "drops": null
+  },
+  "ClanNode10": {
+    "id": "ClanNode10",
+    "nameEn": "Memphis",
+    "nameTc": "Memphis",
+    "type": "Dark Sector Defection",
+    "faction": "Infested",
+    "levels": {
+      "normal": "15 - 25",
+      "steelPath": "115 - 125"
+    },
+    "planet": "Phobos",
+    "drops": null
+  },
+  "ClanNode11": {
+    "id": "ClanNode11",
+    "nameEn": "Zeugma",
+    "nameTc": "Zeugma",
+    "type": "Dark Sector Survival",
+    "faction": "Infested",
+    "levels": {
+      "normal": "15 - 25",
+      "steelPath": "115 - 125"
+    },
+    "planet": "Phobos",
+    "drops": null
+  },
+  "ClanNode12": {
+    "id": "ClanNode12",
+    "nameEn": "Caracol",
+    "nameTc": "Caracol",
+    "type": "Dark Sector Defection",
+    "faction": "Infested",
+    "levels": {
+      "normal": "26 - 36",
+      "steelPath": "126 - 136"
+    },
+    "planet": "Saturn",
+    "drops": null
+  },
+  "ClanNode13": {
+    "id": "ClanNode13",
+    "nameEn": "Piscinas",
+    "nameTc": "Piscinas",
+    "type": "Dark Sector Survival",
+    "faction": "Infested",
+    "levels": {
+      "normal": "26 - 36",
+      "steelPath": "126 - 136"
+    },
+    "planet": "Saturn",
+    "drops": null
+  },
+  "ClanNode14": {
+    "id": "ClanNode14",
+    "nameEn": "Amarna",
+    "nameTc": "Amarna",
+    "type": "Dark Sector Survival",
+    "faction": "Infested",
+    "levels": {
+      "normal": "35 - 45",
+      "steelPath": "135 - 145"
+    },
+    "planet": "Sedna",
+    "drops": null
+  },
+  "ClanNode15": {
+    "id": "ClanNode15",
+    "nameEn": "Sangeru",
+    "nameTc": "Sangeru",
+    "type": "Dark Sector Defense",
+    "faction": "Infested",
+    "levels": {
+      "normal": "35 - 45",
+      "steelPath": "135 - 145"
+    },
+    "planet": "Sedna",
+    "drops": null
+  },
+  "ClanNode16": {
+    "id": "ClanNode16",
+    "nameEn": "Ur",
+    "nameTc": "Ur",
+    "type": "Dark Sector Disruption",
+    "faction": "Infested",
+    "levels": {
+      "normal": "30 - 35",
+      "steelPath": "130 - 135"
+    },
+    "planet": "Uranus",
+    "drops": null
+  },
+  "ClanNode17": {
+    "id": "ClanNode17",
+    "nameEn": "Assur",
+    "nameTc": "Assur",
+    "type": "Dark Sector Survival",
+    "faction": "Infested",
+    "levels": {
+      "normal": "25 - 35",
+      "steelPath": "125 - 135"
+    },
+    "planet": "Uranus",
+    "drops": null
+  },
+  "ClanNode18": {
+    "id": "ClanNode18",
+    "nameEn": "Akkad",
+    "nameTc": "Akkad",
+    "type": "Dark Sector Defense",
+    "faction": "Infested",
+    "levels": {
+      "normal": "35 - 45",
+      "steelPath": "135 - 145"
+    },
+    "planet": "Eris",
+    "drops": null
+  },
+  "ClanNode19": {
+    "id": "ClanNode19",
+    "nameEn": "Zabala",
+    "nameTc": "Zabala",
+    "type": "Dark Sector Survival",
+    "faction": "Infested",
+    "levels": {
+      "normal": "35 - 45",
+      "steelPath": "135 - 145"
+    },
+    "planet": "Eris",
+    "drops": null
+  },
+  "ClanNode20": {
+    "id": "ClanNode20",
+    "nameEn": "Yursa",
+    "nameTc": "Yursa",
+    "type": "Dark Sector Defection",
+    "faction": "Infested",
+    "levels": {
+      "normal": "30 - 40",
+      "steelPath": "130 - 140"
+    },
+    "planet": "Neptune",
+    "drops": null
+  },
+  "ClanNode21": {
+    "id": "ClanNode21",
+    "nameEn": "Kelashin",
+    "nameTc": "Kelashin",
+    "type": "Dark Sector Survival",
+    "faction": "Infested",
+    "levels": {
+      "normal": "30 - 40",
+      "steelPath": "130 - 140"
+    },
+    "planet": "Neptune",
+    "drops": null
+  },
+  "ClanNode22": {
+    "id": "ClanNode22",
+    "nameEn": "Seimeni",
+    "nameTc": "Seimeni",
+    "type": "Dark Sector Defense",
+    "faction": "Infested",
+    "levels": {
+      "normal": "15 - 25",
+      "steelPath": "115 - 125"
+    },
+    "planet": "Ceres",
+    "drops": null
+  },
+  "ClanNode23": {
+    "id": "ClanNode23",
+    "nameEn": "Gabii",
+    "nameTc": "Gabii",
+    "type": "Dark Sector Survival",
+    "faction": "Infested",
+    "levels": {
+      "normal": "15 - 25",
+      "steelPath": "115 - 125"
+    },
+    "planet": "Ceres",
+    "drops": null
+  },
+  "ClanNode24": {
+    "id": "ClanNode24",
+    "nameEn": "Sechura",
+    "nameTc": "Sechura",
+    "type": "Dark Sector Defense",
+    "faction": "Infested",
+    "levels": {
+      "normal": "35 - 45",
+      "steelPath": "135 - 145"
+    },
+    "planet": "Pluto",
+    "drops": null
+  },
+  "ClanNode25": {
+    "id": "ClanNode25",
+    "nameEn": "Hieracon",
+    "nameTc": "Hieracon",
+    "type": "Dark Sector Excavation",
+    "faction": "Infested",
+    "levels": {
+      "normal": "35 - 45",
+      "steelPath": "135 - 145"
+    },
+    "planet": "Pluto",
+    "drops": null
+  },
+  "CrewBattleNode501": {
+    "id": "CrewBattleNode501",
+    "nameEn": "Mordo Cluster",
+    "nameTc": "莫度星團",
+    "type": "Skirmish",
+    "faction": "Grineer",
+    "levels": {
+      "normal": "55 - 60",
+      "steelPath": "155 - 160"
+    },
+    "planet": "Saturn Proxima",
+    "drops": null
+  },
+  "CrewBattleNode502": {
+    "id": "CrewBattleNode502",
+    "nameEn": "Sover Strait",
+    "nameTc": "沉眠星峽",
+    "type": "Skirmish",
+    "faction": "Grineer",
+    "levels": {
+      "normal": "15 - 20",
+      "steelPath": "115 - 120"
+    },
+    "planet": "Earth Proxima",
+    "drops": null
+  },
+  "CrewBattleNode503": {
+    "id": "CrewBattleNode503",
+    "nameEn": "Bifrost Echo",
+    "nameTc": "迴響虹橋",
+    "type": "Extermination",
+    "faction": "Corpus",
+    "levels": {
+      "normal": "15 - 18",
+      "steelPath": "115 - 118"
+    },
+    "planet": "Venus",
+    "drops": null
+  },
+  "CrewBattleNode504": {
+    "id": "CrewBattleNode504",
+    "nameEn": "Arva Vector",
+    "nameTc": "沃野量向",
+    "type": "Defense",
+    "faction": "Corpus",
+    "levels": {
+      "normal": "25 - 28",
+      "steelPath": "125 - 128"
+    },
+    "planet": "Neptune",
+    "drops": null
+  },
+  "CrewBattleNode505": {
+    "id": "CrewBattleNode505",
+    "nameEn": "Ruse War Field",
+    "nameTc": "Ruse War Field",
+    "type": "Skirmish",
+    "faction": "Grineer",
+    "levels": {
+      "normal": "未知",
+      "steelPath": "未知"
+    },
+    "planet": "Veil Proxima",
+    "drops": null
+  },
+  "CrewBattleNode509": {
+    "id": "CrewBattleNode509",
+    "nameEn": "Iota Temple",
+    "nameTc": "埃歐塔聖堂",
+    "type": "Skirmish",
+    "faction": "Grineer",
+    "levels": {
+      "normal": "20 - 28",
+      "steelPath": "120 - 128"
+    },
+    "planet": "Earth Proxima",
+    "drops": null
+  },
+  "CrewBattleNode510": {
+    "id": "CrewBattleNode510",
+    "nameEn": "Gian Point",
+    "nameTc": "Gian Point",
+    "type": "Skirmish",
+    "faction": "Grineer",
+    "levels": {
+      "normal": "未知",
+      "steelPath": "未知"
+    },
+    "planet": "Veil Proxima",
+    "drops": null
+  },
+  "CrewBattleNode511": {
+    "id": "CrewBattleNode511",
+    "nameEn": "Beacon Shield Ring",
+    "nameTc": "信標護環",
+    "type": "Volatile",
+    "faction": "Corpus",
+    "levels": {
+      "normal": "17 - 20",
+      "steelPath": "117 - 120"
+    },
+    "planet": "Venus Proxima",
+    "drops": null
+  },
+  "CrewBattleNode512": {
+    "id": "CrewBattleNode512",
+    "nameEn": "Orvin-Haarc",
+    "nameTc": "奧爾萬－哈爾克",
+    "type": "Spy",
+    "faction": "Corpus",
+    "levels": {
+      "normal": "19 - 22",
+      "steelPath": "119 - 122"
+    },
+    "planet": "Venus",
+    "drops": null
+  },
+  "CrewBattleNode513": {
+    "id": "CrewBattleNode513",
+    "nameEn": "Vesper Strait",
+    "nameTc": "長庚星峽",
+    "type": "Orphix",
+    "faction": "Corpus",
+    "levels": {
+      "normal": "21 - 24",
+      "steelPath": "121 - 124"
+    },
+    "planet": "Venus Proxima",
+    "drops": null
+  },
+  "CrewBattleNode514": {
+    "id": "CrewBattleNode514",
+    "nameEn": "Falling Glory",
+    "nameTc": "殞落光環",
+    "type": "Defense",
+    "faction": "Corpus",
+    "levels": {
+      "normal": "23 - 26",
+      "steelPath": "123 - 126"
+    },
+    "planet": "Venus",
+    "drops": null
+  },
+  "CrewBattleNode515": {
+    "id": "CrewBattleNode515",
+    "nameEn": "Luckless Expanse",
+    "nameTc": "落運廣袤",
+    "type": "Survival",
+    "faction": "Corpus",
+    "levels": {
+      "normal": "22 - 25",
+      "steelPath": "122 - 125"
+    },
+    "planet": "Venus",
+    "drops": null
+  },
+  "CrewBattleNode516": {
+    "id": "CrewBattleNode516",
+    "nameEn": "Nu-gua Mines",
+    "nameTc": "女媧星礦",
+    "type": "Extermination",
+    "faction": "Corpus",
+    "levels": {
+      "normal": "27 - 30",
+      "steelPath": "127 - 130"
+    },
+    "planet": "Neptune",
+    "drops": null
+  },
+  "CrewBattleNode518": {
+    "id": "CrewBattleNode518",
+    "nameEn": "Ogal Cluster",
+    "nameTc": "奧嘉星團",
+    "type": "Skirmish",
+    "faction": "Grineer",
+    "levels": {
+      "normal": "21 - 26",
+      "steelPath": "121 - 126"
+    },
+    "planet": "Earth Proxima",
+    "drops": null
+  },
+  "CrewBattleNode519": {
+    "id": "CrewBattleNode519",
+    "nameEn": "Korm's Belt",
+    "nameTc": "球莖星帶",
+    "type": "Skirmish",
+    "faction": "Grineer",
+    "levels": {
+      "normal": "24 - 30",
+      "steelPath": "124 - 130"
+    },
+    "planet": "Earth Proxima",
+    "drops": null
+  },
+  "CrewBattleNode521": {
+    "id": "CrewBattleNode521",
+    "nameEn": "Enkidu Ice Drifts",
+    "nameTc": "恩奇杜冰川",
+    "type": "Survival",
+    "faction": "Corpus",
+    "levels": {
+      "normal": "29 - 32",
+      "steelPath": "129 - 132"
+    },
+    "planet": "Neptune",
+    "drops": null
+  },
+  "CrewBattleNode522": {
+    "id": "CrewBattleNode522",
+    "nameEn": "Bendar Cluster",
+    "nameTc": "奔達星團",
+    "type": "Skirmish",
+    "faction": "Grineer",
+    "levels": {
+      "normal": "29 - 36",
+      "steelPath": "129 - 136"
+    },
+    "planet": "Earth Proxima",
+    "drops": null
+  },
+  "CrewBattleNode523": {
+    "id": "CrewBattleNode523",
+    "nameEn": "Mammon's Prospect",
+    "nameTc": "瑪門的遠景",
+    "type": "Orphix",
+    "faction": "Corpus",
+    "levels": {
+      "normal": "31 - 34",
+      "steelPath": "131 - 134"
+    },
+    "planet": "Neptune Proxima",
+    "drops": null
+  },
+  "CrewBattleNode524": {
+    "id": "CrewBattleNode524",
+    "nameEn": "Sovereign Grasp",
+    "nameTc": "星君空域",
+    "type": "Volatile",
+    "faction": "Corpus",
+    "levels": {
+      "normal": "33 - 36",
+      "steelPath": "133 - 136"
+    },
+    "planet": "Neptune Proxima",
+    "drops": null
+  },
+  "CrewBattleNode525": {
+    "id": "CrewBattleNode525",
+    "nameEn": "Brom Cluster",
+    "nameTc": "布朗星團",
+    "type": "Spy",
+    "faction": "Corpus",
+    "levels": {
+      "normal": "32 - 35",
+      "steelPath": "132 - 135"
+    },
+    "planet": "Neptune",
+    "drops": null
+  },
+  "CrewBattleNode526": {
+    "id": "CrewBattleNode526",
+    "nameEn": "Khufu Envoy",
+    "nameTc": "胡夫使節",
+    "type": "Orphix",
+    "faction": "Corpus",
+    "levels": {
+      "normal": "35 - 38",
+      "steelPath": "135 - 138"
+    },
+    "planet": "Pluto Proxima",
+    "drops": null
+  },
+  "CrewBattleNode527": {
+    "id": "CrewBattleNode527",
+    "nameEn": "Seven Sirens",
+    "nameTc": "七妖女",
+    "type": "Extermination",
+    "faction": "Corpus",
+    "levels": {
+      "normal": "37 - 40",
+      "steelPath": "137 - 140"
+    },
+    "planet": "Pluto",
+    "drops": null
+  },
+  "CrewBattleNode528": {
+    "id": "CrewBattleNode528",
+    "nameEn": "Obol Crossing",
+    "nameTc": "奧波交點",
+    "type": "Defense",
+    "faction": "Corpus",
+    "levels": {
+      "normal": "39 - 42",
+      "steelPath": "139 - 142"
+    },
+    "planet": "Pluto",
+    "drops": null
+  },
+  "CrewBattleNode529": {
+    "id": "CrewBattleNode529",
+    "nameEn": "Profit Margin",
+    "nameTc": "利益邊緣",
+    "type": "Volatile",
+    "faction": "Corpus",
+    "levels": {
+      "normal": "41 - 44",
+      "steelPath": "141 - 144"
+    },
+    "planet": "Pluto Proxima",
+    "drops": null
+  },
+  "CrewBattleNode530": {
+    "id": "CrewBattleNode530",
+    "nameEn": "Kasio's Rest",
+    "nameTc": "卡西奧的安息處",
+    "type": "Skirmish",
+    "faction": "Grineer",
+    "levels": {
+      "normal": "70 - 75",
+      "steelPath": "170 - 175"
+    },
+    "planet": "Saturn Proxima",
+    "drops": null
+  },
+  "CrewBattleNode531": {
+    "id": "CrewBattleNode531",
+    "nameEn": "Fenton's Field",
+    "nameTc": "分沌力場",
+    "type": "Survival",
+    "faction": "Corpus",
+    "levels": {
+      "normal": "40 - 43",
+      "steelPath": "140 - 143"
+    },
+    "planet": "Pluto",
+    "drops": null
+  },
+  "CrewBattleNode533": {
+    "id": "CrewBattleNode533",
+    "nameEn": "Nodo Gap",
+    "nameTc": "節點星隙",
+    "type": "Skirmish",
+    "faction": "Grineer",
+    "levels": {
+      "normal": "54 - 60",
+      "steelPath": "154 - 160"
+    },
+    "planet": "Saturn Proxima",
+    "drops": null
+  },
+  "CrewBattleNode534": {
+    "id": "CrewBattleNode534",
+    "nameEn": "Lupal Pass",
+    "nameTc": "狼魄星口",
+    "type": "Skirmish",
+    "faction": "Grineer",
+    "levels": {
+      "normal": "48 - 56",
+      "steelPath": "148 - 156"
+    },
+    "planet": "Saturn Proxima",
+    "drops": null
+  },
+  "CrewBattleNode535": {
+    "id": "CrewBattleNode535",
+    "nameEn": "Vand Cluster",
+    "nameTc": "水澤星團",
+    "type": "Skirmish",
+    "faction": "Grineer",
+    "levels": {
+      "normal": "65 - 70",
+      "steelPath": "165 - 170"
+    },
+    "planet": "Saturn Proxima",
+    "drops": null
+  },
+  "CrewBattleNode536": {
+    "id": "CrewBattleNode536",
+    "nameEn": "Peregrine Axis",
+    "nameTc": "遊移星軸",
+    "type": "Spy",
+    "faction": "Corpus",
+    "levels": {
+      "normal": "43 - 46",
+      "steelPath": "143 - 146"
+    },
+    "planet": "Pluto",
+    "drops": null
+  },
+  "CrewBattleNode538": {
+    "id": "CrewBattleNode538",
+    "nameEn": "Calabash",
+    "nameTc": "葫蘆",
+    "type": "Extermination",
+    "faction": "Corpus",
+    "levels": {
+      "normal": "45 - 49",
+      "steelPath": "145 - 149"
+    },
+    "planet": "Veil",
+    "drops": null
+  },
+  "CrewBattleNode539": {
+    "id": "CrewBattleNode539",
+    "nameEn": "Numina",
+    "nameTc": "福德神社",
+    "type": "Volatile",
+    "faction": "Corpus",
+    "levels": {
+      "normal": "48 - 52",
+      "steelPath": "148 - 152"
+    },
+    "planet": "Veil Proxima",
+    "drops": null
+  },
+  "CrewBattleNode540": {
+    "id": "CrewBattleNode540",
+    "nameEn": "Arc Silver",
+    "nameTc": "白銀天弧",
+    "type": "Defense",
+    "faction": "Corpus",
+    "levels": {
+      "normal": "51 - 55",
+      "steelPath": "151 - 155"
+    },
+    "planet": "Veil",
+    "drops": null
+  },
+  "CrewBattleNode541": {
+    "id": "CrewBattleNode541",
+    "nameEn": "Erato",
+    "nameTc": "厄剌托",
+    "type": "Orphix",
+    "faction": "Corpus",
+    "levels": {
+      "normal": "54 - 58",
+      "steelPath": "154 - 158"
+    },
+    "planet": "Veil Proxima",
+    "drops": null
+  },
+  "CrewBattleNode542": {
+    "id": "CrewBattleNode542",
+    "nameEn": "Lu-yan",
+    "nameTc": "呂巖",
+    "type": "Survival",
+    "faction": "Corpus",
+    "levels": {
+      "normal": "55 - 59",
+      "steelPath": "155 - 159"
+    },
+    "planet": "Veil",
+    "drops": null
+  },
+  "CrewBattleNode543": {
+    "id": "CrewBattleNode543",
+    "nameEn": "Sambir Cloud",
+    "nameTc": "Sambir Cloud",
+    "type": "Spy",
+    "faction": "Corpus",
+    "levels": {
+      "normal": "未知",
+      "steelPath": "未知"
+    },
+    "planet": "Veil",
+    "drops": null
+  },
+  "CrewBattleNode550": {
+    "id": "CrewBattleNode550",
+    "nameEn": "Nsu Grid",
+    "nameTc": "踵承星格",
+    "type": "Skirmish",
+    "faction": "Grineer",
+    "levels": {
+      "normal": "80 - 90",
+      "steelPath": "180 - 190"
+    },
+    "planet": "Veil Proxima",
+    "drops": null
+  },
+  "CrewBattleNode551": {
+    "id": "CrewBattleNode551",
+    "nameEn": "Ganalen's Grave",
+    "nameTc": "Ganalen's Grave",
+    "type": "Skirmish",
+    "faction": "Grineer",
+    "levels": {
+      "normal": "未知",
+      "steelPath": "未知"
+    },
+    "planet": "Veil Proxima",
+    "drops": null
+  },
+  "CrewBattleNode552": {
+    "id": "CrewBattleNode552",
+    "nameEn": "Rya",
+    "nameTc": "Rya",
+    "type": "Skirmish",
+    "faction": "Grineer",
+    "levels": {
+      "normal": "未知",
+      "steelPath": "未知"
+    },
+    "planet": "Veil Proxima",
+    "drops": null
+  },
+  "CrewBattleNode553": {
+    "id": "CrewBattleNode553",
+    "nameEn": "Flexa",
+    "nameTc": "弗歷沙",
+    "type": "Skirmish",
+    "faction": "Grineer",
+    "levels": {
+      "normal": "80 - 90",
+      "steelPath": "180 - 190"
+    },
+    "planet": "Veil Proxima",
+    "drops": null
+  },
+  "CrewBattleNode554": {
+    "id": "CrewBattleNode554",
+    "nameEn": "H-2 Cloud",
+    "nameTc": "H-2 星雲",
+    "type": "Skirmish",
+    "faction": "Grineer",
+    "levels": {
+      "normal": "80 - 90",
+      "steelPath": "180 - 190"
+    },
+    "planet": "Veil Proxima",
+    "drops": null
+  },
+  "CrewBattleNode555": {
+    "id": "CrewBattleNode555",
+    "nameEn": "R-9 Cloud",
+    "nameTc": "R-9 星雲",
+    "type": "Skirmish",
+    "faction": "Grineer",
+    "levels": {
+      "normal": "80 - 90",
+      "steelPath": "180 - 190"
+    },
+    "planet": "Veil Proxima",
+    "drops": null
+  },
+  "SolNode723": {
+    "id": "SolNode723",
+    "nameEn": "Brutus",
+    "nameTc": "布魯圖斯",
+    "type": "Ascension",
+    "faction": "Corpus",
+    "levels": {
+      "normal": "45 - 50",
+      "steelPath": "145 - 150"
+    },
+    "planet": "Uranus",
+    "drops": null
+  }
+}

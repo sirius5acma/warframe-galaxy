@@ -1,12 +1,9 @@
-const URL_SOL_NODES = 'https://raw.githubusercontent.com/wfcd/warframe-worldstate-data/master/data/solNodes.json';
-const URL_I18N = 'https://raw.githubusercontent.com/wfcd/warframe-items/master/data/json/i18n.json';
+const URL_PLANET_INDEX = 'data/planetIndex.json';
 
 let currentView = 'normal';
 let previousView = 'normal';
 
-let normalPlanets = {}; 
-let proximaPlanets = {};
-let normalPlanetsArray = []; 
+let normalPlanetsArray = [];
 let proximaPlanetsArray = [];
 
 const planetImages = {
@@ -28,191 +25,49 @@ const planetOrder = {
   "derelict": 20, "duviri": 100, "veil": 101
 };
 
-// 🌟 寫死的完美常規掉落物字典
-const planetDrops = {
-  "Earth": ["鐵氧體", "紅化結晶", "神經元", "爆燃安瓿"],
-  "Venus": ["合金板", "聚合物束", "電路", "電磁力場裝置樣本"],
-  "Mercury": ["非晶態合金", "鐵氧體", "聚合物束", "爆燃安瓿"],
-  "Mars": ["鎵", "非晶態合金", "回收金屬", "電磁力場裝置樣本"],
-  "Phobos": ["紅化結晶", "非晶態合金", "生物質", "合金板"],
-  "Ceres": ["合金板", "電路", "Orokin電池", "爆燃安瓿"],
-  "Jupiter": ["回收金屬", "神經傳感器", "合金板", "六醇燃劑"],
-  "Europa": ["非晶態合金", "紅化結晶", "控制模塊", "電磁力場裝置樣本"],
-  "Saturn": ["奈米孢子", "生物質", "Orokin電池", "爆燃安瓿"],
-  "Uranus": ["聚合物束", "生物質", "鎵", "爆燃安瓿"],
-  "Neptune": ["奈米孢子", "鐵氧體", "控制模塊", "電磁力場裝置樣本"],
-  "Pluto": ["紅化結晶", "非晶態合金", "生物質", "合金板", "電磁力場裝置樣本"],
-  "Sedna": ["紅化結晶", "合金板", "回收金屬", "爆燃安瓿"],
-  "Eris": ["奈米孢子", "生物質", "神經元", "突變原樣本"],
-  "Void": ["氬結晶", "控制模塊", "紅化結晶", "鐵氧體"],
-  "Kuva Fortress": ["回收金屬", "電路", "神經傳感器", "碲", "爆燃安瓿"],
-  "Lua": ["鐵氧體", "紅化結晶", "神經元", "爆燃安瓿"],
-  "Deimos": ["奈米孢子", "突變原樣本", "神經元", "Orokin電池"],
-  "Zariman": ["虛空膠球", "源拓氏燈籠", "合金板", "鐵氧體"],
-  "Duviri": ["哀悲標置", "龍焏", "肉葉結節", "密聲冷石"], //這個還不確定要再改
-  "Earth Proxima": ["鈦金屬", "鈦核船板", "碳化物", "立方二極體", "星彩藍寶石", "加落斯反物質燃料棒", "愛索斯修複液", "奧核電容", "Komms", "虛能石", "碲"],
-  "Venus Proxima": ["鈦金屬", "鈦核船板", "碳化物", "立方二極體", "星彩藍寶石", "加落斯反物質燃料棒", "愛索斯修複液", "奧核電容", "Komms", "虛能石", "碲"],
-  "Saturn Proxima": ["鈦金屬", "鈦核船板", "碳化物", "立方二極體", "星彩藍寶石", "加落斯反物質燃料棒", "愛索斯修複液", "奧核電容", "Komms", "虛能石", "碲"],
-  "Neptune Proxima": ["鈦金屬", "鈦核船板", "碳化物", "立方二極體", "星彩藍寶石", "加落斯反物質燃料棒", "愛索斯修複液", "奧核電容", "Komms", "虛能石", "碲"],
-  "Pluto Proxima": ["鈦金屬", "鈦核船板", "碳化物", "立方二極體", "星彩藍寶石", "加落斯反物質燃料棒", "愛索斯修複液", "奧核電容", "Komms", "虛能石", "碲"],
-  "Veil Proxima": ["鈦金屬", "鈦核船板", "碳化物", "立方二極體", "星彩藍寶石", "加落斯反物質燃料棒", "愛索斯修複液", "奧核電容", "Komms", "虛能石", "碲"]
-};
+async function init() {
+  try {
+    // 🌟 1. 拋棄遠端連線，直接讀取本地算好的極輕量化 Index
+    const response = await fetch(URL_PLANET_INDEX);
+    if (!response.ok) throw new Error('無法載入星球資料，請確認 data 資料夾是否存在。');
+    const planetData = await response.json();
 
-async function fetchWithCache(url) {
-  const cache = await caches.open('warframe-data-cache-v1');
-  const cachedResponse = await cache.match(url);
-  if (cachedResponse) return cachedResponse.json();
-  
-  const response = await fetch(url);
-  if (response.ok) {
-    cache.put(url, response.clone());
-    return response.json();
-  }
-  throw new Error(`網路請求失敗: ${response.status}`);
-}
+    document.getElementById('loader').style.display = 'none';
 
-Promise.all([
-  fetchWithCache(URL_SOL_NODES),
-  fetchWithCache(URL_I18N) // 移除了 URL_RESOURCES，速度大幅提升！
-]).then(([nodesData, i18nData]) => {
-  document.getElementById('loader').style.display = 'none';
+    // 🌟 2. 輕鬆將處理好的星球分類
+    Object.values(planetData).forEach(planet => {
+      let baseName = planet.nameEn.replace(' Proxima', '');
+      let imgKey = baseName === 'Veil' ? 'Veil' : baseName;
+      planet.imgUrl = planetImages[imgKey] || '';
 
-  const i18nNameMap = {};
-  Object.keys(i18nData).forEach(key => {
-    if (i18nData[key].en && i18nData[key].en.name) {
-      i18nNameMap[i18nData[key].en.name.toLowerCase()] = i18nData[key];
-    }
-  });
-
-  function getTcTranslation(englishName, type) {
-    if (!englishName) return "未知";
-    let lower = englishName.toLowerCase();
-    
-    let match = i18nNameMap[lower];
-    if (match) {
-      return match.tc?.name || match['zh-hant']?.name || match.zh?.name || englishName;
-    }
-
-    if (type === 'planet') {
-       if (lower.includes('proxima')) {
-           let baseName = lower.replace(' proxima', '');
-           if (baseName === 'veil') return "面紗毗鄰星";
-           return (basicPlanets[baseName] || englishName.split(' ')[0]) + "毗鄰星";
-       }
-       return basicPlanets[lower] || englishName;
-    }
-    
-    if (type === 'faction') return enemyTypes[englishName] || englishName;
-    if (typeof customNodes !== 'undefined' && type === 'node') {
-        return customNodes[englishName] || englishName;
-    }
-
-    if (type === 'mission') {
-      let text = englishName;
-      text = text.replace(/Dark Sector/gi, ""); 
-      text = text.replace(/Crossfire/gi, "交火");
-      
-      if(typeof missionTypes !== 'undefined'){
-          const sortedKeys = Object.keys(missionTypes).sort((a, b) => b.length - a.length);
-          sortedKeys.forEach(key => {
-            const regex = new RegExp(key, "gi");
-            text = text.replace(regex, missionTypes[key]);
-          });
+      if (planet.nameEn.includes('Proxima') || planet.nameEn === 'Veil') {
+        proximaPlanetsArray.push(planet);
+      } else {
+        normalPlanetsArray.push(planet);
       }
-      
-      text = text.replace(/^\s+|\s+$/g, ""); 
-      text = text.replace(/交火\s+/g, "交火");
-      return text || "未知";
-    }
-
-    return englishName;
-  }
-
-  Object.keys(nodesData).forEach(nodeId => {
-    const node = nodesData[nodeId];
-    if (!node || !node.value || node.type === 'Relay' || node.type === 'Clan Dojo') return;
-    if (node.type === 'Ancient Retribution' || node.enemy === 'Ancient Retribution') return;
-
-    const match = node.value.match(/\(([^)]+)\)/);
-    if (!match) return;
-
-    const rawPlanetNameEn = match[1]; 
-    const rawNodeName = node.value.replace(/\s*\(.*?\)\s*/g, ''); 
-
-    const rjMissionTypes = ['Skirmish', 'Orphix', 'Volatile']; 
-    const isProxima = rawPlanetNameEn === 'Veil' || rjMissionTypes.includes(node.type);
-
-    let targetDict, finalPlanetNameEn, imgKey;
-
-    if (isProxima) {
-        targetDict = proximaPlanets;
-        finalPlanetNameEn = rawPlanetNameEn === 'Veil' ? 'Veil Proxima' : `${rawPlanetNameEn} Proxima`;
-        imgKey = rawPlanetNameEn === 'Veil' ? 'Veil' : rawPlanetNameEn;
-    } else {
-        targetDict = normalPlanets;
-        finalPlanetNameEn = rawPlanetNameEn;
-        imgKey = rawPlanetNameEn;
-    }
-
-    if (!targetDict[finalPlanetNameEn]) {
-        targetDict[finalPlanetNameEn] = {
-            nameEn: finalPlanetNameEn,
-            nameTc: getTcTranslation(finalPlanetNameEn, 'planet'),
-            imgUrl: planetImages[imgKey] || '', 
-            nodes: []
-        };
-    }
-    
-    targetDict[finalPlanetNameEn].nodes.push({
-      id: nodeId,
-      name: getTcTranslation(rawNodeName, 'node'),
-      type: getTcTranslation(node.type, 'mission'),
-      enemy: getTcTranslation(node.enemy, 'faction')
     });
-  });
 
-  normalPlanetsArray = Object.values(normalPlanets);
-  normalPlanetsArray.sort((a, b) => {
-    let aBase = a.nameEn.toLowerCase();
-    let bBase = b.nameEn.toLowerCase();
-    let aWeight = planetOrder[aBase] || 50; 
-    let bWeight = planetOrder[bBase] || 50;
-    if (aWeight !== bWeight) return aWeight - bWeight;
-    return a.nameEn.localeCompare(b.nameEn);
-  });
+    // 排序邏輯保持不變
+    const sortFn = (a, b) => {
+      let aBase = a.nameEn.toLowerCase().replace(' proxima', '');
+      let bBase = b.nameEn.toLowerCase().replace(' proxima', '');
+      let aWeight = planetOrder[aBase] || 50; 
+      let bWeight = planetOrder[bBase] || 50;
+      if (aWeight !== bWeight) return aWeight - bWeight;
+      return a.nameEn.localeCompare(b.nameEn);
+    };
 
-  proximaPlanetsArray = Object.values(proximaPlanets);
-  proximaPlanetsArray.sort((a, b) => {
-    let aBase = a.nameEn.toLowerCase().replace(' proxima', '');
-    let bBase = b.nameEn.toLowerCase().replace(' proxima', '');
-    let aWeight = planetOrder[aBase] || 50; 
-    let bWeight = planetOrder[bBase] || 50;
-    if (aWeight !== bWeight) return aWeight - bWeight;
-    return a.nameEn.localeCompare(b.nameEn);
-  });
-  
-  renderGrid(normalPlanetsArray);
+    normalPlanetsArray.sort(sortFn);
+    proximaPlanetsArray.sort(sortFn);
 
-  const urlParams = new URLSearchParams(window.location.search);
-  const resourceName = urlParams.get('resource'); 
-  const targetLocations = urlParams.get('targets'); 
-  
-  if (resourceName && targetLocations) {
-    const searchInput = document.getElementById('searchInput');
-    searchInput.value = `📍 尋找素材：${resourceName}`;
-    
-    const filteredPlanets = normalPlanetsArray.filter(planet => {
-        return targetLocations.toLowerCase().includes(planet.nameEn.toLowerCase()) || 
-               targetLocations.includes(planet.nameTc);
-    });
-    
-    renderGrid(filteredPlanets);
+    // 初始渲染
+    renderGrid(normalPlanetsArray);
+
+  } catch (err) {
+    console.error(err);
+    document.getElementById('loader').innerText = '載入失敗，請檢查檔案路徑。';
   }
-
-}).catch(err => {
-  console.error(err);
-  document.getElementById('loader').innerText = '載入失敗，請檢查網路連線。';
-});
+}
 
 function handleBack() {
   if (currentView === 'detail') {
@@ -311,32 +166,36 @@ function openPlanetDetail(planet) {
   document.getElementById('detail-name-en').innerText = planet.nameEn;
   document.getElementById('detail-node-count').innerText = planet.nodes.length;
 
-  // 🌟 動態渲染常規掉落物 (從寫死的字典抓取)
+  // 🌟 3. 常規資源現在已經內建在星球資料裡，直接拿來用
   const dropsContainer = document.getElementById('detail-drops');
   dropsContainer.innerHTML = '';
   
-  const drops = planetDrops[planet.nameEn] || [];
-  
-  if (drops.length > 0) {
-    drops.forEach(dropName => {
+  if (planet.drops && planet.drops.length > 0) {
+    planet.drops.forEach(dropName => {
       dropsContainer.innerHTML += `<div class="drop-item">${dropName}</div>`;
     });
   } else {
     dropsContainer.innerHTML = `<div style="color: #a0aec0; font-style: italic;">本星域無常規資源紀錄。</div>`;
   }
   
-  // 渲染下半部的網格節點
+  // 🌟 4. 渲染節點：現在自帶怪物等級與唯一 ID！
   const nodesContainer = document.getElementById('detail-nodes');
   nodesContainer.innerHTML = '';
   
-  planet.nodes.sort((a, b) => a.name.localeCompare(b.name)).forEach(node => {
+  planet.nodes.sort((a, b) => a.nameTc.localeCompare(b.nameTc)).forEach(node => {
     nodesContainer.innerHTML += `
-      <div class="node-card">
+      <div class="node-card" data-id="${node.id}">
         <div class="node-name">
-          <span>${node.name}</span>
-          <span class="node-type">${node.type}</span>
+          <span>${node.nameTc}</span>
+          <!-- 加上 translateUI 處理任務類型 -->
+          <span class="node-type">${translateUI(node.type)}</span>
         </div>
-        <div class="node-faction">派系：${node.enemy}</div>
+        <div class="node-faction">
+          <!-- 加上 translateUI 處理派系 -->
+          <span style="color: #ef4444;">派系：${translateUI(node.faction)}</span>
+          <!-- 這裡會正確顯示腳本抓到的怪物等級 -->
+          <span style="color: #a0aec0; font-size: 0.9em; float: right;">等級: ${node.levels.normal}</span>
+        </div>
       </div>
     `;
   });
@@ -349,10 +208,14 @@ document.getElementById('searchInput').addEventListener('input', (e) => {
   const filtered = activeArray.filter(planet => {
     if (planet.nameEn.toLowerCase().includes(term) || planet.nameTc.toLowerCase().includes(term)) return true;
     return planet.nodes.some(node => 
-      node.name.toLowerCase().includes(term) || 
+      node.nameTc.toLowerCase().includes(term) || 
+      node.nameEn.toLowerCase().includes(term) ||
       node.type.toLowerCase().includes(term) || 
-      node.enemy.toLowerCase().includes(term)
+      node.faction.toLowerCase().includes(term)
     );
   });
   renderGrid(filtered);
 });
+
+// 執行初始化
+init();

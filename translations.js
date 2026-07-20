@@ -1,6 +1,6 @@
 // translations.js - Warframe 本機翻譯資料庫
 
-const basicPlanets = { 
+const DICT_PLANETS = { 
   "earth": "地球", 
   "venus": "金星", 
   "mars": "火星", 
@@ -25,7 +25,7 @@ const basicPlanets = {
   "duviri": "渡域" 
 };
 
-const missionTypes = {
+const DICT_MISSIONS = {
   "Survival": "生存", 
   "Defense": "防禦",
   "Mirror Defense": "鏡像防禦",
@@ -46,6 +46,14 @@ const missionTypes = {
   "Arena": "競技場", 
   "Defection": "叛逃",
   "Disruption": "中斷", 
+  "Mobile Defense (Archwing)": "移動防禦 (Archwing)",
+  "Extermination (Archwing)": "殲滅 (Archwing)",
+  "Survival (Archwing)": "生存 (Archwing)", 
+  "Defense (Archwing)": "防禦 (Archwing)",
+  "Dark Sector Excavation": "【黑暗戰區】挖掘",
+  "Dark Sector Defense": "【黑暗戰區】防禦",
+  "Dark Sector Survival": "【黑暗戰區】生存",
+  "Dark Sector Interception": "【黑暗戰區】攔截",
   "Void Armageddon": "虛空決戰", 
   "Void Cascade": "虛空連崩", 
   "Void Flood": "虛空洪潮",
@@ -56,14 +64,25 @@ const missionTypes = {
   "Orphix": "奧菲斯"
 };
 
-const enemyTypes = {
+const DICT_FACTIONS = {
   "Grineer": "Grineer", "Corpus": "Corpus", "Infested": "Infested",
   "Corrupted": "Corrupted", "Orokin": "Orokin", "Sentient": "Sentient",
   "Narmer": "Narmer", "Murmur": "Murmur"
 };
 
 // 🌟 新增：專門用來處理那些 API 沒有，但你需要手動硬改的「特殊節點名稱」
-const customNodes = {
-  // 可以在這裡自由新增你看到的奇怪節點，例如：
-  // "Earth Proxima": "地球毗鄰星",
+const DICT_NODES = {
+  
 };
+
+function translateUI(text) {
+  if (!text) return "未知";
+
+  // 程式會由上往下依序找，只要在其中一個字典找到對應的值，就會立刻回傳！
+  // 如果全部字典都找不到 (undefined)，最後就會回傳原來的英文 (text)。
+  return DICT_MISSIONS[text] || 
+         DICT_FACTIONS[text] || 
+         DICT_PLANETS[text] || 
+         DICT_NODES[text] || 
+         text; 
+}

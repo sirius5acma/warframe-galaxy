@@ -1,199 +1,156 @@
 {
-  "Neptune": {
-    "nameEn": "Neptune",
-    "nameTc": "海王星",
+  "Mercury": {
+    "nameEn": "Mercury",
+    "nameTc": "水星",
     "drops": [
-      "奈米孢子",
+      "非晶態合金",
       "鐵氧體",
-      "控制模塊",
-      "電磁力場裝置樣本"
+      "聚合物束",
+      "爆燃安瓿"
     ],
     "nodes": [
       {
-        "id": "SolNode1",
-        "nameEn": "Galatea",
-        "nameTc": "Galatea",
-        "type": "Capture",
-        "faction": "Corpus",
-        "levels": {
-          "normal": "27 - 29",
-          "steelPath": "127 - 129"
-        }
-      },
-      {
-        "id": "SolNode6",
-        "nameEn": "Despina",
-        "nameTc": "Despina",
-        "type": "Excavation",
-        "faction": "Corpus",
-        "levels": {
-          "normal": "27 - 32",
-          "steelPath": "127 - 132"
-        }
-      },
-      {
-        "id": "SolNode17",
-        "nameEn": "Proteus",
-        "nameTc": "Proteus",
-        "type": "Defense",
-        "faction": "Corpus",
-        "levels": {
-          "normal": "27 - 32",
-          "steelPath": "127 - 132"
-        }
-      },
-      {
-        "id": "SolNode49",
-        "nameEn": "Larissa",
-        "nameTc": "Larissa",
-        "type": "Mobile Defense",
-        "faction": "Corpus",
-        "levels": {
-          "normal": "29 - 31",
-          "steelPath": "129 - 131"
-        }
-      },
-      {
-        "id": "SolNode57",
-        "nameEn": "Sao",
-        "nameTc": "Sao",
-        "type": "Sabotage",
-        "faction": "Corpus",
-        "levels": {
-          "normal": "30 - 32",
-          "steelPath": "130 - 132"
-        }
-      },
-      {
-        "id": "SolNode62",
-        "nameEn": "Neso",
-        "nameTc": "Neso",
-        "type": "Extermination",
-        "faction": "Corpus",
-        "levels": {
-          "normal": "29 - 31",
-          "steelPath": "129 - 131"
-        }
-      },
-      {
-        "id": "SolNode78",
-        "nameEn": "Triton",
-        "nameTc": "Triton",
-        "type": "Rescue",
-        "faction": "Corpus",
-        "levels": {
-          "normal": "28 - 30",
-          "steelPath": "128 - 130"
-        }
-      },
-      {
-        "id": "SolNode84",
-        "nameEn": "Nereid",
-        "nameTc": "Nereid",
-        "type": "Spy",
-        "faction": "Corpus",
-        "levels": {
-          "normal": "30 - 32",
-          "steelPath": "130 - 132"
-        }
-      },
-      {
-        "id": "SolNode118",
-        "nameEn": "Laomedeia",
-        "nameTc": "Laomedeia",
-        "type": "Disruption",
-        "faction": "Corpus",
-        "levels": {
-          "normal": "25 - 30",
-          "steelPath": "125 - 130"
-        }
-      },
-      {
-        "id": "SolNode127",
-        "nameEn": "Psamathe",
-        "nameTc": "Psamathe",
-        "type": "Assassination",
-        "faction": "Corpus",
-        "levels": {
-          "normal": "30 - 32",
-          "steelPath": "130 - 132"
-        }
-      },
-      {
-        "id": "SolNode908",
-        "nameEn": "Salacia",
-        "nameTc": "Salacia",
-        "type": "Mobile Defense (Archwing)",
-        "faction": "Corpus",
-        "levels": {
-          "normal": "27 - 32",
-          "steelPath": "127 - 132"
-        }
-      },
-      {
-        "id": "ClanNode20",
-        "nameEn": "Yursa",
-        "nameTc": "Yursa",
-        "type": "Dark Sector Defection",
+        "id": "SolNode94",
+        "nameEn": "Apollodorus",
+        "nameTc": "Apollodorus",
+        "type": "SURVIVAL",
+        "typeTc": "生存",
         "faction": "Infested",
         "levels": {
-          "normal": "30 - 40",
-          "steelPath": "130 - 140"
+          "normal": "6 - 11",
+          "steelPath": "106 - 111"
         }
       },
       {
-        "id": "ClanNode21",
-        "nameEn": "Kelashin",
-        "nameTc": "Kelashin",
-        "type": "Dark Sector Survival",
-        "faction": "Infested",
+        "id": "SolNode130",
+        "nameEn": "Lares",
+        "nameTc": "Lares",
+        "type": "DEFENSE",
+        "typeTc": "防禦",
+        "faction": "Grineer",
         "levels": {
-          "normal": "30 - 40",
-          "steelPath": "130 - 140"
+          "normal": "6 - 11",
+          "steelPath": "106 - 111"
         }
       },
       {
-        "id": "CrewBattleNode504",
-        "nameEn": "Arva Vector",
-        "nameTc": "沃野量向",
-        "type": "Defense",
-        "faction": "Corpus",
+        "id": "SolNode119",
+        "nameEn": "Caloris",
+        "nameTc": "Caloris",
+        "type": "RESCUE",
+        "typeTc": "救援",
+        "faction": "Grineer",
         "levels": {
-          "normal": "25 - 28",
-          "steelPath": "125 - 128"
+          "normal": "6 - 8",
+          "steelPath": "106 - 108"
         }
       },
       {
-        "id": "CrewBattleNode516",
-        "nameEn": "Nu-gua Mines",
-        "nameTc": "女媧星礦",
-        "type": "Extermination",
-        "faction": "Corpus",
+        "id": "SolNode12",
+        "nameEn": "Elion",
+        "nameTc": "Elion",
+        "type": "CAPTURE",
+        "typeTc": "捕獲",
+        "faction": "Grineer",
         "levels": {
-          "normal": "27 - 30",
-          "steelPath": "127 - 130"
+          "normal": "7 - 9",
+          "steelPath": "107 - 109"
         }
       },
       {
-        "id": "CrewBattleNode521",
-        "nameEn": "Enkidu Ice Drifts",
-        "nameTc": "恩奇杜冰川",
-        "type": "Survival",
-        "faction": "Corpus",
+        "id": "SolNode103",
+        "nameEn": "M Prime",
+        "nameTc": "M Prime",
+        "type": "EXTERMINATE",
+        "typeTc": "殲滅",
+        "faction": "Crossfire",
         "levels": {
-          "normal": "29 - 32",
-          "steelPath": "129 - 132"
+          "normal": "7 - 9",
+          "steelPath": "107 - 109"
         }
       },
       {
-        "id": "CrewBattleNode525",
-        "nameEn": "Brom Cluster",
-        "nameTc": "布朗星團",
-        "type": "Spy",
-        "faction": "Corpus",
+        "id": "SolNode28",
+        "nameEn": "Terminus",
+        "nameTc": "Terminus",
+        "type": "SABOTAGE",
+        "typeTc": "破壞",
+        "faction": "Crossfire",
         "levels": {
-          "normal": "32 - 35",
-          "steelPath": "132 - 135"
+          "normal": "8 - 10",
+          "steelPath": "108 - 110"
+        }
+      },
+      {
+        "id": "SolNode108",
+        "nameEn": "Tolstoj",
+        "nameTc": "Tolstoj",
+        "type": "ASSASSINATION",
+        "typeTc": "刺殺",
+        "faction": "Grineer",
+        "levels": {
+          "normal": "8 - 10",
+          "steelPath": "108 - 110"
+        }
+      },
+      {
+        "id": "SolNode223",
+        "nameEn": "Boethius",
+        "nameTc": "Boethius",
+        "type": "MOBILE DEFENSE",
+        "typeTc": "移動防禦",
+        "faction": "Grineer",
+        "levels": {
+          "normal": "8 - 10",
+          "steelPath": "108 - 110"
+        }
+      },
+      {
+        "id": "SolNode224",
+        "nameEn": "Odin",
+        "nameTc": "Odin",
+        "type": "INTERCEPTION",
+        "typeTc": "攔截",
+        "faction": "Grineer",
+        "levels": {
+          "normal": "6 - 11",
+          "steelPath": "106 - 111"
+        }
+      },
+      {
+        "id": "SolNode225",
+        "nameEn": "Suisei",
+        "nameTc": "Suisei",
+        "type": "SPY",
+        "typeTc": "間諜",
+        "faction": "Grineer",
+        "levels": {
+          "normal": "8 - 10",
+          "steelPath": "108 - 110"
+        }
+      },
+      {
+        "id": "SolNode226",
+        "nameEn": "Pantheon",
+        "nameTc": "Pantheon",
+        "type": "EXTERMINATE",
+        "typeTc": "殲滅",
+        "faction": "Grineer",
+        "levels": {
+          "normal": "6 - 8",
+          "steelPath": "106 - 108"
+        }
+      },
+      {
+        "id": "MercuryHUB",
+        "nameEn": "Larunda Relay",
+        "nameTc": "Larunda 中繼站",
+        "type": "CONCLAVE",
+        "typeTc": "中繼站 / 城鎮",
+        "faction": "Grineer",
+        "levels": {
+          "normal": "和平區域",
+          "steelPath": "和平區域"
         }
       }
     ]
@@ -209,32 +166,23 @@
     ],
     "nodes": [
       {
-        "id": "SolNode2",
-        "nameEn": "Aphrodite",
-        "nameTc": "Aphrodite",
-        "type": "Mobile Defense",
+        "id": "SolNode129",
+        "nameEn": "Orb Vallis",
+        "nameTc": "奧布山谷",
+        "type": "FREE ROAM",
+        "typeTc": "自由探索",
         "faction": "Corpus",
         "levels": {
-          "normal": "5 - 8",
-          "steelPath": "105 - 108"
+          "normal": "10 - 30",
+          "steelPath": "110 - 130"
         }
       },
       {
-        "id": "SolNode22",
-        "nameEn": "Tessera",
-        "nameTc": "Tessera",
-        "type": "Defense",
-        "faction": "Corpus",
-        "levels": {
-          "normal": "3 - 7",
-          "steelPath": "103 - 107"
-        }
-      },
-      {
-        "id": "SolNode23",
-        "nameEn": "Cytherean",
-        "nameTc": "Cytherean",
-        "type": "Interception",
+        "id": "SolNode123",
+        "nameEn": "V Prime",
+        "nameTc": "V Prime",
+        "type": "SURVIVAL",
+        "typeTc": "生存",
         "faction": "Corpus",
         "levels": {
           "normal": "6 - 8",
@@ -245,7 +193,8 @@
         "id": "SolNode61",
         "nameEn": "Ishtar",
         "nameTc": "Ishtar",
-        "type": "Sabotage",
+        "type": "SABOTAGE",
+        "typeTc": "破壞",
         "faction": "Corpus",
         "levels": {
           "normal": "6 - 8",
@@ -253,76 +202,23 @@
         }
       },
       {
-        "id": "SolNode66",
-        "nameEn": "Unda",
-        "nameTc": "Unda",
-        "type": "Spy",
+        "id": "SolNode2",
+        "nameEn": "Aphrodite",
+        "nameTc": "Aphrodite",
+        "type": "MOBILE DEFENSE",
+        "typeTc": "移動防禦",
         "faction": "Corpus",
         "levels": {
-          "normal": "6 - 8",
-          "steelPath": "106 - 108"
+          "normal": "5 - 8",
+          "steelPath": "105 - 108"
         }
       },
       {
-        "id": "SolNode71",
-        "nameEn": "Vesper",
-        "nameTc": "Vesper",
-        "type": "Spy",
-        "faction": "Corpus",
-        "levels": {
-          "normal": "未知",
-          "steelPath": "未知"
-        }
-      },
-      {
-        "id": "SolNode101",
-        "nameEn": "Kiliken",
-        "nameTc": "Kiliken",
-        "type": "Excavation",
-        "faction": "Corpus",
-        "levels": {
-          "normal": "3 - 7",
-          "steelPath": "103 - 107"
-        }
-      },
-      {
-        "id": "SolNode104",
-        "nameEn": "Fossa",
-        "nameTc": "Fossa",
-        "type": "Assassination",
-        "faction": "Corpus",
-        "levels": {
-          "normal": "6 - 8",
-          "steelPath": "106 - 108"
-        }
-      },
-      {
-        "id": "SolNode107",
-        "nameEn": "Venera",
-        "nameTc": "Venera",
-        "type": "Capture",
-        "faction": "Corpus",
-        "levels": {
-          "normal": "5 - 7",
-          "steelPath": "105 - 107"
-        }
-      },
-      {
-        "id": "SolNode109",
-        "nameEn": "Linea",
-        "nameTc": "Linea",
-        "type": "Rescue",
-        "faction": "Corpus",
-        "levels": {
-          "normal": "5 - 7",
-          "steelPath": "105 - 107"
-        }
-      },
-      {
-        "id": "SolNode123",
-        "nameEn": "V Prime",
-        "nameTc": "V Prime",
-        "type": "Survival",
+        "id": "SolNode23",
+        "nameEn": "Cytherean",
+        "nameTc": "Cytherean",
+        "type": "INTERCEPTION",
+        "typeTc": "攔截",
         "faction": "Corpus",
         "levels": {
           "normal": "6 - 8",
@@ -333,7 +229,8 @@
         "id": "SolNode128",
         "nameEn": "E Gate",
         "nameTc": "E Gate",
-        "type": "Extermination",
+        "type": "EXTERMINATE",
+        "typeTc": "殲滅",
         "faction": "Corpus",
         "levels": {
           "normal": "3 - 5",
@@ -341,21 +238,119 @@
         }
       },
       {
-        "id": "SolNode129",
-        "nameEn": "Orb Vallis",
-        "nameTc": "奧布山谷",
-        "type": "Free Roam",
+        "id": "SolNode109",
+        "nameEn": "Linea",
+        "nameTc": "Linea",
+        "type": "RESCUE",
+        "typeTc": "救援",
         "faction": "Corpus",
         "levels": {
-          "normal": "10 - 30",
-          "steelPath": "110 - 130"
+          "normal": "5 - 7",
+          "steelPath": "105 - 107"
+        }
+      },
+      {
+        "id": "SolNode104",
+        "nameEn": "Fossa",
+        "nameTc": "Fossa",
+        "type": "ASSASSINATION",
+        "typeTc": "刺殺",
+        "faction": "Corpus",
+        "levels": {
+          "normal": "6 - 8",
+          "steelPath": "106 - 108"
+        }
+      },
+      {
+        "id": "SolNode66",
+        "nameEn": "Unda",
+        "nameTc": "Unda",
+        "type": "SPY",
+        "typeTc": "間諜",
+        "faction": "Corpus",
+        "levels": {
+          "normal": "6 - 8",
+          "steelPath": "106 - 108"
+        }
+      },
+      {
+        "id": "ClanNode1",
+        "nameEn": "Malva",
+        "nameTc": "Malva",
+        "type": "SURVIVAL",
+        "typeTc": "生存",
+        "faction": "Infested",
+        "levels": {
+          "normal": "8 - 18",
+          "steelPath": "108 - 118"
+        }
+      },
+      {
+        "id": "SolNode107",
+        "nameEn": "Venera",
+        "nameTc": "Venera",
+        "type": "CAPTURE",
+        "typeTc": "捕獲",
+        "faction": "Corpus",
+        "levels": {
+          "normal": "5 - 7",
+          "steelPath": "105 - 107"
+        }
+      },
+      {
+        "id": "SolNode22",
+        "nameEn": "Tessera",
+        "nameTc": "Tessera",
+        "type": "DEFENSE",
+        "typeTc": "防禦",
+        "faction": "Corpus",
+        "levels": {
+          "normal": "3 - 7",
+          "steelPath": "103 - 107"
+        }
+      },
+      {
+        "id": "SolNode101",
+        "nameEn": "Kiliken",
+        "nameTc": "Kiliken",
+        "type": "EXCAVATION",
+        "typeTc": "挖掘",
+        "faction": "Corpus",
+        "levels": {
+          "normal": "3 - 7",
+          "steelPath": "103 - 107"
+        }
+      },
+      {
+        "id": "ClanNode0",
+        "nameEn": "Romula",
+        "nameTc": "Romula",
+        "type": "DEFENSE",
+        "typeTc": "防禦",
+        "faction": "Infested",
+        "levels": {
+          "normal": "8 - 18",
+          "steelPath": "108 - 118"
+        }
+      },
+      {
+        "id": "SolNode239",
+        "nameEn": "Vesper Relay",
+        "nameTc": "Vesper 中繼站",
+        "type": "Follie's Hunt",
+        "typeTc": "Follie 的狩獵",
+        "faction": "Corpus",
+        "levels": {
+          "normal": "35 - 45",
+          "steelPath": "135 - 145"
         }
       },
       {
         "id": "SolNode902",
         "nameEn": "Montes",
         "nameTc": "Montes",
-        "type": "Extermination (Archwing)",
+        "type": "EXTERMINATE",
+        "typeTc": "殲滅 (Archwing)",
         "faction": "Corpus",
         "levels": {
           "normal": "3 - 8",
@@ -363,69 +358,1383 @@
         }
       },
       {
-        "id": "ClanNode0",
-        "nameEn": "Romula",
-        "nameTc": "Romula",
-        "type": "Dark Sector Defense",
+        "id": "SolarisUnitedHub1",
+        "nameEn": "Fortuna",
+        "nameTc": "福爾圖娜",
+        "type": "CONCLAVE",
+        "typeTc": "中繼站 / 城鎮",
+        "faction": "Corpus",
+        "levels": {
+          "normal": "和平區域",
+          "steelPath": "和平區域"
+        }
+      },
+      {
+        "id": "NokkoColony",
+        "nameEn": "Deepmines",
+        "nameTc": "深礦",
+        "type": "FREE ROAM",
+        "typeTc": "自由探索",
+        "faction": "無",
+        "levels": {
+          "normal": "30 - 40",
+          "steelPath": "130 - 140"
+        }
+      },
+      {
+        "id": "VenusToMercuryJunction",
+        "nameEn": "MERCURY JUNCTION",
+        "nameTc": "水星接合點",
+        "type": "SOLAR RAIL JUNCTION",
+        "typeTc": "星際航道接合點",
+        "faction": "無",
+        "levels": {
+          "normal": "1 - 3",
+          "steelPath": "101 - 103"
+        }
+      }
+    ]
+  },
+  "Earth": {
+    "nameEn": "Earth",
+    "nameTc": "地球",
+    "drops": [
+      "鐵氧體",
+      "紅化結晶",
+      "神經元",
+      "爆燃安瓿"
+    ],
+    "nodes": [
+      {
+        "id": "SolNode63",
+        "nameEn": "Mantle",
+        "nameTc": "Mantle",
+        "type": "CAPTURE",
+        "typeTc": "捕獲",
+        "faction": "Grineer",
+        "levels": {
+          "normal": "2 - 4",
+          "steelPath": "102 - 104"
+        }
+      },
+      {
+        "id": "SolNode27",
+        "nameEn": "E Prime",
+        "nameTc": "E Prime",
+        "type": "EXTERMINATE",
+        "typeTc": "殲滅",
+        "faction": "Grineer",
+        "levels": {
+          "normal": "1 - 3",
+          "steelPath": "101 - 103"
+        }
+      },
+      {
+        "id": "SolNode79",
+        "nameEn": "Cambria",
+        "nameTc": "Cambria",
+        "type": "SPY",
+        "typeTc": "間諜",
+        "faction": "Grineer",
+        "levels": {
+          "normal": "3 - 6",
+          "steelPath": "103 - 106"
+        }
+      },
+      {
+        "id": "SolNode39",
+        "nameEn": "Everest",
+        "nameTc": "Everest",
+        "type": "EXCAVATION",
+        "typeTc": "挖掘",
+        "faction": "Grineer",
+        "levels": {
+          "normal": "1 - 6",
+          "steelPath": "101 - 106"
+        }
+      },
+      {
+        "id": "SolNode15",
+        "nameEn": "Pacific",
+        "nameTc": "Pacific",
+        "type": "RESCUE",
+        "typeTc": "救援",
+        "faction": "Grineer",
+        "levels": {
+          "normal": "3 - 6",
+          "steelPath": "103 - 106"
+        }
+      },
+      {
+        "id": "SolNode26",
+        "nameEn": "Lith",
+        "nameTc": "Lith",
+        "type": "DEFENSE",
+        "typeTc": "防禦",
+        "faction": "Grineer",
+        "levels": {
+          "normal": "2 - 5",
+          "steelPath": "102 - 105"
+        }
+      },
+      {
+        "id": "SolNode89",
+        "nameEn": "Mariana",
+        "nameTc": "Mariana",
+        "type": "EXTERMINATE",
+        "typeTc": "殲滅",
+        "faction": "Grineer",
+        "levels": {
+          "normal": "1 - 3",
+          "steelPath": "101 - 103"
+        }
+      },
+      {
+        "id": "SolNode85",
+        "nameEn": "Gaia",
+        "nameTc": "Gaia",
+        "type": "INTERCEPTION",
+        "typeTc": "攔截",
+        "faction": "Grineer",
+        "levels": {
+          "normal": "1 - 6",
+          "steelPath": "101 - 106"
+        }
+      },
+      {
+        "id": "SolNode59",
+        "nameEn": "Eurasia",
+        "nameTc": "Eurasia",
+        "type": "MOBILE DEFENSE",
+        "typeTc": "移動防禦",
+        "faction": "Grineer",
+        "levels": {
+          "normal": "3 - 6",
+          "steelPath": "103 - 106"
+        }
+      },
+      {
+        "id": "SolNode75",
+        "nameEn": "Cervantes",
+        "nameTc": "Cervantes",
+        "type": "SABOTAGE",
+        "typeTc": "破壞",
+        "faction": "Grineer",
+        "levels": {
+          "normal": "4 - 6",
+          "steelPath": "104 - 106"
+        }
+      },
+      {
+        "id": "SolNode24",
+        "nameEn": "Oro",
+        "nameTc": "Oro",
+        "type": "ASSASSINATION",
+        "typeTc": "刺殺",
+        "faction": "Grineer",
+        "levels": {
+          "normal": "20 - 25",
+          "steelPath": "120 - 125"
+        }
+      },
+      {
+        "id": "ClanNode2",
+        "nameEn": "Coba",
+        "nameTc": "Coba",
+        "type": "DEFENSE",
+        "typeTc": "防禦",
         "faction": "Infested",
         "levels": {
-          "normal": "8 - 18",
-          "steelPath": "108 - 118"
+          "normal": "6 - 16",
+          "steelPath": "106 - 116"
         }
       },
       {
-        "id": "ClanNode1",
-        "nameEn": "Malva",
-        "nameTc": "Malva",
-        "type": "Dark Sector Survival",
+        "id": "SolNode903",
+        "nameEn": "Erpo",
+        "nameTc": "Erpo",
+        "type": "MOBILE DEFENSE",
+        "typeTc": "移動防禦 (Archwing)",
+        "faction": "Grineer",
+        "levels": {
+          "normal": "1 - 6",
+          "steelPath": "101 - 106"
+        }
+      },
+      {
+        "id": "ClanNode3",
+        "nameEn": "Tikal",
+        "nameTc": "Tikal",
+        "type": "EXCAVATION",
+        "typeTc": "挖掘",
         "faction": "Infested",
         "levels": {
-          "normal": "8 - 18",
-          "steelPath": "108 - 118"
+          "normal": "6 - 16",
+          "steelPath": "106 - 116"
         }
       },
       {
-        "id": "CrewBattleNode503",
-        "nameEn": "Bifrost Echo",
-        "nameTc": "迴響虹橋",
-        "type": "Extermination",
-        "faction": "Corpus",
+        "id": "SolNode228",
+        "nameEn": "Plains of Eidolon",
+        "nameTc": "夜靈平野",
+        "type": "FREE ROAM",
+        "typeTc": "自由探索",
+        "faction": "Grineer",
         "levels": {
-          "normal": "15 - 18",
-          "steelPath": "115 - 118"
+          "normal": "10 - 30",
+          "steelPath": "110 - 130"
         }
       },
       {
-        "id": "CrewBattleNode512",
-        "nameEn": "Orvin-Haarc",
-        "nameTc": "奧爾萬－哈爾克",
-        "type": "Spy",
-        "faction": "Corpus",
+        "id": "SolNode451",
+        "nameEn": "Saya's Visions",
+        "nameTc": "Saya 的夢象",
+        "type": "SHRINE DEFENSE",
+        "typeTc": "祭壇防禦",
+        "faction": "無",
         "levels": {
-          "normal": "19 - 22",
-          "steelPath": "119 - 122"
+          "normal": "5 - 15",
+          "steelPath": "105 - 115"
         }
       },
       {
-        "id": "CrewBattleNode514",
-        "nameEn": "Falling Glory",
-        "nameTc": "殞落光環",
-        "type": "Defense",
-        "faction": "Corpus",
+        "id": "CetusHub4",
+        "nameEn": "Cetus",
+        "nameTc": "希圖斯",
+        "type": "CONCLAVE",
+        "typeTc": "中繼站 / 城鎮",
+        "faction": "無",
         "levels": {
-          "normal": "23 - 26",
-          "steelPath": "123 - 126"
+          "normal": "和平區域",
+          "steelPath": "和平區域"
         }
       },
       {
-        "id": "CrewBattleNode515",
-        "nameEn": "Luckless Expanse",
-        "nameTc": "落運廣袤",
-        "type": "Survival",
+        "id": "EarthToVenusJunction",
+        "nameEn": "VENUS JUNCTION",
+        "nameTc": "金星接合點",
+        "type": "SOLAR RAIL JUNCTION",
+        "typeTc": "星際航道接合點",
+        "faction": "無",
+        "levels": {
+          "normal": "1 - 3",
+          "steelPath": "101 - 103"
+        }
+      },
+      {
+        "id": "EarthToMarsJunction",
+        "nameEn": "MARS JUNCTION",
+        "nameTc": "火星接合點",
+        "type": "SOLAR RAIL JUNCTION",
+        "typeTc": "星際航道接合點",
+        "faction": "無",
+        "levels": {
+          "normal": "1 - 1",
+          "steelPath": "101 - 101"
+        }
+      },
+      {
+        "id": "EarthHUB",
+        "nameEn": "Strata Relay",
+        "nameTc": "Strata 中繼站",
+        "type": "CONCLAVE",
+        "typeTc": "中繼站 / 城鎮",
+        "faction": "Grineer",
+        "levels": {
+          "normal": "和平區域",
+          "steelPath": "和平區域"
+        }
+      }
+    ]
+  },
+  "Mars": {
+    "nameEn": "Mars",
+    "nameTc": "火星",
+    "drops": [
+      "鎵",
+      "非晶態合金",
+      "回收金屬",
+      "電磁力場裝置樣本"
+    ],
+    "nodes": [
+      {
+        "id": "SolNode30",
+        "nameEn": "Olympus",
+        "nameTc": "Olympus",
+        "type": "DISRUPTION",
+        "typeTc": "中斷",
+        "faction": "Grineer",
+        "levels": {
+          "normal": "15 - 20",
+          "steelPath": "115 - 120"
+        }
+      },
+      {
+        "id": "SolNode113",
+        "nameEn": "Ares",
+        "nameTc": "Ares",
+        "type": "SABOTAGE",
+        "typeTc": "破壞",
+        "faction": "Grineer",
+        "levels": {
+          "normal": "8 - 10",
+          "steelPath": "108 - 110"
+        }
+      },
+      {
+        "id": "SolNode46",
+        "nameEn": "Spear",
+        "nameTc": "Spear",
+        "type": "DEFENSE",
+        "typeTc": "防禦",
+        "faction": "Grineer",
+        "levels": {
+          "normal": "8 - 12",
+          "steelPath": "108 - 112"
+        }
+      },
+      {
+        "id": "SolNode68",
+        "nameEn": "Vallis",
+        "nameTc": "Vallis",
+        "type": "MOBILE DEFENSE",
+        "typeTc": "移動防禦",
+        "faction": "Grineer",
+        "levels": {
+          "normal": "11 - 13",
+          "steelPath": "111 - 113"
+        }
+      },
+      {
+        "id": "SolNode58",
+        "nameEn": "Hellas",
+        "nameTc": "Hellas",
+        "type": "EXTERMINATE",
+        "typeTc": "殲滅",
+        "faction": "Grineer",
+        "levels": {
+          "normal": "8 - 12",
+          "steelPath": "108 - 112"
+        }
+      },
+      {
+        "id": "SolNode106",
+        "nameEn": "Alator",
+        "nameTc": "Alator",
+        "type": "INTERCEPTION",
+        "typeTc": "攔截",
+        "faction": "Grineer",
+        "levels": {
+          "normal": "8 - 13",
+          "steelPath": "108 - 113"
+        }
+      },
+      {
+        "id": "SolNode41",
+        "nameEn": "Arval",
+        "nameTc": "Arval",
+        "type": "SPY",
+        "typeTc": "間諜",
+        "faction": "Grineer",
+        "levels": {
+          "normal": "9 - 11",
+          "steelPath": "109 - 111"
+        }
+      },
+      {
+        "id": "SolNode14",
+        "nameEn": "Ultor",
+        "nameTc": "Ultor",
+        "type": "EXTERMINATE",
+        "typeTc": "殲滅",
+        "faction": "Crossfire",
+        "levels": {
+          "normal": "11 - 13",
+          "steelPath": "111 - 113"
+        }
+      },
+      {
+        "id": "SolNode16",
+        "nameEn": "Augustus",
+        "nameTc": "Augustus",
+        "type": "EXCAVATION",
+        "typeTc": "挖掘",
+        "faction": "Grineer",
+        "levels": {
+          "normal": "9 - 11",
+          "steelPath": "109 - 111"
+        }
+      },
+      {
+        "id": "SolNode45",
+        "nameEn": "Ara",
+        "nameTc": "Ara",
+        "type": "CAPTURE",
+        "typeTc": "捕獲",
+        "faction": "Grineer",
+        "levels": {
+          "normal": "10 - 12",
+          "steelPath": "110 - 112"
+        }
+      },
+      {
+        "id": "SolNode36",
+        "nameEn": "Martialis",
+        "nameTc": "Martialis",
+        "type": "RESCUE",
+        "typeTc": "救援",
+        "faction": "Grineer",
+        "levels": {
+          "normal": "10 - 12",
+          "steelPath": "110 - 112"
+        }
+      },
+      {
+        "id": "ClanNode8",
+        "nameEn": "Kadesh",
+        "nameTc": "Kadesh",
+        "type": "DEFENSE",
+        "typeTc": "防禦",
+        "faction": "Infested",
+        "levels": {
+          "normal": "10 - 20",
+          "steelPath": "110 - 120"
+        }
+      },
+      {
+        "id": "SolNode99",
+        "nameEn": "War",
+        "nameTc": "War",
+        "type": "ASSASSINATION",
+        "typeTc": "刺殺",
+        "faction": "Grineer",
+        "levels": {
+          "normal": "11 - 13",
+          "steelPath": "111 - 113"
+        }
+      },
+      {
+        "id": "SolNode65",
+        "nameEn": "Gradivus",
+        "nameTc": "Gradivus",
+        "type": "SABOTAGE",
+        "typeTc": "破壞",
         "faction": "Corpus",
         "levels": {
-          "normal": "22 - 25",
-          "steelPath": "122 - 125"
+          "normal": "9 - 12",
+          "steelPath": "109 - 112"
+        }
+      },
+      {
+        "id": "ClanNode9",
+        "nameEn": "Wahiba",
+        "nameTc": "Wahiba",
+        "type": "SURVIVAL",
+        "typeTc": "生存",
+        "faction": "Infested",
+        "levels": {
+          "normal": "10 - 20",
+          "steelPath": "110 - 120"
+        }
+      },
+      {
+        "id": "SolNode11",
+        "nameEn": "Tharsis",
+        "nameTc": "Tharsis",
+        "type": "MOBILE DEFENSE",
+        "typeTc": "移動防禦",
+        "faction": "Corpus",
+        "levels": {
+          "normal": "9 - 11",
+          "steelPath": "109 - 111"
+        }
+      },
+      {
+        "id": "SolNode904",
+        "nameEn": "Syrtis",
+        "nameTc": "Syrtis",
+        "type": "EXTERMINATE",
+        "typeTc": "殲滅 (Archwing)",
+        "faction": "Grineer",
+        "levels": {
+          "normal": "8 - 13",
+          "steelPath": "108 - 113"
+        }
+      },
+      {
+        "id": "SolNode450",
+        "nameEn": "Tyana Pass",
+        "nameTc": "Tyana Pass",
+        "type": "Mirror Defense",
+        "typeTc": "鏡像防禦",
+        "faction": "Crossfire",
+        "levels": {
+          "normal": "25 - 30",
+          "steelPath": "125 - 130"
+        }
+      },
+      {
+        "id": "TradeHUB1",
+        "nameEn": "Maroo's Bazaar",
+        "nameTc": "Maroo 的市集",
+        "type": "CONCLAVE",
+        "typeTc": "中繼站 / 城鎮",
+        "faction": "Corpus",
+        "levels": {
+          "normal": "和平區域",
+          "steelPath": "和平區域"
+        }
+      },
+      {
+        "id": "MarsToCeresJunction",
+        "nameEn": "CERES JUNCTION",
+        "nameTc": "穀神星接合點",
+        "type": "SOLAR RAIL JUNCTION",
+        "typeTc": "星際航道接合點",
+        "faction": "無",
+        "levels": {
+          "normal": "1 - 1",
+          "steelPath": "101 - 101"
+        }
+      },
+      {
+        "id": "MarsToPhobosJunction",
+        "nameEn": "PHOBOS JUNCTION",
+        "nameTc": "火衛一接合點",
+        "type": "SOLAR RAIL JUNCTION",
+        "typeTc": "星際航道接合點",
+        "faction": "無",
+        "levels": {
+          "normal": "1 - 3",
+          "steelPath": "101 - 103"
+        }
+      }
+    ]
+  },
+  "Jupiter": {
+    "nameEn": "Jupiter",
+    "nameTc": "木星",
+    "drops": [
+      "回收金屬",
+      "神經傳感器",
+      "合金板",
+      "六醇燃劑"
+    ],
+    "nodes": [
+      {
+        "id": "SolNode87",
+        "nameEn": "Ganymede",
+        "nameTc": "Ganymede",
+        "type": "DISRUPTION",
+        "typeTc": "中斷",
+        "faction": "Corpus",
+        "levels": {
+          "normal": "30 - 35",
+          "steelPath": "130 - 135"
+        }
+      },
+      {
+        "id": "SolNode88",
+        "nameEn": "Adrastea",
+        "nameTc": "Adrastea",
+        "type": "SABOTAGE",
+        "typeTc": "破壞",
+        "faction": "Corpus",
+        "levels": {
+          "normal": "18 - 20",
+          "steelPath": "118 - 120"
+        }
+      },
+      {
+        "id": "SolNode97",
+        "nameEn": "Amalthea",
+        "nameTc": "Amalthea",
+        "type": "SPY",
+        "typeTc": "間諜",
+        "faction": "Corpus",
+        "levels": {
+          "normal": "17 - 19",
+          "steelPath": "117 - 119"
+        }
+      },
+      {
+        "id": "SolNode126",
+        "nameEn": "Metis",
+        "nameTc": "Metis",
+        "type": "RESCUE",
+        "typeTc": "救援",
+        "faction": "Corpus",
+        "levels": {
+          "normal": "15 - 17",
+          "steelPath": "115 - 117"
+        }
+      },
+      {
+        "id": "SolNode125",
+        "nameEn": "Io",
+        "nameTc": "Io",
+        "type": "DEFENSE",
+        "typeTc": "防禦",
+        "faction": "Corpus",
+        "levels": {
+          "normal": "15 - 20",
+          "steelPath": "115 - 120"
+        }
+      },
+      {
+        "id": "SolNode100",
+        "nameEn": "Elara",
+        "nameTc": "Elara",
+        "type": "SURVIVAL",
+        "typeTc": "生存",
+        "faction": "Corpus",
+        "levels": {
+          "normal": "15 - 20",
+          "steelPath": "115 - 120"
+        }
+      },
+      {
+        "id": "SolNode10",
+        "nameEn": "Thebe",
+        "nameTc": "Thebe",
+        "type": "SABOTAGE",
+        "typeTc": "破壞",
+        "faction": "Corpus",
+        "levels": {
+          "normal": "18 - 20",
+          "steelPath": "118 - 120"
+        }
+      },
+      {
+        "id": "SolNode25",
+        "nameEn": "Callisto",
+        "nameTc": "Callisto",
+        "type": "INTERCEPTION",
+        "typeTc": "攔截",
+        "faction": "Corpus",
+        "levels": {
+          "normal": "15 - 20",
+          "steelPath": "115 - 120"
+        }
+      },
+      {
+        "id": "SolNode121",
+        "nameEn": "Carpo",
+        "nameTc": "Carpo",
+        "type": "EXTERMINATE",
+        "typeTc": "殲滅",
+        "faction": "Corpus",
+        "levels": {
+          "normal": "17 - 19",
+          "steelPath": "117 - 119"
+        }
+      },
+      {
+        "id": "SolNode53",
+        "nameEn": "Themisto",
+        "nameTc": "Themisto",
+        "type": "ASSASSINATION",
+        "typeTc": "刺殺",
+        "faction": "Corpus",
+        "levels": {
+          "normal": "18 - 20",
+          "steelPath": "118 - 120"
+        }
+      },
+      {
+        "id": "SolNode74",
+        "nameEn": "Carme",
+        "nameTc": "Carme",
+        "type": "MOBILE DEFENSE",
+        "typeTc": "移動防禦",
+        "faction": "Corpus",
+        "levels": {
+          "normal": "16 - 18",
+          "steelPath": "116 - 118"
+        }
+      },
+      {
+        "id": "SolNode740",
+        "nameEn": "The Ropalolyst",
+        "nameTc": "蝠力使",
+        "type": "ASSASSINATION",
+        "typeTc": "刺殺",
+        "faction": "Sentient",
+        "levels": {
+          "normal": "40 - 40",
+          "steelPath": "140 - 140"
+        }
+      },
+      {
+        "id": "ClanNode4",
+        "nameEn": "Sinai",
+        "nameTc": "Sinai",
+        "type": "DEFENSE",
+        "typeTc": "防禦",
+        "faction": "Infested",
+        "levels": {
+          "normal": "20 - 30",
+          "steelPath": "120 - 130"
+        }
+      },
+      {
+        "id": "SolNode73",
+        "nameEn": "Ananke",
+        "nameTc": "Ananke",
+        "type": "CAPTURE",
+        "typeTc": "捕獲",
+        "faction": "Corpus",
+        "levels": {
+          "normal": "16 - 18",
+          "steelPath": "116 - 118"
+        }
+      },
+      {
+        "id": "SolNode905",
+        "nameEn": "Galilea",
+        "nameTc": "Galilea",
+        "type": "SABOTAGE",
+        "typeTc": "破壞 (Archwing)",
+        "faction": "Corpus",
+        "levels": {
+          "normal": "15 - 20",
+          "steelPath": "115 - 120"
+        }
+      },
+      {
+        "id": "ClanNode5",
+        "nameEn": "Cameria",
+        "nameTc": "Cameria",
+        "type": "SURVIVAL",
+        "typeTc": "生存",
+        "faction": "Infested",
+        "levels": {
+          "normal": "20 - 30",
+          "steelPath": "120 - 130"
+        }
+      },
+      {
+        "id": "JupiterToEuropaJunction",
+        "nameEn": "EUROPA JUNCTION",
+        "nameTc": "歐羅巴接合點",
+        "type": "SOLAR RAIL JUNCTION",
+        "typeTc": "星際航道接合點",
+        "faction": "無",
+        "levels": {
+          "normal": "1 - 3",
+          "steelPath": "101 - 103"
+        }
+      },
+      {
+        "id": "JupiterToSaturnJunction",
+        "nameEn": "SATURN JUNCTION",
+        "nameTc": "土星接合點",
+        "type": "SOLAR RAIL JUNCTION",
+        "typeTc": "星際航道接合點",
+        "faction": "無",
+        "levels": {
+          "normal": "1 - 3",
+          "steelPath": "101 - 103"
+        }
+      }
+    ]
+  },
+  "Saturn": {
+    "nameEn": "Saturn",
+    "nameTc": "土星",
+    "drops": [
+      "奈米孢子",
+      "生物質",
+      "Orokin電池",
+      "爆燃安瓿"
+    ],
+    "nodes": [
+      {
+        "id": "SolNode42",
+        "nameEn": "Helene",
+        "nameTc": "Helene",
+        "type": "DEFENSE",
+        "typeTc": "防禦",
+        "faction": "Grineer",
+        "levels": {
+          "normal": "21 - 26",
+          "steelPath": "121 - 126"
+        }
+      },
+      {
+        "id": "SolNode19",
+        "nameEn": "Enceladus",
+        "nameTc": "Enceladus",
+        "type": "SABOTAGE",
+        "typeTc": "破壞",
+        "faction": "Grineer",
+        "levels": {
+          "normal": "23 - 25",
+          "steelPath": "123 - 125"
+        }
+      },
+      {
+        "id": "SolNode96",
+        "nameEn": "Titan",
+        "nameTc": "Titan",
+        "type": "SURVIVAL",
+        "typeTc": "生存",
+        "faction": "Grineer",
+        "levels": {
+          "normal": "21 - 26",
+          "steelPath": "121 - 126"
+        }
+      },
+      {
+        "id": "SolNode67",
+        "nameEn": "Dione",
+        "nameTc": "Dione",
+        "type": "SPY",
+        "typeTc": "間諜",
+        "faction": "Grineer",
+        "levels": {
+          "normal": "21 - 23",
+          "steelPath": "121 - 123"
+        }
+      },
+      {
+        "id": "SolNode93",
+        "nameEn": "Keeler",
+        "nameTc": "Keeler",
+        "type": "MOBILE DEFENSE",
+        "typeTc": "移動防禦",
+        "faction": "Grineer",
+        "levels": {
+          "normal": "23 - 25",
+          "steelPath": "123 - 125"
+        }
+      },
+      {
+        "id": "SolNode32",
+        "nameEn": "Tethys",
+        "nameTc": "Tethys",
+        "type": "ASSASSINATION",
+        "typeTc": "刺殺",
+        "faction": "Grineer",
+        "levels": {
+          "normal": "24 - 26",
+          "steelPath": "124 - 126"
+        }
+      },
+      {
+        "id": "SolNode18",
+        "nameEn": "Rhea",
+        "nameTc": "Rhea",
+        "type": "INTERCEPTION",
+        "typeTc": "攔截",
+        "faction": "Grineer",
+        "levels": {
+          "normal": "21 - 26",
+          "steelPath": "121 - 126"
+        }
+      },
+      {
+        "id": "SolNode20",
+        "nameEn": "Telesto",
+        "nameTc": "Telesto",
+        "type": "EXTERMINATE",
+        "typeTc": "殲滅",
+        "faction": "Grineer",
+        "levels": {
+          "normal": "22 - 24",
+          "steelPath": "122 - 124"
+        }
+      },
+      {
+        "id": "SolNode70",
+        "nameEn": "Cassini",
+        "nameTc": "Cassini",
+        "type": "CAPTURE",
+        "typeTc": "捕獲",
+        "faction": "Grineer",
+        "levels": {
+          "normal": "21 - 23",
+          "steelPath": "121 - 123"
+        }
+      },
+      {
+        "id": "SolNode31",
+        "nameEn": "Anthe",
+        "nameTc": "Anthe",
+        "type": "RESCUE",
+        "typeTc": "救援",
+        "faction": "Grineer",
+        "levels": {
+          "normal": "22 - 24",
+          "steelPath": "122 - 124"
+        }
+      },
+      {
+        "id": "SolNode50",
+        "nameEn": "Numa",
+        "nameTc": "Numa",
+        "type": "RESCUE",
+        "typeTc": "救援",
+        "faction": "Grineer",
+        "levels": {
+          "normal": "22 - 24",
+          "steelPath": "122 - 124"
+        }
+      },
+      {
+        "id": "SolNode82",
+        "nameEn": "Calypso",
+        "nameTc": "Calypso",
+        "type": "SABOTAGE",
+        "typeTc": "破壞",
+        "faction": "Grineer",
+        "levels": {
+          "normal": "24 - 26",
+          "steelPath": "124 - 126"
+        }
+      },
+      {
+        "id": "SolNode906",
+        "nameEn": "Pandora",
+        "nameTc": "Pandora",
+        "type": "PURSUIT",
+        "typeTc": "追擊 (Archwing)",
+        "faction": "Grineer",
+        "levels": {
+          "normal": "21 - 23",
+          "steelPath": "121 - 123"
+        }
+      },
+      {
+        "id": "ClanNode13",
+        "nameEn": "Piscinas",
+        "nameTc": "Piscinas",
+        "type": "SURVIVAL",
+        "typeTc": "生存",
+        "faction": "Infested",
+        "levels": {
+          "normal": "26 - 36",
+          "steelPath": "126 - 136"
+        }
+      },
+      {
+        "id": "ClanNode12",
+        "nameEn": "Caracol",
+        "nameTc": "Caracol",
+        "type": "DEFECTION",
+        "typeTc": "叛逃",
+        "faction": "Infested",
+        "levels": {
+          "normal": "26 - 36",
+          "steelPath": "126 - 136"
+        }
+      },
+      {
+        "id": "SaturnToUranusJunction",
+        "nameEn": "URANUS JUNCTION",
+        "nameTc": "天王星接合點",
+        "type": "SOLAR RAIL JUNCTION",
+        "typeTc": "星際航道接合點",
+        "faction": "無",
+        "levels": {
+          "normal": "1 - 3",
+          "steelPath": "101 - 103"
+        }
+      },
+      {
+        "id": "SaturnHUB",
+        "nameEn": "Kronia Relay",
+        "nameTc": "Kronia 中繼站",
+        "type": "CONCLAVE",
+        "typeTc": "中繼站 / 城鎮",
+        "faction": "Grineer",
+        "levels": {
+          "normal": "和平區域",
+          "steelPath": "和平區域"
+        }
+      }
+    ]
+  },
+  "Uranus": {
+    "nameEn": "Uranus",
+    "nameTc": "天王星",
+    "drops": [
+      "聚合物束",
+      "生物質",
+      "鎵",
+      "爆燃安瓿"
+    ],
+    "nodes": [
+      {
+        "id": "SolNode33",
+        "nameEn": "Ariel",
+        "nameTc": "Ariel",
+        "type": "CAPTURE",
+        "typeTc": "捕獲",
+        "faction": "Grineer",
+        "levels": {
+          "normal": "25 - 27",
+          "steelPath": "125 - 127"
+        }
+      },
+      {
+        "id": "SolNode105",
+        "nameEn": "Titania",
+        "nameTc": "Titania",
+        "type": "ASSASSINATION",
+        "typeTc": "刺殺",
+        "faction": "Grineer",
+        "levels": {
+          "normal": "27 - 29",
+          "steelPath": "127 - 129"
+        }
+      },
+      {
+        "id": "SolNode64",
+        "nameEn": "Umbriel",
+        "nameTc": "Umbriel",
+        "type": "INTERCEPTION",
+        "typeTc": "攔截",
+        "faction": "Grineer",
+        "levels": {
+          "normal": "24 - 29",
+          "steelPath": "124 - 129"
+        }
+      },
+      {
+        "id": "SolNode69",
+        "nameEn": "Ophelia",
+        "nameTc": "Ophelia",
+        "type": "SURVIVAL",
+        "typeTc": "生存",
+        "faction": "Grineer",
+        "levels": {
+          "normal": "24 - 29",
+          "steelPath": "124 - 129"
+        }
+      },
+      {
+        "id": "SolNode83",
+        "nameEn": "Cressida",
+        "nameTc": "Cressida",
+        "type": "MOBILE DEFENSE",
+        "typeTc": "移動防禦",
+        "faction": "Grineer",
+        "levels": {
+          "normal": "27 - 29",
+          "steelPath": "127 - 129"
+        }
+      },
+      {
+        "id": "SolNode98",
+        "nameEn": "Desdemona",
+        "nameTc": "Desdemona",
+        "type": "SABOTAGE",
+        "typeTc": "破壞",
+        "faction": "Grineer",
+        "levels": {
+          "normal": "26 - 28",
+          "steelPath": "126 - 128"
+        }
+      },
+      {
+        "id": "SolNode9",
+        "nameEn": "Rosalind",
+        "nameTc": "Rosalind",
+        "type": "SPY",
+        "typeTc": "間諜",
+        "faction": "Grineer",
+        "levels": {
+          "normal": "27 - 29",
+          "steelPath": "127 - 129"
+        }
+      },
+      {
+        "id": "SolNode60",
+        "nameEn": "Caliban",
+        "nameTc": "Caliban",
+        "type": "RESCUE",
+        "typeTc": "救援",
+        "faction": "Grineer",
+        "levels": {
+          "normal": "25 - 27",
+          "steelPath": "125 - 127"
+        }
+      },
+      {
+        "id": "SolNode114",
+        "nameEn": "Puck",
+        "nameTc": "Puck",
+        "type": "EXTERMINATE",
+        "typeTc": "殲滅",
+        "faction": "Grineer",
+        "levels": {
+          "normal": "27 - 29",
+          "steelPath": "127 - 129"
+        }
+      },
+      {
+        "id": "ClanNode16",
+        "nameEn": "Ur",
+        "nameTc": "Ur",
+        "type": "DISRUPTION",
+        "typeTc": "中斷",
+        "faction": "Infested",
+        "levels": {
+          "normal": "30 - 35",
+          "steelPath": "130 - 135"
+        }
+      },
+      {
+        "id": "SolNode34",
+        "nameEn": "Sycorax",
+        "nameTc": "Sycorax",
+        "type": "EXTERMINATE",
+        "typeTc": "殲滅",
+        "faction": "Grineer",
+        "levels": {
+          "normal": "24 - 26",
+          "steelPath": "124 - 126"
+        }
+      },
+      {
+        "id": "SolNode122",
+        "nameEn": "Stephano",
+        "nameTc": "Stephano",
+        "type": "DEFENSE",
+        "typeTc": "防禦",
+        "faction": "Grineer",
+        "levels": {
+          "normal": "24 - 29",
+          "steelPath": "124 - 129"
+        }
+      },
+      {
+        "id": "SolNode907",
+        "nameEn": "Caelus",
+        "nameTc": "Caelus",
+        "type": "INTERCEPTION",
+        "typeTc": "攔截 (Archwing)",
+        "faction": "Grineer",
+        "levels": {
+          "normal": "24 - 29",
+          "steelPath": "124 - 129"
+        }
+      },
+      {
+        "id": "ClanNode17",
+        "nameEn": "Assur",
+        "nameTc": "Assur",
+        "type": "SURVIVAL",
+        "typeTc": "生存",
+        "faction": "Infested",
+        "levels": {
+          "normal": "25 - 35",
+          "steelPath": "125 - 135"
+        }
+      },
+      {
+        "id": "UranusToNeptuneJunction",
+        "nameEn": "NEPTUNE JUNCTION",
+        "nameTc": "海王星接合點",
+        "type": "SOLAR RAIL JUNCTION",
+        "typeTc": "星際航道接合點",
+        "faction": "無",
+        "levels": {
+          "normal": "1 - 3",
+          "steelPath": "101 - 103"
+        }
+      }
+    ]
+  },
+  "Neptune": {
+    "nameEn": "Neptune",
+    "nameTc": "海王星",
+    "drops": [
+      "奈米孢子",
+      "鐵氧體",
+      "控制模塊",
+      "電磁力場裝置樣本"
+    ],
+    "nodes": [
+      {
+        "id": "SolNode49",
+        "nameEn": "Larissa",
+        "nameTc": "Larissa",
+        "type": "MOBILE DEFENSE",
+        "typeTc": "移動防禦",
+        "faction": "Corpus",
+        "levels": {
+          "normal": "29 - 31",
+          "steelPath": "129 - 131"
+        }
+      },
+      {
+        "id": "SolNode1",
+        "nameEn": "Galatea",
+        "nameTc": "Galatea",
+        "type": "CAPTURE",
+        "typeTc": "捕獲",
+        "faction": "Corpus",
+        "levels": {
+          "normal": "27 - 29",
+          "steelPath": "127 - 129"
+        }
+      },
+      {
+        "id": "SolNode17",
+        "nameEn": "Proteus",
+        "nameTc": "Proteus",
+        "type": "DEFENSE",
+        "typeTc": "防禦",
+        "faction": "Corpus",
+        "levels": {
+          "normal": "27 - 32",
+          "steelPath": "127 - 132"
+        }
+      },
+      {
+        "id": "SolNode78",
+        "nameEn": "Triton",
+        "nameTc": "Triton",
+        "type": "RESCUE",
+        "typeTc": "救援",
+        "faction": "Corpus",
+        "levels": {
+          "normal": "28 - 30",
+          "steelPath": "128 - 130"
+        }
+      },
+      {
+        "id": "SolNode6",
+        "nameEn": "Despina",
+        "nameTc": "Despina",
+        "type": "EXCAVATION",
+        "typeTc": "挖掘",
+        "faction": "Corpus",
+        "levels": {
+          "normal": "27 - 32",
+          "steelPath": "127 - 132"
+        }
+      },
+      {
+        "id": "SolNode57",
+        "nameEn": "Sao",
+        "nameTc": "Sao",
+        "type": "SABOTAGE",
+        "typeTc": "破壞",
+        "faction": "Corpus",
+        "levels": {
+          "normal": "30 - 32",
+          "steelPath": "130 - 132"
+        }
+      },
+      {
+        "id": "SolNode62",
+        "nameEn": "Neso",
+        "nameTc": "Neso",
+        "type": "EXTERMINATE",
+        "typeTc": "殲滅",
+        "faction": "Corpus",
+        "levels": {
+          "normal": "29 - 31",
+          "steelPath": "129 - 131"
+        }
+      },
+      {
+        "id": "SolNode908",
+        "nameEn": "Salacia",
+        "nameTc": "Salacia",
+        "type": "MOBILE DEFENSE",
+        "typeTc": "移動防禦 (Archwing)",
+        "faction": "Corpus",
+        "levels": {
+          "normal": "27 - 32",
+          "steelPath": "127 - 132"
+        }
+      },
+      {
+        "id": "SolNode127",
+        "nameEn": "Psamathe",
+        "nameTc": "Psamathe",
+        "type": "ASSASSINATION",
+        "typeTc": "刺殺",
+        "faction": "Corpus",
+        "levels": {
+          "normal": "30 - 32",
+          "steelPath": "130 - 132"
+        }
+      },
+      {
+        "id": "SolNode118",
+        "nameEn": "Laomedeia",
+        "nameTc": "Laomedeia",
+        "type": "DISRUPTION",
+        "typeTc": "中斷",
+        "faction": "Corpus",
+        "levels": {
+          "normal": "25 - 30",
+          "steelPath": "125 - 130"
+        }
+      },
+      {
+        "id": "SolNode84",
+        "nameEn": "Nereid",
+        "nameTc": "Nereid",
+        "type": "SPY",
+        "typeTc": "間諜",
+        "faction": "Corpus",
+        "levels": {
+          "normal": "30 - 32",
+          "steelPath": "130 - 132"
+        }
+      },
+      {
+        "id": "ClanNode20",
+        "nameEn": "Yursa",
+        "nameTc": "Yursa",
+        "type": "DEFECTION",
+        "typeTc": "叛逃",
+        "faction": "Infested",
+        "levels": {
+          "normal": "30 - 40",
+          "steelPath": "130 - 140"
+        }
+      },
+      {
+        "id": "ClanNode21",
+        "nameEn": "Kelashin",
+        "nameTc": "Kelashin",
+        "type": "SURVIVAL",
+        "typeTc": "生存",
+        "faction": "Infested",
+        "levels": {
+          "normal": "30 - 40",
+          "steelPath": "130 - 140"
+        }
+      },
+      {
+        "id": "EventNode763",
+        "nameEn": "The Index: Endurance",
+        "nameTc": "《指數之場》：挑戰",
+        "type": "ARENA",
+        "typeTc": "競技場",
+        "faction": "無",
+        "levels": {
+          "normal": "30 - 30",
+          "steelPath": "130 - 130"
+        }
+      },
+      {
+        "id": "NeptuneToPlutoJunction",
+        "nameEn": "PLUTO JUNCTION",
+        "nameTc": "冥王星接合點",
+        "type": "SOLAR RAIL JUNCTION",
+        "typeTc": "星際航道接合點",
+        "faction": "無",
+        "levels": {
+          "normal": "1 - 3",
+          "steelPath": "101 - 103"
         }
       }
     ]
@@ -445,73 +1754,8 @@
         "id": "SolNode4",
         "nameEn": "Acheron",
         "nameTc": "Acheron",
-        "type": "Extermination",
-        "faction": "Corpus",
-        "levels": {
-          "normal": "34 - 38",
-          "steelPath": "134 - 138"
-        }
-      },
-      {
-        "id": "SolNode21",
-        "nameEn": "Narcissus",
-        "nameTc": "Narcissus",
-        "type": "Extermination",
-        "faction": "Corpus",
-        "levels": {
-          "normal": "32 - 36",
-          "steelPath": "132 - 136"
-        }
-      },
-      {
-        "id": "SolNode38",
-        "nameEn": "Minthe",
-        "nameTc": "Minthe",
-        "type": "Mobile Defense",
-        "faction": "Corpus",
-        "levels": {
-          "normal": "30 - 34",
-          "steelPath": "130 - 134"
-        }
-      },
-      {
-        "id": "SolNode43",
-        "nameEn": "Cerberus",
-        "nameTc": "Cerberus",
-        "type": "Interception",
-        "faction": "Corpus",
-        "levels": {
-          "normal": "30 - 40",
-          "steelPath": "130 - 140"
-        }
-      },
-      {
-        "id": "SolNode48",
-        "nameEn": "Regna",
-        "nameTc": "Regna",
-        "type": "Rescue",
-        "faction": "Corpus",
-        "levels": {
-          "normal": "34 - 38",
-          "steelPath": "134 - 138"
-        }
-      },
-      {
-        "id": "SolNode51",
-        "nameEn": "Hades",
-        "nameTc": "Hades",
-        "type": "Assassination",
-        "faction": "Corpus",
-        "levels": {
-          "normal": "35 - 45",
-          "steelPath": "135 - 145"
-        }
-      },
-      {
-        "id": "SolNode56",
-        "nameEn": "Cypress",
-        "nameTc": "Cypress",
-        "type": "Sabotage",
+        "type": "EXTERMINATE",
+        "typeTc": "殲滅",
         "faction": "Corpus",
         "levels": {
           "normal": "34 - 38",
@@ -522,7 +1766,8 @@
         "id": "SolNode72",
         "nameEn": "Outer Terminus",
         "nameTc": "Outer Terminus",
-        "type": "Defense",
+        "type": "DEFENSE",
+        "typeTc": "防禦",
         "faction": "Corpus",
         "levels": {
           "normal": "30 - 40",
@@ -530,32 +1775,23 @@
         }
       },
       {
-        "id": "SolNode76",
-        "nameEn": "Hydra",
-        "nameTc": "Hydra",
-        "type": "Capture",
+        "id": "SolNode48",
+        "nameEn": "Regna",
+        "nameTc": "Regna",
+        "type": "RESCUE",
+        "typeTc": "救援",
         "faction": "Corpus",
         "levels": {
-          "normal": "30 - 34",
-          "steelPath": "130 - 134"
+          "normal": "34 - 38",
+          "steelPath": "134 - 138"
         }
       },
       {
-        "id": "SolNode81",
-        "nameEn": "Palus",
-        "nameTc": "Palus",
-        "type": "Survival",
-        "faction": "Corpus",
-        "levels": {
-          "normal": "30 - 40",
-          "steelPath": "130 - 140"
-        }
-      },
-      {
-        "id": "SolNode102",
-        "nameEn": "Oceanum",
-        "nameTc": "Oceanum",
-        "type": "Spy",
+        "id": "SolNode21",
+        "nameEn": "Narcissus",
+        "nameTc": "Narcissus",
+        "type": "EXTERMINATE",
+        "typeTc": "殲滅",
         "faction": "Corpus",
         "levels": {
           "normal": "32 - 36",
@@ -563,21 +1799,107 @@
         }
       },
       {
+        "id": "SolNode76",
+        "nameEn": "Hydra",
+        "nameTc": "Hydra",
+        "type": "CAPTURE",
+        "typeTc": "捕獲",
+        "faction": "Corpus",
+        "levels": {
+          "normal": "30 - 34",
+          "steelPath": "130 - 134"
+        }
+      },
+      {
+        "id": "SolNode51",
+        "nameEn": "Hades",
+        "nameTc": "Hades",
+        "type": "ASSASSINATION",
+        "typeTc": "刺殺",
+        "faction": "Corpus",
+        "levels": {
+          "normal": "35 - 45",
+          "steelPath": "135 - 145"
+        }
+      },
+      {
+        "id": "SolNode38",
+        "nameEn": "Minthe",
+        "nameTc": "Minthe",
+        "type": "MOBILE DEFENSE",
+        "typeTc": "移動防禦",
+        "faction": "Corpus",
+        "levels": {
+          "normal": "30 - 34",
+          "steelPath": "130 - 134"
+        }
+      },
+      {
+        "id": "SolNode56",
+        "nameEn": "Cypress",
+        "nameTc": "Cypress",
+        "type": "SABOTAGE",
+        "typeTc": "破壞",
+        "faction": "Corpus",
+        "levels": {
+          "normal": "34 - 38",
+          "steelPath": "134 - 138"
+        }
+      },
+      {
+        "id": "SolNode43",
+        "nameEn": "Cerberus",
+        "nameTc": "Cerberus",
+        "type": "INTERCEPTION",
+        "typeTc": "攔截",
+        "faction": "Corpus",
+        "levels": {
+          "normal": "30 - 40",
+          "steelPath": "130 - 140"
+        }
+      },
+      {
+        "id": "SolNode81",
+        "nameEn": "Palus",
+        "nameTc": "Palus",
+        "type": "SURVIVAL",
+        "typeTc": "生存",
+        "faction": "Corpus",
+        "levels": {
+          "normal": "30 - 40",
+          "steelPath": "130 - 140"
+        }
+      },
+      {
         "id": "ClanNode24",
         "nameEn": "Sechura",
         "nameTc": "Sechura",
-        "type": "Dark Sector Defense",
+        "type": "DEFENSE",
+        "typeTc": "防禦",
         "faction": "Infested",
         "levels": {
           "normal": "35 - 45",
           "steelPath": "135 - 145"
+        }
+      },
+      {
+        "id": "SolNode102",
+        "nameEn": "Oceanum",
+        "nameTc": "Oceanum",
+        "type": "SPY",
+        "typeTc": "間諜",
+        "faction": "Corpus",
+        "levels": {
+          "normal": "32 - 36",
+          "steelPath": "132 - 136"
         }
       },
       {
         "id": "ClanNode25",
         "nameEn": "Hieracon",
         "nameTc": "Hieracon",
-        "type": "Dark Sector Excavation",
+        "type": "EXCAVATION",
+        "typeTc": "挖掘",
         "faction": "Infested",
         "levels": {
           "normal": "35 - 45",
@@ -585,1162 +1907,39 @@
         }
       },
       {
-        "id": "CrewBattleNode527",
-        "nameEn": "Seven Sirens",
-        "nameTc": "七妖女",
-        "type": "Extermination",
+        "id": "PlutoToErisJunction",
+        "nameEn": "ERIS JUNCTION",
+        "nameTc": "鬩神星接合點",
+        "type": "SOLAR RAIL JUNCTION",
+        "typeTc": "星際航道接合點",
+        "faction": "無",
+        "levels": {
+          "normal": "1 - 1",
+          "steelPath": "101 - 101"
+        }
+      },
+      {
+        "id": "ErisToSednaJunction",
+        "nameEn": "SEDNA JUNCTION",
+        "nameTc": "賽德娜接合點",
+        "type": "SOLAR RAIL JUNCTION",
+        "typeTc": "星際航道接合點",
+        "faction": "無",
+        "levels": {
+          "normal": "1 - 1",
+          "steelPath": "101 - 101"
+        }
+      },
+      {
+        "id": "PlutoHUB",
+        "nameEn": "Orcus Relay",
+        "nameTc": "Orcus 中繼站",
+        "type": "CONCLAVE",
+        "typeTc": "中繼站 / 城鎮",
         "faction": "Corpus",
         "levels": {
-          "normal": "37 - 40",
-          "steelPath": "137 - 140"
-        }
-      },
-      {
-        "id": "CrewBattleNode528",
-        "nameEn": "Obol Crossing",
-        "nameTc": "奧波交點",
-        "type": "Defense",
-        "faction": "Corpus",
-        "levels": {
-          "normal": "39 - 42",
-          "steelPath": "139 - 142"
-        }
-      },
-      {
-        "id": "CrewBattleNode531",
-        "nameEn": "Fenton's Field",
-        "nameTc": "分沌力場",
-        "type": "Survival",
-        "faction": "Corpus",
-        "levels": {
-          "normal": "40 - 43",
-          "steelPath": "140 - 143"
-        }
-      },
-      {
-        "id": "CrewBattleNode536",
-        "nameEn": "Peregrine Axis",
-        "nameTc": "遊移星軸",
-        "type": "Spy",
-        "faction": "Corpus",
-        "levels": {
-          "normal": "43 - 46",
-          "steelPath": "143 - 146"
-        }
-      }
-    ]
-  },
-  "Uranus": {
-    "nameEn": "Uranus",
-    "nameTc": "天王星",
-    "drops": [
-      "聚合物束",
-      "生物質",
-      "鎵",
-      "爆燃安瓿"
-    ],
-    "nodes": [
-      {
-        "id": "SolNode9",
-        "nameEn": "Rosalind",
-        "nameTc": "Rosalind",
-        "type": "Spy",
-        "faction": "Grineer",
-        "levels": {
-          "normal": "27 - 29",
-          "steelPath": "127 - 129"
-        }
-      },
-      {
-        "id": "SolNode33",
-        "nameEn": "Ariel",
-        "nameTc": "Ariel",
-        "type": "Capture",
-        "faction": "Grineer",
-        "levels": {
-          "normal": "25 - 27",
-          "steelPath": "125 - 127"
-        }
-      },
-      {
-        "id": "SolNode34",
-        "nameEn": "Sycorax",
-        "nameTc": "Sycorax",
-        "type": "Extermination",
-        "faction": "Grineer",
-        "levels": {
-          "normal": "24 - 26",
-          "steelPath": "124 - 126"
-        }
-      },
-      {
-        "id": "SolNode60",
-        "nameEn": "Caliban",
-        "nameTc": "Caliban",
-        "type": "Rescue",
-        "faction": "Grineer",
-        "levels": {
-          "normal": "25 - 27",
-          "steelPath": "125 - 127"
-        }
-      },
-      {
-        "id": "SolNode64",
-        "nameEn": "Umbriel",
-        "nameTc": "Umbriel",
-        "type": "Interception",
-        "faction": "Grineer",
-        "levels": {
-          "normal": "24 - 29",
-          "steelPath": "124 - 129"
-        }
-      },
-      {
-        "id": "SolNode69",
-        "nameEn": "Ophelia",
-        "nameTc": "Ophelia",
-        "type": "Survival",
-        "faction": "Grineer",
-        "levels": {
-          "normal": "24 - 29",
-          "steelPath": "124 - 129"
-        }
-      },
-      {
-        "id": "SolNode83",
-        "nameEn": "Cressida",
-        "nameTc": "Cressida",
-        "type": "Mobile Defense",
-        "faction": "Grineer",
-        "levels": {
-          "normal": "27 - 29",
-          "steelPath": "127 - 129"
-        }
-      },
-      {
-        "id": "SolNode98",
-        "nameEn": "Desdemona",
-        "nameTc": "Desdemona",
-        "type": "Sabotage (Archwing)",
-        "faction": "Grineer",
-        "levels": {
-          "normal": "26 - 28",
-          "steelPath": "126 - 128"
-        }
-      },
-      {
-        "id": "SolNode105",
-        "nameEn": "Titania",
-        "nameTc": "Titania",
-        "type": "Assassination",
-        "faction": "Grineer",
-        "levels": {
-          "normal": "27 - 29",
-          "steelPath": "127 - 129"
-        }
-      },
-      {
-        "id": "SolNode114",
-        "nameEn": "Puck",
-        "nameTc": "Puck",
-        "type": "Extermination",
-        "faction": "Grineer",
-        "levels": {
-          "normal": "27 - 29",
-          "steelPath": "127 - 129"
-        }
-      },
-      {
-        "id": "SolNode122",
-        "nameEn": "Stephano",
-        "nameTc": "Stephano",
-        "type": "Defense",
-        "faction": "Grineer",
-        "levels": {
-          "normal": "24 - 29",
-          "steelPath": "124 - 129"
-        }
-      },
-      {
-        "id": "SolNode907",
-        "nameEn": "Caelus",
-        "nameTc": "Caelus",
-        "type": "Interception (Archwing)",
-        "faction": "Grineer",
-        "levels": {
-          "normal": "24 - 29",
-          "steelPath": "124 - 129"
-        }
-      },
-      {
-        "id": "ClanNode16",
-        "nameEn": "Ur",
-        "nameTc": "Ur",
-        "type": "Dark Sector Disruption",
-        "faction": "Infested",
-        "levels": {
-          "normal": "30 - 35",
-          "steelPath": "130 - 135"
-        }
-      },
-      {
-        "id": "ClanNode17",
-        "nameEn": "Assur",
-        "nameTc": "Assur",
-        "type": "Dark Sector Survival",
-        "faction": "Infested",
-        "levels": {
-          "normal": "25 - 35",
-          "steelPath": "125 - 135"
-        }
-      },
-      {
-        "id": "SolNode723",
-        "nameEn": "Brutus",
-        "nameTc": "布魯圖斯",
-        "type": "Ascension",
-        "faction": "Corpus",
-        "levels": {
-          "normal": "45 - 50",
-          "steelPath": "145 - 150"
-        }
-      }
-    ]
-  },
-  "Jupiter": {
-    "nameEn": "Jupiter",
-    "nameTc": "木星",
-    "drops": [
-      "回收金屬",
-      "神經傳感器",
-      "合金板",
-      "六醇燃劑"
-    ],
-    "nodes": [
-      {
-        "id": "SolNode10",
-        "nameEn": "Thebe",
-        "nameTc": "Thebe",
-        "type": "Sabotage",
-        "faction": "Corpus",
-        "levels": {
-          "normal": "18 - 20",
-          "steelPath": "118 - 120"
-        }
-      },
-      {
-        "id": "SolNode25",
-        "nameEn": "Callisto",
-        "nameTc": "Callisto",
-        "type": "Interception",
-        "faction": "Corpus",
-        "levels": {
-          "normal": "15 - 20",
-          "steelPath": "115 - 120"
-        }
-      },
-      {
-        "id": "SolNode53",
-        "nameEn": "Themisto",
-        "nameTc": "Themisto",
-        "type": "Assassination",
-        "faction": "Corpus",
-        "levels": {
-          "normal": "18 - 20",
-          "steelPath": "118 - 120"
-        }
-      },
-      {
-        "id": "SolNode73",
-        "nameEn": "Ananke",
-        "nameTc": "Ananke",
-        "type": "Capture",
-        "faction": "Corpus",
-        "levels": {
-          "normal": "16 - 18",
-          "steelPath": "116 - 118"
-        }
-      },
-      {
-        "id": "SolNode74",
-        "nameEn": "Carme",
-        "nameTc": "Carme",
-        "type": "Mobile Defense",
-        "faction": "Corpus",
-        "levels": {
-          "normal": "16 - 18",
-          "steelPath": "116 - 118"
-        }
-      },
-      {
-        "id": "SolNode87",
-        "nameEn": "Ganymede",
-        "nameTc": "Ganymede",
-        "type": "Disruption",
-        "faction": "Corpus",
-        "levels": {
-          "normal": "30 - 35",
-          "steelPath": "130 - 135"
-        }
-      },
-      {
-        "id": "SolNode88",
-        "nameEn": "Adrastea",
-        "nameTc": "Adrastea",
-        "type": "Sabotage",
-        "faction": "Corpus",
-        "levels": {
-          "normal": "18 - 20",
-          "steelPath": "118 - 120"
-        }
-      },
-      {
-        "id": "SolNode97",
-        "nameEn": "Amalthea",
-        "nameTc": "Amalthea",
-        "type": "Spy",
-        "faction": "Corpus",
-        "levels": {
-          "normal": "17 - 19",
-          "steelPath": "117 - 119"
-        }
-      },
-      {
-        "id": "SolNode100",
-        "nameEn": "Elara",
-        "nameTc": "Elara",
-        "type": "Survival",
-        "faction": "Corpus",
-        "levels": {
-          "normal": "15 - 20",
-          "steelPath": "115 - 120"
-        }
-      },
-      {
-        "id": "SolNode121",
-        "nameEn": "Carpo",
-        "nameTc": "Carpo",
-        "type": "Extermination",
-        "faction": "Corpus",
-        "levels": {
-          "normal": "17 - 19",
-          "steelPath": "117 - 119"
-        }
-      },
-      {
-        "id": "SolNode125",
-        "nameEn": "Io",
-        "nameTc": "Io",
-        "type": "Defense",
-        "faction": "Corpus",
-        "levels": {
-          "normal": "15 - 20",
-          "steelPath": "115 - 120"
-        }
-      },
-      {
-        "id": "SolNode126",
-        "nameEn": "Metis",
-        "nameTc": "Metis",
-        "type": "Rescue",
-        "faction": "Corpus",
-        "levels": {
-          "normal": "15 - 17",
-          "steelPath": "115 - 117"
-        }
-      },
-      {
-        "id": "SolNode740",
-        "nameEn": "The Ropalolyst",
-        "nameTc": "蝠力使",
-        "type": "Assassination",
-        "faction": "Sentient",
-        "levels": {
-          "normal": "40 - 40",
-          "steelPath": "140 - 140"
-        }
-      },
-      {
-        "id": "SolNode905",
-        "nameEn": "Galilea",
-        "nameTc": "Galilea",
-        "type": "Sabotage (Archwing)",
-        "faction": "Corpus",
-        "levels": {
-          "normal": "15 - 20",
-          "steelPath": "115 - 120"
-        }
-      },
-      {
-        "id": "EventNode30",
-        "nameEn": "Ganymede",
-        "nameTc": "Ganymede",
-        "type": "Disruption",
-        "faction": "Corpus",
-        "levels": {
-          "normal": "30 - 35",
-          "steelPath": "130 - 135"
-        }
-      },
-      {
-        "id": "EventNode31",
-        "nameEn": "Ganymede",
-        "nameTc": "Ganymede",
-        "type": "Disruption",
-        "faction": "Corpus",
-        "levels": {
-          "normal": "30 - 35",
-          "steelPath": "130 - 135"
-        }
-      },
-      {
-        "id": "EventNode32",
-        "nameEn": "Ganymede",
-        "nameTc": "Ganymede",
-        "type": "Disruption",
-        "faction": "Corpus",
-        "levels": {
-          "normal": "30 - 35",
-          "steelPath": "130 - 135"
-        }
-      },
-      {
-        "id": "EventNode33",
-        "nameEn": "Ganymede",
-        "nameTc": "Ganymede",
-        "type": "Disruption",
-        "faction": "Corpus",
-        "levels": {
-          "normal": "30 - 35",
-          "steelPath": "130 - 135"
-        }
-      },
-      {
-        "id": "ClanNode4",
-        "nameEn": "Sinai",
-        "nameTc": "Sinai",
-        "type": "Dark Sector Defense",
-        "faction": "Infested",
-        "levels": {
-          "normal": "20 - 30",
-          "steelPath": "120 - 130"
-        }
-      },
-      {
-        "id": "ClanNode5",
-        "nameEn": "Cameria",
-        "nameTc": "Cameria",
-        "type": "Dark Sector Survival",
-        "faction": "Infested",
-        "levels": {
-          "normal": "20 - 30",
-          "steelPath": "120 - 130"
-        }
-      }
-    ]
-  },
-  "Mars": {
-    "nameEn": "Mars",
-    "nameTc": "火星",
-    "drops": [
-      "鎵",
-      "非晶態合金",
-      "回收金屬",
-      "電磁力場裝置樣本"
-    ],
-    "nodes": [
-      {
-        "id": "SolNode11",
-        "nameEn": "Tharsis",
-        "nameTc": "Tharsis",
-        "type": "Mobile Defense",
-        "faction": "Corpus",
-        "levels": {
-          "normal": "9 - 11",
-          "steelPath": "109 - 111"
-        }
-      },
-      {
-        "id": "SolNode14",
-        "nameEn": "Ultor",
-        "nameTc": "Ultor",
-        "type": "Extermination",
-        "faction": "Crossfire",
-        "levels": {
-          "normal": "11 - 13",
-          "steelPath": "111 - 113"
-        }
-      },
-      {
-        "id": "SolNode16",
-        "nameEn": "Augustus",
-        "nameTc": "Augustus",
-        "type": "Excavation",
-        "faction": "Grineer",
-        "levels": {
-          "normal": "9 - 11",
-          "steelPath": "109 - 111"
-        }
-      },
-      {
-        "id": "SolNode30",
-        "nameEn": "Olympus",
-        "nameTc": "Olympus",
-        "type": "Disruption",
-        "faction": "Grineer",
-        "levels": {
-          "normal": "15 - 20",
-          "steelPath": "115 - 120"
-        }
-      },
-      {
-        "id": "SolNode36",
-        "nameEn": "Martialis",
-        "nameTc": "Martialis",
-        "type": "Rescue",
-        "faction": "Grineer",
-        "levels": {
-          "normal": "10 - 12",
-          "steelPath": "110 - 112"
-        }
-      },
-      {
-        "id": "SolNode41",
-        "nameEn": "Arval",
-        "nameTc": "Arval",
-        "type": "Spy",
-        "faction": "Grineer",
-        "levels": {
-          "normal": "9 - 11",
-          "steelPath": "109 - 111"
-        }
-      },
-      {
-        "id": "SolNode45",
-        "nameEn": "Ara",
-        "nameTc": "Ara",
-        "type": "Capture",
-        "faction": "Grineer",
-        "levels": {
-          "normal": "10 - 12",
-          "steelPath": "110 - 112"
-        }
-      },
-      {
-        "id": "SolNode46",
-        "nameEn": "Spear",
-        "nameTc": "Spear",
-        "type": "Defense",
-        "faction": "Grineer",
-        "levels": {
-          "normal": "8 - 12",
-          "steelPath": "108 - 112"
-        }
-      },
-      {
-        "id": "SolNode58",
-        "nameEn": "Hellas",
-        "nameTc": "Hellas",
-        "type": "Extermination",
-        "faction": "Grineer",
-        "levels": {
-          "normal": "8 - 12",
-          "steelPath": "108 - 112"
-        }
-      },
-      {
-        "id": "SolNode65",
-        "nameEn": "Gradivus",
-        "nameTc": "Gradivus",
-        "type": "Sabotage",
-        "faction": "Corpus",
-        "levels": {
-          "normal": "9 - 12",
-          "steelPath": "109 - 112"
-        }
-      },
-      {
-        "id": "SolNode68",
-        "nameEn": "Vallis",
-        "nameTc": "Vallis",
-        "type": "Mobile Defense",
-        "faction": "Grineer",
-        "levels": {
-          "normal": "11 - 13",
-          "steelPath": "111 - 113"
-        }
-      },
-      {
-        "id": "SolNode99",
-        "nameEn": "War",
-        "nameTc": "War",
-        "type": "Assassination",
-        "faction": "Grineer",
-        "levels": {
-          "normal": "11 - 13",
-          "steelPath": "111 - 113"
-        }
-      },
-      {
-        "id": "SolNode106",
-        "nameEn": "Alator",
-        "nameTc": "Alator",
-        "type": "Interception",
-        "faction": "Grineer",
-        "levels": {
-          "normal": "8 - 13",
-          "steelPath": "108 - 113"
-        }
-      },
-      {
-        "id": "SolNode113",
-        "nameEn": "Ares",
-        "nameTc": "Ares",
-        "type": "Sabotage",
-        "faction": "Grineer",
-        "levels": {
-          "normal": "8 - 10",
-          "steelPath": "108 - 110"
-        }
-      },
-      {
-        "id": "SolNode450",
-        "nameEn": "Tyana Pass",
-        "nameTc": "Tyana Pass",
-        "type": "Mirror Defense",
-        "faction": "Crossfire",
-        "levels": {
-          "normal": "25 - 30",
-          "steelPath": "125 - 130"
-        }
-      },
-      {
-        "id": "SolNode904",
-        "nameEn": "Syrtis",
-        "nameTc": "Syrtis",
-        "type": "Extermination (Archwing)",
-        "faction": "Grineer",
-        "levels": {
-          "normal": "8 - 13",
-          "steelPath": "108 - 113"
-        }
-      },
-      {
-        "id": "ClanNode8",
-        "nameEn": "Kadesh",
-        "nameTc": "Kadesh",
-        "type": "Dark Sector Defense",
-        "faction": "Infested",
-        "levels": {
-          "normal": "10 - 20",
-          "steelPath": "110 - 120"
-        }
-      },
-      {
-        "id": "ClanNode9",
-        "nameEn": "Wahiba",
-        "nameTc": "Wahiba",
-        "type": "Dark Sector Survival",
-        "faction": "Infested",
-        "levels": {
-          "normal": "10 - 20",
-          "steelPath": "110 - 120"
-        }
-      }
-    ]
-  },
-  "Mercury": {
-    "nameEn": "Mercury",
-    "nameTc": "水星",
-    "drops": [
-      "非晶態合金",
-      "鐵氧體",
-      "聚合物束",
-      "爆燃安瓿"
-    ],
-    "nodes": [
-      {
-        "id": "SolNode12",
-        "nameEn": "Elion",
-        "nameTc": "Elion",
-        "type": "Capture",
-        "faction": "Grineer",
-        "levels": {
-          "normal": "7 - 9",
-          "steelPath": "107 - 109"
-        }
-      },
-      {
-        "id": "SolNode28",
-        "nameEn": "Terminus",
-        "nameTc": "Terminus",
-        "type": "Sabotage",
-        "faction": "Crossfire",
-        "levels": {
-          "normal": "8 - 10",
-          "steelPath": "108 - 110"
-        }
-      },
-      {
-        "id": "SolNode94",
-        "nameEn": "Apollodorus",
-        "nameTc": "Apollodorus",
-        "type": "Survival",
-        "faction": "Infested",
-        "levels": {
-          "normal": "6 - 11",
-          "steelPath": "106 - 111"
-        }
-      },
-      {
-        "id": "SolNode103",
-        "nameEn": "M Prime",
-        "nameTc": "M Prime",
-        "type": "Extermination",
-        "faction": "Crossfire",
-        "levels": {
-          "normal": "7 - 9",
-          "steelPath": "107 - 109"
-        }
-      },
-      {
-        "id": "SolNode108",
-        "nameEn": "Tolstoj",
-        "nameTc": "Tolstoj",
-        "type": "Assassination",
-        "faction": "Grineer",
-        "levels": {
-          "normal": "8 - 10",
-          "steelPath": "108 - 110"
-        }
-      },
-      {
-        "id": "SolNode119",
-        "nameEn": "Caloris",
-        "nameTc": "Caloris",
-        "type": "Rescue",
-        "faction": "Grineer",
-        "levels": {
-          "normal": "6 - 8",
-          "steelPath": "106 - 108"
-        }
-      },
-      {
-        "id": "SolNode130",
-        "nameEn": "Lares",
-        "nameTc": "Lares",
-        "type": "Defense",
-        "faction": "Grineer",
-        "levels": {
-          "normal": "6 - 11",
-          "steelPath": "106 - 111"
-        }
-      },
-      {
-        "id": "SolNode223",
-        "nameEn": "Boethius",
-        "nameTc": "Boethius",
-        "type": "Mobile Defense",
-        "faction": "Grineer",
-        "levels": {
-          "normal": "8 - 10",
-          "steelPath": "108 - 110"
-        }
-      },
-      {
-        "id": "SolNode224",
-        "nameEn": "Odin",
-        "nameTc": "Odin",
-        "type": "Interception",
-        "faction": "Grineer",
-        "levels": {
-          "normal": "6 - 11",
-          "steelPath": "106 - 111"
-        }
-      },
-      {
-        "id": "SolNode225",
-        "nameEn": "Suisei",
-        "nameTc": "Suisei",
-        "type": "Spy",
-        "faction": "Grineer",
-        "levels": {
-          "normal": "8 - 10",
-          "steelPath": "108 - 110"
-        }
-      },
-      {
-        "id": "SolNode226",
-        "nameEn": "Pantheon",
-        "nameTc": "Pantheon",
-        "type": "Extermination",
-        "faction": "Grineer",
-        "levels": {
-          "normal": "6 - 8",
-          "steelPath": "106 - 108"
-        }
-      },
-      {
-        "id": "SolNode227",
-        "nameEn": "Verdi",
-        "nameTc": "Verdi",
-        "levels": {
-          "normal": "未知",
-          "steelPath": "未知"
-        }
-      }
-    ]
-  },
-  "Earth": {
-    "nameEn": "Earth",
-    "nameTc": "地球",
-    "drops": [
-      "鐵氧體",
-      "紅化結晶",
-      "神經元",
-      "爆燃安瓿"
-    ],
-    "nodes": [
-      {
-        "id": "SolNode15",
-        "nameEn": "Pacific",
-        "nameTc": "Pacific",
-        "type": "Rescue",
-        "faction": "Grineer",
-        "levels": {
-          "normal": "3 - 6",
-          "steelPath": "103 - 106"
-        }
-      },
-      {
-        "id": "SolNode24",
-        "nameEn": "Oro",
-        "nameTc": "Oro",
-        "type": "Assassination",
-        "faction": "Grineer",
-        "levels": {
-          "normal": "20 - 25",
-          "steelPath": "120 - 125"
-        }
-      },
-      {
-        "id": "SolNode26",
-        "nameEn": "Lith",
-        "nameTc": "Lith",
-        "type": "Defense",
-        "faction": "Grineer",
-        "levels": {
-          "normal": "2 - 5",
-          "steelPath": "102 - 105"
-        }
-      },
-      {
-        "id": "SolNode27",
-        "nameEn": "E Prime",
-        "nameTc": "E Prime",
-        "type": "Extermination",
-        "faction": "Grineer",
-        "levels": {
-          "normal": "1 - 3",
-          "steelPath": "101 - 103"
-        }
-      },
-      {
-        "id": "SolNode39",
-        "nameEn": "Everest",
-        "nameTc": "Everest",
-        "type": "Excavation",
-        "faction": "Grineer",
-        "levels": {
-          "normal": "1 - 6",
-          "steelPath": "101 - 106"
-        }
-      },
-      {
-        "id": "SolNode59",
-        "nameEn": "Eurasia",
-        "nameTc": "Eurasia",
-        "type": "Mobile Defense",
-        "faction": "Grineer",
-        "levels": {
-          "normal": "3 - 6",
-          "steelPath": "103 - 106"
-        }
-      },
-      {
-        "id": "SolNode63",
-        "nameEn": "Mantle",
-        "nameTc": "Mantle",
-        "type": "Capture",
-        "faction": "Grineer",
-        "levels": {
-          "normal": "2 - 4",
-          "steelPath": "102 - 104"
-        }
-      },
-      {
-        "id": "SolNode75",
-        "nameEn": "Cervantes",
-        "nameTc": "Cervantes",
-        "type": "Sabotage",
-        "faction": "Grineer",
-        "levels": {
-          "normal": "4 - 6",
-          "steelPath": "104 - 106"
-        }
-      },
-      {
-        "id": "SolNode79",
-        "nameEn": "Cambria",
-        "nameTc": "Cambria",
-        "type": "Spy",
-        "faction": "Grineer",
-        "levels": {
-          "normal": "3 - 6",
-          "steelPath": "103 - 106"
-        }
-      },
-      {
-        "id": "SolNode85",
-        "nameEn": "Gaia",
-        "nameTc": "Gaia",
-        "type": "Interception",
-        "faction": "Grineer",
-        "levels": {
-          "normal": "1 - 6",
-          "steelPath": "101 - 106"
-        }
-      },
-      {
-        "id": "SolNode89",
-        "nameEn": "Mariana",
-        "nameTc": "Mariana",
-        "type": "Extermination",
-        "faction": "Grineer",
-        "levels": {
-          "normal": "1 - 3",
-          "steelPath": "101 - 103"
-        }
-      },
-      {
-        "id": "SolNode228",
-        "nameEn": "Plains of Eidolon",
-        "nameTc": "夜靈平野",
-        "type": "Free Roam",
-        "faction": "Grineer",
-        "levels": {
-          "normal": "10 - 30",
-          "steelPath": "110 - 130"
-        }
-      },
-      {
-        "id": "SolNode903",
-        "nameEn": "Erpo",
-        "nameTc": "Erpo",
-        "type": "Mobile Defense (Archwing)",
-        "faction": "Grineer",
-        "levels": {
-          "normal": "1 - 6",
-          "steelPath": "101 - 106"
-        }
-      },
-      {
-        "id": "ClanNode2",
-        "nameEn": "Coba",
-        "nameTc": "Coba",
-        "type": "Dark Sector Defense",
-        "faction": "Infested",
-        "levels": {
-          "normal": "6 - 16",
-          "steelPath": "106 - 116"
-        }
-      },
-      {
-        "id": "ClanNode3",
-        "nameEn": "Tikal",
-        "nameTc": "Tikal",
-        "type": "Dark Sector Excavation",
-        "faction": "Infested",
-        "levels": {
-          "normal": "6 - 16",
-          "steelPath": "106 - 116"
-        }
-      }
-    ]
-  },
-  "Saturn": {
-    "nameEn": "Saturn",
-    "nameTc": "土星",
-    "drops": [
-      "奈米孢子",
-      "生物質",
-      "Orokin電池",
-      "爆燃安瓿"
-    ],
-    "nodes": [
-      {
-        "id": "SolNode18",
-        "nameEn": "Rhea",
-        "nameTc": "Rhea",
-        "type": "Interception",
-        "faction": "Grineer",
-        "levels": {
-          "normal": "21 - 26",
-          "steelPath": "121 - 126"
-        }
-      },
-      {
-        "id": "SolNode19",
-        "nameEn": "Enceladus",
-        "nameTc": "Enceladus",
-        "type": "Sabotage",
-        "faction": "Grineer",
-        "levels": {
-          "normal": "23 - 25",
-          "steelPath": "123 - 125"
-        }
-      },
-      {
-        "id": "SolNode20",
-        "nameEn": "Telesto",
-        "nameTc": "Telesto",
-        "type": "Extermination",
-        "faction": "Grineer",
-        "levels": {
-          "normal": "22 - 24",
-          "steelPath": "122 - 124"
-        }
-      },
-      {
-        "id": "SolNode31",
-        "nameEn": "Anthe",
-        "nameTc": "Anthe",
-        "type": "Rescue",
-        "faction": "Grineer",
-        "levels": {
-          "normal": "22 - 24",
-          "steelPath": "122 - 124"
-        }
-      },
-      {
-        "id": "SolNode32",
-        "nameEn": "Tethys",
-        "nameTc": "Tethys",
-        "type": "Assassination",
-        "faction": "Grineer",
-        "levels": {
-          "normal": "24 - 26",
-          "steelPath": "124 - 126"
-        }
-      },
-      {
-        "id": "SolNode42",
-        "nameEn": "Helene",
-        "nameTc": "Helene",
-        "type": "Defense",
-        "faction": "Grineer",
-        "levels": {
-          "normal": "21 - 26",
-          "steelPath": "121 - 126"
-        }
-      },
-      {
-        "id": "SolNode50",
-        "nameEn": "Numa",
-        "nameTc": "Numa",
-        "type": "Rescue",
-        "faction": "Grineer",
-        "levels": {
-          "normal": "22 - 24",
-          "steelPath": "122 - 124"
-        }
-      },
-      {
-        "id": "SolNode67",
-        "nameEn": "Dione",
-        "nameTc": "Dione",
-        "type": "Spy",
-        "faction": "Grineer",
-        "levels": {
-          "normal": "21 - 23",
-          "steelPath": "121 - 123"
-        }
-      },
-      {
-        "id": "SolNode70",
-        "nameEn": "Cassini",
-        "nameTc": "Cassini",
-        "type": "Capture",
-        "faction": "Grineer",
-        "levels": {
-          "normal": "21 - 23",
-          "steelPath": "121 - 123"
-        }
-      },
-      {
-        "id": "SolNode82",
-        "nameEn": "Calypso",
-        "nameTc": "Calypso",
-        "type": "Sabotage",
-        "faction": "Grineer",
-        "levels": {
-          "normal": "24 - 26",
-          "steelPath": "124 - 126"
-        }
-      },
-      {
-        "id": "SolNode93",
-        "nameEn": "Keeler",
-        "nameTc": "Keeler",
-        "type": "Mobile Defense",
-        "faction": "Grineer",
-        "levels": {
-          "normal": "23 - 25",
-          "steelPath": "123 - 125"
-        }
-      },
-      {
-        "id": "SolNode96",
-        "nameEn": "Titan",
-        "nameTc": "Titan",
-        "type": "Survival",
-        "faction": "Grineer",
-        "levels": {
-          "normal": "21 - 26",
-          "steelPath": "121 - 126"
-        }
-      },
-      {
-        "id": "SolNode906",
-        "nameEn": "Pandora",
-        "nameTc": "Pandora",
-        "type": "Pursuit (Archwing)",
-        "faction": "Grineer",
-        "levels": {
-          "normal": "21 - 23",
-          "steelPath": "121 - 123"
-        }
-      },
-      {
-        "id": "ClanNode12",
-        "nameEn": "Caracol",
-        "nameTc": "Caracol",
-        "type": "Dark Sector Defection",
-        "faction": "Infested",
-        "levels": {
-          "normal": "26 - 36",
-          "steelPath": "126 - 136"
-        }
-      },
-      {
-        "id": "ClanNode13",
-        "nameEn": "Piscinas",
-        "nameTc": "Piscinas",
-        "type": "Dark Sector Survival",
-        "faction": "Infested",
-        "levels": {
-          "normal": "26 - 36",
-          "steelPath": "126 - 136"
+          "normal": "和平區域",
+          "steelPath": "和平區域"
         }
       }
     ]
@@ -1759,18 +1958,8 @@
         "id": "SolNode131",
         "nameEn": "Pallas",
         "nameTc": "Pallas",
-        "type": "Extermination",
-        "faction": "Grineer",
-        "levels": {
-          "normal": "12 - 14",
-          "steelPath": "112 - 114"
-        }
-      },
-      {
-        "id": "SolNode132",
-        "nameEn": "Bode",
-        "nameTc": "Bode",
-        "type": "Spy",
+        "type": "EXTERMINATE",
+        "typeTc": "殲滅",
         "faction": "Grineer",
         "levels": {
           "normal": "12 - 14",
@@ -1781,7 +1970,8 @@
         "id": "SolNode135",
         "nameEn": "Thon",
         "nameTc": "Thon",
-        "type": "Sabotage",
+        "type": "SABOTAGE",
+        "typeTc": "破壞",
         "faction": "Grineer",
         "levels": {
           "normal": "15 - 17",
@@ -1789,10 +1979,59 @@
         }
       },
       {
+        "id": "SolNode132",
+        "nameEn": "Bode",
+        "nameTc": "Bode",
+        "type": "SPY",
+        "typeTc": "間諜",
+        "faction": "Grineer",
+        "levels": {
+          "normal": "12 - 14",
+          "steelPath": "112 - 114"
+        }
+      },
+      {
+        "id": "SolNode139",
+        "nameEn": "Lex",
+        "nameTc": "Lex",
+        "type": "CAPTURE",
+        "typeTc": "捕獲",
+        "faction": "Grineer",
+        "levels": {
+          "normal": "14 - 16",
+          "steelPath": "114 - 116"
+        }
+      },
+      {
+        "id": "SolNode141",
+        "nameEn": "Ker",
+        "nameTc": "Ker",
+        "type": "SABOTAGE",
+        "typeTc": "破壞",
+        "faction": "Grineer",
+        "levels": {
+          "normal": "14 - 16",
+          "steelPath": "114 - 116"
+        }
+      },
+      {
         "id": "SolNode137",
         "nameEn": "Nuovo",
         "nameTc": "Nuovo",
-        "type": "Rescue",
+        "type": "RESCUE",
+        "typeTc": "救援",
+        "faction": "Grineer",
+        "levels": {
+          "normal": "13 - 15",
+          "steelPath": "113 - 115"
+        }
+      },
+      {
+        "id": "SolNode140",
+        "nameEn": "Kiste",
+        "nameTc": "Kiste",
+        "type": "MOBILE DEFENSE",
+        "typeTc": "移動防禦",
         "faction": "Grineer",
         "levels": {
           "normal": "13 - 15",
@@ -1803,7 +2042,8 @@
         "id": "SolNode138",
         "nameEn": "Ludi",
         "nameTc": "Ludi",
-        "type": "Hijack",
+        "type": "HIJACK",
+        "typeTc": "劫持",
         "faction": "Grineer",
         "levels": {
           "normal": "15 - 17",
@@ -1811,43 +2051,11 @@
         }
       },
       {
-        "id": "SolNode139",
-        "nameEn": "Lex",
-        "nameTc": "Lex",
-        "type": "Capture",
-        "faction": "Grineer",
-        "levels": {
-          "normal": "14 - 16",
-          "steelPath": "114 - 116"
-        }
-      },
-      {
-        "id": "SolNode140",
-        "nameEn": "Kiste",
-        "nameTc": "Kiste",
-        "type": "Mobile Defense",
-        "faction": "Grineer",
-        "levels": {
-          "normal": "13 - 15",
-          "steelPath": "113 - 115"
-        }
-      },
-      {
-        "id": "SolNode141",
-        "nameEn": "Ker",
-        "nameTc": "Ker",
-        "type": "Sabotage",
-        "faction": "Grineer",
-        "levels": {
-          "normal": "14 - 16",
-          "steelPath": "114 - 116"
-        }
-      },
-      {
         "id": "SolNode144",
         "nameEn": "Exta",
         "nameTc": "Exta",
-        "type": "Assassination",
+        "type": "ASSASSINATION",
+        "typeTc": "刺殺",
         "faction": "Grineer",
         "levels": {
           "normal": "14 - 16",
@@ -1855,10 +2063,11 @@
         }
       },
       {
-        "id": "SolNode146",
-        "nameEn": "Draco",
-        "nameTc": "Draco",
-        "type": "Survival",
+        "id": "SolNode149",
+        "nameEn": "Casta",
+        "nameTc": "Casta",
+        "type": "DEFENSE",
+        "typeTc": "防禦",
         "faction": "Grineer",
         "levels": {
           "normal": "12 - 17",
@@ -1869,7 +2078,8 @@
         "id": "SolNode147",
         "nameEn": "Cinxia",
         "nameTc": "Cinxia",
-        "type": "Interception",
+        "type": "INTERCEPTION",
+        "typeTc": "攔截",
         "faction": "Grineer",
         "levels": {
           "normal": "12 - 17",
@@ -1877,19 +2087,11 @@
         }
       },
       {
-        "id": "SolNode148",
-        "nameEn": "Cerium",
-        "nameTc": "Cerium",
-        "levels": {
-          "normal": "未知",
-          "steelPath": "未知"
-        }
-      },
-      {
-        "id": "SolNode149",
-        "nameEn": "Casta",
-        "nameTc": "Casta",
-        "type": "Defense",
+        "id": "SolNode146",
+        "nameEn": "Draco",
+        "nameTc": "Draco",
+        "type": "SURVIVAL",
+        "typeTc": "生存",
         "faction": "Grineer",
         "levels": {
           "normal": "12 - 17",
@@ -1897,10 +2099,11 @@
         }
       },
       {
-        "id": "ClanNode22",
-        "nameEn": "Seimeni",
-        "nameTc": "Seimeni",
-        "type": "Dark Sector Defense",
+        "id": "ClanNode23",
+        "nameEn": "Gabii",
+        "nameTc": "Gabii",
+        "type": "SURVIVAL",
+        "typeTc": "生存",
         "faction": "Infested",
         "levels": {
           "normal": "15 - 25",
@@ -1908,10 +2111,11 @@
         }
       },
       {
-        "id": "ClanNode23",
-        "nameEn": "Gabii",
-        "nameTc": "Gabii",
-        "type": "Dark Sector Survival",
+        "id": "ClanNode22",
+        "nameEn": "Seimeni",
+        "nameTc": "Seimeni",
+        "type": "DEFENSE",
+        "typeTc": "防禦",
         "faction": "Infested",
         "levels": {
           "normal": "15 - 25",
@@ -1934,38 +2138,20 @@
         "id": "SolNode153",
         "nameEn": "Brugia",
         "nameTc": "Brugia",
-        "type": "Rescue",
+        "type": "RESCUE",
+        "typeTc": "救援",
         "faction": "Infested",
         "levels": {
           "normal": "32 - 36",
           "steelPath": "132 - 136"
-        }
-      },
-      {
-        "id": "SolNode162",
-        "nameEn": "Isos",
-        "nameTc": "Isos",
-        "type": "Capture",
-        "faction": "Infested",
-        "levels": {
-          "normal": "32 - 36",
-          "steelPath": "132 - 136"
-        }
-      },
-      {
-        "id": "SolNode163",
-        "nameEn": "Ixodes",
-        "nameTc": "Ixodes",
-        "levels": {
-          "normal": "未知",
-          "steelPath": "未知"
         }
       },
       {
         "id": "SolNode164",
         "nameEn": "Kala-azar",
         "nameTc": "Kala-azar",
-        "type": "Defense",
+        "type": "DEFENSE",
+        "typeTc": "防禦",
         "faction": "Infested",
         "levels": {
           "normal": "30 - 40",
@@ -1973,43 +2159,23 @@
         }
       },
       {
-        "id": "SolNode165",
-        "nameEn": "Sporid",
-        "nameTc": "Sporid",
-        "type": "Hive Sabotage",
+        "id": "SolNode162",
+        "nameEn": "Isos",
+        "nameTc": "Isos",
+        "type": "CAPTURE",
+        "typeTc": "捕獲",
         "faction": "Infested",
         "levels": {
-          "normal": "未知",
-          "steelPath": "未知"
-        }
-      },
-      {
-        "id": "SolNode166",
-        "nameEn": "Nimus",
-        "nameTc": "Nimus",
-        "type": "Survival",
-        "faction": "Infested",
-        "levels": {
-          "normal": "30 - 40",
-          "steelPath": "130 - 140"
-        }
-      },
-      {
-        "id": "SolNode167",
-        "nameEn": "Oestrus",
-        "nameTc": "Oestrus",
-        "type": "Infested Salvage",
-        "faction": "Infested",
-        "levels": {
-          "normal": "34 - 38",
-          "steelPath": "134 - 138"
+          "normal": "32 - 36",
+          "steelPath": "132 - 136"
         }
       },
       {
         "id": "SolNode171",
         "nameEn": "Saxis",
         "nameTc": "Saxis",
-        "type": "Extermination",
+        "type": "EXTERMINATE",
+        "typeTc": "殲滅",
         "faction": "Infested",
         "levels": {
           "normal": "34 - 38",
@@ -2017,10 +2183,23 @@
         }
       },
       {
-        "id": "SolNode172",
-        "nameEn": "Xini",
-        "nameTc": "Xini",
-        "type": "Interception",
+        "id": "SolNode167",
+        "nameEn": "Oestrus",
+        "nameTc": "Oestrus",
+        "type": "INFESTED SALVAGE",
+        "typeTc": "INFESTED 資源回收",
+        "faction": "Infested",
+        "levels": {
+          "normal": "34 - 38",
+          "steelPath": "134 - 138"
+        }
+      },
+      {
+        "id": "SolNode166",
+        "nameEn": "Nimus",
+        "nameTc": "Nimus",
+        "type": "SURVIVAL",
+        "typeTc": "生存",
         "faction": "Infested",
         "levels": {
           "normal": "30 - 40",
@@ -2031,7 +2210,8 @@
         "id": "SolNode173",
         "nameEn": "Solium",
         "nameTc": "Solium",
-        "type": "Mobile Defense",
+        "type": "MOBILE DEFENSE",
+        "typeTc": "移動防禦",
         "faction": "Infested",
         "levels": {
           "normal": "34 - 38",
@@ -2039,10 +2219,47 @@
         }
       },
       {
+        "id": "ClanNode18",
+        "nameEn": "Akkad",
+        "nameTc": "Akkad",
+        "type": "DEFENSE",
+        "typeTc": "防禦",
+        "faction": "Infested",
+        "levels": {
+          "normal": "35 - 45",
+          "steelPath": "135 - 145"
+        }
+      },
+      {
+        "id": "SolNode172",
+        "nameEn": "Xini",
+        "nameTc": "Xini",
+        "type": "INTERCEPTION",
+        "typeTc": "攔截",
+        "faction": "Infested",
+        "levels": {
+          "normal": "30 - 40",
+          "steelPath": "130 - 140"
+        }
+      },
+      {
+        "id": "ClanNode19",
+        "nameEn": "Zabala",
+        "nameTc": "Zabala",
+        "type": "SURVIVAL",
+        "typeTc": "生存",
+        "faction": "Infested",
+        "levels": {
+          "normal": "35 - 45",
+          "steelPath": "135 - 145"
+        }
+      },
+      {
         "id": "SolNode175",
         "nameEn": "Naeglar",
         "nameTc": "Naeglar",
-        "type": "Hive",
+        "type": "HIVE",
+        "typeTc": "清巢",
         "faction": "Infested",
         "levels": {
           "normal": "30 - 34",
@@ -2050,25 +2267,27 @@
         }
       },
       {
-        "id": "ClanNode18",
-        "nameEn": "Akkad",
-        "nameTc": "Akkad",
-        "type": "Dark Sector Defense",
-        "faction": "Infested",
+        "id": "SolNode701",
+        "nameEn": "Jordas Golem Assassinate",
+        "nameTc": "Jordas 魔像刺殺",
+        "type": "ASSASSINATION",
+        "typeTc": "刺殺",
+        "faction": "無",
         "levels": {
-          "normal": "35 - 45",
-          "steelPath": "135 - 145"
+          "normal": "32 - 34",
+          "steelPath": "132 - 134"
         }
       },
       {
-        "id": "ClanNode19",
-        "nameEn": "Zabala",
-        "nameTc": "Zabala",
-        "type": "Dark Sector Survival",
-        "faction": "Infested",
+        "id": "SolNode705",
+        "nameEn": "Mutalist Alad V Assassinate",
+        "nameTc": "異融者 Alad V 刺殺",
+        "type": "ASSASSINATION",
+        "typeTc": "刺殺",
+        "faction": "無",
         "levels": {
-          "normal": "35 - 45",
-          "steelPath": "135 - 145"
+          "normal": "30 - 35",
+          "steelPath": "130 - 135"
         }
       }
     ]
@@ -2087,7 +2306,8 @@
         "id": "SolNode177",
         "nameEn": "Kappa",
         "nameTc": "Kappa",
-        "type": "Disruption",
+        "type": "DISRUPTION",
+        "typeTc": "中斷",
         "faction": "Grineer",
         "levels": {
           "normal": "34 - 38",
@@ -2095,10 +2315,23 @@
         }
       },
       {
+        "id": "SolNode184",
+        "nameEn": "Rusalka",
+        "nameTc": "Rusalka",
+        "type": "SABOTAGE",
+        "typeTc": "破壞",
+        "faction": "Grineer",
+        "levels": {
+          "normal": "32 - 36",
+          "steelPath": "132 - 136"
+        }
+      },
+      {
         "id": "SolNode181",
         "nameEn": "Adaro",
         "nameTc": "Adaro",
-        "type": "Extermination",
+        "type": "EXTERMINATE",
+        "typeTc": "殲滅",
         "faction": "Grineer",
         "levels": {
           "normal": "32 - 36",
@@ -2109,7 +2342,8 @@
         "id": "SolNode183",
         "nameEn": "Vodyanoi",
         "nameTc": "Vodyanoi",
-        "type": "Arena",
+        "type": "ARENA",
+        "typeTc": "競技場",
         "faction": "Grineer",
         "levels": {
           "normal": "85 - 85",
@@ -2117,43 +2351,35 @@
         }
       },
       {
-        "id": "SolNode184",
-        "nameEn": "Rusalka",
-        "nameTc": "Rusalka",
-        "type": "Sabotage",
+        "id": "SolNode190",
+        "nameEn": "Nakki",
+        "nameTc": "Nakki",
+        "type": "ARENA",
+        "typeTc": "競技場",
         "faction": "Grineer",
         "levels": {
-          "normal": "32 - 36",
-          "steelPath": "132 - 136"
+          "normal": "40 - 40",
+          "steelPath": "140 - 140"
         }
       },
       {
         "id": "SolNode185",
         "nameEn": "Berehynia",
         "nameTc": "Berehynia",
-        "type": "Interception",
+        "type": "INTERCEPTION",
+        "typeTc": "攔截",
         "faction": "Grineer",
         "levels": {
           "normal": "30 - 40",
           "steelPath": "130 - 140"
-        }
-      },
-      {
-        "id": "SolNode186",
-        "nameEn": "Phithale",
-        "nameTc": "Phithale",
-        "type": "Sabotage",
-        "faction": "Grineer",
-        "levels": {
-          "normal": "未知",
-          "steelPath": "未知"
         }
       },
       {
         "id": "SolNode187",
         "nameEn": "Selkie",
         "nameTc": "Selkie",
-        "type": "Survival",
+        "type": "SURVIVAL",
+        "typeTc": "生存",
         "faction": "Grineer",
         "levels": {
           "normal": "30 - 40",
@@ -2161,10 +2387,23 @@
         }
       },
       {
+        "id": "SolNode191",
+        "nameEn": "Marid",
+        "nameTc": "Marid",
+        "type": "HIJACK",
+        "typeTc": "劫持",
+        "faction": "Grineer",
+        "levels": {
+          "normal": "34 - 38",
+          "steelPath": "134 - 138"
+        }
+      },
+      {
         "id": "SolNode188",
         "nameEn": "Kelpie",
         "nameTc": "Kelpie",
-        "type": "Spy",
+        "type": "SPY",
+        "typeTc": "間諜",
         "faction": "Grineer",
         "levels": {
           "normal": "35 - 40",
@@ -2175,7 +2414,8 @@
         "id": "SolNode189",
         "nameEn": "Naga",
         "nameTc": "Naga",
-        "type": "Rescue",
+        "type": "RESCUE",
+        "typeTc": "救援",
         "faction": "Grineer",
         "levels": {
           "normal": "30 - 34",
@@ -2183,76 +2423,11 @@
         }
       },
       {
-        "id": "SolNode190",
-        "nameEn": "Nakki",
-        "nameTc": "Nakki",
-        "type": "Arena",
-        "faction": "Grineer",
-        "levels": {
-          "normal": "40 - 40",
-          "steelPath": "140 - 140"
-        }
-      },
-      {
-        "id": "SolNode191",
-        "nameEn": "Marid",
-        "nameTc": "Marid",
-        "type": "Hijack",
-        "faction": "Grineer",
-        "levels": {
-          "normal": "34 - 38",
-          "steelPath": "134 - 138"
-        }
-      },
-      {
-        "id": "SolNode192",
-        "nameEn": "Tikoloshe",
-        "nameTc": "Tikoloshe",
-        "type": "Spy",
-        "faction": "Grineer",
-        "levels": {
-          "normal": "未知",
-          "steelPath": "未知"
-        }
-      },
-      {
-        "id": "SolNode193",
-        "nameEn": "Merrow",
-        "nameTc": "Merrow",
-        "type": "Assassination",
-        "faction": "Grineer",
-        "levels": {
-          "normal": "35 - 40",
-          "steelPath": "135 - 140"
-        }
-      },
-      {
-        "id": "SolNode195",
-        "nameEn": "Hydron",
-        "nameTc": "Hydron",
-        "type": "Defense",
-        "faction": "Grineer",
-        "levels": {
-          "normal": "30 - 40",
-          "steelPath": "130 - 140"
-        }
-      },
-      {
-        "id": "SolNode196",
-        "nameEn": "Charybdis",
-        "nameTc": "Charybdis",
-        "type": "Mobile Defense",
-        "faction": "Grineer",
-        "levels": {
-          "normal": "34 - 38",
-          "steelPath": "134 - 138"
-        }
-      },
-      {
         "id": "SolNode199",
         "nameEn": "Yam",
         "nameTc": "Yam",
-        "type": "Arena",
+        "type": "ARENA",
+        "typeTc": "競技場",
         "faction": "Grineer",
         "levels": {
           "normal": "60 - 60",
@@ -2260,10 +2435,47 @@
         }
       },
       {
+        "id": "SolNode193",
+        "nameEn": "Merrow",
+        "nameTc": "Merrow",
+        "type": "ASSASSINATION",
+        "typeTc": "刺殺",
+        "faction": "Grineer",
+        "levels": {
+          "normal": "35 - 40",
+          "steelPath": "135 - 140"
+        }
+      },
+      {
+        "id": "SolNode196",
+        "nameEn": "Charybdis",
+        "nameTc": "Charybdis",
+        "type": "MOBILE DEFENSE",
+        "typeTc": "移動防禦",
+        "faction": "Grineer",
+        "levels": {
+          "normal": "34 - 38",
+          "steelPath": "134 - 138"
+        }
+      },
+      {
+        "id": "SolNode195",
+        "nameEn": "Hydron",
+        "nameTc": "Hydron",
+        "type": "DEFENSE",
+        "typeTc": "防禦",
+        "faction": "Grineer",
+        "levels": {
+          "normal": "30 - 40",
+          "steelPath": "130 - 140"
+        }
+      },
+      {
         "id": "ClanNode14",
         "nameEn": "Amarna",
         "nameTc": "Amarna",
-        "type": "Dark Sector Survival",
+        "type": "SURVIVAL",
+        "typeTc": "生存",
         "faction": "Infested",
         "levels": {
           "normal": "35 - 45",
@@ -2274,7 +2486,8 @@
         "id": "ClanNode15",
         "nameEn": "Sangeru",
         "nameTc": "Sangeru",
-        "type": "Dark Sector Defense",
+        "type": "DEFENSE",
+        "typeTc": "防禦",
         "faction": "Infested",
         "levels": {
           "normal": "35 - 45",
@@ -2297,7 +2510,8 @@
         "id": "SolNode203",
         "nameEn": "Abaddon",
         "nameTc": "Abaddon",
-        "type": "Capture",
+        "type": "CAPTURE",
+        "typeTc": "捕獲",
         "faction": "Corpus",
         "levels": {
           "normal": "21 - 23",
@@ -2308,7 +2522,8 @@
         "id": "SolNode204",
         "nameEn": "Armaros",
         "nameTc": "Armaros",
-        "type": "Extermination",
+        "type": "EXTERMINATE",
+        "typeTc": "殲滅",
         "faction": "Corpus",
         "levels": {
           "normal": "18 - 20",
@@ -2316,30 +2531,11 @@
         }
       },
       {
-        "id": "SolNode205",
-        "nameEn": "Baal",
-        "nameTc": "Baal",
-        "type": "Extermination",
-        "faction": "Corpus",
-        "levels": {
-          "normal": "21 - 23",
-          "steelPath": "121 - 123"
-        }
-      },
-      {
-        "id": "SolNode206",
-        "nameEn": "Eligor",
-        "nameTc": "Eligor",
-        "levels": {
-          "normal": "未知",
-          "steelPath": "未知"
-        }
-      },
-      {
         "id": "SolNode209",
         "nameEn": "Morax",
         "nameTc": "Morax",
-        "type": "Mobile Defense",
+        "type": "MOBILE DEFENSE",
+        "typeTc": "移動防禦",
         "faction": "Corpus",
         "levels": {
           "normal": "18 - 20",
@@ -2350,7 +2546,8 @@
         "id": "SolNode210",
         "nameEn": "Naamah",
         "nameTc": "Naamah",
-        "type": "Assassination",
+        "type": "ASSASSINATION",
+        "typeTc": "刺殺",
         "faction": "Corpus",
         "levels": {
           "normal": "21 - 23",
@@ -2358,41 +2555,35 @@
         }
       },
       {
-        "id": "SolNode211",
-        "nameEn": "Ose",
-        "nameTc": "Ose",
-        "type": "Interception",
+        "id": "SolNode205",
+        "nameEn": "Baal",
+        "nameTc": "Baal",
+        "type": "EXTERMINATE",
+        "typeTc": "殲滅",
+        "faction": "Corpus",
+        "levels": {
+          "normal": "21 - 23",
+          "steelPath": "121 - 123"
+        }
+      },
+      {
+        "id": "SolNode216",
+        "nameEn": "Valefor",
+        "nameTc": "Valefor",
+        "type": "EXCAVATION",
+        "typeTc": "挖掘",
         "faction": "Corpus",
         "levels": {
           "normal": "18 - 23",
           "steelPath": "118 - 123"
-        }
-      },
-      {
-        "id": "SolNode212",
-        "nameEn": "Paimon",
-        "nameTc": "Paimon",
-        "type": "Defense",
-        "faction": "Corpus",
-        "levels": {
-          "normal": "18 - 23",
-          "steelPath": "118 - 123"
-        }
-      },
-      {
-        "id": "SolNode213",
-        "nameEn": "Shax",
-        "nameTc": "Shax",
-        "levels": {
-          "normal": "未知",
-          "steelPath": "未知"
         }
       },
       {
         "id": "SolNode214",
         "nameEn": "Sorath",
         "nameTc": "Sorath",
-        "type": "Hijack",
+        "type": "HIJACK",
+        "typeTc": "劫持",
         "faction": "Corpus",
         "levels": {
           "normal": "19 - 21",
@@ -2400,10 +2591,23 @@
         }
       },
       {
+        "id": "SolNode211",
+        "nameEn": "Ose",
+        "nameTc": "Ose",
+        "type": "INTERCEPTION",
+        "typeTc": "攔截",
+        "faction": "Corpus",
+        "levels": {
+          "normal": "18 - 23",
+          "steelPath": "118 - 123"
+        }
+      },
+      {
         "id": "SolNode215",
         "nameEn": "Valac",
         "nameTc": "Valac",
-        "type": "Spy",
+        "type": "SPY",
+        "typeTc": "間諜",
         "faction": "Corpus",
         "levels": {
           "normal": "18 - 20",
@@ -2411,10 +2615,11 @@
         }
       },
       {
-        "id": "SolNode216",
-        "nameEn": "Valefor",
-        "nameTc": "Valefor",
-        "type": "Excavation",
+        "id": "SolNode212",
+        "nameEn": "Paimon",
+        "nameTc": "Paimon",
+        "type": "DEFENSE",
+        "typeTc": "防禦",
         "faction": "Corpus",
         "levels": {
           "normal": "18 - 23",
@@ -2425,18 +2630,8 @@
         "id": "SolNode217",
         "nameEn": "Orias",
         "nameTc": "Orias",
-        "type": "Rescue",
-        "faction": "Corpus",
-        "levels": {
-          "normal": "20 - 22",
-          "steelPath": "120 - 122"
-        }
-      },
-      {
-        "id": "SolNode220",
-        "nameEn": "Kokabiel",
-        "nameTc": "Kokabiel",
-        "type": "Sabotage",
+        "type": "RESCUE",
+        "typeTc": "救援",
         "faction": "Corpus",
         "levels": {
           "normal": "20 - 22",
@@ -2447,333 +2642,36 @@
         "id": "ClanNode6",
         "nameEn": "Larzac",
         "nameTc": "Larzac",
-        "type": "Dark Sector Defense",
+        "type": "DEFENSE",
+        "typeTc": "防禦",
         "faction": "Infested",
         "levels": {
           "normal": "23 - 33",
           "steelPath": "123 - 133"
+        }
+      },
+      {
+        "id": "SolNode220",
+        "nameEn": "Kokabiel",
+        "nameTc": "Kokabiel",
+        "type": "SABOTAGE",
+        "typeTc": "破壞",
+        "faction": "Corpus",
+        "levels": {
+          "normal": "20 - 22",
+          "steelPath": "120 - 122"
         }
       },
       {
         "id": "ClanNode7",
         "nameEn": "Cholistan",
         "nameTc": "Cholistan",
-        "type": "Dark Sector Excavation",
+        "type": "EXCAVATION",
+        "typeTc": "挖掘",
         "faction": "Infested",
         "levels": {
           "normal": "23 - 33",
           "steelPath": "123 - 133"
-        }
-      }
-    ]
-  },
-  "Deimos": {
-    "nameEn": "Deimos",
-    "nameTc": "火衛二",
-    "drops": [
-      "奈米孢子",
-      "突變原樣本",
-      "神經元",
-      "Orokin電池"
-    ],
-    "nodes": [
-      {
-        "id": "SolNode229",
-        "nameEn": "Cambion Drift",
-        "nameTc": "魔裔禁地",
-        "type": "Free Roam",
-        "faction": "Infested",
-        "levels": {
-          "normal": "15 - 30",
-          "steelPath": "115 - 130"
-        }
-      },
-      {
-        "id": "SolNode706",
-        "nameEn": "Horend",
-        "nameTc": "Horend",
-        "type": "Capture",
-        "faction": "Infested",
-        "levels": {
-          "normal": "12 - 14",
-          "steelPath": "112 - 114"
-        }
-      },
-      {
-        "id": "SolNode707",
-        "nameEn": "Hyf",
-        "nameTc": "Hyf",
-        "type": "Defense",
-        "faction": "Infested",
-        "levels": {
-          "normal": "15 - 20",
-          "steelPath": "115 - 120"
-        }
-      },
-      {
-        "id": "SolNode708",
-        "nameEn": "Phlegyas",
-        "nameTc": "Phlegyas",
-        "type": "Extermination",
-        "faction": "Infested",
-        "levels": {
-          "normal": "13 - 15",
-          "steelPath": "113 - 115"
-        }
-      },
-      {
-        "id": "SolNode709",
-        "nameEn": "Dirus",
-        "nameTc": "Dirus",
-        "type": "Mobile Defense",
-        "faction": "Infested",
-        "levels": {
-          "normal": "15 - 17",
-          "steelPath": "115 - 117"
-        }
-      },
-      {
-        "id": "SolNode710",
-        "nameEn": "Formido",
-        "nameTc": "Formido",
-        "type": "Sabotage",
-        "faction": "Infested",
-        "levels": {
-          "normal": "14 - 16",
-          "steelPath": "114 - 116"
-        }
-      },
-      {
-        "id": "SolNode711",
-        "nameEn": "Terrorem",
-        "nameTc": "Terrorem",
-        "type": "Survival",
-        "faction": "Infested",
-        "levels": {
-          "normal": "25 - 35",
-          "steelPath": "125 - 135"
-        }
-      },
-      {
-        "id": "SolNode712",
-        "nameEn": "Magnacidium",
-        "nameTc": "Magnacidium",
-        "type": "Assassination",
-        "faction": "Infested",
-        "levels": {
-          "normal": "20 - 25",
-          "steelPath": "120 - 125"
-        }
-      },
-      {
-        "id": "SolNode713",
-        "nameEn": "Exequias",
-        "nameTc": "Exequias",
-        "type": "Assassination",
-        "faction": "Infested",
-        "levels": {
-          "normal": "30 - 35",
-          "steelPath": "130 - 135"
-        }
-      },
-      {
-        "id": "SolNode715",
-        "nameEn": "Effervo",
-        "nameTc": "誒沸禍",
-        "type": "Assassination",
-        "faction": "The Murmur",
-        "levels": {
-          "normal": "55 - 60",
-          "steelPath": "155 - 160"
-        }
-      },
-      {
-        "id": "SolNode716",
-        "nameEn": "Nex",
-        "nameTc": "涅克斯",
-        "type": "Extermination",
-        "faction": "The Murmur",
-        "levels": {
-          "normal": "55 - 60",
-          "steelPath": "155 - 160"
-        }
-      },
-      {
-        "id": "SolNode717",
-        "nameEn": "Persto",
-        "nameTc": "佩斯托",
-        "type": "Survival",
-        "faction": "The Murmur",
-        "levels": {
-          "normal": "55 - 60",
-          "steelPath": "155 - 160"
-        }
-      },
-      {
-        "id": "SolNode718",
-        "nameEn": "Cambire",
-        "nameTc": "坎比爾",
-        "type": "Alchemy",
-        "faction": "The Murmur",
-        "levels": {
-          "normal": "55 - 60",
-          "steelPath": "155 - 160"
-        }
-      },
-      {
-        "id": "SolNode719",
-        "nameEn": "Munio",
-        "nameTc": "穆尼歐",
-        "type": "Mirror Defense",
-        "faction": "The Murmur",
-        "levels": {
-          "normal": "55 - 60",
-          "steelPath": "155 - 160"
-        }
-      },
-      {
-        "id": "SolNode720",
-        "nameEn": "Testudo",
-        "nameTc": "龜甲庫",
-        "type": "Netracells",
-        "faction": "The Murmur",
-        "levels": {
-          "normal": "220 - 240",
-          "steelPath": "320 - 340"
-        }
-      },
-      {
-        "id": "SolNode721",
-        "nameEn": "Armatus",
-        "nameTc": "阿馬圖斯",
-        "type": "Disruption",
-        "faction": "The Murmur",
-        "levels": {
-          "normal": "55 - 60",
-          "steelPath": "155 - 160"
-        }
-      },
-      {
-        "id": "SolNode251",
-        "nameEn": "Dark Refactory",
-        "nameTc": "Dark Refactory",
-        "type": "The Perita Rebellion",
-        "faction": "Anarch",
-        "levels": {
-          "normal": "未知",
-          "steelPath": "未知"
-        }
-      }
-    ]
-  },
-  "Zariman": {
-    "nameEn": "Zariman",
-    "nameTc": "扎日曼",
-    "drops": [
-      "虛空膠球",
-      "源拓氏燈籠",
-      "合金板",
-      "鐵氧體"
-    ],
-    "nodes": [
-      {
-        "id": "SolNode230",
-        "nameEn": "Everview Arc",
-        "nameTc": "永景弧域",
-        "type": "Void Flood",
-        "faction": "Crossfire",
-        "levels": {
-          "normal": "50 - 55",
-          "steelPath": "150 - 155"
-        }
-      },
-      {
-        "id": "SolNode231",
-        "nameEn": "Halako Perimeter",
-        "nameTc": "哈拉科周界",
-        "type": "Extermination",
-        "faction": "Crossfire",
-        "levels": {
-          "normal": "50 - 55",
-          "steelPath": "150 - 155"
-        }
-      },
-      {
-        "id": "SolNode232",
-        "nameEn": "Tuvul Commons",
-        "nameTc": "Tuvul 公域",
-        "type": "Void Cascade",
-        "faction": "Crossfire",
-        "levels": {
-          "normal": "50 - 55",
-          "steelPath": "150 - 155"
-        }
-      },
-      {
-        "id": "SolNode233",
-        "nameEn": "Oro Works",
-        "nameTc": "Oro 工場",
-        "type": "Void Armageddon",
-        "faction": "Crossfire",
-        "levels": {
-          "normal": "50 - 55",
-          "steelPath": "150 - 155"
-        }
-      },
-      {
-        "id": "SolNode235",
-        "nameEn": "The Greenway",
-        "nameTc": "綠色大道",
-        "type": "Mobile Defense",
-        "faction": "Crossfire",
-        "levels": {
-          "normal": "50 - 55",
-          "steelPath": "150 - 155"
-        }
-      }
-    ]
-  },
-  "Duviri": {
-    "nameEn": "Duviri",
-    "nameTc": "渡域",
-    "drops": [
-      "哀悲標置",
-      "龍焏",
-      "肉葉結節",
-      "密聲冷石"
-    ],
-    "nodes": [
-      {
-        "id": "SolNode236",
-        "nameEn": "The Duviri Experience",
-        "nameTc": "渡域體驗",
-        "type": "Free Roam",
-        "faction": "Duviri",
-        "levels": {
-          "normal": "20 - 20",
-          "steelPath": "120 - 120"
-        }
-      },
-      {
-        "id": "SolNode237",
-        "nameEn": "The Lone Story",
-        "nameTc": "獨孤心事",
-        "type": "Free Roam",
-        "faction": "Duviri",
-        "levels": {
-          "normal": "20 - 20",
-          "steelPath": "120 - 120"
-        }
-      },
-      {
-        "id": "SolNode238",
-        "nameEn": "The Circuit",
-        "nameTc": "無盡巡迴",
-        "type": "Free Roam",
-        "faction": "Duviri",
-        "levels": {
-          "normal": "35 - 55",
-          "steelPath": "135 - 155"
         }
       }
     ]
@@ -2792,7 +2690,8 @@
         "id": "SolNode400",
         "nameEn": "Teshub",
         "nameTc": "Teshub",
-        "type": "Extermination",
+        "type": "EXTERMINATE",
+        "typeTc": "殲滅",
         "faction": "Orokin",
         "levels": {
           "normal": "10 - 15",
@@ -2803,7 +2702,8 @@
         "id": "SolNode401",
         "nameEn": "Hepit",
         "nameTc": "Hepit",
-        "type": "Capture",
+        "type": "CAPTURE",
+        "typeTc": "捕獲",
         "faction": "Orokin",
         "levels": {
           "normal": "10 - 15",
@@ -2814,7 +2714,8 @@
         "id": "SolNode402",
         "nameEn": "Taranis",
         "nameTc": "Taranis",
-        "type": "Defense",
+        "type": "DEFENSE",
+        "typeTc": "防禦",
         "faction": "Orokin",
         "levels": {
           "normal": "10 - 15",
@@ -2825,7 +2726,8 @@
         "id": "SolNode403",
         "nameEn": "Tiwaz",
         "nameTc": "Tiwaz",
-        "type": "Mobile Defense",
+        "type": "MOBILE DEFENSE",
+        "typeTc": "移動防禦",
         "faction": "Orokin",
         "levels": {
           "normal": "20 - 25",
@@ -2836,7 +2738,8 @@
         "id": "SolNode404",
         "nameEn": "Stribog",
         "nameTc": "Stribog",
-        "type": "Orokin Sabotage",
+        "type": "SABOTAGE",
+        "typeTc": "破壞",
         "faction": "Orokin",
         "levels": {
           "normal": "20 - 25",
@@ -2847,7 +2750,8 @@
         "id": "SolNode405",
         "nameEn": "Ani",
         "nameTc": "Ani",
-        "type": "Survival",
+        "type": "SURVIVAL",
+        "typeTc": "生存",
         "faction": "Orokin",
         "levels": {
           "normal": "20 - 25",
@@ -2858,7 +2762,8 @@
         "id": "SolNode406",
         "nameEn": "Ukko",
         "nameTc": "Ukko",
-        "type": "Capture",
+        "type": "CAPTURE",
+        "typeTc": "捕獲",
         "faction": "Orokin",
         "levels": {
           "normal": "30 - 35",
@@ -2869,7 +2774,8 @@
         "id": "SolNode407",
         "nameEn": "Oxomoco",
         "nameTc": "Oxomoco",
-        "type": "Extermination",
+        "type": "EXTERMINATE",
+        "typeTc": "殲滅",
         "faction": "Orokin",
         "levels": {
           "normal": "30 - 35",
@@ -2880,7 +2786,8 @@
         "id": "SolNode408",
         "nameEn": "Belenus",
         "nameTc": "Belenus",
-        "type": "Defense",
+        "type": "DEFENSE",
+        "typeTc": "防禦",
         "faction": "Orokin",
         "levels": {
           "normal": "30 - 35",
@@ -2891,7 +2798,8 @@
         "id": "SolNode409",
         "nameEn": "Mot",
         "nameTc": "Mot",
-        "type": "Survival",
+        "type": "SURVIVAL",
+        "typeTc": "生存",
         "faction": "Orokin",
         "levels": {
           "normal": "40 - 45",
@@ -2902,7 +2810,8 @@
         "id": "SolNode410",
         "nameEn": "Aten",
         "nameTc": "Aten",
-        "type": "Mobile Defense",
+        "type": "MOBILE DEFENSE",
+        "typeTc": "移動防禦",
         "faction": "Orokin",
         "levels": {
           "normal": "40 - 45",
@@ -2913,7 +2822,8 @@
         "id": "SolNode411",
         "nameEn": "Marduk",
         "nameTc": "Marduk",
-        "type": "Sabotage",
+        "type": "SABOTAGE",
+        "typeTc": "破壞",
         "faction": "Orokin",
         "levels": {
           "normal": "40 - 45",
@@ -2924,11 +2834,516 @@
         "id": "SolNode412",
         "nameEn": "Mithra",
         "nameTc": "Mithra",
-        "type": "Interception",
+        "type": "INTERCEPTION",
+        "typeTc": "攔截",
         "faction": "Orokin",
         "levels": {
           "normal": "40 - 45",
           "steelPath": "140 - 145"
+        }
+      }
+    ]
+  },
+  "Phobos": {
+    "nameEn": "Phobos",
+    "nameTc": "火衛一",
+    "drops": [
+      "紅化結晶",
+      "非晶態合金",
+      "生物質",
+      "合金板"
+    ],
+    "nodes": [
+      {
+        "id": "SettlementNode1",
+        "nameEn": "Roche",
+        "nameTc": "Roche",
+        "type": "EXTERMINATE",
+        "typeTc": "殲滅",
+        "faction": "Corpus",
+        "levels": {
+          "normal": "10 - 12",
+          "steelPath": "110 - 112"
+        }
+      },
+      {
+        "id": "SettlementNode3",
+        "nameEn": "Stickney",
+        "nameTc": "Stickney",
+        "type": "SURVIVAL",
+        "typeTc": "生存",
+        "faction": "Corpus",
+        "levels": {
+          "normal": "10 - 15",
+          "steelPath": "110 - 115"
+        }
+      },
+      {
+        "id": "SettlementNode2",
+        "nameEn": "Skyresh",
+        "nameTc": "Skyresh",
+        "type": "CAPTURE",
+        "typeTc": "捕獲",
+        "faction": "Corpus",
+        "levels": {
+          "normal": "12 - 14",
+          "steelPath": "112 - 114"
+        }
+      },
+      {
+        "id": "SettlementNode12",
+        "nameEn": "Monolith",
+        "nameTc": "Monolith",
+        "type": "RESCUE",
+        "typeTc": "救援",
+        "faction": "Corpus",
+        "levels": {
+          "normal": "13 - 15",
+          "steelPath": "113 - 115"
+        }
+      },
+      {
+        "id": "SettlementNode10",
+        "nameEn": "Kepler",
+        "nameTc": "Kepler",
+        "type": "RUSH",
+        "typeTc": "突襲 (Archwing)",
+        "faction": "Corpus",
+        "levels": {
+          "normal": "12 - 14",
+          "steelPath": "112 - 114"
+        }
+      },
+      {
+        "id": "SettlementNode15",
+        "nameEn": "Sharpless",
+        "nameTc": "Sharpless",
+        "type": "MOBILE DEFENSE",
+        "typeTc": "移動防禦",
+        "faction": "Corpus",
+        "levels": {
+          "normal": "11 - 13",
+          "steelPath": "111 - 113"
+        }
+      },
+      {
+        "id": "SettlementNode11",
+        "nameEn": "Gulliver",
+        "nameTc": "Gulliver",
+        "type": "DEFENSE",
+        "typeTc": "防禦",
+        "faction": "Corpus",
+        "levels": {
+          "normal": "10 - 15",
+          "steelPath": "110 - 115"
+        }
+      },
+      {
+        "id": "SettlementNode14",
+        "nameEn": "Shklovsky",
+        "nameTc": "Shklovsky",
+        "type": "SPY",
+        "typeTc": "間諜",
+        "faction": "Corpus",
+        "levels": {
+          "normal": "11 - 13",
+          "steelPath": "111 - 113"
+        }
+      },
+      {
+        "id": "ClanNode10",
+        "nameEn": "Memphis",
+        "nameTc": "Memphis",
+        "type": "DEFECTION",
+        "typeTc": "叛逃",
+        "faction": "Infested",
+        "levels": {
+          "normal": "15 - 25",
+          "steelPath": "115 - 125"
+        }
+      },
+      {
+        "id": "SettlementNode20",
+        "nameEn": "Iliad",
+        "nameTc": "Iliad",
+        "type": "ASSASSINATION",
+        "typeTc": "刺殺",
+        "faction": "Corpus",
+        "levels": {
+          "normal": "13 - 15",
+          "steelPath": "113 - 115"
+        }
+      },
+      {
+        "id": "ClanNode11",
+        "nameEn": "Zeugma",
+        "nameTc": "Zeugma",
+        "type": "SURVIVAL",
+        "typeTc": "生存",
+        "faction": "Infested",
+        "levels": {
+          "normal": "15 - 25",
+          "steelPath": "115 - 125"
+        }
+      }
+    ]
+  },
+  "Deimos": {
+    "nameEn": "Deimos",
+    "nameTc": "火衛二",
+    "drops": [
+      "奈米孢子",
+      "突變原樣本",
+      "神經元",
+      "Orokin電池"
+    ],
+    "nodes": [
+      {
+        "id": "SolNode706",
+        "nameEn": "Horend",
+        "nameTc": "Horend",
+        "type": "CAPTURE",
+        "typeTc": "捕獲",
+        "faction": "Infested",
+        "levels": {
+          "normal": "12 - 14",
+          "steelPath": "112 - 114"
+        }
+      },
+      {
+        "id": "SolNode707",
+        "nameEn": "Hyf",
+        "nameTc": "Hyf",
+        "type": "DEFENSE",
+        "typeTc": "防禦",
+        "faction": "Infested",
+        "levels": {
+          "normal": "15 - 20",
+          "steelPath": "115 - 120"
+        }
+      },
+      {
+        "id": "SolNode708",
+        "nameEn": "Phlegyas",
+        "nameTc": "Phlegyas",
+        "type": "EXTERMINATE",
+        "typeTc": "殲滅",
+        "faction": "Infested",
+        "levels": {
+          "normal": "13 - 15",
+          "steelPath": "113 - 115"
+        }
+      },
+      {
+        "id": "SolNode709",
+        "nameEn": "Dirus",
+        "nameTc": "Dirus",
+        "type": "MOBILE DEFENSE",
+        "typeTc": "移動防禦",
+        "faction": "Infested",
+        "levels": {
+          "normal": "15 - 17",
+          "steelPath": "115 - 117"
+        }
+      },
+      {
+        "id": "SolNode710",
+        "nameEn": "Formido",
+        "nameTc": "Formido",
+        "type": "SABOTAGE",
+        "typeTc": "破壞",
+        "faction": "Infested",
+        "levels": {
+          "normal": "14 - 16",
+          "steelPath": "114 - 116"
+        }
+      },
+      {
+        "id": "SolNode711",
+        "nameEn": "Terrorem",
+        "nameTc": "Terrorem",
+        "type": "SURVIVAL",
+        "typeTc": "生存",
+        "faction": "Infested",
+        "levels": {
+          "normal": "25 - 35",
+          "steelPath": "125 - 135"
+        }
+      },
+      {
+        "id": "SolNode712",
+        "nameEn": "Magnacidium",
+        "nameTc": "Magnacidium",
+        "type": "ASSASSINATION",
+        "typeTc": "刺殺",
+        "faction": "Infested",
+        "levels": {
+          "normal": "20 - 25",
+          "steelPath": "120 - 125"
+        }
+      },
+      {
+        "id": "SolNode713",
+        "nameEn": "Exequias",
+        "nameTc": "Exequias",
+        "type": "ASSASSINATION",
+        "typeTc": "刺殺",
+        "faction": "Infested",
+        "levels": {
+          "normal": "30 - 35",
+          "steelPath": "130 - 135"
+        }
+      },
+      {
+        "id": "SolNode229",
+        "nameEn": "Cambion Drift",
+        "nameTc": "魔裔禁地",
+        "type": "FREE ROAM",
+        "typeTc": "自由探索",
+        "faction": "Infested",
+        "levels": {
+          "normal": "15 - 30",
+          "steelPath": "115 - 130"
+        }
+      },
+      {
+        "id": "SolNode715",
+        "nameEn": "Effervo",
+        "nameTc": "誒沸禍",
+        "type": "ASSASSINATION",
+        "typeTc": "刺殺",
+        "faction": "The Murmur",
+        "levels": {
+          "normal": "55 - 60",
+          "steelPath": "155 - 160"
+        }
+      },
+      {
+        "id": "SolNode716",
+        "nameEn": "Nex",
+        "nameTc": "涅克斯",
+        "type": "EXTERMINATE",
+        "typeTc": "殲滅",
+        "faction": "The Murmur",
+        "levels": {
+          "normal": "55 - 60",
+          "steelPath": "155 - 160"
+        }
+      },
+      {
+        "id": "SolNode717",
+        "nameEn": "Persto",
+        "nameTc": "佩斯托",
+        "type": "SURVIVAL",
+        "typeTc": "生存",
+        "faction": "The Murmur",
+        "levels": {
+          "normal": "55 - 60",
+          "steelPath": "155 - 160"
+        }
+      },
+      {
+        "id": "SolNode718",
+        "nameEn": "Cambire",
+        "nameTc": "坎比爾",
+        "type": "Alchemy",
+        "typeTc": "轉化",
+        "faction": "The Murmur",
+        "levels": {
+          "normal": "55 - 60",
+          "steelPath": "155 - 160"
+        }
+      },
+      {
+        "id": "SolNode719",
+        "nameEn": "Munio",
+        "nameTc": "穆尼歐",
+        "type": "Mirror Defense",
+        "typeTc": "鏡像防禦",
+        "faction": "The Murmur",
+        "levels": {
+          "normal": "55 - 60",
+          "steelPath": "155 - 160"
+        }
+      },
+      {
+        "id": "SolNode721",
+        "nameEn": "Armatus",
+        "nameTc": "阿馬圖斯",
+        "type": "DISRUPTION",
+        "typeTc": "中斷",
+        "faction": "The Murmur",
+        "levels": {
+          "normal": "55 - 60",
+          "steelPath": "155 - 160"
+        }
+      },
+      {
+        "id": "DeimosHub",
+        "nameEn": "Necralisk",
+        "nameTc": "亡骸殿",
+        "type": "CONCLAVE",
+        "typeTc": "中繼站 / 城鎮",
+        "faction": "Tenno",
+        "levels": {
+          "normal": "和平區域",
+          "steelPath": "和平區域"
+        }
+      },
+      {
+        "id": "EntratiLabHub",
+        "nameEn": "Sanctum Anatomica",
+        "nameTc": "解剖聖堂",
+        "type": "CONCLAVE",
+        "typeTc": "中繼站 / 城鎮",
+        "faction": "Tenno",
+        "levels": {
+          "normal": "和平區域",
+          "steelPath": "和平區域"
+        }
+      },
+      {
+        "id": "CeresToJupiterJunction",
+        "nameEn": "JUPITER JUNCTION",
+        "nameTc": "木星接合點",
+        "type": "SOLAR RAIL JUNCTION",
+        "typeTc": "星際航道接合點",
+        "faction": "無",
+        "levels": {
+          "normal": "1 - 3",
+          "steelPath": "101 - 103"
+        }
+      }
+    ]
+  },
+  "Lua": {
+    "nameEn": "Lua",
+    "nameTc": "月球",
+    "drops": [
+      "鐵氧體",
+      "紅化結晶",
+      "神經元",
+      "爆燃安瓿"
+    ],
+    "nodes": [
+      {
+        "id": "SolNode300",
+        "nameEn": "Plato",
+        "nameTc": "Plato",
+        "type": "EXTERMINATE",
+        "typeTc": "殲滅",
+        "faction": "Crossfire",
+        "levels": {
+          "normal": "25 - 30",
+          "steelPath": "125 - 130"
+        }
+      },
+      {
+        "id": "SolNode306",
+        "nameEn": "Pavlov",
+        "nameTc": "Pavlov",
+        "type": "SPY",
+        "typeTc": "間諜",
+        "faction": "Crossfire",
+        "levels": {
+          "normal": "25 - 30",
+          "steelPath": "125 - 130"
+        }
+      },
+      {
+        "id": "SolNode302",
+        "nameEn": "Tycho",
+        "nameTc": "Tycho",
+        "type": "SURVIVAL",
+        "typeTc": "生存",
+        "faction": "Corpus",
+        "levels": {
+          "normal": "25 - 30",
+          "steelPath": "125 - 130"
+        }
+      },
+      {
+        "id": "SolNode305",
+        "nameEn": "Stöfler",
+        "nameTc": "Stöfler",
+        "type": "DEFENSE",
+        "typeTc": "防禦",
+        "faction": "Grineer",
+        "levels": {
+          "normal": "25 - 30",
+          "steelPath": "125 - 130"
+        }
+      },
+      {
+        "id": "SolNode304",
+        "nameEn": "Copernicus",
+        "nameTc": "Copernicus",
+        "type": "CAPTURE",
+        "typeTc": "捕獲",
+        "faction": "Corpus",
+        "levels": {
+          "normal": "25 - 30",
+          "steelPath": "125 - 130"
+        }
+      },
+      {
+        "id": "SolNode301",
+        "nameEn": "Grimaldi",
+        "nameTc": "Grimaldi",
+        "type": "MOBILE DEFENSE",
+        "typeTc": "移動防禦",
+        "faction": "Grineer",
+        "levels": {
+          "normal": "25 - 30",
+          "steelPath": "125 - 130"
+        }
+      },
+      {
+        "id": "SolNode307",
+        "nameEn": "Zeipel",
+        "nameTc": "Zeipel",
+        "type": "RESCUE",
+        "typeTc": "救援",
+        "faction": "Corpus",
+        "levels": {
+          "normal": "25 - 30",
+          "steelPath": "125 - 130"
+        }
+      },
+      {
+        "id": "SolNode308",
+        "nameEn": "Apollo",
+        "nameTc": "Apollo",
+        "type": "DISRUPTION",
+        "typeTc": "中斷",
+        "faction": "Corpus",
+        "levels": {
+          "normal": "35 - 40",
+          "steelPath": "135 - 140"
+        }
+      },
+      {
+        "id": "SolNode309",
+        "nameEn": "Yuvarium",
+        "nameTc": "育承宮",
+        "type": "CONJUNCTION SURVIVAL",
+        "typeTc": "合相生存",
+        "faction": "Orokin",
+        "levels": {
+          "normal": "25 - 30",
+          "steelPath": "125 - 130"
+        }
+      },
+      {
+        "id": "SolNode310",
+        "nameEn": "Circulus",
+        "nameTc": "圓承宮",
+        "type": "CONJUNCTION SURVIVAL",
+        "typeTc": "合相生存",
+        "faction": "Grineer",
+        "levels": {
+          "normal": "80 - 100",
+          "steelPath": "180 - 200"
         }
       }
     ]
@@ -2948,7 +3363,8 @@
         "id": "SolNode741",
         "nameEn": "Koro",
         "nameTc": "Koro",
-        "type": "Assault",
+        "type": "ASSAULT",
+        "typeTc": "強襲",
         "faction": "Grineer",
         "levels": {
           "normal": "29 - 31",
@@ -2959,7 +3375,8 @@
         "id": "SolNode742",
         "nameEn": "Nabuk",
         "nameTc": "Nabuk",
-        "type": "Defense",
+        "type": "DEFENSE",
+        "typeTc": "防禦",
         "faction": "Grineer",
         "levels": {
           "normal": "30 - 32",
@@ -2970,7 +3387,8 @@
         "id": "SolNode743",
         "nameEn": "Rotuma",
         "nameTc": "Rotuma",
-        "type": "Mobile Defense",
+        "type": "MOBILE DEFENSE",
+        "typeTc": "移動防禦",
         "faction": "Grineer",
         "levels": {
           "normal": "30 - 32",
@@ -2981,7 +3399,8 @@
         "id": "SolNode744",
         "nameEn": "Taveuni",
         "nameTc": "Taveuni",
-        "type": "Survival",
+        "type": "SURVIVAL",
+        "typeTc": "生存",
         "faction": "Grineer",
         "levels": {
           "normal": "32 - 37",
@@ -2992,7 +3411,8 @@
         "id": "SolNode745",
         "nameEn": "Tamu",
         "nameTc": "Tamu",
-        "type": "Disruption",
+        "type": "DISRUPTION",
+        "typeTc": "中斷",
         "faction": "Grineer",
         "levels": {
           "normal": "35 - 40",
@@ -3003,7 +3423,8 @@
         "id": "SolNode746",
         "nameEn": "Dakata",
         "nameTc": "Dakata",
-        "type": "Extermination",
+        "type": "EXTERMINATE",
+        "typeTc": "殲滅",
         "faction": "Grineer",
         "levels": {
           "normal": "28 - 30",
@@ -3014,7 +3435,8 @@
         "id": "SolNode747",
         "nameEn": "Pago",
         "nameTc": "Pago",
-        "type": "Spy",
+        "type": "SPY",
+        "typeTc": "間諜",
         "faction": "Grineer",
         "levels": {
           "normal": "31 - 33",
@@ -3025,7 +3447,8 @@
         "id": "SolNode748",
         "nameEn": "Garus",
         "nameTc": "Garus",
-        "type": "Rescue",
+        "type": "RESCUE",
+        "typeTc": "救援",
         "faction": "Grineer",
         "levels": {
           "normal": "31 - 33",
@@ -3034,331 +3457,376 @@
       }
     ]
   },
-  "Lua": {
-    "nameEn": "Lua",
-    "nameTc": "月球",
+  "Zariman": {
+    "nameEn": "Zariman",
+    "nameTc": "扎日曼",
     "drops": [
-      "鐵氧體",
-      "紅化結晶",
-      "神經元",
-      "爆燃安瓿"
+      "虛空膠球",
+      "源拓氏燈籠",
+      "合金板",
+      "鐵氧體"
     ],
     "nodes": [
       {
-        "id": "SolNode300",
-        "nameEn": "Plato",
-        "nameTc": "Plato",
-        "type": "Extermination",
+        "id": "SolNode230",
+        "nameEn": "Everview Arc",
+        "nameTc": "永景弧域",
+        "type": "VOID FLOOD",
+        "typeTc": "虛空洪潮",
         "faction": "Crossfire",
         "levels": {
-          "normal": "25 - 30",
-          "steelPath": "125 - 130"
+          "normal": "50 - 55",
+          "steelPath": "150 - 155"
         }
       },
       {
-        "id": "SolNode301",
-        "nameEn": "Grimaldi",
-        "nameTc": "Grimaldi",
-        "type": "Mobile Defense",
-        "faction": "Grineer",
-        "levels": {
-          "normal": "25 - 30",
-          "steelPath": "125 - 130"
-        }
-      },
-      {
-        "id": "SolNode302",
-        "nameEn": "Tycho",
-        "nameTc": "Tycho",
-        "type": "Survival",
-        "faction": "Corpus",
-        "levels": {
-          "normal": "25 - 30",
-          "steelPath": "125 - 130"
-        }
-      },
-      {
-        "id": "SolNode304",
-        "nameEn": "Copernicus",
-        "nameTc": "Copernicus",
-        "type": "Capture",
-        "faction": "Corpus",
-        "levels": {
-          "normal": "25 - 30",
-          "steelPath": "125 - 130"
-        }
-      },
-      {
-        "id": "SolNode305",
-        "nameEn": "Stöfler",
-        "nameTc": "Stöfler",
-        "type": "Defense",
-        "faction": "Grineer",
-        "levels": {
-          "normal": "25 - 30",
-          "steelPath": "125 - 130"
-        }
-      },
-      {
-        "id": "SolNode306",
-        "nameEn": "Pavlov",
-        "nameTc": "Pavlov",
-        "type": "Spy",
+        "id": "SolNode231",
+        "nameEn": "Halako Perimeter",
+        "nameTc": "哈拉科周界",
+        "type": "EXTERMINATE",
+        "typeTc": "殲滅",
         "faction": "Crossfire",
         "levels": {
-          "normal": "25 - 30",
-          "steelPath": "125 - 130"
+          "normal": "50 - 55",
+          "steelPath": "150 - 155"
         }
       },
       {
-        "id": "SolNode307",
-        "nameEn": "Zeipel",
-        "nameTc": "Zeipel",
-        "type": "Rescue",
-        "faction": "Corpus",
+        "id": "SolNode232",
+        "nameEn": "Tuvul Commons",
+        "nameTc": "Tuvul 公域",
+        "type": "VOID CASCADE",
+        "typeTc": "虛空連崩",
+        "faction": "Crossfire",
         "levels": {
-          "normal": "25 - 30",
-          "steelPath": "125 - 130"
+          "normal": "50 - 55",
+          "steelPath": "150 - 155"
         }
       },
       {
-        "id": "SolNode308",
-        "nameEn": "Apollo",
-        "nameTc": "Apollo",
-        "type": "Disruption",
-        "faction": "Corpus",
+        "id": "SolNode233",
+        "nameEn": "Oro Works",
+        "nameTc": "Oro 工場",
+        "type": "VOID ARMAGEDDON",
+        "typeTc": "虛空決戰",
+        "faction": "Crossfire",
         "levels": {
-          "normal": "35 - 40",
-          "steelPath": "135 - 140"
+          "normal": "50 - 55",
+          "steelPath": "150 - 155"
         }
       },
       {
-        "id": "SolNode309",
-        "nameEn": "Yuvarium",
-        "nameTc": "育承宮",
-        "type": "Survival",
-        "faction": "Orokin",
+        "id": "SolNode235",
+        "nameEn": "The Greenway",
+        "nameTc": "綠色大道",
+        "type": "MOBILE DEFENSE",
+        "typeTc": "移動防禦",
+        "faction": "Crossfire",
         "levels": {
-          "normal": "25 - 30",
-          "steelPath": "125 - 130"
+          "normal": "50 - 55",
+          "steelPath": "150 - 155"
         }
       },
       {
-        "id": "SolNode310",
-        "nameEn": "Circulus",
-        "nameTc": "圓承宮",
-        "type": "Survival",
-        "faction": "Grineer",
+        "id": "ZarimanHub",
+        "nameEn": "Chrysalith",
+        "nameTc": "蛹巖",
+        "type": "CONCLAVE",
+        "typeTc": "中繼站 / 城鎮",
+        "faction": "Tenno",
         "levels": {
-          "normal": "80 - 100",
-          "steelPath": "180 - 200"
+          "normal": "和平區域",
+          "steelPath": "和平區域"
+        }
+      },
+      {
+        "id": "SolNode234",
+        "nameEn": "Dormizone",
+        "nameTc": "寢區",
+        "type": "CONCLAVE",
+        "typeTc": "中繼站 / 城鎮",
+        "faction": "Tenno",
+        "levels": {
+          "normal": "和平區域",
+          "steelPath": "和平區域"
         }
       }
     ]
   },
-  "Phobos": {
-    "nameEn": "Phobos",
-    "nameTc": "火衛一",
+  "Duviri": {
+    "nameEn": "Duviri",
+    "nameTc": "渡域",
     "drops": [
-      "紅化結晶",
-      "非晶態合金",
-      "生物質",
-      "合金板"
+      "哀悲標置",
+      "龍焏",
+      "肉葉結節",
+      "密聲冷石"
     ],
     "nodes": [
       {
-        "id": "SettlementNode1",
-        "nameEn": "Roche",
-        "nameTc": "Roche",
-        "type": "Extermination",
-        "faction": "Corpus",
+        "id": "SolNode236",
+        "nameEn": "The Duviri Experience",
+        "nameTc": "渡域體驗",
+        "type": "FREE ROAM",
+        "typeTc": "自由探索",
+        "faction": "Duviri",
         "levels": {
-          "normal": "10 - 12",
-          "steelPath": "110 - 112"
+          "normal": "20 - 20",
+          "steelPath": "120 - 120"
         }
       },
       {
-        "id": "SettlementNode2",
-        "nameEn": "Skyresh",
-        "nameTc": "Skyresh",
-        "type": "Capture",
-        "faction": "Corpus",
+        "id": "SolNode237",
+        "nameEn": "The Lone Story",
+        "nameTc": "獨孤心事",
+        "type": "FREE ROAM",
+        "typeTc": "自由探索",
+        "faction": "Duviri",
         "levels": {
-          "normal": "12 - 14",
-          "steelPath": "112 - 114"
+          "normal": "20 - 20",
+          "steelPath": "120 - 120"
         }
       },
       {
-        "id": "SettlementNode3",
-        "nameEn": "Stickney",
-        "nameTc": "Stickney",
-        "type": "Survival",
-        "faction": "Corpus",
+        "id": "SolNode238",
+        "nameEn": "The Circuit",
+        "nameTc": "無盡巡迴",
+        "type": "THE CIRCUIT",
+        "typeTc": "無盡巡迴",
+        "faction": "Duviri",
         "levels": {
-          "normal": "10 - 15",
-          "steelPath": "110 - 115"
-        }
-      },
-      {
-        "id": "SettlementNode10",
-        "nameEn": "Kepler",
-        "nameTc": "Kepler",
-        "type": "Rush (Archwing)",
-        "faction": "Corpus",
-        "levels": {
-          "normal": "12 - 14",
-          "steelPath": "112 - 114"
-        }
-      },
-      {
-        "id": "SettlementNode11",
-        "nameEn": "Gulliver",
-        "nameTc": "Gulliver",
-        "type": "Defense",
-        "faction": "Corpus",
-        "levels": {
-          "normal": "10 - 15",
-          "steelPath": "110 - 115"
-        }
-      },
-      {
-        "id": "SettlementNode12",
-        "nameEn": "Monolith",
-        "nameTc": "Monolith",
-        "type": "Rescue",
-        "faction": "Corpus",
-        "levels": {
-          "normal": "13 - 15",
-          "steelPath": "113 - 115"
-        }
-      },
-      {
-        "id": "SettlementNode14",
-        "nameEn": "Shklovsky",
-        "nameTc": "Shklovsky",
-        "type": "Spy",
-        "faction": "Corpus",
-        "levels": {
-          "normal": "11 - 13",
-          "steelPath": "111 - 113"
-        }
-      },
-      {
-        "id": "SettlementNode15",
-        "nameEn": "Sharpless",
-        "nameTc": "Sharpless",
-        "type": "Mobile Defense",
-        "faction": "Corpus",
-        "levels": {
-          "normal": "11 - 13",
-          "steelPath": "111 - 113"
-        }
-      },
-      {
-        "id": "SettlementNode20",
-        "nameEn": "Iliad",
-        "nameTc": "Iliad",
-        "type": "Assassination",
-        "faction": "Corpus",
-        "levels": {
-          "normal": "13 - 15",
-          "steelPath": "113 - 115"
-        }
-      },
-      {
-        "id": "ClanNode10",
-        "nameEn": "Memphis",
-        "nameTc": "Memphis",
-        "type": "Dark Sector Defection",
-        "faction": "Infested",
-        "levels": {
-          "normal": "15 - 25",
-          "steelPath": "115 - 125"
-        }
-      },
-      {
-        "id": "ClanNode11",
-        "nameEn": "Zeugma",
-        "nameTc": "Zeugma",
-        "type": "Dark Sector Survival",
-        "faction": "Infested",
-        "levels": {
-          "normal": "15 - 25",
-          "steelPath": "115 - 125"
+          "normal": "35 - 55",
+          "steelPath": "135 - 155"
         }
       }
     ]
   },
-  "Saturn Proxima": {
-    "nameEn": "Saturn Proxima",
-    "nameTc": "土星毗鄰星",
-    "drops": [
-      "鈦金屬",
-      "鈦核船板",
-      "碳化物",
-      "立方二極體",
-      "星彩藍寶石",
-      "加落斯反物質燃料棒",
-      "愛索斯修複液",
-      "奧核電容",
-      "Komms",
-      "虛能石",
-      "碲"
-    ],
+  "Höllvania": {
+    "nameEn": "Höllvania",
+    "nameTc": "霍爾瓦尼亞",
+    "drops": [],
     "nodes": [
       {
-        "id": "CrewBattleNode501",
-        "nameEn": "Mordo Cluster",
-        "nameTc": "莫度星團",
-        "type": "Skirmish",
-        "faction": "Grineer",
-        "levels": {
-          "normal": "55 - 60",
-          "steelPath": "155 - 160"
-        }
-      },
-      {
-        "id": "CrewBattleNode530",
-        "nameEn": "Kasio's Rest",
-        "nameTc": "卡西奧的安息處",
-        "type": "Skirmish",
-        "faction": "Grineer",
-        "levels": {
-          "normal": "70 - 75",
-          "steelPath": "170 - 175"
-        }
-      },
-      {
-        "id": "CrewBattleNode533",
-        "nameEn": "Nodo Gap",
-        "nameTc": "節點星隙",
-        "type": "Skirmish",
-        "faction": "Grineer",
-        "levels": {
-          "normal": "54 - 60",
-          "steelPath": "154 - 160"
-        }
-      },
-      {
-        "id": "CrewBattleNode534",
-        "nameEn": "Lupal Pass",
-        "nameTc": "狼魄星口",
-        "type": "Skirmish",
-        "faction": "Grineer",
-        "levels": {
-          "normal": "48 - 56",
-          "steelPath": "148 - 156"
-        }
-      },
-      {
-        "id": "CrewBattleNode535",
-        "nameEn": "Vand Cluster",
-        "nameTc": "水澤星團",
-        "type": "Skirmish",
-        "faction": "Grineer",
+        "id": "SolNode850",
+        "nameEn": "Legacyte Harvest",
+        "nameTc": "傳承細胞收割",
+        "type": "Legacyte Harvest",
+        "typeTc": "傳承細胞收割",
+        "faction": "無",
         "levels": {
           "normal": "65 - 70",
           "steelPath": "165 - 170"
+        }
+      },
+      {
+        "id": "SolNode851",
+        "nameEn": "Hell-Scrub: Scaldra",
+        "nameTc": "地獄洗滌：清剿隊",
+        "type": "SURVIVAL",
+        "typeTc": "生存",
+        "faction": "無",
+        "levels": {
+          "normal": "65 - 70",
+          "steelPath": "165 - 170"
+        }
+      },
+      {
+        "id": "SolNode852",
+        "nameEn": "Hell-Scrub: Techrot",
+        "nameTc": "地獄洗滌：科腐者",
+        "type": "SURVIVAL",
+        "typeTc": "生存",
+        "faction": "無",
+        "levels": {
+          "normal": "65 - 70",
+          "steelPath": "165 - 170"
+        }
+      },
+      {
+        "id": "SolNode853",
+        "nameEn": "Exterminate: Scaldra",
+        "nameTc": "殲滅：清剿隊",
+        "type": "EXTERMINATE",
+        "typeTc": "殲滅",
+        "faction": "無",
+        "levels": {
+          "normal": "65 - 70",
+          "steelPath": "165 - 170"
+        }
+      },
+      {
+        "id": "SolNode854",
+        "nameEn": "Exterminate: Techrot",
+        "nameTc": "殲滅：科腐者",
+        "type": "EXTERMINATE",
+        "typeTc": "殲滅",
+        "faction": "無",
+        "levels": {
+          "normal": "65 - 70",
+          "steelPath": "165 - 170"
+        }
+      },
+      {
+        "id": "SolNode855",
+        "nameEn": "Faceoff: Squad VS Squad",
+        "nameTc": "對峙：小隊對戰",
+        "type": "Faceoff",
+        "typeTc": "對峙",
+        "faction": "無",
+        "levels": {
+          "normal": "65 - 70",
+          "steelPath": "165 - 170"
+        }
+      },
+      {
+        "id": "SolNode856",
+        "nameEn": "Assassinate: H-09 Tank",
+        "nameTc": "刺殺：H-09 戰車",
+        "type": "ASSASSINATION",
+        "typeTc": "刺殺",
+        "faction": "無",
+        "levels": {
+          "normal": "65 - 70",
+          "steelPath": "165 - 170"
+        }
+      },
+      {
+        "id": "SolNode857",
+        "nameEn": "Faceoff: Single Squad",
+        "nameTc": "對峙：小隊獨戰",
+        "type": "Faceoff",
+        "typeTc": "對峙",
+        "faction": "無",
+        "levels": {
+          "normal": "65 - 70",
+          "steelPath": "165 - 170"
+        }
+      },
+      {
+        "id": "SolNode858",
+        "nameEn": "Solstice Square",
+        "nameTc": "至點廣場",
+        "type": "DEFENSE",
+        "typeTc": "防禦",
+        "faction": "無",
+        "levels": {
+          "normal": "65 - 70",
+          "steelPath": "165 - 170"
+        }
+      },
+      {
+        "id": "1999Hub",
+        "nameEn": "Höllvania Central Mall",
+        "nameTc": "霍爾瓦尼亞中央購物中心",
+        "type": "CONCLAVE",
+        "typeTc": "中繼站 / 城鎮",
+        "faction": "無",
+        "levels": {
+          "normal": "和平區域",
+          "steelPath": "和平區域"
+        }
+      }
+    ]
+  },
+  "Dark Refractory, Deimos": {
+    "nameEn": "Dark Refractory, Deimos",
+    "nameTc": "憶夢池（火衛二）",
+    "drops": [],
+    "nodes": [
+      {
+        "id": "SolNode250",
+        "nameEn": "Recall: Hunhullus",
+        "nameTc": "回憶：匈赫勒",
+        "type": "The Perita Rebellion",
+        "typeTc": "佩麗塔叛亂",
+        "faction": "無",
+        "levels": {
+          "normal": "65 - 70",
+          "steelPath": "165 - 170"
+        }
+      },
+      {
+        "id": "SolNode251",
+        "nameEn": "Recall: Dactolyst",
+        "nameTc": "回憶：肢節使",
+        "type": "The Perita Rebellion",
+        "typeTc": "佩麗塔叛亂",
+        "faction": "無",
+        "levels": {
+          "normal": "65 - 70",
+          "steelPath": "165 - 170"
+        }
+      },
+      {
+        "id": "SolNode252",
+        "nameEn": "Recall: Vanguard",
+        "nameTc": "回憶：先鋒",
+        "type": "The Perita Rebellion",
+        "typeTc": "佩麗塔叛亂",
+        "faction": "無",
+        "levels": {
+          "normal": "65 - 70",
+          "steelPath": "165 - 170"
+        }
+      },
+      {
+        "id": "SolNode253",
+        "nameEn": "Descend",
+        "nameTc": "爬降",
+        "type": "The Descendia",
+        "typeTc": "墮落淵獄",
+        "faction": "無",
+        "levels": {
+          "normal": "65 - 65",
+          "steelPath": "165 - 165"
+        }
+      },
+      {
+        "id": "SolNode254",
+        "nameEn": "Descend from Marie's Sanctuary",
+        "nameTc": "從瑪麗的庇護所爬降",
+        "type": "The Descendia",
+        "typeTc": "墮落淵獄",
+        "faction": "無",
+        "levels": {
+          "normal": "72 - 72",
+          "steelPath": "172 - 172"
+        }
+      },
+      {
+        "id": "SolNode255",
+        "nameEn": "Descend from Lyon's Sanctuary",
+        "nameTc": "從里昂的庇護所爬降",
+        "type": "The Descendia",
+        "typeTc": "墮落淵獄",
+        "faction": "無",
+        "levels": {
+          "normal": "79 - 79",
+          "steelPath": "179 - 179"
+        }
+      },
+      {
+        "id": "SolNode256",
+        "nameEn": "Roathe's Oblivion",
+        "nameTc": "羅瑟的遺忘憶境",
+        "type": "The Descendia",
+        "typeTc": "墮落淵獄",
+        "faction": "無",
+        "levels": {
+          "normal": "86 - 86",
+          "steelPath": "186 - 186"
+        }
+      },
+      {
+        "id": "SolNode257",
+        "nameEn": "The Guilty",
+        "nameTc": "有罪者",
+        "type": "The Perita Rebellion",
+        "typeTc": "佩麗塔叛亂",
+        "faction": "無",
+        "levels": {
+          "normal": "165 - 170",
+          "steelPath": "265 - 270"
         }
       }
     ]
@@ -3381,10 +3849,23 @@
     ],
     "nodes": [
       {
+        "id": "CrewBattleNode556",
+        "nameEn": "Free Flight",
+        "nameTc": "自由航區",
+        "type": "SKIRMISH",
+        "typeTc": "前哨戰",
+        "faction": "無",
+        "levels": {
+          "normal": "1 - 1",
+          "steelPath": "101 - 101"
+        }
+      },
+      {
         "id": "CrewBattleNode502",
         "nameEn": "Sover Strait",
         "nameTc": "沉眠星峽",
-        "type": "Skirmish",
+        "type": "SKIRMISH",
+        "typeTc": "前哨戰",
         "faction": "Grineer",
         "levels": {
           "normal": "15 - 20",
@@ -3395,7 +3876,8 @@
         "id": "CrewBattleNode509",
         "nameEn": "Iota Temple",
         "nameTc": "埃歐塔聖堂",
-        "type": "Skirmish",
+        "type": "SKIRMISH",
+        "typeTc": "前哨戰",
         "faction": "Grineer",
         "levels": {
           "normal": "20 - 28",
@@ -3406,7 +3888,8 @@
         "id": "CrewBattleNode518",
         "nameEn": "Ogal Cluster",
         "nameTc": "奧嘉星團",
-        "type": "Skirmish",
+        "type": "SKIRMISH",
+        "typeTc": "前哨戰",
         "faction": "Grineer",
         "levels": {
           "normal": "21 - 26",
@@ -3417,7 +3900,8 @@
         "id": "CrewBattleNode519",
         "nameEn": "Korm's Belt",
         "nameTc": "球莖星帶",
-        "type": "Skirmish",
+        "type": "SKIRMISH",
+        "typeTc": "前哨戰",
         "faction": "Grineer",
         "levels": {
           "normal": "24 - 30",
@@ -3428,140 +3912,12 @@
         "id": "CrewBattleNode522",
         "nameEn": "Bendar Cluster",
         "nameTc": "奔達星團",
-        "type": "Skirmish",
+        "type": "SKIRMISH",
+        "typeTc": "前哨戰",
         "faction": "Grineer",
         "levels": {
           "normal": "29 - 36",
           "steelPath": "129 - 136"
-        }
-      }
-    ]
-  },
-  "Veil Proxima": {
-    "nameEn": "Veil Proxima",
-    "nameTc": "面紗毗鄰星",
-    "drops": [
-      "鈦金屬",
-      "鈦核船板",
-      "碳化物",
-      "立方二極體",
-      "星彩藍寶石",
-      "加落斯反物質燃料棒",
-      "愛索斯修複液",
-      "奧核電容",
-      "Komms",
-      "虛能石",
-      "碲"
-    ],
-    "nodes": [
-      {
-        "id": "CrewBattleNode505",
-        "nameEn": "Ruse War Field",
-        "nameTc": "Ruse War Field",
-        "type": "Skirmish",
-        "faction": "Grineer",
-        "levels": {
-          "normal": "未知",
-          "steelPath": "未知"
-        }
-      },
-      {
-        "id": "CrewBattleNode510",
-        "nameEn": "Gian Point",
-        "nameTc": "Gian Point",
-        "type": "Skirmish",
-        "faction": "Grineer",
-        "levels": {
-          "normal": "未知",
-          "steelPath": "未知"
-        }
-      },
-      {
-        "id": "CrewBattleNode539",
-        "nameEn": "Numina",
-        "nameTc": "福德神社",
-        "type": "Volatile",
-        "faction": "Corpus",
-        "levels": {
-          "normal": "48 - 52",
-          "steelPath": "148 - 152"
-        }
-      },
-      {
-        "id": "CrewBattleNode541",
-        "nameEn": "Erato",
-        "nameTc": "厄剌托",
-        "type": "Orphix",
-        "faction": "Corpus",
-        "levels": {
-          "normal": "54 - 58",
-          "steelPath": "154 - 158"
-        }
-      },
-      {
-        "id": "CrewBattleNode550",
-        "nameEn": "Nsu Grid",
-        "nameTc": "踵承星格",
-        "type": "Skirmish",
-        "faction": "Grineer",
-        "levels": {
-          "normal": "80 - 90",
-          "steelPath": "180 - 190"
-        }
-      },
-      {
-        "id": "CrewBattleNode551",
-        "nameEn": "Ganalen's Grave",
-        "nameTc": "Ganalen's Grave",
-        "type": "Skirmish",
-        "faction": "Grineer",
-        "levels": {
-          "normal": "未知",
-          "steelPath": "未知"
-        }
-      },
-      {
-        "id": "CrewBattleNode552",
-        "nameEn": "Rya",
-        "nameTc": "Rya",
-        "type": "Skirmish",
-        "faction": "Grineer",
-        "levels": {
-          "normal": "未知",
-          "steelPath": "未知"
-        }
-      },
-      {
-        "id": "CrewBattleNode553",
-        "nameEn": "Flexa",
-        "nameTc": "弗歷沙",
-        "type": "Skirmish",
-        "faction": "Grineer",
-        "levels": {
-          "normal": "80 - 90",
-          "steelPath": "180 - 190"
-        }
-      },
-      {
-        "id": "CrewBattleNode554",
-        "nameEn": "H-2 Cloud",
-        "nameTc": "H-2 星雲",
-        "type": "Skirmish",
-        "faction": "Grineer",
-        "levels": {
-          "normal": "80 - 90",
-          "steelPath": "180 - 190"
-        }
-      },
-      {
-        "id": "CrewBattleNode555",
-        "nameEn": "R-9 Cloud",
-        "nameTc": "R-9 星雲",
-        "type": "Skirmish",
-        "faction": "Grineer",
-        "levels": {
-          "normal": "80 - 90",
-          "steelPath": "180 - 190"
         }
       }
     ]
@@ -3587,7 +3943,8 @@
         "id": "CrewBattleNode511",
         "nameEn": "Beacon Shield Ring",
         "nameTc": "信標護環",
-        "type": "Volatile",
+        "type": "VOLATILE",
+        "typeTc": "爆發",
         "faction": "Corpus",
         "levels": {
           "normal": "17 - 20",
@@ -3598,11 +3955,139 @@
         "id": "CrewBattleNode513",
         "nameEn": "Vesper Strait",
         "nameTc": "長庚星峽",
-        "type": "Orphix",
+        "type": "ORPHIX",
+        "typeTc": "奧菲斯",
         "faction": "Corpus",
         "levels": {
           "normal": "21 - 24",
           "steelPath": "121 - 124"
+        }
+      },
+      {
+        "id": "CrewBattleNode515",
+        "nameEn": "Luckless Expanse",
+        "nameTc": "落運廣袤",
+        "type": "SURVIVAL",
+        "typeTc": "生存",
+        "faction": "Corpus",
+        "levels": {
+          "normal": "22 - 25",
+          "steelPath": "122 - 125"
+        }
+      },
+      {
+        "id": "CrewBattleNode514",
+        "nameEn": "Falling Glory",
+        "nameTc": "殞落光環",
+        "type": "DEFENSE",
+        "typeTc": "防禦",
+        "faction": "Corpus",
+        "levels": {
+          "normal": "23 - 26",
+          "steelPath": "123 - 126"
+        }
+      },
+      {
+        "id": "CrewBattleNode503",
+        "nameEn": "Bifrost Echo",
+        "nameTc": "迴響虹橋",
+        "type": "EXTERMINATE",
+        "typeTc": "殲滅",
+        "faction": "Corpus",
+        "levels": {
+          "normal": "15 - 18",
+          "steelPath": "115 - 118"
+        }
+      },
+      {
+        "id": "CrewBattleNode512",
+        "nameEn": "Orvin-Haarc",
+        "nameTc": "奧爾萬－哈爾克",
+        "type": "SPY",
+        "typeTc": "間諜",
+        "faction": "Corpus",
+        "levels": {
+          "normal": "19 - 22",
+          "steelPath": "119 - 122"
+        }
+      }
+    ]
+  },
+  "Saturn Proxima": {
+    "nameEn": "Saturn Proxima",
+    "nameTc": "土星毗鄰星",
+    "drops": [
+      "鈦金屬",
+      "鈦核船板",
+      "碳化物",
+      "立方二極體",
+      "星彩藍寶石",
+      "加落斯反物質燃料棒",
+      "愛索斯修複液",
+      "奧核電容",
+      "Komms",
+      "虛能石",
+      "碲"
+    ],
+    "nodes": [
+      {
+        "id": "CrewBattleNode501",
+        "nameEn": "Mordo Cluster",
+        "nameTc": "莫度星團",
+        "type": "SKIRMISH",
+        "typeTc": "前哨戰",
+        "faction": "Grineer",
+        "levels": {
+          "normal": "55 - 60",
+          "steelPath": "155 - 160"
+        }
+      },
+      {
+        "id": "CrewBattleNode534",
+        "nameEn": "Lupal Pass",
+        "nameTc": "狼魄星口",
+        "type": "SKIRMISH",
+        "typeTc": "前哨戰",
+        "faction": "Grineer",
+        "levels": {
+          "normal": "48 - 56",
+          "steelPath": "148 - 156"
+        }
+      },
+      {
+        "id": "CrewBattleNode533",
+        "nameEn": "Nodo Gap",
+        "nameTc": "節點星隙",
+        "type": "SKIRMISH",
+        "typeTc": "前哨戰",
+        "faction": "Grineer",
+        "levels": {
+          "normal": "54 - 60",
+          "steelPath": "154 - 160"
+        }
+      },
+      {
+        "id": "CrewBattleNode535",
+        "nameEn": "Vand Cluster",
+        "nameTc": "水澤星團",
+        "type": "SKIRMISH",
+        "typeTc": "前哨戰",
+        "faction": "Grineer",
+        "levels": {
+          "normal": "65 - 70",
+          "steelPath": "165 - 170"
+        }
+      },
+      {
+        "id": "CrewBattleNode530",
+        "nameEn": "Kasio's Rest",
+        "nameTc": "卡西奧的安息處",
+        "type": "SKIRMISH",
+        "typeTc": "前哨戰",
+        "faction": "Grineer",
+        "levels": {
+          "normal": "70 - 75",
+          "steelPath": "170 - 175"
         }
       }
     ]
@@ -3625,10 +4110,35 @@
     ],
     "nodes": [
       {
+        "id": "CrewBattleNode504",
+        "nameEn": "Arva Vector",
+        "nameTc": "沃野量向",
+        "type": "DEFENSE",
+        "typeTc": "防禦",
+        "faction": "Corpus",
+        "levels": {
+          "normal": "25 - 28",
+          "steelPath": "125 - 128"
+        }
+      },
+      {
+        "id": "CrewBattleNode516",
+        "nameEn": "Nu-gua Mines",
+        "nameTc": "女媧星礦",
+        "type": "EXTERMINATE",
+        "typeTc": "殲滅",
+        "faction": "Corpus",
+        "levels": {
+          "normal": "27 - 30",
+          "steelPath": "127 - 130"
+        }
+      },
+      {
         "id": "CrewBattleNode523",
         "nameEn": "Mammon's Prospect",
         "nameTc": "瑪門的遠景",
-        "type": "Orphix",
+        "type": "ORPHIX",
+        "typeTc": "奧菲斯",
         "faction": "Corpus",
         "levels": {
           "normal": "31 - 34",
@@ -3636,10 +4146,35 @@
         }
       },
       {
+        "id": "CrewBattleNode525",
+        "nameEn": "Brom Cluster",
+        "nameTc": "布朗星團",
+        "type": "SPY",
+        "typeTc": "間諜",
+        "faction": "Corpus",
+        "levels": {
+          "normal": "32 - 35",
+          "steelPath": "132 - 135"
+        }
+      },
+      {
+        "id": "CrewBattleNode521",
+        "nameEn": "Enkidu Ice Drifts",
+        "nameTc": "恩奇杜冰川",
+        "type": "SURVIVAL",
+        "typeTc": "生存",
+        "faction": "Corpus",
+        "levels": {
+          "normal": "29 - 32",
+          "steelPath": "129 - 132"
+        }
+      },
+      {
         "id": "CrewBattleNode524",
         "nameEn": "Sovereign Grasp",
         "nameTc": "星君空域",
-        "type": "Volatile",
+        "type": "VOLATILE",
+        "typeTc": "爆發",
         "faction": "Corpus",
         "levels": {
           "normal": "33 - 36",
@@ -3669,7 +4204,8 @@
         "id": "CrewBattleNode526",
         "nameEn": "Khufu Envoy",
         "nameTc": "胡夫使節",
-        "type": "Orphix",
+        "type": "ORPHIX",
+        "typeTc": "奧菲斯",
         "faction": "Corpus",
         "levels": {
           "normal": "35 - 38",
@@ -3677,28 +4213,138 @@
         }
       },
       {
+        "id": "CrewBattleNode527",
+        "nameEn": "Seven Sirens",
+        "nameTc": "七妖女",
+        "type": "EXTERMINATE",
+        "typeTc": "殲滅",
+        "faction": "Corpus",
+        "levels": {
+          "normal": "37 - 40",
+          "steelPath": "137 - 140"
+        }
+      },
+      {
+        "id": "CrewBattleNode528",
+        "nameEn": "Obol Crossing",
+        "nameTc": "奧波交點",
+        "type": "DEFENSE",
+        "typeTc": "防禦",
+        "faction": "Corpus",
+        "levels": {
+          "normal": "39 - 42",
+          "steelPath": "139 - 142"
+        }
+      },
+      {
+        "id": "CrewBattleNode531",
+        "nameEn": "Fenton's Field",
+        "nameTc": "分沌力場",
+        "type": "SURVIVAL",
+        "typeTc": "生存",
+        "faction": "Corpus",
+        "levels": {
+          "normal": "40 - 43",
+          "steelPath": "140 - 143"
+        }
+      },
+      {
         "id": "CrewBattleNode529",
         "nameEn": "Profit Margin",
         "nameTc": "利益邊緣",
-        "type": "Volatile",
+        "type": "VOLATILE",
+        "typeTc": "爆發",
         "faction": "Corpus",
         "levels": {
           "normal": "41 - 44",
           "steelPath": "141 - 144"
         }
+      },
+      {
+        "id": "CrewBattleNode536",
+        "nameEn": "Peregrine Axis",
+        "nameTc": "遊移星軸",
+        "type": "SPY",
+        "typeTc": "間諜",
+        "faction": "Corpus",
+        "levels": {
+          "normal": "43 - 46",
+          "steelPath": "143 - 146"
+        }
       }
     ]
   },
-  "Veil": {
-    "nameEn": "Veil",
-    "nameTc": "Veil",
-    "drops": [],
+  "Veil Proxima": {
+    "nameEn": "Veil Proxima",
+    "nameTc": "面紗毗鄰星",
+    "drops": [
+      "鈦金屬",
+      "鈦核船板",
+      "碳化物",
+      "立方二極體",
+      "星彩藍寶石",
+      "加落斯反物質燃料棒",
+      "愛索斯修複液",
+      "奧核電容",
+      "Komms",
+      "虛能石",
+      "碲"
+    ],
     "nodes": [
+      {
+        "id": "CrewBattleNode550",
+        "nameEn": "Nsu Grid",
+        "nameTc": "踵承星格",
+        "type": "SKIRMISH",
+        "typeTc": "前哨戰",
+        "faction": "Grineer",
+        "levels": {
+          "normal": "80 - 90",
+          "steelPath": "180 - 190"
+        }
+      },
+      {
+        "id": "CrewBattleNode555",
+        "nameEn": "R-9 Cloud",
+        "nameTc": "R-9 星雲",
+        "type": "SKIRMISH",
+        "typeTc": "前哨戰",
+        "faction": "Grineer",
+        "levels": {
+          "normal": "80 - 90",
+          "steelPath": "180 - 190"
+        }
+      },
+      {
+        "id": "CrewBattleNode554",
+        "nameEn": "H-2 Cloud",
+        "nameTc": "H-2 星雲",
+        "type": "SKIRMISH",
+        "typeTc": "前哨戰",
+        "faction": "Grineer",
+        "levels": {
+          "normal": "80 - 90",
+          "steelPath": "180 - 190"
+        }
+      },
+      {
+        "id": "CrewBattleNode553",
+        "nameEn": "Flexa",
+        "nameTc": "弗歷沙",
+        "type": "SKIRMISH",
+        "typeTc": "前哨戰",
+        "faction": "Grineer",
+        "levels": {
+          "normal": "80 - 90",
+          "steelPath": "180 - 190"
+        }
+      },
       {
         "id": "CrewBattleNode538",
         "nameEn": "Calabash",
         "nameTc": "葫蘆",
-        "type": "Extermination",
+        "type": "EXTERMINATE",
+        "typeTc": "殲滅",
         "faction": "Corpus",
         "levels": {
           "normal": "45 - 49",
@@ -3706,10 +4352,23 @@
         }
       },
       {
+        "id": "CrewBattleNode539",
+        "nameEn": "Numina",
+        "nameTc": "福德神社",
+        "type": "VOLATILE",
+        "typeTc": "爆發",
+        "faction": "Corpus",
+        "levels": {
+          "normal": "48 - 52",
+          "steelPath": "148 - 152"
+        }
+      },
+      {
         "id": "CrewBattleNode540",
         "nameEn": "Arc Silver",
         "nameTc": "白銀天弧",
-        "type": "Defense",
+        "type": "DEFENSE",
+        "typeTc": "防禦",
         "faction": "Corpus",
         "levels": {
           "normal": "51 - 55",
@@ -3717,10 +4376,23 @@
         }
       },
       {
+        "id": "CrewBattleNode541",
+        "nameEn": "Erato",
+        "nameTc": "厄剌托",
+        "type": "ORPHIX",
+        "typeTc": "奧菲斯",
+        "faction": "Corpus",
+        "levels": {
+          "normal": "54 - 58",
+          "steelPath": "154 - 158"
+        }
+      },
+      {
         "id": "CrewBattleNode542",
         "nameEn": "Lu-yan",
         "nameTc": "呂巖",
-        "type": "Survival",
+        "type": "SURVIVAL",
+        "typeTc": "生存",
         "faction": "Corpus",
         "levels": {
           "normal": "55 - 59",
@@ -3729,13 +4401,14 @@
       },
       {
         "id": "CrewBattleNode543",
-        "nameEn": "Sambir Cloud",
-        "nameTc": "Sambir Cloud",
-        "type": "Spy",
-        "faction": "Corpus",
+        "nameEn": "Sabmir Cloud",
+        "nameTc": "撒謎星雲",
+        "type": "SPY",
+        "typeTc": "間諜",
+        "faction": "無",
         "levels": {
-          "normal": "未知",
-          "steelPath": "未知"
+          "normal": "57 - 60",
+          "steelPath": "157 - 160"
         }
       }
     ]

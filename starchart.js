@@ -107,15 +107,14 @@ function renderGrid(planetsToRender) {
     const card = document.createElement('div');
     card.className = 'card';
     
-    const imgHtml = planet.imgUrl 
-      ? `<img src="${planet.imgUrl}" class="planet-img" onerror="this.outerHTML='<div class=\\'planet-placeholder\\'>無圖片</div>';">`
-      : `<div class="planet-placeholder">無圖片</div>`;
+    // 🌟 不管三七二十一，全部強制用「英文名稱.png」去找圖！
+    const imgHtml = `<img src="images/planets/${planet.nameEn}.png" class="planet-img" onerror="this.outerHTML='<div class=\\'planet-placeholder\\'>無圖片</div>';">`;
     
     card.innerHTML = `
       ${imgHtml}
       <div class="card-title">${planet.nameTc}</div>
       <div class="card-subtitle">${planet.nameEn}</div>
-      <div class="card-subtitle" style="color: #10b981; margin-top: 15px;">${planet.nodes.length} 個節點</div>
+      <div class="card-subtitle" style="color: #10b981; margin-top: 15px;">${planet.nodes ? planet.nodes.length : 0} 個節點</div>
     `;
     
     card.onclick = () => openPlanetDetail(planet);
@@ -126,7 +125,7 @@ function renderGrid(planetsToRender) {
       const rjCard = document.createElement('div');
       rjCard.className = 'card empyrean-card';
       rjCard.innerHTML = `
-        <img src="images/railjack.png" class="planet-img" onerror="this.outerHTML='<div class=\\'planet-placeholder\\'>無圖片</div>';">
+        <img src="images/planets/Empyrean.png" class="planet-img" onerror="this.outerHTML='<div class=\\'planet-placeholder\\'>無圖片</div>';">
         <div class="card-title">九重天</div>
         <div class="card-subtitle">Empyrean</div>
         <div class="card-subtitle" style="color: #38bdf8; margin-top: 15px; font-weight:bold;">點擊進入銳捷號星圖</div>
@@ -182,19 +181,44 @@ function openPlanetDetail(planet) {
   const nodesContainer = document.getElementById('detail-nodes');
   nodesContainer.innerHTML = '';
   
+  // 🌟 1. 建立有背景圖的白名單 (只針對你有抓圖的節點)
+  const HAS_BG_NODES = ["希圖斯", "福爾圖娜", "魔裔禁地", "蛹巖", "鋼鐵守望", "解剖聖堂", "亡骸殿", "寢區", "霍爾瓦尼亞中央購物中心"];
+
   planet.nodes.sort((a, b) => a.nameTc.localeCompare(b.nameTc)).forEach(node => {
+    
+    // 🛡️ 2. 判斷是否為和平區域
+    const isPeaceful = node.levels.normal === "和平區域";
+
+    const typeBadgeHtml = isPeaceful 
+      ? "" 
+      : `<span class="node-type">${node.typeTc}</span>`;
+      
+    const levelTextHtml = isPeaceful 
+      ? "" 
+      : `<span style="color: #a0aec0; font-size: 0.9em; float: right;">等級: ${node.levels.normal}</span>`;
+
+    // 🛡️ 3. 處理背景圖邏輯
+    let bgStyle = "";
+    if (HAS_BG_NODES.includes(node.nameTc)) {
+      bgStyle = `
+        background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.6)), url('images/nodes/${node.nameEn}.jpg'); 
+        background-size: cover; 
+        background-position: center; 
+        color: white; 
+        border-color: rgba(255, 255, 255, 0.2);
+      `;
+    }
+
+    // 🛡️ 4. 輸出 HTML (將 bgStyle 塞入最外層的 style 屬性)
     nodesContainer.innerHTML += `
-      <div class="node-card" data-id="${node.id}">
+      <div class="node-card" data-id="${node.id}" style="${bgStyle}">
         <div class="node-name">
           <span>${node.nameTc}</span>
-          <!-- 加上 translateUI 處理任務類型 -->
-          <span class="node-type">${translateUI(node.type)}</span>
+          ${typeBadgeHtml}
         </div>
         <div class="node-faction">
-          <!-- 加上 translateUI 處理派系 -->
           <span style="color: #ef4444;">派系：${translateUI(node.faction)}</span>
-          <!-- 這裡會正確顯示腳本抓到的怪物等級 -->
-          <span style="color: #a0aec0; font-size: 0.9em; float: right;">等級: ${node.levels.normal}</span>
+          ${levelTextHtml}
         </div>
       </div>
     `;

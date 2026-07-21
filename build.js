@@ -1,13 +1,13 @@
 import fs from 'fs';
 import crypto from 'crypto';
 
-// 🌟 資料來源：四大金剛集合
-const URL_SOL_NODES = 'https://raw.githubusercontent.com/wfcd/warframe-worldstate-data/master/data/solNodes.json';
+// 🌟 核心資料庫
+const URL_SOL_NODES = 'https://raw.githubusercontent.com/wfcd/warframe-worldstate-data/master/data/solNodes.json'; // 降級為輔助 (補派系用)
 const URL_DROPS = 'https://raw.githubusercontent.com/wfcd/warframe-drop-data/master/data/all.json';
-const URL_I18N = 'https://raw.githubusercontent.com/wfcd/warframe-items/master/data/json/i18n.json'; // 留給掉落物品用
-const URL_REGIONS = 'https://raw.githubusercontent.com/calamity-inc/warframe-public-export-plus/senpai/ExportRegions.json';
+const URL_I18N = 'https://raw.githubusercontent.com/wfcd/warframe-items/master/data/json/i18n.json';
+const URL_REGIONS = 'https://raw.githubusercontent.com/calamity-inc/warframe-public-export-plus/senpai/ExportRegions.json'; // 🌟 晉升為核心
 const URL_DICT_TC = 'https://raw.githubusercontent.com/calamity-inc/warframe-public-export-plus/senpai/dict.tc.json';
-const URL_DICT_EN = 'https://raw.githubusercontent.com/calamity-inc/warframe-public-export-plus/senpai/dict.en.json'; // 🌟 新增英文橋樑
+const URL_DICT_EN = 'https://raw.githubusercontent.com/calamity-inc/warframe-public-export-plus/senpai/dict.en.json';
 
 // 🗑️ 垃圾過濾名單
 const JUNK_FILTER = [
@@ -16,7 +16,6 @@ const JUNK_FILTER = [
   "Detonite Ampule", "Fieldron Sample", "Mutagen Sample", "Circuits", "Control Module"
 ];
 
-// 🌟 常規掉落物字典
 const PLANET_DROPS = {
   "Earth": ["鐵氧體", "紅化結晶", "神經元", "爆燃安瓿"],
   "Venus": ["合金板", "聚合物束", "電路", "電磁力場裝置樣本"],
@@ -46,7 +45,6 @@ const PLANET_DROPS = {
   "Veil Proxima": ["鈦金屬", "鈦核船板", "碳化物", "立方二極體", "星彩藍寶石", "加落斯反物質燃料棒", "愛索斯修複液", "奧核電容", "Komms", "虛能石", "碲"]
 };
 
-// 防呆 Fetch
 async function fetchJson(url) {
   try {
     const res = await fetch(url);
@@ -59,7 +57,7 @@ async function fetchJson(url) {
 }
 
 async function build() {
-  console.log('🚀 [1/5] 開始向 WFCD 與解包資料庫下載海量數據 (可能需要幾秒鐘)...');
+  console.log('🚀 [1/5] 啟動 2.0 系統：從底層解包資料庫提取世界藍圖...');
   
   const [solNodesRes, dropsRes, i18nRes, regionsRes, dictTcRes, dictEnRes] = await Promise.all([
     fetchJson(URL_SOL_NODES),
@@ -72,7 +70,7 @@ async function build() {
 
   console.log('🛡️ [2/5] 執行指紋比對...');
   const hash = crypto.createHash('md5');
-  hash.update(solNodesRes.text);
+  hash.update(regionsRes.text); // 改用 Regions 當主要指紋
   hash.update(dropsRes.text);
   const currentHash = hash.digest('hex');
 
@@ -86,50 +84,29 @@ async function build() {
   const i18n = i18nRes.data;
   const dictTc = dictTcRes.data || {};
   const dictEn = dictEnRes.data || {};
-
-  const enToTcMap = {};
-  Object.keys(dictEn).forEach(key => {
-    const enText = dictEn[key];
-    if (typeof enText === 'string') {
-      // 轉大寫，消除大小寫比對的誤差
-      enToTcMap[enText.trim().toUpperCase()] = dictTc[key]; 
-    }
-  });
   
-  let rawRegions = regionsRes.data.ExportRegions || regionsRes.data || [];
-  const regionsData = Array.isArray(rawRegions) ? rawRegions : Object.values(rawRegions);
+  let regionsObj = regionsRes.data.ExportRegions || regionsRes.data || {};
 
-  // 🌟 1. 建立「無敵字典」：以英文大寫名稱為 Key，直接包含等級與官方中文！
-  const regionMap = {};
-  regionsData.forEach(region => {
-    if (region.name) {
-      const locKey = region.name; // 例如 "/Lotus/Language/Locations/DeepSpaceCrewBattleNode50"
-      const enName = dictEn[locKey]; // 透過橋樑拿到 "R-9 Cloud"
-      const tcName = dictTc[locKey]; // 拿到 "R-9 星雲"
-
-      if (enName) {
-        const cleanKey = enName.trim().toUpperCase();
-        regionMap[cleanKey] = {
-          min: region.minEnemyLevel || 0,
-          max: region.maxEnemyLevel || 0,
-          tcName: tcName || enName // 萬一 TC 缺失，退回英文
-        };
+  // 🌟 建立輔助：從 solNodes 提取「派系」與「Archwing 標籤」
+  const factionMap = {};
+  const archwingMap = {}; // 新增 Archwing 探測器
+  
+  Object.values(solNodes).forEach(node => {
+    if (node && node.value) {
+      const match = node.value.match(/(.+?)\s*\(/);
+      if (match) {
+        const nodeKey = match[1].trim().toUpperCase();
+        factionMap[nodeKey] = node.enemy || "無";
+        
+        // 只要 WFCD 資料庫有標示，或描述裡含有 Archwing 字眼，就標記起來
+        if (node.isArchwing || (node.desc && node.desc.includes('Archwing'))) {
+          archwingMap[nodeKey] = true;
+        }
       }
     }
   });
 
-  // 🌟 2. 星球反查表 (解決毗鄰星問題)
-  const realPlanetMap = {};
-  if (drops.missionRewards) {
-    Object.keys(drops.missionRewards).forEach(path => {
-      const parts = path.split('/');
-      if (parts.length === 2) {
-        realPlanetMap[parts[1].trim()] = parts[0].trim();
-      }
-    });
-  }
-
-  // WFCD 物品翻譯 (用於掉落表)
+  // WFCD 物品翻譯 (給掉落表用)
   const i18nNameMap = {};
   Object.keys(i18n).forEach(key => {
     if (i18n[key].en && i18n[key].en.name) {
@@ -138,95 +115,99 @@ async function build() {
   });
   const translateItem = (enText) => i18nNameMap[(enText || "").toLowerCase()] || enText;
 
-  // 星球翻譯
-  const translatePlanet = (enPlanet) => {
-    const searchKey = enPlanet.trim().toUpperCase();
-    
-    // 直接去全域翻譯蒟蒻裡面查 (例如 "EARTH" -> "地球", "EARTH PROXIMA" -> "地球毗鄰星")
-    let tcName = enToTcMap[searchKey];
-
-    // 🛡️ 防呆機制：萬一有特殊情況沒查到 (比如 WFCD 自己亂拼字)，我們把它拆開來查
-    if (!tcName) {
-      const base = enPlanet.replace(' Proxima', '');
-      const baseTc = enToTcMap[base.toUpperCase()] || base;
-      tcName = baseTc + (enPlanet.includes('Proxima') ? '毗鄰星' : '');
-    }
-    
-    return tcName;
-  };
-
   const planetIndex = {};
   const nodeIndex = {};
   const itemIndex = {};
   const relicIndex = {};
 
-  console.log('⚙️ [3/4] 正在透過英文橋樑，將節點 UI 與底層資料完美融合...');
+  console.log('⚙️ [3/4] 正在以 ExportRegions 為核心，精準重建星圖矩陣...');
   
-  Object.keys(solNodes).forEach(nodeId => {
-    const node = solNodes[nodeId];
-    if (!node || !node.value || node.type === 'Relay' || node.type === 'Clan Dojo' || node.type === 'Ancient Retribution') return;
+  Object.entries(regionsObj).forEach(([regionId, region]) => {
+    // 🛡️ 官方無敵過濾網：直接濾掉所有隱藏、廢棄、測試節點 (完美消滅舊版 Vesper)
+    if (region.hidden === true) return;
+    if (!region.name || !region.systemName || !region.missionName) return;
 
-    const match = node.value.match(/(.+?)\s*\((.+?)\)/);
-    if (!match) return;
+    // 🌟 1. 精準雙語對接：直接從字典開鎖！
+    const enNodeName = dictEn[region.name];
+    const tcNodeName = dictTc[region.name];
+    
+    const enPlanetName = dictEn[region.systemName];
+    const tcPlanetName = dictTc[region.systemName];
+    
+    const enMissionType = dictEn[region.missionName];
+    const tcMissionType = dictTc[region.missionName];
 
-    const rawNodeName = match[1].trim(); // 這是英文名 (e.g. "R-9 Cloud")
-    let planetEn = match[2].trim();
+    // 如果連英文官方字典都沒有這個節點，代表是非常底層的無用代碼，跳過
+    if (!enNodeName || !enPlanetName || !enMissionType) return;
 
-    // 毗鄰星校正
-    const realPlanet = realPlanetMap[rawNodeName];
-    if (realPlanet && realPlanet.includes(planetEn)) {
-      planetEn = realPlanet;
-    } else if (!planetEn.includes('Proxima') && ['Skirmish', 'Volatile', 'Orphix'].includes(node.type)) {
-      planetEn += ' Proxima';
+    if (enPlanetName === "Veil") {
+      enPlanetName = "Veil Proxima";
+      tcPlanetName = "面紗毗鄰星";
     }
 
-    // 🌟 在無敵字典中精準查找！
-    const searchKey = rawNodeName.toUpperCase();
-    const regionInfo = regionMap[searchKey] || { min: 0, max: 0, tcName: null };
-    
-    const minLvl = regionInfo.min;
-    const maxLvl = regionInfo.max;
-    const isUnknown = (minLvl === 0 && maxLvl === 0);
-    
-    // 如果底層找不到官方中文，退回使用 WFCD 的翻譯機作為備案
-    const finalTcName = regionInfo.tcName || translateItem(rawNodeName);
+    // 🌟 2. 獲取派系 (從剛才建立的輔助表拿)
+    const faction = factionMap[enNodeName.toUpperCase()] || "無";
+
+    // 🌟 3. 處理等級與和平區域判斷
+    const minLvl = region.minEnemyLevel || 0;
+    const maxLvl = region.maxEnemyLevel || 0;
+    // 如果等級是 0，且任務類型包含中繼站/城鎮 (Hub)，則標記為和平區域
+    const isPeaceful = (minLvl === 0 && maxLvl === 0);
+
+    const isArchwing = [
+      region.name,
+      region.tileset,
+      region.levelOverride
+    ].some(attr => attr && (attr.includes('Archwing') || attr.includes('SpaceBattles')));
+
+    // 🛡️ 任務類型後製處理
+    let finalTypeTc = tcMissionType || enMissionType;
+    if (isPeaceful) {
+      finalTypeTc = "中繼站 / 城鎮";
+    } else if (isArchwing) {
+      finalTypeTc = `${finalTypeTc} (Archwing)`; // 只要掃描到關鍵字，就強制掛上牌子！
+    }
 
     const nodeData = {
-      id: nodeId,
-      nameEn: rawNodeName,
-      nameTc: finalTcName,    // 🌟 原汁原味的官方翻譯！
-      type: node.type,        // 前端負責
-      faction: node.enemy,    // 前端負責
+      id: regionId,              // e.g. "EarthNodeC", "CrewBattleNode559"
+      nameEn: enNodeName,        // e.g. "Coba"
+      nameTc: tcNodeName || enNodeName, // 萬一沒中文，退回英文
+      type: enMissionType,       // e.g. "Defense", "Railjack Assassinate"
+      typeTc: finalTypeTc, // 🌟 附上官方中文任務名稱！(e.g. "防禦")
+      faction: faction,
       levels: {
-        normal: isUnknown ? "未知" : `${minLvl} - ${maxLvl}`,
-        steelPath: isUnknown ? "未知" : `${minLvl + 100} - ${maxLvl + 100}`
+        normal: isPeaceful ? "和平區域" : `${minLvl} - ${maxLvl}`,
+        steelPath: isPeaceful ? "和平區域" : `${minLvl + 100} - ${maxLvl + 100}`
       }
     };
 
-    if (!planetIndex[planetEn]) {
-      planetIndex[planetEn] = {
-        nameEn: planetEn,
-        nameTc: translatePlanet(planetEn),
-        drops: PLANET_DROPS[planetEn] || [],
+    // 🌟 4. 歸類到正確的星球 (再也不用自己判斷 Proxima 了！)
+    if (!planetIndex[enPlanetName]) {
+      planetIndex[enPlanetName] = {
+        nameEn: enPlanetName,
+        nameTc: tcPlanetName || enPlanetName,
+        drops: PLANET_DROPS[enPlanetName] || [],
         nodes: []
       };
     }
-    planetIndex[planetEn].nodes.push(nodeData);
+    planetIndex[enPlanetName].nodes.push(nodeData);
 
-    const dropPath = `${planetEn}/${rawNodeName}`;
+    // 🌟 5. 精準對接掉落表
+    // Drops API 的路徑通常是 "Earth/Coba" 或 "Earth Proxima/R-9 Cloud"
+    const dropPath = `${enPlanetName}/${enNodeName}`;
     let nodeDrops = null;
     if (drops.missionRewards && drops.missionRewards[dropPath]) {
       nodeDrops = drops.missionRewards[dropPath];
     }
     
-    nodeIndex[nodeId] = {
+    nodeIndex[regionId] = {
       ...nodeData,
-      planet: planetEn,
+      planet: enPlanetName,
       drops: nodeDrops
     };
   });
   
-  console.log('⚙️ [4/5] 處理掉落表...');
+  console.log('⚙️ [4/5] 重建掉落物與遺物索引...');
   const addItemSource = (itemNameEn, sourceObj) => {
     if (JUNK_FILTER.some(junk => itemNameEn.includes(junk))) return;
     const itemNameTc = translateItem(itemNameEn);
@@ -234,16 +215,15 @@ async function build() {
     itemIndex[itemNameTc].push(sourceObj);
   };
 
-  Object.keys(nodeIndex).forEach(nodeId => {
-    const node = nodeIndex[nodeId];
+  Object.values(nodeIndex).forEach(node => {
     if (!node.drops || !node.drops.rewards) return;
     const r = node.drops.rewards;
     if (r.A || r.B || r.C) {
       ['A', 'B', 'C'].forEach(rot => {
-        if (r[rot]) r[rot].forEach(drop => addItemSource(drop.itemName, { type: 'Mission', nodeId: nodeId, rotation: rot, chance: drop.chance }));
+        if (r[rot]) r[rot].forEach(drop => addItemSource(drop.itemName, { type: 'Mission', nodeId: node.id, rotation: rot, chance: drop.chance }));
       });
     } else if (Array.isArray(r)) {
-      r.forEach(drop => addItemSource(drop.itemName, { type: 'Mission', nodeId: nodeId, chance: drop.chance }));
+      r.forEach(drop => addItemSource(drop.itemName, { type: 'Mission', nodeId: node.id, chance: drop.chance }));
     }
   });
 
@@ -264,7 +244,7 @@ async function build() {
   fs.writeFileSync(`${dataDir}/relicIndex.json`, JSON.stringify(relicIndex, null, 2));
   fs.writeFileSync('last_hash.txt', currentHash);
 
-  console.log('🎉 大功告成！完美整合官方中英對照與底層數值，這次真的是系統的完全體了！');
+  console.log('🎉 系統 2.0 升級完成！資料庫淨化完畢，幽靈節點與錯位問題已徹底根除！');
 }
 
 build();

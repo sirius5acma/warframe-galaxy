@@ -53,3 +53,56 @@
   width: 100%; /* 確保容器有撐滿可用空間 */
   gap: 16px; 
 }
+
+/* =========================================
+   卡片懸停顯示獎勵 (Hover Overlay) 樣式
+========================================= */
+
+/* 確保卡片本身是相對定位，才包得住浮動的圖層 */
+.card {
+    position: relative;
+    overflow: hidden; /* 防止內容超出去 */
+}
+
+/* 這是卡片的正面內容 */
+.card-front {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    transition: all 0.3s ease;
+}
+
+/* 當滑鼠懸停在卡片上時，讓正面的圖文變暗並且稍微模糊，把視覺焦點讓給文字 */
+.card:hover .card-front {
+    opacity: 0.15;
+    filter: blur(2px);
+}
+
+/* 這是覆蓋在上面的獎勵清單層 */
+.card-rewards-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(15, 23, 42, 0.6); /* 微微透出底下的深藍色背景 */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+    box-sizing: border-box;
+    
+    /* 🌟 重點魔法在此：預設隱藏，並且在滑鼠「離開」時瞬間消失 (0s 延遲) */
+    opacity: 0;
+    pointer-events: none; /* 讓滑鼠點擊可以穿透它，確保原本的 onclick 正常運作 */
+    transition: opacity 0.2s ease 0s; 
+}
+
+/* 當滑鼠懸停在卡片上時，讓獎勵層浮現 */
+.card:hover .card-rewards-overlay {
+    opacity: 1;
+    /* 🌟 當滑鼠「進入」時，等待 0.25 秒後才開始浮現動畫 */
+    transition: opacity 0.3s ease 0.25s; 
+}

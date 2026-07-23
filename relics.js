@@ -47,27 +47,53 @@ function renderRelics(relicsToRender) {
 
     const statusColor = relic.status === '入庫' ? '#64748b' : '#10b981';
     
+    // 🌟 新增：提取獎勵並生成 HTML (只顯示物品名稱，用顏色區分稀有度)
+    let rewardsHtml = '';
+    if (relic.rewards && relic.rewards.length > 0) {
+      const sortedRewards = [...relic.rewards].sort((a, b) => b.chance - a.chance);
+      sortedRewards.forEach(drop => {
+        let rarityColor = '#cd7f32'; // 銅
+        if (drop.chance <= 2) rarityColor = '#fbbf24'; // 金
+        else if (drop.chance <= 11) rarityColor = '#94a3b8'; // 銀
+        
+        rewardsHtml += `<div style="color: ${rarityColor}; font-size: 0.9em; margin-bottom: 6px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; width: 100%; text-align: center; text-shadow: 0 1px 2px rgba(0,0,0,0.8);">${drop.itemName}</div>`;
+      });
+    } else {
+      rewardsHtml = '<div style="color: #a0aec0; font-size: 0.9em;">未知獎勵</div>';
+    }
+
     card.innerHTML = `
-      <img src="images/relics/${relic.eraEn}.png" 
-           alt="${relic.eraEn} ${relic.name}" 
-           class="relic-img" 
-           style="filter: drop-shadow(0 0 15px ${eraColor}88);"
-           onerror="this.onerror=null; this.style.display='none';">
-           
-      <div class="card-title" style="color: ${eraColor}; margin-top: 5px;">
-        ${relic.era} ${relic.name}
+      <!-- 原本的卡片正面 -->
+      <div class="card-front">
+          <img src="images/relics/${relic.eraEn}.png" 
+               alt="${relic.eraEn} ${relic.name}" 
+               class="relic-img" 
+               style="filter: drop-shadow(0 0 15px ${eraColor}88);"
+               onerror="this.onerror=null; this.style.display='none';">
+               
+          <div class="card-title" style="color: ${eraColor}; margin-top: 5px;">
+            ${relic.era} ${relic.name}
+          </div>
+          <div class="card-subtitle">
+            ${relic.era}遺物
+          </div>
+          <div style="margin-top: 15px; border-top: 1px dashed rgba(255,255,255,0.1); padding-top: 12px; width: 100%;">
+            <span style="background: rgba(12, 14, 18, 0.8); padding: 4px 12px; border-radius: 12px; font-size: 12px; color: ${statusColor}; border: 1px solid ${statusColor}55;">
+              ${relic.status}
+            </span>
+          </div>
       </div>
-      <div class="card-subtitle">
-        ${relic.era}遺物
-      </div>
-      <div style="margin-top: 15px; border-top: 1px dashed rgba(255,255,255,0.1); padding-top: 12px; width: 100%;">
-        <span style="background: rgba(12, 14, 18, 0.8); padding: 4px 12px; border-radius: 12px; font-size: 12px; color: ${statusColor}; border: 1px solid ${statusColor}55;">
-          ${relic.status}
-        </span>
+
+      <!-- 🌟 新增：懸停時浮現的獎勵清單層 -->
+      <div class="card-rewards-overlay">
+         <div style="color: #fff; font-size: 0.85em; letter-spacing: 2px; margin-bottom: 12px; border-bottom: 1px solid rgba(255,255,255,0.2); padding-bottom: 5px;">
+            掉落內容
+         </div>
+         ${rewardsHtml}
       </div>
     `;
     
-    // 🌟 點擊卡片時，呼叫展開詳細資訊的函數
+    // 點擊卡片時，呼叫展開詳細資訊的函數 (這個保留不動)
     card.onclick = () => openRelicDetail(relic, eraColor, statusColor);
     grid.appendChild(card);
   });

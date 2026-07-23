@@ -1,5 +1,5 @@
 {
-  "Akstiletto Prime Barrel": [
+  "史提托雙槍 Prime 槍管": [
     {
       "type": "Relic",
       "relicName": "Axi A1",
@@ -145,7 +145,7 @@
       "chance": 16.67
     }
   ],
-  "Trinity Prime Systems Blueprint": [
+  "Trinity Prime 系統 藍圖": [
     {
       "type": "Relic",
       "relicName": "Axi A1",
@@ -339,7 +339,7 @@
       "chance": 16.67
     }
   ],
-  "Fragor Prime Head": [
+  "重擊巨鎚 Prime 鎚頭": [
     {
       "type": "Relic",
       "relicName": "Axi A1",
@@ -485,7 +485,7 @@
       "chance": 16.67
     }
   ],
-  "Dual Kamas Prime Handle": [
+  "雙短柄戰鐮 Prime 握柄": [
     {
       "type": "Relic",
       "relicName": "Axi A1",
@@ -607,7 +607,7 @@
       "chance": 20
     }
   ],
-  "Braton Prime Stock": [
+  "布萊頓 Prime 槍托": [
     {
       "type": "Relic",
       "relicName": "Axi A1",
@@ -1713,7 +1713,7 @@
       "chance": 16.67
     }
   ],
-  "Nikana Prime Blueprint": [
+  "侍刃 Prime 藍圖": [
     {
       "type": "Relic",
       "relicName": "Axi A1",
@@ -1883,7 +1883,7 @@
       "chance": 20
     }
   ],
-  "Aksomati Prime Link": [
+  "輕靈月神雙槍 Prime 連接器": [
     {
       "type": "Relic",
       "relicName": "Axi A10",
@@ -2005,7 +2005,7 @@
       "chance": 10
     }
   ],
-  "Wukong Prime Chassis Blueprint": [
+  "Wukong Prime 機體 藍圖": [
     {
       "type": "Relic",
       "relicName": "Axi A10",
@@ -2199,7 +2199,7 @@
       "chance": 20
     }
   ],
-  "Paris Prime Grip": [
+  "帕里斯 Prime 弓身": [
     {
       "type": "Relic",
       "relicName": "Axi A10",
@@ -2729,7 +2729,7 @@
       "chance": 20
     }
   ],
-  "Akbronco Prime Blueprint": [
+  "野馬雙槍 Prime 藍圖": [
     {
       "type": "Relic",
       "relicName": "Axi A10",
@@ -3451,7 +3451,7 @@
       "chance": 16.67
     }
   ],
-  "Forma Blueprint": [
+  "Forma 藍圖": [
     {
       "type": "Relic",
       "relicName": "Axi A10",
@@ -12573,7 +12573,7 @@
       "chance": 16.67
     }
   ],
-  "Stradavar Prime Receiver": [
+  "斯特拉迪瓦 Prime 槍機": [
     {
       "type": "Relic",
       "relicName": "Axi A10",
@@ -12719,7 +12719,7 @@
       "chance": 16.67
     }
   ],
-  "Atlas Prime Neuroptics Blueprint": [
+  "Atlas Prime 頭部神經光元 藍圖": [
     {
       "type": "Relic",
       "relicName": "Axi A11",
@@ -12841,7 +12841,7 @@
       "chance": 10
     }
   ],
-  "Pangolin Prime Blade": [
+  "鯪鯉劍 Prime 刀刃": [
     {
       "type": "Relic",
       "relicName": "Axi A11",
@@ -13035,7 +13035,7 @@
       "chance": 20
     }
   ],
-  "Wukong Prime Systems Blueprint": [
+  "Wukong Prime 系統 藍圖": [
     {
       "type": "Relic",
       "relicName": "Axi A11",
@@ -13205,7 +13205,7 @@
       "chance": 20
     }
   ],
-  "Zhuge Prime String": [
+  "諸葛連弩 Prime 弓弦": [
     {
       "type": "Relic",
       "relicName": "Axi A11",
@@ -13399,7 +13399,7 @@
       "chance": 16.67
     }
   ],
-  "Fang Prime Blueprint": [
+  "狼牙 Prime 藍圖": [
     {
       "type": "Relic",
       "relicName": "Axi A11",
@@ -14457,7 +14457,7 @@
       "chance": 16.67
     }
   ],
-  "Burston Prime Receiver": [
+  "伯斯頓 Prime 槍機": [
     {
       "type": "Relic",
       "relicName": "Axi A11",
@@ -15443,7 +15443,7 @@
       "chance": 16.67
     }
   ],
-  "Akbolto Prime Receiver": [
+  "螺釘雙槍 Prime 槍機": [
     {
       "type": "Relic",
       "relicName": "Axi A12",
@@ -15565,7 +15565,7 @@
       "chance": 10
     }
   ],
-  "Helios Prime Systems": [
+  "赫利俄斯 Prime 系統": [
     {
       "type": "Relic",
       "relicName": "Axi A12",
@@ -15711,7 +15711,7 @@
       "chance": 20
     }
   ],
-  "Banshee Prime Blueprint": [
+  "Banshee Prime 藍圖": [
     {
       "type": "Relic",
       "relicName": "Axi A12",
@@ -15929,7 +15929,7 @@
       "chance": 20
     }
   ],
-  "Mirage Prime Chassis Blueprint": [
+  "Mirage Prime 機體 藍圖": [
     {
       "type": "Relic",
       "relicName": "Axi A12",
@@ -16075,7 +16075,7 @@
       "chance": 16.67
     }
   ],
-  "Kogake Prime Boot": [
+  "科加基 Prime 靴子": [
     {
       "type": "Relic",
       "relicName": "Axi A12",
@@ -16245,7 +16245,7 @@
       "chance": 16.67
     }
   ],
-  "Orthos Prime Blueprint": [
+  "歐特魯斯 Prime 藍圖": [
     {
       "type": "Relic",
       "relicName": "Axi A13",
@@ -16703,7 +16703,7 @@
       "chance": 20
     }
   ],
-  "Inaros Prime Systems Blueprint": [
+  "Inaros Prime 系統 藍圖": [
     {
       "type": "Relic",
       "relicName": "Axi A13",
@@ -16897,7 +16897,7 @@
       "chance": 16.67
     }
   ],
-  "Karyst Prime Handle": [
+  "凱洛斯特 Prime 握柄": [
     {
       "type": "Relic",
       "relicName": "Axi A14",
@@ -17091,7 +17091,7 @@
       "chance": 20
     }
   ],
-  "Nidus Prime Blueprint": [
+  "Nidus Prime 藍圖": [
     {
       "type": "Relic",
       "relicName": "Axi A14",
@@ -17285,7 +17285,7 @@
       "chance": 20
     }
   ],
-  "Zakti Prime Receiver": [
+  "毒芽 Prime 槍機": [
     {
       "type": "Relic",
       "relicName": "Axi A14",
@@ -17503,7 +17503,7 @@
       "chance": 16.67
     }
   ],
-  "Paris Prime Blueprint": [
+  "帕里斯 Prime 藍圖": [
     {
       "type": "Relic",
       "relicName": "Axi A14",
@@ -18297,7 +18297,7 @@
       "chance": 16.67
     }
   ],
-  "Volnus Prime Blueprint": [
+  "創傷 Prime 藍圖": [
     {
       "type": "Relic",
       "relicName": "Axi A14",
@@ -18491,7 +18491,7 @@
       "chance": 16.67
     }
   ],
-  "Oberon Prime Systems Blueprint": [
+  "Oberon Prime 系統 藍圖": [
     {
       "type": "Relic",
       "relicName": "Axi A15",
@@ -18637,7 +18637,7 @@
       "chance": 20
     }
   ],
-  "Ivara Prime Systems Blueprint": [
+  "Ivara Prime 系統 藍圖": [
     {
       "type": "Relic",
       "relicName": "Axi A15",
@@ -18783,7 +18783,7 @@
       "chance": 20
     }
   ],
-  "Baza Prime Receiver": [
+  "蒼鷹 Prime 槍機": [
     {
       "type": "Relic",
       "relicName": "Axi A15",
@@ -18977,7 +18977,7 @@
       "chance": 16.67
     }
   ],
-  "Sybaris Prime Stock": [
+  "席芭莉絲 Prime 槍托": [
     {
       "type": "Relic",
       "relicName": "Axi A15",
@@ -19123,7 +19123,7 @@
       "chance": 16.67
     }
   ],
-  "Afuris Prime Receiver": [
+  "盜賊雙槍 Prime 槍機": [
     {
       "type": "Relic",
       "relicName": "Axi A16",
@@ -19221,7 +19221,7 @@
       "chance": 10
     }
   ],
-  "Revenant Prime Systems Blueprint": [
+  "Revenant Prime 系統 藍圖": [
     {
       "type": "Relic",
       "relicName": "Axi A16",
@@ -19391,7 +19391,7 @@
       "chance": 20
     }
   ],
-  "Harrow Prime Neuroptics Blueprint": [
+  "Harrow Prime 頭部神經光元 藍圖": [
     {
       "type": "Relic",
       "relicName": "Axi A16",
@@ -19585,7 +19585,7 @@
       "chance": 20
     }
   ],
-  "Scourge Prime Blade": [
+  "禍根 Prime 刀刃": [
     {
       "type": "Relic",
       "relicName": "Axi A16",
@@ -19803,7 +19803,7 @@
       "chance": 16.67
     }
   ],
-  "Braton Prime Blueprint": [
+  "布萊頓 Prime 藍圖": [
     {
       "type": "Relic",
       "relicName": "Axi A16",
@@ -20885,7 +20885,7 @@
       "chance": 16.67
     }
   ],
-  "Fang Prime Handle": [
+  "狼牙 Prime 握柄": [
     {
       "type": "Relic",
       "relicName": "Axi A16",
@@ -21919,7 +21919,7 @@
       "chance": 16.67
     }
   ],
-  "Shade Prime Blueprint": [
+  "陰影 Prime 藍圖": [
     {
       "type": "Relic",
       "relicName": "Axi A17",
@@ -22089,7 +22089,7 @@
       "chance": 20
     }
   ],
-  "Wisp Prime Systems Blueprint": [
+  "Wisp Prime 系統 藍圖": [
     {
       "type": "Relic",
       "relicName": "Axi A17",
@@ -22283,7 +22283,7 @@
       "chance": 16.67
     }
   ],
-  "Braton Prime Barrel": [
+  "布萊頓 Prime 槍管": [
     {
       "type": "Relic",
       "relicName": "Axi A17",
@@ -23221,7 +23221,7 @@
       "chance": 16.67
     }
   ],
-  "Acceltra Prime Stock": [
+  "迅發電漿炮 Prime 槍托": [
     {
       "type": "Relic",
       "relicName": "Axi A18",
@@ -23319,7 +23319,7 @@
       "chance": 10
     }
   ],
-  "Akbronco Prime Link": [
+  "野馬雙槍 Prime 連接器": [
     {
       "type": "Relic",
       "relicName": "Axi A18",
@@ -23825,7 +23825,7 @@
       "chance": 20
     }
   ],
-  "Hildryn Prime Chassis Blueprint": [
+  "Hildryn Prime 機體 藍圖": [
     {
       "type": "Relic",
       "relicName": "Axi A18",
@@ -23971,7 +23971,7 @@
       "chance": 20
     }
   ],
-  "Paris Prime Lower Limb": [
+  "帕里斯 Prime 下弓臂": [
     {
       "type": "Relic",
       "relicName": "Axi A18",
@@ -24837,7 +24837,7 @@
       "chance": 16.67
     }
   ],
-  "Cobra & Crane Prime Hilt": [
+  "眼鏡蛇 & 鶴 Prime 握柄": [
     {
       "type": "Relic",
       "relicName": "Axi A18",
@@ -25031,7 +25031,7 @@
       "chance": 16.67
     }
   ],
-  "Xaku Prime Systems Blueprint": [
+  "Xaku Prime 系統 藍圖": [
     {
       "type": "Relic",
       "relicName": "Axi A19",
@@ -25177,7 +25177,7 @@
       "chance": 20
     }
   ],
-  "Larkspur Prime Receiver": [
+  "翠雀 Prime 槍機": [
     {
       "type": "Relic",
       "relicName": "Axi A19",
@@ -25347,7 +25347,7 @@
       "chance": 20
     }
   ],
-  "Bronco Prime Receiver": [
+  "野馬 Prime 槍機": [
     {
       "type": "Relic",
       "relicName": "Axi A19",
@@ -26285,7 +26285,7 @@
       "chance": 16.67
     }
   ],
-  "Epitaph Prime Blueprint": [
+  "墓悼者 Prime 藍圖": [
     {
       "type": "Relic",
       "relicName": "Axi A19",
@@ -26479,7 +26479,7 @@
       "chance": 16.67
     }
   ],
-  "Aklex Prime Link": [
+  "雷克斯雙槍 Prime 連接器": [
     {
       "type": "Relic",
       "relicName": "Axi A2",
@@ -26505,7 +26505,7 @@
       "chance": 10
     }
   ],
-  "Aklex Prime Blueprint": [
+  "雷克斯雙槍 Prime 藍圖": [
     {
       "type": "Relic",
       "relicName": "Axi A2",
@@ -26555,7 +26555,7 @@
       "chance": 20
     }
   ],
-  "Lex Prime Blueprint": [
+  "雷克斯 Prime 藍圖": [
     {
       "type": "Relic",
       "relicName": "Axi A2",
@@ -27565,7 +27565,7 @@
       "chance": 16.67
     }
   ],
-  "Lex Prime Receiver": [
+  "雷克斯 Prime 槍機": [
     {
       "type": "Relic",
       "relicName": "Axi A2",
@@ -28575,7 +28575,7 @@
       "chance": 16.67
     }
   ],
-  "Lex Prime Barrel": [
+  "雷克斯 Prime 槍管": [
     {
       "type": "Relic",
       "relicName": "Axi A2",
@@ -29657,7 +29657,7 @@
       "chance": 16.67
     }
   ],
-  "Alternox Prime Blueprint": [
+  "交電步槍 Prime 藍圖": [
     {
       "type": "Relic",
       "relicName": "Axi A20",
@@ -29731,7 +29731,7 @@
       "chance": 10
     }
   ],
-  "Kompressa Prime Receiver": [
+  "漮浦薩 Prime 槍機": [
     {
       "type": "Relic",
       "relicName": "Axi A20",
@@ -29829,7 +29829,7 @@
       "chance": 20
     }
   ],
-  "Lavos Prime Neuroptics Blueprint": [
+  "Lavos Prime 頭部神經光元 藍圖": [
     {
       "type": "Relic",
       "relicName": "Axi A20",
@@ -29927,7 +29927,7 @@
       "chance": 20
     }
   ],
-  "Cedo Prime Stock": [
+  "席多 Prime 槍托": [
     {
       "type": "Relic",
       "relicName": "Axi A20",
@@ -30073,7 +30073,7 @@
       "chance": 16.67
     }
   ],
-  "Daikyu Prime String": [
+  "大久和弓 Prime 弓弦": [
     {
       "type": "Relic",
       "relicName": "Axi A20",
@@ -30195,7 +30195,7 @@
       "chance": 16.67
     }
   ],
-  "Velox Prime Receiver": [
+  "迅敏屠夫 Prime 槍機": [
     {
       "type": "Relic",
       "relicName": "Axi A20",
@@ -30365,7 +30365,7 @@
       "chance": 16.67
     }
   ],
-  "Alternox Prime Stock": [
+  "交電步槍 Prime 槍托": [
     {
       "type": "Relic",
       "relicName": "Axi A21",
@@ -30415,7 +30415,7 @@
       "chance": 10
     }
   ],
-  "Voruna Prime Chassis Blueprint": [
+  "Voruna Prime 機體 藍圖": [
     {
       "type": "Relic",
       "relicName": "Axi A21",
@@ -30465,7 +30465,7 @@
       "chance": 20
     }
   ],
-  "Cedo Prime Barrel": [
+  "席多 Prime 槍管": [
     {
       "type": "Relic",
       "relicName": "Axi A21",
@@ -30563,7 +30563,7 @@
       "chance": 20
     }
   ],
-  "Styanax Prime Blueprint": [
+  "Styanax Prime 藍圖": [
     {
       "type": "Relic",
       "relicName": "Axi A21",
@@ -30589,7 +30589,7 @@
       "chance": 16.67
     }
   ],
-  "Vadarya Prime Stock": [
+  "瓦達雅 Prime 槍托": [
     {
       "type": "Relic",
       "relicName": "Axi A21",
@@ -30687,7 +30687,7 @@
       "chance": 16.67
     }
   ],
-  "Afentis Prime Blueprint": [
+  "阿凡提 Prime 藍圖": [
     {
       "type": "Relic",
       "relicName": "Axi A22",
@@ -34675,7 +34675,7 @@
       "chance": 20
     }
   ],
-  "Dual Zoren Prime Handle": [
+  "佐倫雙斧 Prime 握柄": [
     {
       "type": "Relic",
       "relicName": "Axi A22",
@@ -34845,7 +34845,7 @@
       "chance": 16.67
     }
   ],
-  "Burston Prime Blueprint": [
+  "伯斯頓 Prime 藍圖": [
     {
       "type": "Relic",
       "relicName": "Axi A22",
@@ -35855,7 +35855,7 @@
       "chance": 16.67
     }
   ],
-  "Venato Prime Handle": [
+  "威拿托 Prime 握柄": [
     {
       "type": "Relic",
       "relicName": "Axi A22",
@@ -35977,7 +35977,7 @@
       "chance": 16.67
     }
   ],
-  "Hydroid Prime Neuroptics Blueprint": [
+  "Hydroid Prime 頭部神經光元 藍圖": [
     {
       "type": "Relic",
       "relicName": "Axi A3",
@@ -36075,7 +36075,7 @@
       "chance": 20
     }
   ],
-  "Cernos Prime String": [
+  "西諾斯 Prime 弓弦": [
     {
       "type": "Relic",
       "relicName": "Axi A3",
@@ -36269,7 +36269,7 @@
       "chance": 20
     }
   ],
-  "Helios Prime Carapace": [
+  "赫利俄斯 Prime 外殼": [
     {
       "type": "Relic",
       "relicName": "Axi A3",
@@ -36511,7 +36511,7 @@
       "chance": 16.67
     }
   ],
-  "Ballistica Prime String": [
+  "布里斯提卡 Prime 弓弦": [
     {
       "type": "Relic",
       "relicName": "Axi A4",
@@ -36609,7 +36609,7 @@
       "chance": 20
     }
   ],
-  "Zephyr Prime Neuroptics Blueprint": [
+  "Zephyr Prime 頭部神經光元 藍圖": [
     {
       "type": "Relic",
       "relicName": "Axi A4",
@@ -36803,7 +36803,7 @@
       "chance": 16.67
     }
   ],
-  "Akvasto Prime Blueprint": [
+  "瓦斯托雙槍 Prime 藍圖": [
     {
       "type": "Relic",
       "relicName": "Axi A5",
@@ -36829,7 +36829,7 @@
       "chance": 10
     }
   ],
-  "Vasto Prime Blueprint": [
+  "瓦斯托 Prime 藍圖": [
     {
       "type": "Relic",
       "relicName": "Axi A5",
@@ -37047,7 +37047,7 @@
       "chance": 20
     }
   ],
-  "Akvasto Prime Link": [
+  "瓦斯托雙槍 Prime 連接器": [
     {
       "type": "Relic",
       "relicName": "Axi A5",
@@ -37073,7 +37073,7 @@
       "chance": 20
     }
   ],
-  "Vasto Prime Barrel": [
+  "瓦斯托 Prime 槍管": [
     {
       "type": "Relic",
       "relicName": "Axi A5",
@@ -37339,7 +37339,7 @@
       "chance": 16.67
     }
   ],
-  "Vasto Prime Receiver": [
+  "瓦斯托 Prime 槍機": [
     {
       "type": "Relic",
       "relicName": "Axi A5",
@@ -37581,7 +37581,7 @@
       "chance": 16.67
     }
   ],
-  "Zhuge Prime Blueprint": [
+  "諸葛連弩 Prime 藍圖": [
     {
       "type": "Relic",
       "relicName": "Axi A6",
@@ -37775,7 +37775,7 @@
       "chance": 20
     }
   ],
-  "Tipedo Prime Ornament": [
+  "提佩多 Prime 飾品": [
     {
       "type": "Relic",
       "relicName": "Axi A6",
@@ -37921,7 +37921,7 @@
       "chance": 20
     }
   ],
-  "Orthos Prime Handle": [
+  "歐特魯斯 Prime 握柄": [
     {
       "type": "Relic",
       "relicName": "Axi A6",
@@ -38763,7 +38763,7 @@
       "chance": 16.67
     }
   ],
-  "Chroma Prime Blueprint": [
+  "Chroma Prime 藍圖": [
     {
       "type": "Relic",
       "relicName": "Axi A6",
@@ -38957,7 +38957,7 @@
       "chance": 16.67
     }
   ],
-  "Ash Prime Systems Blueprint": [
+  "Ash Prime 系統 藍圖": [
     {
       "type": "Relic",
       "relicName": "Axi A7",
@@ -39079,7 +39079,7 @@
       "chance": 20
     }
   ],
-  "Fragor Prime Blueprint": [
+  "重擊巨鎚 Prime 藍圖": [
     {
       "type": "Relic",
       "relicName": "Axi A7",
@@ -39225,7 +39225,7 @@
       "chance": 20
     }
   ],
-  "Carrier Prime Systems": [
+  "搬運者 Prime 系統": [
     {
       "type": "Relic",
       "relicName": "Axi A7",
@@ -39419,7 +39419,7 @@
       "chance": 16.67
     }
   ],
-  "Akstiletto Prime Receiver": [
+  "史提托雙槍 Prime 槍機": [
     {
       "type": "Relic",
       "relicName": "Axi A7",
@@ -39565,7 +39565,7 @@
       "chance": 20
     }
   ],
-  "Gram Prime Blueprint": [
+  "格拉姆 Prime 藍圖": [
     {
       "type": "Relic",
       "relicName": "Axi A8",
@@ -39711,7 +39711,7 @@
       "chance": 20
     }
   ],
-  "Pyrana Prime Barrel": [
+  "食人魚 Prime 槍管": [
     {
       "type": "Relic",
       "relicName": "Axi A8",
@@ -39929,7 +39929,7 @@
       "chance": 16.67
     }
   ],
-  "Equinox Prime Chassis Blueprint": [
+  "Equinox Prime 機體 藍圖": [
     {
       "type": "Relic",
       "relicName": "Axi A8",
@@ -40123,7 +40123,7 @@
       "chance": 16.67
     }
   ],
-  "Rubico Prime Stock": [
+  "絕路 Prime 槍托": [
     {
       "type": "Relic",
       "relicName": "Axi A9",
@@ -40341,7 +40341,7 @@
       "chance": 20
     }
   ],
-  "Gram Prime Blade": [
+  "格拉姆 Prime 刀刃": [
     {
       "type": "Relic",
       "relicName": "Axi A9",
@@ -40511,7 +40511,7 @@
       "chance": 16.67
     }
   ],
-  "Banshee Prime Systems Blueprint": [
+  "Banshee Prime 系統 藍圖": [
     {
       "type": "Relic",
       "relicName": "Axi B1",
@@ -40633,7 +40633,7 @@
       "chance": 10
     }
   ],
-  "Cernos Prime Blueprint": [
+  "西諾斯 Prime 藍圖": [
     {
       "type": "Relic",
       "relicName": "Axi B1",
@@ -40803,7 +40803,7 @@
       "chance": 20
     }
   ],
-  "Kavasa Prime Buckle": [
+  "喀婆薩 Prime 庫狛項圈扣": [
     {
       "type": "Relic",
       "relicName": "Axi B1",
@@ -40949,7 +40949,7 @@
       "chance": 20
     }
   ],
-  "Euphona Prime Blueprint": [
+  "悅音 Prime 藍圖": [
     {
       "type": "Relic",
       "relicName": "Axi B1",
@@ -41167,7 +41167,7 @@
       "chance": 16.67
     }
   ],
-  "Ash Prime Chassis Blueprint": [
+  "Ash Prime 機體 藍圖": [
     {
       "type": "Relic",
       "relicName": "Axi B1",
@@ -41313,7 +41313,7 @@
       "chance": 16.67
     }
   ],
-  "Fang Prime Blade": [
+  "狼牙 Prime 刀刃": [
     {
       "type": "Relic",
       "relicName": "Axi B1",
@@ -42371,7 +42371,7 @@
       "chance": 16.67
     }
   ],
-  "Sybaris Prime Blueprint": [
+  "席芭莉絲 Prime 藍圖": [
     {
       "type": "Relic",
       "relicName": "Axi B2",
@@ -42541,7 +42541,7 @@
       "chance": 16.67
     }
   ],
-  "Baza Prime Stock": [
+  "蒼鷹 Prime 槍托": [
     {
       "type": "Relic",
       "relicName": "Axi B3",
@@ -42639,7 +42639,7 @@
       "chance": 10
     }
   ],
-  "Zhuge Prime Receiver": [
+  "諸葛連弩 Prime 槍機": [
     {
       "type": "Relic",
       "relicName": "Axi B3",
@@ -42737,7 +42737,7 @@
       "chance": 20
     }
   ],
-  "Atlas Prime Chassis Blueprint": [
+  "Atlas Prime 機體 藍圖": [
     {
       "type": "Relic",
       "relicName": "Axi B3",
@@ -42907,7 +42907,7 @@
       "chance": 20
     }
   ],
-  "Stradavar Prime Stock": [
+  "斯特拉迪瓦 Prime 槍托": [
     {
       "type": "Relic",
       "relicName": "Axi B3",
@@ -43077,7 +43077,7 @@
       "chance": 16.67
     }
   ],
-  "Baza Prime Blueprint": [
+  "蒼鷹 Prime 藍圖": [
     {
       "type": "Relic",
       "relicName": "Axi B4",
@@ -43223,7 +43223,7 @@
       "chance": 10
     }
   ],
-  "Ivara Prime Blueprint": [
+  "Ivara Prime 藍圖": [
     {
       "type": "Relic",
       "relicName": "Axi B4",
@@ -43393,7 +43393,7 @@
       "chance": 20
     }
   ],
-  "Aksomati Prime Blueprint": [
+  "輕靈月神雙槍 Prime 藍圖": [
     {
       "type": "Relic",
       "relicName": "Axi B4",
@@ -43587,7 +43587,7 @@
       "chance": 16.67
     }
   ],
-  "Akjagara Prime Blueprint": [
+  "覺醒雙槍 Prime 藍圖": [
     {
       "type": "Relic",
       "relicName": "Axi B4",
@@ -43805,7 +43805,7 @@
       "chance": 16.67
     }
   ],
-  "Baruuk Prime Neuroptics Blueprint": [
+  "Baruuk Prime 頭部神經光元 藍圖": [
     {
       "type": "Relic",
       "relicName": "Axi B5",
@@ -43951,7 +43951,7 @@
       "chance": 10
     }
   ],
-  "Nagantaka Prime Receiver": [
+  "噬蛇弩 Prime 槍機": [
     {
       "type": "Relic",
       "relicName": "Axi B5",
@@ -44145,7 +44145,7 @@
       "chance": 20
     }
   ],
-  "Volnus Prime Head": [
+  "創傷 Prime 鎚頭": [
     {
       "type": "Relic",
       "relicName": "Axi B5",
@@ -44339,7 +44339,7 @@
       "chance": 20
     }
   ],
-  "Knell Prime Blueprint": [
+  "喪鐘 Prime 藍圖": [
     {
       "type": "Relic",
       "relicName": "Axi B5",
@@ -44533,7 +44533,7 @@
       "chance": 16.67
     }
   ],
-  "Shade Prime Systems": [
+  "陰影 Prime 系統": [
     {
       "type": "Relic",
       "relicName": "Axi B6",
@@ -44679,7 +44679,7 @@
       "chance": 20
     }
   ],
-  "Garuda Prime Chassis Blueprint": [
+  "Garuda Prime 機體 藍圖": [
     {
       "type": "Relic",
       "relicName": "Axi B6",
@@ -44897,7 +44897,7 @@
       "chance": 20
     }
   ],
-  "Afuris Prime Blueprint": [
+  "盜賊雙槍 Prime 藍圖": [
     {
       "type": "Relic",
       "relicName": "Axi B6",
@@ -45091,7 +45091,7 @@
       "chance": 16.67
     }
   ],
-  "Gauss Prime Blueprint": [
+  "Gauss Prime 藍圖": [
     {
       "type": "Relic",
       "relicName": "Axi B7",
@@ -45309,7 +45309,7 @@
       "chance": 20
     }
   ],
-  "Hystrix Prime Blueprint": [
+  "豪豬 Prime 藍圖": [
     {
       "type": "Relic",
       "relicName": "Axi B7",
@@ -45431,7 +45431,7 @@
       "chance": 20
     }
   ],
-  "Okina Prime Blade": [
+  "翁 Prime 刀刃": [
     {
       "type": "Relic",
       "relicName": "Axi B8",
@@ -45601,7 +45601,7 @@
       "chance": 16.67
     }
   ],
-  "Baruuk Prime Blueprint": [
+  "Baruuk Prime 藍圖": [
     {
       "type": "Relic",
       "relicName": "Axi B9",
@@ -45723,7 +45723,7 @@
       "chance": 10
     }
   ],
-  "Cobra & Crane Prime Blueprint": [
+  "眼鏡蛇 & 鶴 Prime 藍圖": [
     {
       "type": "Relic",
       "relicName": "Axi B9",
@@ -45869,7 +45869,7 @@
       "chance": 20
     }
   ],
-  "Cernos Prime Lower Limb": [
+  "西諾斯 Prime 下弓臂": [
     {
       "type": "Relic",
       "relicName": "Axi C1",
@@ -46015,7 +46015,7 @@
       "chance": 10
     }
   ],
-  "Trinity Prime Neuroptics Blueprint": [
+  "Trinity Prime 頭部神經光元 藍圖": [
     {
       "type": "Relic",
       "relicName": "Axi C1",
@@ -46185,7 +46185,7 @@
       "chance": 16.67
     }
   ],
-  "Vectis Prime Barrel": [
+  "守望者 Prime 槍管": [
     {
       "type": "Relic",
       "relicName": "Axi C1",
@@ -46331,7 +46331,7 @@
       "chance": 16.67
     }
   ],
-  "Caliban Prime Systems Blueprint": [
+  "Caliban Prime 系統 藍圖": [
     {
       "type": "Relic",
       "relicName": "Axi C10",
@@ -46429,7 +46429,7 @@
       "chance": 10
     }
   ],
-  "Daikyu Prime Lower Limb": [
+  "大久和弓 Prime 下弓臂": [
     {
       "type": "Relic",
       "relicName": "Axi C10",
@@ -46551,7 +46551,7 @@
       "chance": 20
     }
   ],
-  "Lavos Prime Chassis Blueprint": [
+  "Lavos Prime 機體 藍圖": [
     {
       "type": "Relic",
       "relicName": "Axi C10",
@@ -46673,7 +46673,7 @@
       "chance": 16.67
     }
   ],
-  "Perigale Prime Stock": [
+  "肆飆 Prime 槍托": [
     {
       "type": "Relic",
       "relicName": "Axi C11",
@@ -46747,7 +46747,7 @@
       "chance": 16.67
     }
   ],
-  "Silva & Aegis Prime Blade": [
+  "席瓦 & 神盾 Prime 刀刃": [
     {
       "type": "Relic",
       "relicName": "Axi C2",
@@ -46893,7 +46893,7 @@
       "chance": 20
     }
   ],
-  "Fragor Prime Handle": [
+  "重擊巨鎚 Prime 握柄": [
     {
       "type": "Relic",
       "relicName": "Axi C2",
@@ -47063,7 +47063,7 @@
       "chance": 20
     }
   ],
-  "Chroma Prime Systems Blueprint": [
+  "Chroma Prime 系統 藍圖": [
     {
       "type": "Relic",
       "relicName": "Axi C3",
@@ -47185,7 +47185,7 @@
       "chance": 10
     }
   ],
-  "Pyrana Prime Receiver": [
+  "食人魚 Prime 槍機": [
     {
       "type": "Relic",
       "relicName": "Axi C3",
@@ -47355,7 +47355,7 @@
       "chance": 20
     }
   ],
-  "Hydroid Prime Chassis Blueprint": [
+  "Hydroid Prime 機體 藍圖": [
     {
       "type": "Relic",
       "relicName": "Axi C3",
@@ -47549,7 +47549,7 @@
       "chance": 16.67
     }
   ],
-  "Sybaris Prime Receiver": [
+  "席芭莉絲 Prime 槍機": [
     {
       "type": "Relic",
       "relicName": "Axi C4",
@@ -47671,7 +47671,7 @@
       "chance": 20
     }
   ],
-  "Kogake Prime Blueprint": [
+  "科加基 Prime 藍圖": [
     {
       "type": "Relic",
       "relicName": "Axi C4",
@@ -47817,7 +47817,7 @@
       "chance": 20
     }
   ],
-  "Corinth Prime Barrel": [
+  "科林斯 Prime 槍管": [
     {
       "type": "Relic",
       "relicName": "Axi C5",
@@ -47939,7 +47939,7 @@
       "chance": 10
     }
   ],
-  "Panthera Prime Blueprint": [
+  "獵豹 Prime 藍圖": [
     {
       "type": "Relic",
       "relicName": "Axi C5",
@@ -48133,7 +48133,7 @@
       "chance": 16.67
     }
   ],
-  "Tekko Prime Gauntlet": [
+  "鐵鉤手甲 Prime 手套": [
     {
       "type": "Relic",
       "relicName": "Axi C5",
@@ -48327,7 +48327,7 @@
       "chance": 16.67
     }
   ],
-  "Pandero Prime Barrel": [
+  "手鼓 Prime 槍管": [
     {
       "type": "Relic",
       "relicName": "Axi C6",
@@ -48497,7 +48497,7 @@
       "chance": 20
     }
   ],
-  "Pangolin Prime Handle": [
+  "鯪鯉劍 Prime 握柄": [
     {
       "type": "Relic",
       "relicName": "Axi C6",
@@ -48691,7 +48691,7 @@
       "chance": 16.67
     }
   ],
-  "Karyst Prime Blueprint": [
+  "凱洛斯特 Prime 藍圖": [
     {
       "type": "Relic",
       "relicName": "Axi C6",
@@ -48909,7 +48909,7 @@
       "chance": 16.67
     }
   ],
-  "Tenora Prime Stock": [
+  "雙簧管 Prime 槍托": [
     {
       "type": "Relic",
       "relicName": "Axi C7",
@@ -49079,7 +49079,7 @@
       "chance": 20
     }
   ],
-  "Bronco Prime Blueprint": [
+  "野馬 Prime 藍圖": [
     {
       "type": "Relic",
       "relicName": "Axi C7",
@@ -49945,7 +49945,7 @@
       "chance": 16.67
     }
   ],
-  "Magnus Prime Blueprint": [
+  "麥格努斯 Prime 藍圖": [
     {
       "type": "Relic",
       "relicName": "Axi C7",
@@ -50187,7 +50187,7 @@
       "chance": 16.67
     }
   ],
-  "Corinth Prime Stock": [
+  "科林斯 Prime 槍托": [
     {
       "type": "Relic",
       "relicName": "Axi C8",
@@ -50285,7 +50285,7 @@
       "chance": 10
     }
   ],
-  "Gara Prime Systems Blueprint": [
+  "Gara Prime 系統 藍圖": [
     {
       "type": "Relic",
       "relicName": "Axi C8",
@@ -50479,7 +50479,7 @@
       "chance": 16.67
     }
   ],
-  "Cobra & Crane Prime Guard": [
+  "眼鏡蛇 & 鶴 Prime 護手": [
     {
       "type": "Relic",
       "relicName": "Axi C9",
@@ -50625,7 +50625,7 @@
       "chance": 10
     }
   ],
-  "Tatsu Prime Blade": [
+  "龍辰 Prime 刀刃": [
     {
       "type": "Relic",
       "relicName": "Axi C9",
@@ -50771,7 +50771,7 @@
       "chance": 20
     }
   ],
-  "Phantasma Prime Stock": [
+  "幻離子 Prime 槍托": [
     {
       "type": "Relic",
       "relicName": "Axi C9",
@@ -50917,7 +50917,7 @@
       "chance": 10
     }
   ],
-  "Revenant Prime Chassis Blueprint": [
+  "Revenant Prime 機體 藍圖": [
     {
       "type": "Relic",
       "relicName": "Axi C9",
@@ -51135,7 +51135,7 @@
       "chance": 16.67
     }
   ],
-  "Braton Prime Receiver": [
+  "布萊頓 Prime 槍機": [
     {
       "type": "Relic",
       "relicName": "Axi C9",
@@ -51905,7 +51905,7 @@
       "chance": 20
     }
   ],
-  "Destreza Prime Blade": [
+  "技巧之劍 Prime 刀刃": [
     {
       "type": "Relic",
       "relicName": "Axi D1",
@@ -52051,7 +52051,7 @@
       "chance": 10
     }
   ],
-  "Tiberon Prime Receiver": [
+  "狂鯊 Prime 槍機": [
     {
       "type": "Relic",
       "relicName": "Axi D1",
@@ -52197,7 +52197,7 @@
       "chance": 16.67
     }
   ],
-  "Aksomati Prime Receiver": [
+  "輕靈月神雙槍 Prime 槍機": [
     {
       "type": "Relic",
       "relicName": "Axi D2",
@@ -52415,7 +52415,7 @@
       "chance": 16.67
     }
   ],
-  "Destreza Prime Handle": [
+  "技巧之劍 Prime 握柄": [
     {
       "type": "Relic",
       "relicName": "Axi D2",
@@ -52633,7 +52633,7 @@
       "chance": 16.67
     }
   ],
-  "Dual Kamas Prime Blade": [
+  "雙短柄戰鐮 Prime 刀刃": [
     {
       "type": "Relic",
       "relicName": "Axi D3",
@@ -52707,7 +52707,7 @@
       "chance": 10
     }
   ],
-  "Destreza Prime Blueprint": [
+  "技巧之劍 Prime 藍圖": [
     {
       "type": "Relic",
       "relicName": "Axi D3",
@@ -52901,7 +52901,7 @@
       "chance": 20
     }
   ],
-  "Limbo Prime Systems Blueprint": [
+  "Limbo Prime 系統 藍圖": [
     {
       "type": "Relic",
       "relicName": "Axi D3",
@@ -53119,7 +53119,7 @@
       "chance": 16.67
     }
   ],
-  "Dakra Prime Blade": [
+  "達克拉 Prime 刀刃": [
     {
       "type": "Relic",
       "relicName": "Axi D4",
@@ -53217,7 +53217,7 @@
       "chance": 10
     }
   ],
-  "Boar Prime Barrel": [
+  "野豬 Prime 槍管": [
     {
       "type": "Relic",
       "relicName": "Axi D4",
@@ -53315,7 +53315,7 @@
       "chance": 20
     }
   ],
-  "Mag Prime Neuroptics Blueprint": [
+  "Mag Prime 頭部神經光元 藍圖": [
     {
       "type": "Relic",
       "relicName": "Axi D4",
@@ -53413,7 +53413,7 @@
       "chance": 16.67
     }
   ],
-  "Latron Prime Barrel": [
+  "拉特昂 Prime 槍管": [
     {
       "type": "Relic",
       "relicName": "Axi D4",
@@ -53487,7 +53487,7 @@
       "chance": 16.67
     }
   ],
-  "Frost Prime Neuroptics Blueprint": [
+  "Frost Prime 頭部神經光元 藍圖": [
     {
       "type": "Relic",
       "relicName": "Axi D4",
@@ -53561,7 +53561,7 @@
       "chance": 16.67
     }
   ],
-  "Dual Keres Prime Blueprint": [
+  "凱瑞斯雙刀 Prime 藍圖": [
     {
       "type": "Relic",
       "relicName": "Axi D5",
@@ -53707,7 +53707,7 @@
       "chance": 10
     }
   ],
-  "Larkspur Prime Stock": [
+  "翠雀 Prime 槍托": [
     {
       "type": "Relic",
       "relicName": "Axi D5",
@@ -53877,7 +53877,7 @@
       "chance": 20
     }
   ],
-  "Revenant Prime Neuroptics Blueprint": [
+  "Revenant Prime 頭部神經光元 藍圖": [
     {
       "type": "Relic",
       "relicName": "Axi D5",
@@ -53999,7 +53999,7 @@
       "chance": 20
     }
   ],
-  "Akarius Prime Barrel": [
+  "阿利烏雙槍 Prime 槍管": [
     {
       "type": "Relic",
       "relicName": "Axi D5",
@@ -54193,7 +54193,7 @@
       "chance": 16.67
     }
   ],
-  "Paris Prime Upper Limb": [
+  "帕里斯 Prime 上弓臂": [
     {
       "type": "Relic",
       "relicName": "Axi D5",
@@ -55179,7 +55179,7 @@
       "chance": 20
     }
   ],
-  "Dual Zoren Prime Blade": [
+  "佐倫雙斧 Prime 刀刃": [
     {
       "type": "Relic",
       "relicName": "Axi D6",
@@ -55229,7 +55229,7 @@
       "chance": 10
     }
   ],
-  "Orthos Prime Blade": [
+  "歐特魯斯 Prime 刀刃": [
     {
       "type": "Relic",
       "relicName": "Axi D6",
@@ -55591,7 +55591,7 @@
       "chance": 20
     }
   ],
-  "Ember Prime Blueprint": [
+  "Ember Prime 藍圖": [
     {
       "type": "Relic",
       "relicName": "Axi E1",
@@ -55713,7 +55713,7 @@
       "chance": 10
     }
   ],
-  "Glaive Prime Blade": [
+  "戰刃 Prime 刀刃": [
     {
       "type": "Relic",
       "relicName": "Axi E1",
@@ -55787,7 +55787,7 @@
       "chance": 20
     }
   ],
-  "Sicarus Prime Blueprint": [
+  "暗殺者 Prime 藍圖": [
     {
       "type": "Relic",
       "relicName": "Axi E1",
@@ -55861,7 +55861,7 @@
       "chance": 16.67
     }
   ],
-  "Euphona Prime Receiver": [
+  "悅音 Prime 槍機": [
     {
       "type": "Relic",
       "relicName": "Axi E2",
@@ -55911,7 +55911,7 @@
       "chance": 10
     }
   ],
-  "Bronco Prime Barrel": [
+  "野馬 Prime 槍管": [
     {
       "type": "Relic",
       "relicName": "Axi E2",
@@ -56441,7 +56441,7 @@
       "chance": 20
     }
   ],
-  "Atlas Prime Systems Blueprint": [
+  "Atlas Prime 系統 藍圖": [
     {
       "type": "Relic",
       "relicName": "Axi F1",
@@ -56611,7 +56611,7 @@
       "chance": 20
     }
   ],
-  "Vauban Prime Blueprint": [
+  "Vauban Prime 藍圖": [
     {
       "type": "Relic",
       "relicName": "Axi F1",
@@ -56709,7 +56709,7 @@
       "chance": 10
     }
   ],
-  "Fulmin Prime Receiver": [
+  "雷霆 Prime 槍機": [
     {
       "type": "Relic",
       "relicName": "Axi F2",
@@ -56855,7 +56855,7 @@
       "chance": 10
     }
   ],
-  "Velox Prime Blueprint": [
+  "迅敏屠夫 Prime 藍圖": [
     {
       "type": "Relic",
       "relicName": "Axi F2",
@@ -57001,7 +57001,7 @@
       "chance": 20
     }
   ],
-  "Wisp Prime Neuroptics Blueprint": [
+  "Wisp Prime 頭部神經光元 藍圖": [
     {
       "type": "Relic",
       "relicName": "Axi F2",
@@ -57171,7 +57171,7 @@
       "chance": 20
     }
   ],
-  "Masseter Prime Handle": [
+  "咀嚼金棒 Prime 握柄": [
     {
       "type": "Relic",
       "relicName": "Axi F2",
@@ -57365,7 +57365,7 @@
       "chance": 16.67
     }
   ],
-  "Lavos Prime Blueprint": [
+  "Lavos Prime 藍圖": [
     {
       "type": "Relic",
       "relicName": "Axi F3",
@@ -57463,7 +57463,7 @@
       "chance": 20
     }
   ],
-  "Galatine Prime Blueprint": [
+  "迦倫提恩 Prime 藍圖": [
     {
       "type": "Relic",
       "relicName": "Axi G1",
@@ -57561,7 +57561,7 @@
       "chance": 10
     }
   ],
-  "Kavasa Prime Kubrow Collar Blueprint": [
+  "喀婆薩 Prime 庫狛項圈 藍圖": [
     {
       "type": "Relic",
       "relicName": "Axi G1",
@@ -57683,7 +57683,7 @@
       "chance": 20
     }
   ],
-  "Nekros Prime Chassis Blueprint": [
+  "Nekros Prime 機體 藍圖": [
     {
       "type": "Relic",
       "relicName": "Axi G1",
@@ -57901,7 +57901,7 @@
       "chance": 16.67
     }
   ],
-  "Saryn Prime Systems Blueprint": [
+  "Saryn Prime 系統 藍圖": [
     {
       "type": "Relic",
       "relicName": "Axi G1",
@@ -58167,7 +58167,7 @@
       "chance": 16.67
     }
   ],
-  "Garuda Prime Systems Blueprint": [
+  "Garuda Prime 系統 藍圖": [
     {
       "type": "Relic",
       "relicName": "Axi G10",
@@ -58265,7 +58265,7 @@
       "chance": 20
     }
   ],
-  "Corvas Prime Receiver": [
+  "黑鴉 Prime 槍機": [
     {
       "type": "Relic",
       "relicName": "Axi G10",
@@ -58459,7 +58459,7 @@
       "chance": 16.67
     }
   ],
-  "Grendel Prime Systems Blueprint": [
+  "Grendel Prime 系統 藍圖": [
     {
       "type": "Relic",
       "relicName": "Axi G11",
@@ -58533,7 +58533,7 @@
       "chance": 20
     }
   ],
-  "Afuris Prime Link": [
+  "盜賊雙槍 Prime 連接器": [
     {
       "type": "Relic",
       "relicName": "Axi G11",
@@ -58655,7 +58655,7 @@
       "chance": 20
     }
   ],
-  "Shade Prime Cerebrum": [
+  "陰影 Prime 頭部": [
     {
       "type": "Relic",
       "relicName": "Axi G11",
@@ -58849,7 +58849,7 @@
       "chance": 16.67
     }
   ],
-  "Garuda Prime Neuroptics Blueprint": [
+  "Garuda Prime 頭部神經光元 藍圖": [
     {
       "type": "Relic",
       "relicName": "Axi G12",
@@ -58947,7 +58947,7 @@
       "chance": 10
     }
   ],
-  "Masseter Prime Blueprint": [
+  "咀嚼金棒 Prime 藍圖": [
     {
       "type": "Relic",
       "relicName": "Axi G12",
@@ -59141,7 +59141,7 @@
       "chance": 20
     }
   ],
-  "Khora Prime Chassis Blueprint": [
+  "Khora Prime 機體 藍圖": [
     {
       "type": "Relic",
       "relicName": "Axi G13",
@@ -59287,7 +59287,7 @@
       "chance": 20
     }
   ],
-  "Hystrix Prime Barrel": [
+  "豪豬 Prime 槍管": [
     {
       "type": "Relic",
       "relicName": "Axi G13",
@@ -59481,7 +59481,7 @@
       "chance": 16.67
     }
   ],
-  "Zylok Prime Receiver": [
+  "賽爾火槍 Prime 槍機": [
     {
       "type": "Relic",
       "relicName": "Axi G14",
@@ -59651,7 +59651,7 @@
       "chance": 20
     }
   ],
-  "Quassus Prime Handle": [
+  "夸瑟 Prime 握柄": [
     {
       "type": "Relic",
       "relicName": "Axi G14",
@@ -59821,7 +59821,7 @@
       "chance": 16.67
     }
   ],
-  "Sevagoth Prime Neuroptics Blueprint": [
+  "Sevagoth Prime 頭部神經光元 藍圖": [
     {
       "type": "Relic",
       "relicName": "Axi G14",
@@ -60015,7 +60015,7 @@
       "chance": 16.67
     }
   ],
-  "Gauss Prime Systems Blueprint": [
+  "Gauss Prime 系統 藍圖": [
     {
       "type": "Relic",
       "relicName": "Axi G15",
@@ -60185,7 +60185,7 @@
       "chance": 10
     }
   ],
-  "Grendel Prime Neuroptics Blueprint": [
+  "Grendel Prime 頭部神經光元 藍圖": [
     {
       "type": "Relic",
       "relicName": "Axi G15",
@@ -60355,7 +60355,7 @@
       "chance": 16.67
     }
   ],
-  "Gram Prime Handle": [
+  "格拉姆 Prime 握柄": [
     {
       "type": "Relic",
       "relicName": "Axi G2",
@@ -60501,7 +60501,7 @@
       "chance": 10
     }
   ],
-  "Redeemer Prime Blueprint": [
+  "救贖者 Prime 藍圖": [
     {
       "type": "Relic",
       "relicName": "Axi G2",
@@ -60695,7 +60695,7 @@
       "chance": 20
     }
   ],
-  "Wukong Prime Neuroptics Blueprint": [
+  "Wukong Prime 頭部神經光元 藍圖": [
     {
       "type": "Relic",
       "relicName": "Axi G2",
@@ -60889,7 +60889,7 @@
       "chance": 16.67
     }
   ],
-  "Akbolto Prime Blueprint": [
+  "螺釘雙槍 Prime 藍圖": [
     {
       "type": "Relic",
       "relicName": "Axi G2",
@@ -61059,7 +61059,7 @@
       "chance": 16.67
     }
   ],
-  "Burston Prime Barrel": [
+  "伯斯頓 Prime 槍管": [
     {
       "type": "Relic",
       "relicName": "Axi G3",
@@ -61829,7 +61829,7 @@
       "chance": 20
     }
   ],
-  "Kronen Prime Handle": [
+  "皇家拐刃 Prime 握柄": [
     {
       "type": "Relic",
       "relicName": "Axi G3",
@@ -62023,7 +62023,7 @@
       "chance": 20
     }
   ],
-  "Ninkondi Prime Blueprint": [
+  "降靈追獵者 Prime 藍圖": [
     {
       "type": "Relic",
       "relicName": "Axi G3",
@@ -62217,7 +62217,7 @@
       "chance": 16.67
     }
   ],
-  "Zephyr Prime Blueprint": [
+  "Zephyr Prime 藍圖": [
     {
       "type": "Relic",
       "relicName": "Axi G5",
@@ -62339,7 +62339,7 @@
       "chance": 10
     }
   ],
-  "Burston Prime Stock": [
+  "伯斯頓 Prime 槍托": [
     {
       "type": "Relic",
       "relicName": "Axi G5",
@@ -63349,7 +63349,7 @@
       "chance": 16.67
     }
   ],
-  "Gara Prime Blueprint": [
+  "Gara Prime 藍圖": [
     {
       "type": "Relic",
       "relicName": "Axi G6",
@@ -63471,7 +63471,7 @@
       "chance": 10
     }
   ],
-  "Nezha Prime Blueprint": [
+  "Nezha Prime 藍圖": [
     {
       "type": "Relic",
       "relicName": "Axi G6",
@@ -63665,7 +63665,7 @@
       "chance": 20
     }
   ],
-  "Astilla Prime Blueprint": [
+  "碎裂者 Prime 藍圖": [
     {
       "type": "Relic",
       "relicName": "Axi G7",
@@ -63835,7 +63835,7 @@
       "chance": 20
     }
   ],
-  "Gara Prime Chassis Blueprint": [
+  "Gara Prime 機體 藍圖": [
     {
       "type": "Relic",
       "relicName": "Axi G8",
@@ -64005,7 +64005,7 @@
       "chance": 20
     }
   ],
-  "Dual Keres Prime Blade": [
+  "凱瑞斯雙刀 Prime 刀刃": [
     {
       "type": "Relic",
       "relicName": "Axi G8",
@@ -64175,7 +64175,7 @@
       "chance": 16.67
     }
   ],
-  "Corvas Prime Stock": [
+  "黑鴉 Prime 槍托": [
     {
       "type": "Relic",
       "relicName": "Axi G8",
@@ -64321,7 +64321,7 @@
       "chance": 16.67
     }
   ],
-  "Cobra & Crane Prime Blade": [
+  "眼鏡蛇 & 鶴 Prime 刀刃": [
     {
       "type": "Relic",
       "relicName": "Axi G9",
@@ -64515,7 +64515,7 @@
       "chance": 20
     }
   ],
-  "Helios Prime Cerebrum": [
+  "赫利俄斯 Prime 頭部": [
     {
       "type": "Relic",
       "relicName": "Axi H1",
@@ -64661,7 +64661,7 @@
       "chance": 10
     }
   ],
-  "Trinity Prime Chassis Blueprint": [
+  "Trinity Prime 機體 藍圖": [
     {
       "type": "Relic",
       "relicName": "Axi H1",
@@ -64807,7 +64807,7 @@
       "chance": 20
     }
   ],
-  "Oberon Prime Chassis Blueprint": [
+  "Oberon Prime 機體 藍圖": [
     {
       "type": "Relic",
       "relicName": "Axi H2",
@@ -64977,7 +64977,7 @@
       "chance": 16.67
     }
   ],
-  "Hydroid Prime Systems Blueprint": [
+  "Hydroid Prime 系統 藍圖": [
     {
       "type": "Relic",
       "relicName": "Axi H3",
@@ -65099,7 +65099,7 @@
       "chance": 10
     }
   ],
-  "Kronen Prime Blueprint": [
+  "皇家拐刃 Prime 藍圖": [
     {
       "type": "Relic",
       "relicName": "Axi H3",
@@ -65293,7 +65293,7 @@
       "chance": 16.67
     }
   ],
-  "Cernos Prime Grip": [
+  "西諾斯 Prime 弓身": [
     {
       "type": "Relic",
       "relicName": "Axi H3",
@@ -65487,7 +65487,7 @@
       "chance": 16.67
     }
   ],
-  "Akbolto Prime Link": [
+  "螺釘雙槍 Prime 連接器": [
     {
       "type": "Relic",
       "relicName": "Axi H4",
@@ -65657,7 +65657,7 @@
       "chance": 20
     }
   ],
-  "Mesa Prime Chassis Blueprint": [
+  "Mesa Prime 機體 藍圖": [
     {
       "type": "Relic",
       "relicName": "Axi H4",
@@ -65899,7 +65899,7 @@
       "chance": 16.67
     }
   ],
-  "Mirage Prime Systems Blueprint": [
+  "Mirage Prime 系統 藍圖": [
     {
       "type": "Relic",
       "relicName": "Axi H5",
@@ -66045,7 +66045,7 @@
       "chance": 20
     }
   ],
-  "Banshee Prime Neuroptics Blueprint": [
+  "Banshee Prime 頭部神經光元 藍圖": [
     {
       "type": "Relic",
       "relicName": "Axi H5",
@@ -66215,7 +66215,7 @@
       "chance": 16.67
     }
   ],
-  "Hildryn Prime Blueprint": [
+  "Hildryn Prime 藍圖": [
     {
       "type": "Relic",
       "relicName": "Axi H6",
@@ -66337,7 +66337,7 @@
       "chance": 10
     }
   ],
-  "Garuda Prime Blueprint": [
+  "Garuda Prime 藍圖": [
     {
       "type": "Relic",
       "relicName": "Axi H6",
@@ -66579,7 +66579,7 @@
       "chance": 16.67
     }
   ],
-  "Harrow Prime Systems Blueprint": [
+  "Harrow Prime 系統 藍圖": [
     {
       "type": "Relic",
       "relicName": "Axi H7",
@@ -66773,7 +66773,7 @@
       "chance": 10
     }
   ],
-  "Fulmin Prime Stock": [
+  "雷霆 Prime 槍托": [
     {
       "type": "Relic",
       "relicName": "Axi H7",
@@ -66943,7 +66943,7 @@
       "chance": 20
     }
   ],
-  "Fulmin Prime Blueprint": [
+  "雷霆 Prime 藍圖": [
     {
       "type": "Relic",
       "relicName": "Axi H8",
@@ -67113,7 +67113,7 @@
       "chance": 20
     }
   ],
-  "Zylok Prime Barrel": [
+  "賽爾火槍 Prime 槍管": [
     {
       "type": "Relic",
       "relicName": "Axi H8",
@@ -67331,7 +67331,7 @@
       "chance": 16.67
     }
   ],
-  "Inaros Prime Neuroptics Blueprint": [
+  "Inaros Prime 頭部神經光元 藍圖": [
     {
       "type": "Relic",
       "relicName": "Axi I1",
@@ -67453,7 +67453,7 @@
       "chance": 10
     }
   ],
-  "Dethcube Prime Systems": [
+  "死亡魔方 Prime 系統": [
     {
       "type": "Relic",
       "relicName": "Axi I1",
@@ -67647,7 +67647,7 @@
       "chance": 16.67
     }
   ],
-  "Baza Prime Barrel": [
+  "蒼鷹 Prime 槍管": [
     {
       "type": "Relic",
       "relicName": "Axi I2",
@@ -67817,7 +67817,7 @@
       "chance": 20
     }
   ],
-  "Strun Prime Receiver": [
+  "斯特朗 Prime 槍機": [
     {
       "type": "Relic",
       "relicName": "Axi I2",
@@ -68035,7 +68035,7 @@
       "chance": 16.67
     }
   ],
-  "Tenora Prime Blueprint": [
+  "雙簧管 Prime 藍圖": [
     {
       "type": "Relic",
       "relicName": "Axi I2",
@@ -68205,7 +68205,7 @@
       "chance": 16.67
     }
   ],
-  "Ash Prime Blueprint": [
+  "Ash Prime 藍圖": [
     {
       "type": "Relic",
       "relicName": "Axi I3",
@@ -68351,7 +68351,7 @@
       "chance": 20
     }
   ],
-  "Odonata Prime Harness Blueprint": [
+  "Odonata Prime 外甲 藍圖": [
     {
       "type": "Relic",
       "relicName": "Axi K1",
@@ -68497,7 +68497,7 @@
       "chance": 16.67
     }
   ],
-  "Hikou Prime Pouch": [
+  "飛揚 Prime 鏢袋": [
     {
       "type": "Relic",
       "relicName": "Axi K1",
@@ -68595,7 +68595,7 @@
       "chance": 16.67
     }
   ],
-  "Knell Prime Barrel": [
+  "喪鐘 Prime 槍管": [
     {
       "type": "Relic",
       "relicName": "Axi K10",
@@ -68765,7 +68765,7 @@
       "chance": 10
     }
   ],
-  "Strun Prime Stock": [
+  "斯特朗 Prime 槍托": [
     {
       "type": "Relic",
       "relicName": "Axi K10",
@@ -68959,7 +68959,7 @@
       "chance": 20
     }
   ],
-  "Scourge Prime Handle": [
+  "禍根 Prime 握柄": [
     {
       "type": "Relic",
       "relicName": "Axi K11",
@@ -69129,7 +69129,7 @@
       "chance": 20
     }
   ],
-  "Karyst Prime Blade": [
+  "凱洛斯特 Prime 刀刃": [
     {
       "type": "Relic",
       "relicName": "Axi K12",
@@ -69251,7 +69251,7 @@
       "chance": 10
     }
   ],
-  "Inaros Prime Blueprint": [
+  "Inaros Prime 藍圖": [
     {
       "type": "Relic",
       "relicName": "Axi K12",
@@ -69397,7 +69397,7 @@
       "chance": 20
     }
   ],
-  "Vectis Prime Stock": [
+  "守望者 Prime 槍托": [
     {
       "type": "Relic",
       "relicName": "Axi K12",
@@ -69543,7 +69543,7 @@
       "chance": 20
     }
   ],
-  "Kronen Prime Blade": [
+  "皇家拐刃 Prime 刀刃": [
     {
       "type": "Relic",
       "relicName": "Axi K2",
@@ -69713,7 +69713,7 @@
       "chance": 10
     }
   ],
-  "Galatine Prime Handle": [
+  "迦倫提恩 Prime 握柄": [
     {
       "type": "Relic",
       "relicName": "Axi K2",
@@ -69907,7 +69907,7 @@
       "chance": 20
     }
   ],
-  "Hydroid Prime Blueprint": [
+  "Hydroid Prime 藍圖": [
     {
       "type": "Relic",
       "relicName": "Axi K5",
@@ -70029,7 +70029,7 @@
       "chance": 20
     }
   ],
-  "Equinox Prime Blueprint": [
+  "Equinox Prime 藍圖": [
     {
       "type": "Relic",
       "relicName": "Axi K5",
@@ -70175,7 +70175,7 @@
       "chance": 20
     }
   ],
-  "Ballistica Prime Lower Limb": [
+  "布里斯提卡 Prime 下弓臂": [
     {
       "type": "Relic",
       "relicName": "Axi K5",
@@ -70345,7 +70345,7 @@
       "chance": 16.67
     }
   ],
-  "Harrow Prime Blueprint": [
+  "Harrow Prime 藍圖": [
     {
       "type": "Relic",
       "relicName": "Axi K6",
@@ -70515,7 +70515,7 @@
       "chance": 20
     }
   ],
-  "Inaros Prime Chassis Blueprint": [
+  "Inaros Prime 機體 藍圖": [
     {
       "type": "Relic",
       "relicName": "Axi K6",
@@ -70709,7 +70709,7 @@
       "chance": 20
     }
   ],
-  "Octavia Prime Neuroptics Blueprint": [
+  "Octavia Prime 頭部神經光元 藍圖": [
     {
       "type": "Relic",
       "relicName": "Axi K6",
@@ -70879,7 +70879,7 @@
       "chance": 16.67
     }
   ],
-  "Corvas Prime Blueprint": [
+  "黑鴉 Prime 藍圖": [
     {
       "type": "Relic",
       "relicName": "Axi K7",
@@ -71025,7 +71025,7 @@
       "chance": 20
     }
   ],
-  "Khora Prime Neuroptics Blueprint": [
+  "Khora Prime 頭部神經光元 藍圖": [
     {
       "type": "Relic",
       "relicName": "Axi K8",
@@ -71123,7 +71123,7 @@
       "chance": 10
     }
   ],
-  "Octavia Prime Chassis Blueprint": [
+  "Octavia Prime 機體 藍圖": [
     {
       "type": "Relic",
       "relicName": "Axi K8",
@@ -71293,7 +71293,7 @@
       "chance": 20
     }
   ],
-  "Nagantaka Prime Barrel": [
+  "噬蛇弩 Prime 槍管": [
     {
       "type": "Relic",
       "relicName": "Axi K9",
@@ -71487,7 +71487,7 @@
       "chance": 16.67
     }
   ],
-  "Loki Prime Systems Blueprint": [
+  "Loki Prime 系統 藍圖": [
     {
       "type": "Relic",
       "relicName": "Axi L1",
@@ -71537,7 +71537,7 @@
       "chance": 10
     }
   ],
-  "Reaper Prime Blueprint": [
+  "收割者 Prime 藍圖": [
     {
       "type": "Relic",
       "relicName": "Axi L1",
@@ -71611,7 +71611,7 @@
       "chance": 16.67
     }
   ],
-  "Wyrm Prime Carapace": [
+  "蛟龍 Prime 外殼": [
     {
       "type": "Relic",
       "relicName": "Axi L1",
@@ -71661,7 +71661,7 @@
       "chance": 16.67
     }
   ],
-  "Latron Prime Blueprint": [
+  "拉特昂 Prime 藍圖": [
     {
       "type": "Relic",
       "relicName": "Axi L1",
@@ -71735,7 +71735,7 @@
       "chance": 10
     }
   ],
-  "Limbo Prime Neuroptics Blueprint": [
+  "Limbo Prime 頭部神經光元 藍圖": [
     {
       "type": "Relic",
       "relicName": "Axi L2",
@@ -71857,7 +71857,7 @@
       "chance": 10
     }
   ],
-  "Tiberon Prime Blueprint": [
+  "狂鯊 Prime 藍圖": [
     {
       "type": "Relic",
       "relicName": "Axi L2",
@@ -72027,7 +72027,7 @@
       "chance": 20
     }
   ],
-  "Nami Skyla Prime Blueprint": [
+  "海波斯庫拉對劍 Prime 藍圖": [
     {
       "type": "Relic",
       "relicName": "Axi L2",
@@ -72173,7 +72173,7 @@
       "chance": 16.67
     }
   ],
-  "Limbo Prime Chassis Blueprint": [
+  "Limbo Prime 機體 藍圖": [
     {
       "type": "Relic",
       "relicName": "Axi L3",
@@ -72319,7 +72319,7 @@
       "chance": 10
     }
   ],
-  "Akjagara Prime Receiver": [
+  "覺醒雙槍 Prime 槍機": [
     {
       "type": "Relic",
       "relicName": "Axi L3",
@@ -72489,7 +72489,7 @@
       "chance": 20
     }
   ],
-  "Zephyr Prime Chassis Blueprint": [
+  "Zephyr Prime 機體 藍圖": [
     {
       "type": "Relic",
       "relicName": "Axi L3",
@@ -72659,7 +72659,7 @@
       "chance": 20
     }
   ],
-  "Volt Prime Systems Blueprint": [
+  "Volt Prime 系統 藍圖": [
     {
       "type": "Relic",
       "relicName": "Axi L4",
@@ -72879,7 +72879,7 @@
       "chance": 20
     }
   ],
-  "Bo Prime Ornament": [
+  "玻之武杖 Prime 飾品": [
     {
       "type": "Relic",
       "relicName": "Axi L4",
@@ -72929,7 +72929,7 @@
       "chance": 16.67
     }
   ],
-  "Larkspur Prime Barrel": [
+  "翠雀 Prime 槍管": [
     {
       "type": "Relic",
       "relicName": "Axi L6",
@@ -73051,7 +73051,7 @@
       "chance": 10
     }
   ],
-  "Mirage Prime Blueprint": [
+  "Mirage Prime 藍圖": [
     {
       "type": "Relic",
       "relicName": "Axi M1",
@@ -73173,7 +73173,7 @@
       "chance": 10
     }
   ],
-  "Rubico Prime Barrel": [
+  "絕路 Prime 槍管": [
     {
       "type": "Relic",
       "relicName": "Axi M1",
@@ -73319,7 +73319,7 @@
       "chance": 20
     }
   ],
-  "Magnus Prime Barrel": [
+  "麥格努斯 Prime 槍管": [
     {
       "type": "Relic",
       "relicName": "Axi M2",
@@ -73417,7 +73417,7 @@
       "chance": 10
     }
   ],
-  "Panthera Prime Stock": [
+  "獵豹 Prime 槍托": [
     {
       "type": "Relic",
       "relicName": "Axi M2",
@@ -73587,7 +73587,7 @@
       "chance": 20
     }
   ],
-  "Titania Prime Chassis Blueprint": [
+  "Titania Prime 機體 藍圖": [
     {
       "type": "Relic",
       "relicName": "Axi M2",
@@ -73781,7 +73781,7 @@
       "chance": 16.67
     }
   ],
-  "Mesa Prime Neuroptics Blueprint": [
+  "Mesa Prime 頭部神經光元 藍圖": [
     {
       "type": "Relic",
       "relicName": "Axi M3",
@@ -73927,7 +73927,7 @@
       "chance": 10
     }
   ],
-  "Ballistica Prime Upper Limb": [
+  "布里斯提卡 Prime 上弓臂": [
     {
       "type": "Relic",
       "relicName": "Axi M3",
@@ -74049,7 +74049,7 @@
       "chance": 20
     }
   ],
-  "Magnus Prime Receiver": [
+  "麥格努斯 Prime 槍機": [
     {
       "type": "Relic",
       "relicName": "Axi M5",
@@ -74243,7 +74243,7 @@
       "chance": 20
     }
   ],
-  "Akmagnus Prime Link": [
+  "麥格努斯雙槍 Prime 連接器": [
     {
       "type": "Relic",
       "relicName": "Axi M5",
@@ -74269,7 +74269,7 @@
       "chance": 20
     }
   ],
-  "Akmagnus Prime Blueprint": [
+  "麥格努斯雙槍 Prime 藍圖": [
     {
       "type": "Relic",
       "relicName": "Axi M5",
@@ -74295,7 +74295,7 @@
       "chance": 16.67
     }
   ],
-  "Masseter Prime Blade": [
+  "咀嚼金棒 Prime 刀刃": [
     {
       "type": "Relic",
       "relicName": "Axi M6",
@@ -74441,7 +74441,7 @@
       "chance": 10
     }
   ],
-  "Cedo Prime Receiver": [
+  "席多 Prime 槍機": [
     {
       "type": "Relic",
       "relicName": "Axi M6",
@@ -74539,7 +74539,7 @@
       "chance": 20
     }
   ],
-  "Acceltra Prime Blueprint": [
+  "迅發電漿炮 Prime 藍圖": [
     {
       "type": "Relic",
       "relicName": "Axi M6",
@@ -74757,7 +74757,7 @@
       "chance": 16.67
     }
   ],
-  "Akstiletto Prime Link": [
+  "史提托雙槍 Prime 連接器": [
     {
       "type": "Relic",
       "relicName": "Axi N1",
@@ -74879,7 +74879,7 @@
       "chance": 20
     }
   ],
-  "Odonata Prime Wings Blueprint": [
+  "Odonata Prime 機翼 藍圖": [
     {
       "type": "Relic",
       "relicName": "Axi N1",
@@ -74977,7 +74977,7 @@
       "chance": 10
     }
   ],
-  "Nidus Prime Neuroptics Blueprint": [
+  "Nidus Prime 頭部神經光元 藍圖": [
     {
       "type": "Relic",
       "relicName": "Axi N10",
@@ -75075,7 +75075,7 @@
       "chance": 20
     }
   ],
-  "Phantasma Prime Blueprint": [
+  "幻離子 Prime 藍圖": [
     {
       "type": "Relic",
       "relicName": "Axi N10",
@@ -75245,7 +75245,7 @@
       "chance": 20
     }
   ],
-  "Harrow Prime Chassis Blueprint": [
+  "Harrow Prime 機體 藍圖": [
     {
       "type": "Relic",
       "relicName": "Axi N10",
@@ -75415,7 +75415,7 @@
       "chance": 16.67
     }
   ],
-  "Afuris Prime Barrel": [
+  "盜賊雙槍 Prime 槍管": [
     {
       "type": "Relic",
       "relicName": "Axi N10",
@@ -75633,7 +75633,7 @@
       "chance": 16.67
     }
   ],
-  "Tatsu Prime Blueprint": [
+  "龍辰 Prime 藍圖": [
     {
       "type": "Relic",
       "relicName": "Axi N10",
@@ -75851,7 +75851,7 @@
       "chance": 16.67
     }
   ],
-  "Nagantaka Prime Blueprint": [
+  "噬蛇弩 Prime 藍圖": [
     {
       "type": "Relic",
       "relicName": "Axi N11",
@@ -75997,7 +75997,7 @@
       "chance": 10
     }
   ],
-  "Khora Prime Systems Blueprint": [
+  "Khora Prime 系統 藍圖": [
     {
       "type": "Relic",
       "relicName": "Axi N11",
@@ -76215,7 +76215,7 @@
       "chance": 16.67
     }
   ],
-  "Nidus Prime Chassis Blueprint": [
+  "Nidus Prime 機體 藍圖": [
     {
       "type": "Relic",
       "relicName": "Axi N12",
@@ -76361,7 +76361,7 @@
       "chance": 10
     }
   ],
-  "Saryn Prime Blueprint": [
+  "Saryn Prime 藍圖": [
     {
       "type": "Relic",
       "relicName": "Axi N12",
@@ -76531,7 +76531,7 @@
       "chance": 10
     }
   ],
-  "Strun Prime Barrel": [
+  "斯特朗 Prime 槍管": [
     {
       "type": "Relic",
       "relicName": "Axi N12",
@@ -76725,7 +76725,7 @@
       "chance": 20
     }
   ],
-  "Paris Prime String": [
+  "帕里斯 Prime 弓弦": [
     {
       "type": "Relic",
       "relicName": "Axi N12",
@@ -77639,7 +77639,7 @@
       "chance": 16.67
     }
   ],
-  "Nautilus Prime Cerebrum": [
+  "鸚鵡螺 Prime 頭部": [
     {
       "type": "Relic",
       "relicName": "Axi N13",
@@ -77737,7 +77737,7 @@
       "chance": 10
     }
   ],
-  "Protea Prime Blueprint": [
+  "Protea Prime 藍圖": [
     {
       "type": "Relic",
       "relicName": "Axi N13",
@@ -77955,7 +77955,7 @@
       "chance": 16.67
     }
   ],
-  "Carrier Prime Carapace": [
+  "搬運者 Prime 外殼": [
     {
       "type": "Relic",
       "relicName": "Axi N2",
@@ -78077,7 +78077,7 @@
       "chance": 16.67
     }
   ],
-  "Nikana Prime Hilt": [
+  "侍刃 Prime 握柄": [
     {
       "type": "Relic",
       "relicName": "Axi N2",
@@ -78223,7 +78223,7 @@
       "chance": 10
     }
   ],
-  "Ash Prime Neuroptics Blueprint": [
+  "Ash Prime 頭部神經光元 藍圖": [
     {
       "type": "Relic",
       "relicName": "Axi N2",
@@ -78417,7 +78417,7 @@
       "chance": 16.67
     }
   ],
-  "Nekros Prime Blueprint": [
+  "Nekros Prime 藍圖": [
     {
       "type": "Relic",
       "relicName": "Axi N3",
@@ -78539,7 +78539,7 @@
       "chance": 10
     }
   ],
-  "Volt Prime Blueprint": [
+  "Volt Prime 藍圖": [
     {
       "type": "Relic",
       "relicName": "Axi N3",
@@ -78661,7 +78661,7 @@
       "chance": 16.67
     }
   ],
-  "Dual Kamas Prime Blueprint": [
+  "雙短柄戰鐮 Prime 藍圖": [
     {
       "type": "Relic",
       "relicName": "Axi N3",
@@ -78855,7 +78855,7 @@
       "chance": 16.67
     }
   ],
-  "Cernos Prime Upper Limb": [
+  "西諾斯 Prime 上弓臂": [
     {
       "type": "Relic",
       "relicName": "Axi N4",
@@ -79073,7 +79073,7 @@
       "chance": 16.67
     }
   ],
-  "Galatine Prime Blade": [
+  "迦倫提恩 Prime 刀刃": [
     {
       "type": "Relic",
       "relicName": "Axi N4",
@@ -79363,7 +79363,7 @@
       "chance": 16.67
     }
   ],
-  "Nami Skyla Prime Blade": [
+  "海波斯庫拉對劍 Prime 刀刃": [
     {
       "type": "Relic",
       "relicName": "Axi N5",
@@ -79461,7 +79461,7 @@
       "chance": 10
     }
   ],
-  "Nekros Prime Neuroptics Blueprint": [
+  "Nekros Prime 頭部神經光元 藍圖": [
     {
       "type": "Relic",
       "relicName": "Axi N5",
@@ -79559,7 +79559,7 @@
       "chance": 20
     }
   ],
-  "Nezha Prime Chassis Blueprint": [
+  "Nezha Prime 機體 藍圖": [
     {
       "type": "Relic",
       "relicName": "Axi N7",
@@ -79681,7 +79681,7 @@
       "chance": 10
     }
   ],
-  "Dethcube Prime Carapace": [
+  "死亡魔方 Prime 外殼": [
     {
       "type": "Relic",
       "relicName": "Axi N7",
@@ -79875,7 +79875,7 @@
       "chance": 20
     }
   ],
-  "Astilla Prime Receiver": [
+  "碎裂者 Prime 槍機": [
     {
       "type": "Relic",
       "relicName": "Axi N7",
@@ -80069,7 +80069,7 @@
       "chance": 16.67
     }
   ],
-  "Octavia Prime Systems Blueprint": [
+  "Octavia Prime 系統 藍圖": [
     {
       "type": "Relic",
       "relicName": "Axi N7",
@@ -80263,7 +80263,7 @@
       "chance": 16.67
     }
   ],
-  "Nezha Prime Neuroptics Blueprint": [
+  "Nezha Prime 頭部神經光元 藍圖": [
     {
       "type": "Relic",
       "relicName": "Axi N8",
@@ -80433,7 +80433,7 @@
       "chance": 20
     }
   ],
-  "Pandero Prime Blueprint": [
+  "手鼓 Prime 藍圖": [
     {
       "type": "Relic",
       "relicName": "Axi N9",
@@ -80603,7 +80603,7 @@
       "chance": 16.67
     }
   ],
-  "Venka Prime Blueprint": [
+  "凱旋之爪 Prime 藍圖": [
     {
       "type": "Relic",
       "relicName": "Axi O3",
@@ -80725,7 +80725,7 @@
       "chance": 20
     }
   ],
-  "Octavia Prime Blueprint": [
+  "Octavia Prime 藍圖": [
     {
       "type": "Relic",
       "relicName": "Axi O5",
@@ -80799,7 +80799,7 @@
       "chance": 10
     }
   ],
-  "Nezha Prime Systems Blueprint": [
+  "Nezha Prime 系統 藍圖": [
     {
       "type": "Relic",
       "relicName": "Axi O5",
@@ -81017,7 +81017,7 @@
       "chance": 16.67
     }
   ],
-  "Okina Prime Blueprint": [
+  "翁 Prime 藍圖": [
     {
       "type": "Relic",
       "relicName": "Axi O6",
@@ -81115,7 +81115,7 @@
       "chance": 10
     }
   ],
-  "Acceltra Prime Receiver": [
+  "迅發電漿炮 Prime 槍機": [
     {
       "type": "Relic",
       "relicName": "Axi O6",
@@ -81333,7 +81333,7 @@
       "chance": 20
     }
   ],
-  "Pyrana Prime Blueprint": [
+  "食人魚 Prime 藍圖": [
     {
       "type": "Relic",
       "relicName": "Axi P1",
@@ -81527,7 +81527,7 @@
       "chance": 10
     }
   ],
-  "Ninkondi Prime Chain": [
+  "降靈追獵者 Prime 鏈條": [
     {
       "type": "Relic",
       "relicName": "Axi P1",
@@ -81697,7 +81697,7 @@
       "chance": 20
     }
   ],
-  "Perigale Prime Barrel": [
+  "肆飆 Prime 槍管": [
     {
       "type": "Relic",
       "relicName": "Axi P10",
@@ -81747,7 +81747,7 @@
       "chance": 10
     }
   ],
-  "Athodai Prime Receiver": [
+  "厄索戴 Prime 槍機": [
     {
       "type": "Relic",
       "relicName": "Axi P10",
@@ -81773,7 +81773,7 @@
       "chance": 20
     }
   ],
-  "Caliban Prime Chassis Blueprint": [
+  "Caliban Prime 機體 藍圖": [
     {
       "type": "Relic",
       "relicName": "Axi P10",
@@ -81895,7 +81895,7 @@
       "chance": 16.67
     }
   ],
-  "Zhuge Prime Grip": [
+  "諸葛連弩 Prime 弓身": [
     {
       "type": "Relic",
       "relicName": "Axi P3",
@@ -82089,7 +82089,7 @@
       "chance": 16.67
     }
   ],
-  "Pangolin Prime Blueprint": [
+  "鯪鯉劍 Prime 藍圖": [
     {
       "type": "Relic",
       "relicName": "Axi P4",
@@ -82235,7 +82235,7 @@
       "chance": 10
     }
   ],
-  "Corinth Prime Receiver": [
+  "科林斯 Prime 槍機": [
     {
       "type": "Relic",
       "relicName": "Axi P4",
@@ -82405,7 +82405,7 @@
       "chance": 20
     }
   ],
-  "Pandero Prime Receiver": [
+  "手鼓 Prime 槍機": [
     {
       "type": "Relic",
       "relicName": "Axi P5",
@@ -82527,7 +82527,7 @@
       "chance": 10
     }
   ],
-  "Hildryn Prime Systems Blueprint": [
+  "Hildryn Prime 系統 藍圖": [
     {
       "type": "Relic",
       "relicName": "Axi P6",
@@ -82769,7 +82769,7 @@
       "chance": 16.67
     }
   ],
-  "Protea Prime Chassis Blueprint": [
+  "Protea Prime 機體 藍圖": [
     {
       "type": "Relic",
       "relicName": "Axi P7",
@@ -82891,7 +82891,7 @@
       "chance": 20
     }
   ],
-  "Baruuk Prime Systems Blueprint": [
+  "Baruuk Prime 系統 藍圖": [
     {
       "type": "Relic",
       "relicName": "Axi P7",
@@ -83085,7 +83085,7 @@
       "chance": 16.67
     }
   ],
-  "Epitaph Prime Barrel": [
+  "墓悼者 Prime 槍管": [
     {
       "type": "Relic",
       "relicName": "Axi P8",
@@ -83231,7 +83231,7 @@
       "chance": 20
     }
   ],
-  "Protea Prime Systems Blueprint": [
+  "Protea Prime 系統 藍圖": [
     {
       "type": "Relic",
       "relicName": "Axi P9",
@@ -83377,7 +83377,7 @@
       "chance": 10
     }
   ],
-  "Gauss Prime Neuroptics Blueprint": [
+  "Gauss Prime 頭部神經光元 藍圖": [
     {
       "type": "Relic",
       "relicName": "Axi P9",
@@ -83547,7 +83547,7 @@
       "chance": 20
     }
   ],
-  "Gunsen Prime Blueprint": [
+  "軍扇 Prime 藍圖": [
     {
       "type": "Relic",
       "relicName": "Axi P9",
@@ -83741,7 +83741,7 @@
       "chance": 16.67
     }
   ],
-  "Trumna Prime Blueprint": [
+  "創痍者 Prime 藍圖": [
     {
       "type": "Relic",
       "relicName": "Axi P9",
@@ -83935,7 +83935,7 @@
       "chance": 16.67
     }
   ],
-  "Rhino Prime Blueprint": [
+  "Rhino Prime 藍圖": [
     {
       "type": "Relic",
       "relicName": "Axi R1",
@@ -84009,7 +84009,7 @@
       "chance": 10
     }
   ],
-  "Dakra Prime Blueprint": [
+  "達克拉 Prime 藍圖": [
     {
       "type": "Relic",
       "relicName": "Axi R1",
@@ -84107,7 +84107,7 @@
       "chance": 20
     }
   ],
-  "Ankyros Prime Blade": [
+  "甲龍雙拳 Prime 刀刃": [
     {
       "type": "Relic",
       "relicName": "Axi R1",
@@ -84181,7 +84181,7 @@
       "chance": 20
     }
   ],
-  "Boltor Prime Stock": [
+  "螺釘步槍 Prime 槍托": [
     {
       "type": "Relic",
       "relicName": "Axi R1",
@@ -84255,7 +84255,7 @@
       "chance": 16.67
     }
   ],
-  "Mag Prime Systems Blueprint": [
+  "Mag Prime 系統 藍圖": [
     {
       "type": "Relic",
       "relicName": "Axi R1",
@@ -84353,7 +84353,7 @@
       "chance": 16.67
     }
   ],
-  "Boar Prime Receiver": [
+  "野豬 Prime 槍機": [
     {
       "type": "Relic",
       "relicName": "Axi R1",
@@ -84451,7 +84451,7 @@
       "chance": 16.67
     }
   ],
-  "Redeemer Prime Handle": [
+  "救贖者 Prime 握柄": [
     {
       "type": "Relic",
       "relicName": "Axi R2",
@@ -84597,7 +84597,7 @@
       "chance": 10
     }
   ],
-  "Chroma Prime Chassis Blueprint": [
+  "Chroma Prime 機體 藍圖": [
     {
       "type": "Relic",
       "relicName": "Axi R2",
@@ -84767,7 +84767,7 @@
       "chance": 16.67
     }
   ],
-  "Akjagara Prime Link": [
+  "覺醒雙槍 Prime 連接器": [
     {
       "type": "Relic",
       "relicName": "Axi R3",
@@ -84937,7 +84937,7 @@
       "chance": 20
     }
   ],
-  "Ember Prime Systems Blueprint": [
+  "Ember Prime 系統 藍圖": [
     {
       "type": "Relic",
       "relicName": "Axi R4",
@@ -85035,7 +85035,7 @@
       "chance": 20
     }
   ],
-  "Glaive Prime Disc": [
+  "戰刃 Prime 圓盤": [
     {
       "type": "Relic",
       "relicName": "Axi R4",
@@ -85109,7 +85109,7 @@
       "chance": 20
     }
   ],
-  "Scindo Prime Blade": [
+  "分裂斬斧 Prime 刀刃": [
     {
       "type": "Relic",
       "relicName": "Axi S1",
@@ -85183,7 +85183,7 @@
       "chance": 10
     }
   ],
-  "Trinity Prime Blueprint": [
+  "Trinity Prime 藍圖": [
     {
       "type": "Relic",
       "relicName": "Axi S1",
@@ -85329,7 +85329,7 @@
       "chance": 20
     }
   ],
-  "Scourge Prime Barrel": [
+  "禍根 Prime 槍管": [
     {
       "type": "Relic",
       "relicName": "Axi S10",
@@ -85475,7 +85475,7 @@
       "chance": 10
     }
   ],
-  "Guandao Prime Blade": [
+  "關刀 Prime 刀刃": [
     {
       "type": "Relic",
       "relicName": "Axi S10",
@@ -85669,7 +85669,7 @@
       "chance": 16.67
     }
   ],
-  "Scourge Prime Blueprint": [
+  "禍根 Prime 藍圖": [
     {
       "type": "Relic",
       "relicName": "Axi S11",
@@ -85791,7 +85791,7 @@
       "chance": 10
     }
   ],
-  "Sybaris Prime Barrel": [
+  "席芭莉絲 Prime 槍管": [
     {
       "type": "Relic",
       "relicName": "Axi S13",
@@ -85937,7 +85937,7 @@
       "chance": 10
     }
   ],
-  "Gara Prime Neuroptics Blueprint": [
+  "Gara Prime 頭部神經光元 藍圖": [
     {
       "type": "Relic",
       "relicName": "Axi S14",
@@ -86083,7 +86083,7 @@
       "chance": 20
     }
   ],
-  "Knell Prime Receiver": [
+  "喪鐘 Prime 槍機": [
     {
       "type": "Relic",
       "relicName": "Axi S15",
@@ -86277,7 +86277,7 @@
       "chance": 20
     }
   ],
-  "Shade Prime Carapace": [
+  "陰影 Prime 外殼": [
     {
       "type": "Relic",
       "relicName": "Axi S16",
@@ -86375,7 +86375,7 @@
       "chance": 10
     }
   ],
-  "Nautilus Prime Systems": [
+  "鸚鵡螺 Prime 系統": [
     {
       "type": "Relic",
       "relicName": "Axi S16",
@@ -86521,7 +86521,7 @@
       "chance": 20
     }
   ],
-  "Protea Prime Neuroptics Blueprint": [
+  "Protea Prime 頭部神經光元 藍圖": [
     {
       "type": "Relic",
       "relicName": "Axi S16",
@@ -86715,7 +86715,7 @@
       "chance": 16.67
     }
   ],
-  "Larkspur Prime Blueprint": [
+  "翠雀 Prime 藍圖": [
     {
       "type": "Relic",
       "relicName": "Axi S16",
@@ -86909,7 +86909,7 @@
       "chance": 16.67
     }
   ],
-  "Sevagoth Prime Chassis Blueprint": [
+  "Sevagoth Prime 機體 藍圖": [
     {
       "type": "Relic",
       "relicName": "Axi S17",
@@ -87007,7 +87007,7 @@
       "chance": 10
     }
   ],
-  "Vadarya Prime Receiver": [
+  "瓦達雅 Prime 槍機": [
     {
       "type": "Relic",
       "relicName": "Axi S18",
@@ -87129,7 +87129,7 @@
       "chance": 20
     }
   ],
-  "Gunsen Prime Handle": [
+  "軍扇 Prime 握柄": [
     {
       "type": "Relic",
       "relicName": "Axi S19",
@@ -87299,7 +87299,7 @@
       "chance": 20
     }
   ],
-  "Sicarus Prime Receiver": [
+  "暗殺者 Prime 槍機": [
     {
       "type": "Relic",
       "relicName": "Axi S2",
@@ -87373,7 +87373,7 @@
       "chance": 10
     }
   ],
-  "Wyrm Prime Blueprint": [
+  "蛟龍 Prime 藍圖": [
     {
       "type": "Relic",
       "relicName": "Axi S2",
@@ -87447,7 +87447,7 @@
       "chance": 16.67
     }
   ],
-  "Loki Prime Blueprint": [
+  "Loki Prime 藍圖": [
     {
       "type": "Relic",
       "relicName": "Axi S2",
@@ -87521,7 +87521,7 @@
       "chance": 16.67
     }
   ],
-  "Latron Prime Receiver": [
+  "拉特昂 Prime 槍機": [
     {
       "type": "Relic",
       "relicName": "Axi S2",
@@ -87595,7 +87595,7 @@
       "chance": 16.67
     }
   ],
-  "Sarofang Prime Blade": [
+  "闇牙 Prime 刀刃": [
     {
       "type": "Relic",
       "relicName": "Axi S20",
@@ -87621,7 +87621,7 @@
       "chance": 10
     }
   ],
-  "Nyx Prime Systems Blueprint": [
+  "Nyx Prime 系統 藍圖": [
     {
       "type": "Relic",
       "relicName": "Axi S3",
@@ -87695,7 +87695,7 @@
       "chance": 20
     }
   ],
-  "Rhino Prime Systems Blueprint": [
+  "Rhino Prime 系統 藍圖": [
     {
       "type": "Relic",
       "relicName": "Axi S3",
@@ -87769,7 +87769,7 @@
       "chance": 16.67
     }
   ],
-  "Hikou Prime Stars": [
+  "飛揚 Prime 星鏢": [
     {
       "type": "Relic",
       "relicName": "Axi S3",
@@ -87867,7 +87867,7 @@
       "chance": 16.67
     }
   ],
-  "Soma Prime Stock": [
+  "月神 Prime 槍托": [
     {
       "type": "Relic",
       "relicName": "Axi S4",
@@ -87965,7 +87965,7 @@
       "chance": 10
     }
   ],
-  "Nova Prime Blueprint": [
+  "Nova Prime 藍圖": [
     {
       "type": "Relic",
       "relicName": "Axi S4",
@@ -88039,7 +88039,7 @@
       "chance": 20
     }
   ],
-  "Spira Prime Pouch": [
+  "旋刃飛刀 Prime 鏢袋": [
     {
       "type": "Relic",
       "relicName": "Axi S5",
@@ -88233,7 +88233,7 @@
       "chance": 10
     }
   ],
-  "Nikana Prime Blade": [
+  "侍刃 Prime 刀刃": [
     {
       "type": "Relic",
       "relicName": "Axi S5",
@@ -88379,7 +88379,7 @@
       "chance": 20
     }
   ],
-  "Venka Prime Blades": [
+  "凱旋之爪 Prime 爪刃": [
     {
       "type": "Relic",
       "relicName": "Axi S5",
@@ -88597,7 +88597,7 @@
       "chance": 16.67
     }
   ],
-  "Tigris Prime Barrel": [
+  "猛虎 Prime 槍管": [
     {
       "type": "Relic",
       "relicName": "Axi S6",
@@ -88767,7 +88767,7 @@
       "chance": 20
     }
   ],
-  "Nova Prime Systems Blueprint": [
+  "Nova Prime 系統 藍圖": [
     {
       "type": "Relic",
       "relicName": "Axi S7",
@@ -88889,7 +88889,7 @@
       "chance": 16.67
     }
   ],
-  "Nyx Prime Chassis Blueprint": [
+  "Nyx Prime 機體 藍圖": [
     {
       "type": "Relic",
       "relicName": "Axi S8",
@@ -88963,7 +88963,7 @@
       "chance": 20
     }
   ],
-  "Hikou Prime Blueprint": [
+  "飛揚 Prime 藍圖": [
     {
       "type": "Relic",
       "relicName": "Axi S8",
@@ -89061,7 +89061,7 @@
       "chance": 16.67
     }
   ],
-  "Tigris Prime Blueprint": [
+  "猛虎 Prime 藍圖": [
     {
       "type": "Relic",
       "relicName": "Axi T1",
@@ -89183,7 +89183,7 @@
       "chance": 10
     }
   ],
-  "Tatsu Prime Handle": [
+  "龍辰 Prime 握柄": [
     {
       "type": "Relic",
       "relicName": "Axi T10",
@@ -89305,7 +89305,7 @@
       "chance": 10
     }
   ],
-  "Trumna Prime Receiver": [
+  "創痍者 Prime 槍機": [
     {
       "type": "Relic",
       "relicName": "Axi T12",
@@ -89403,7 +89403,7 @@
       "chance": 10
     }
   ],
-  "Trumna Prime Barrel": [
+  "創痍者 Prime 槍管": [
     {
       "type": "Relic",
       "relicName": "Axi T13",
@@ -89501,7 +89501,7 @@
       "chance": 10
     }
   ],
-  "Gyre Prime Chassis Blueprint": [
+  "Gyre Prime 機體 藍圖": [
     {
       "type": "Relic",
       "relicName": "Axi T13",
@@ -89527,7 +89527,7 @@
       "chance": 20
     }
   ],
-  "Xaku Prime Neuroptics Blueprint": [
+  "Xaku Prime 頭部神經光元 藍圖": [
     {
       "type": "Relic",
       "relicName": "Axi T13",
@@ -89721,7 +89721,7 @@
       "chance": 16.67
     }
   ],
-  "Tipedo Prime Handle": [
+  "提佩多 Prime 握柄": [
     {
       "type": "Relic",
       "relicName": "Axi T2",
@@ -89819,7 +89819,7 @@
       "chance": 10
     }
   ],
-  "Mirage Prime Neuroptics Blueprint": [
+  "Mirage Prime 頭部神經光元 藍圖": [
     {
       "type": "Relic",
       "relicName": "Axi T2",
@@ -90013,7 +90013,7 @@
       "chance": 16.67
     }
   ],
-  "Corinth Prime Blueprint": [
+  "科林斯 Prime 藍圖": [
     {
       "type": "Relic",
       "relicName": "Axi T4",
@@ -90207,7 +90207,7 @@
       "chance": 16.67
     }
   ],
-  "Titania Prime Systems Blueprint": [
+  "Titania Prime 系統 藍圖": [
     {
       "type": "Relic",
       "relicName": "Axi T5",
@@ -90353,7 +90353,7 @@
       "chance": 10
     }
   ],
-  "Rubico Prime Receiver": [
+  "絕路 Prime 槍機": [
     {
       "type": "Relic",
       "relicName": "Axi T5",
@@ -90523,7 +90523,7 @@
       "chance": 16.67
     }
   ],
-  "Tekko Prime Blade": [
+  "鐵鉤手甲 Prime 刀刃": [
     {
       "type": "Relic",
       "relicName": "Axi T6",
@@ -90621,7 +90621,7 @@
       "chance": 10
     }
   ],
-  "Tenora Prime Receiver": [
+  "雙簧管 Prime 槍機": [
     {
       "type": "Relic",
       "relicName": "Axi T8",
@@ -90719,7 +90719,7 @@
       "chance": 10
     }
   ],
-  "Equinox Prime Neuroptics Blueprint": [
+  "Equinox Prime 頭部神經光元 藍圖": [
     {
       "type": "Relic",
       "relicName": "Axi T9",
@@ -90841,7 +90841,7 @@
       "chance": 20
     }
   ],
-  "Odonata Prime Systems Blueprint": [
+  "Odonata Prime 系統 藍圖": [
     {
       "type": "Relic",
       "relicName": "Axi V1",
@@ -90963,7 +90963,7 @@
       "chance": 16.67
     }
   ],
-  "Vauban Prime Chassis Blueprint": [
+  "Vauban Prime 機體 藍圖": [
     {
       "type": "Relic",
       "relicName": "Axi V1",
@@ -91109,7 +91109,7 @@
       "chance": 10
     }
   ],
-  "Volt Prime Neuroptics Blueprint": [
+  "Volt Prime 頭部神經光元 藍圖": [
     {
       "type": "Relic",
       "relicName": "Axi V1",
@@ -91207,7 +91207,7 @@
       "chance": 20
     }
   ],
-  "Venka Prime Gauntlet": [
+  "凱旋之爪 Prime 手套": [
     {
       "type": "Relic",
       "relicName": "Axi V10",
@@ -91329,7 +91329,7 @@
       "chance": 10
     }
   ],
-  "Valkyr Prime Systems Blueprint": [
+  "Valkyr Prime 系統 藍圖": [
     {
       "type": "Relic",
       "relicName": "Axi V10",
@@ -91451,7 +91451,7 @@
       "chance": 10
     }
   ],
-  "Volnus Prime Handle": [
+  "創傷 Prime 握柄": [
     {
       "type": "Relic",
       "relicName": "Axi V11",
@@ -91525,7 +91525,7 @@
       "chance": 10
     }
   ],
-  "Titania Prime Blueprint": [
+  "Titania Prime 藍圖": [
     {
       "type": "Relic",
       "relicName": "Axi V11",
@@ -91671,7 +91671,7 @@
       "chance": 20
     }
   ],
-  "Astilla Prime Stock": [
+  "碎裂者 Prime 槍托": [
     {
       "type": "Relic",
       "relicName": "Axi V11",
@@ -91841,7 +91841,7 @@
       "chance": 20
     }
   ],
-  "Velox Prime Barrel": [
+  "迅敏屠夫 Prime 槍管": [
     {
       "type": "Relic",
       "relicName": "Axi V12",
@@ -91963,7 +91963,7 @@
       "chance": 10
     }
   ],
-  "Xaku Prime Chassis Blueprint": [
+  "Xaku Prime 機體 藍圖": [
     {
       "type": "Relic",
       "relicName": "Axi V12",
@@ -92133,7 +92133,7 @@
       "chance": 20
     }
   ],
-  "Venato Prime Blade": [
+  "威拿托 Prime 刀刃": [
     {
       "type": "Relic",
       "relicName": "Axi V13",
@@ -92183,7 +92183,7 @@
       "chance": 10
     }
   ],
-  "Nautilus Prime Carapace": [
+  "鸚鵡螺 Prime 外殼": [
     {
       "type": "Relic",
       "relicName": "Axi V13",
@@ -92353,7 +92353,7 @@
       "chance": 16.67
     }
   ],
-  "Voruna Prime Blueprint": [
+  "Voruna Prime 藍圖": [
     {
       "type": "Relic",
       "relicName": "Axi V14",
@@ -92379,7 +92379,7 @@
       "chance": 10
     }
   ],
-  "Alternox Prime Receiver": [
+  "交電步槍 Prime 槍機": [
     {
       "type": "Relic",
       "relicName": "Axi V14",
@@ -92453,7 +92453,7 @@
       "chance": 16.67
     }
   ],
-  "Valkyr Prime Chassis Blueprint": [
+  "Valkyr Prime 機體 藍圖": [
     {
       "type": "Relic",
       "relicName": "Axi V5",
@@ -92575,7 +92575,7 @@
       "chance": 10
     }
   ],
-  "Tigris Prime Receiver": [
+  "猛虎 Prime 槍機": [
     {
       "type": "Relic",
       "relicName": "Axi V5",
@@ -92793,7 +92793,7 @@
       "chance": 20
     }
   ],
-  "Silva & Aegis Prime Blueprint": [
+  "席瓦 & 神盾 Prime 藍圖": [
     {
       "type": "Relic",
       "relicName": "Axi V7",
@@ -92963,7 +92963,7 @@
       "chance": 20
     }
   ],
-  "Valkyr Prime Blueprint": [
+  "Valkyr Prime 藍圖": [
     {
       "type": "Relic",
       "relicName": "Axi V7",
@@ -93205,7 +93205,7 @@
       "chance": 16.67
     }
   ],
-  "Volt Prime Chassis Blueprint": [
+  "Volt Prime 機體 藍圖": [
     {
       "type": "Relic",
       "relicName": "Axi V8",
@@ -93327,7 +93327,7 @@
       "chance": 16.67
     }
   ],
-  "Spira Prime Blade": [
+  "旋刃飛刀 Prime 刀刃": [
     {
       "type": "Relic",
       "relicName": "Axi V9",
@@ -93473,7 +93473,7 @@
       "chance": 10
     }
   ],
-  "Saryn Prime Neuroptics Blueprint": [
+  "Saryn Prime 頭部神經光元 藍圖": [
     {
       "type": "Relic",
       "relicName": "Axi V9",
@@ -93643,7 +93643,7 @@
       "chance": 20
     }
   ],
-  "Wukong Prime Blueprint": [
+  "Wukong Prime 藍圖": [
     {
       "type": "Relic",
       "relicName": "Axi W1",
@@ -93789,7 +93789,7 @@
       "chance": 10
     }
   ],
-  "Wisp Prime Blueprint": [
+  "Wisp Prime 藍圖": [
     {
       "type": "Relic",
       "relicName": "Axi W3",
@@ -93911,7 +93911,7 @@
       "chance": 10
     }
   ],
-  "Hildryn Prime Neuroptics Blueprint": [
+  "Hildryn Prime 頭部神經光元 藍圖": [
     {
       "type": "Relic",
       "relicName": "Axi W4",
@@ -94081,7 +94081,7 @@
       "chance": 20
     }
   ],
-  "Fulmin Prime Barrel": [
+  "雷霆 Prime 槍管": [
     {
       "type": "Relic",
       "relicName": "Axi W4",
@@ -94275,7 +94275,7 @@
       "chance": 16.67
     }
   ],
-  "Yareli Prime Systems Blueprint": [
+  "Yareli Prime 系統 藍圖": [
     {
       "type": "Relic",
       "relicName": "Axi Y1",
@@ -94325,7 +94325,7 @@
       "chance": 10
     }
   ],
-  "Yareli Prime Neuroptics Blueprint": [
+  "Yareli Prime 頭部神經光元 藍圖": [
     {
       "type": "Relic",
       "relicName": "Axi Y2",
@@ -94447,7 +94447,7 @@
       "chance": 10
     }
   ],
-  "Akarius Prime Link": [
+  "阿利烏雙槍 Prime 連接器": [
     {
       "type": "Relic",
       "relicName": "Axi Y2",
@@ -94617,7 +94617,7 @@
       "chance": 20
     }
   ],
-  "Kompressa Prime Blueprint": [
+  "漮浦薩 Prime 藍圖": [
     {
       "type": "Relic",
       "relicName": "Axi Y2",
@@ -94739,7 +94739,7 @@
       "chance": 16.67
     }
   ],
-  "Vadarya Prime Barrel": [
+  "瓦達雅 Prime 槍管": [
     {
       "type": "Relic",
       "relicName": "Axi Y3",
@@ -94837,7 +94837,7 @@
       "chance": 20
     }
   ],
-  "Sevagoth Prime Blueprint": [
+  "Sevagoth Prime 藍圖": [
     {
       "type": "Relic",
       "relicName": "Axi Y3",
@@ -94983,7 +94983,7 @@
       "chance": 20
     }
   ],
-  "Zakti Prime Blueprint": [
+  "毒芽 Prime 藍圖": [
     {
       "type": "Relic",
       "relicName": "Axi Z1",
@@ -95081,7 +95081,7 @@
       "chance": 10
     }
   ],
-  "Zylok Prime Blueprint": [
+  "賽爾火槍 Prime 藍圖": [
     {
       "type": "Relic",
       "relicName": "Axi Z2",
@@ -95203,7 +95203,7 @@
       "chance": 10
     }
   ],
-  "Vectis Prime Blueprint": [
+  "守望者 Prime 藍圖": [
     {
       "type": "Relic",
       "relicName": "Lith A1",
@@ -95301,7 +95301,7 @@
       "chance": 20
     }
   ],
-  "Akstiletto Prime Blueprint": [
+  "史提托雙槍 Prime 藍圖": [
     {
       "type": "Relic",
       "relicName": "Lith A1",
@@ -95423,7 +95423,7 @@
       "chance": 10
     }
   ],
-  "Akarius Prime Receiver": [
+  "阿利烏雙槍 Prime 槍機": [
     {
       "type": "Relic",
       "relicName": "Lith A10",
@@ -95545,7 +95545,7 @@
       "chance": 20
     }
   ],
-  "Yareli Prime Chassis Blueprint": [
+  "Yareli Prime 機體 藍圖": [
     {
       "type": "Relic",
       "relicName": "Lith A10",
@@ -95691,7 +95691,7 @@
       "chance": 16.67
     }
   ],
-  "Acceltra Prime Barrel": [
+  "迅發電漿炮 Prime 槍管": [
     {
       "type": "Relic",
       "relicName": "Lith A11",
@@ -95837,7 +95837,7 @@
       "chance": 10
     }
   ],
-  "Grendel Prime Chassis Blueprint": [
+  "Grendel Prime 機體 藍圖": [
     {
       "type": "Relic",
       "relicName": "Lith A11",
@@ -95959,7 +95959,7 @@
       "chance": 20
     }
   ],
-  "Akjagara Prime Barrel": [
+  "覺醒雙槍 Prime 槍管": [
     {
       "type": "Relic",
       "relicName": "Lith A3",
@@ -96081,7 +96081,7 @@
       "chance": 10
     }
   ],
-  "Akbolto Prime Barrel": [
+  "螺釘雙槍 Prime 槍管": [
     {
       "type": "Relic",
       "relicName": "Lith A3",
@@ -96203,7 +96203,7 @@
       "chance": 20
     }
   ],
-  "Astilla Prime Barrel": [
+  "碎裂者 Prime 槍管": [
     {
       "type": "Relic",
       "relicName": "Lith A4",
@@ -96301,7 +96301,7 @@
       "chance": 10
     }
   ],
-  "Sevagoth Prime Systems Blueprint": [
+  "Sevagoth Prime 系統 藍圖": [
     {
       "type": "Relic",
       "relicName": "Lith A7",
@@ -96471,7 +96471,7 @@
       "chance": 16.67
     }
   ],
-  "Boar Prime Stock": [
+  "野豬 Prime 槍托": [
     {
       "type": "Relic",
       "relicName": "Lith B1",
@@ -96569,7 +96569,7 @@
       "chance": 10
     }
   ],
-  "Rhino Prime Neuroptics Blueprint": [
+  "Rhino Prime 頭部神經光元 藍圖": [
     {
       "type": "Relic",
       "relicName": "Lith B1",
@@ -96643,7 +96643,7 @@
       "chance": 20
     }
   ],
-  "Boltor Prime Receiver": [
+  "螺釘步槍 Prime 槍機": [
     {
       "type": "Relic",
       "relicName": "Lith B1",
@@ -96717,7 +96717,7 @@
       "chance": 20
     }
   ],
-  "Ankyros Prime Blueprint": [
+  "甲龍雙拳 Prime 藍圖": [
     {
       "type": "Relic",
       "relicName": "Lith B1",
@@ -96791,7 +96791,7 @@
       "chance": 16.67
     }
   ],
-  "Phantasma Prime Receiver": [
+  "幻離子 Prime 槍機": [
     {
       "type": "Relic",
       "relicName": "Lith B10",
@@ -97009,7 +97009,7 @@
       "chance": 16.67
     }
   ],
-  "Ballistica Prime Blueprint": [
+  "布里斯提卡 Prime 藍圖": [
     {
       "type": "Relic",
       "relicName": "Lith B2",
@@ -97131,7 +97131,7 @@
       "chance": 10
     }
   ],
-  "Tigris Prime Stock": [
+  "猛虎 Prime 槍托": [
     {
       "type": "Relic",
       "relicName": "Lith B2",
@@ -97277,7 +97277,7 @@
       "chance": 16.67
     }
   ],
-  "Boltor Prime Blueprint": [
+  "螺釘步槍 Prime 藍圖": [
     {
       "type": "Relic",
       "relicName": "Lith B4",
@@ -97351,7 +97351,7 @@
       "chance": 10
     }
   ],
-  "Scindo Prime Blueprint": [
+  "分裂斬斧 Prime 藍圖": [
     {
       "type": "Relic",
       "relicName": "Lith B4",
@@ -97425,7 +97425,7 @@
       "chance": 20
     }
   ],
-  "Nyx Prime Blueprint": [
+  "Nyx Prime 藍圖": [
     {
       "type": "Relic",
       "relicName": "Lith B4",
@@ -97523,7 +97523,7 @@
       "chance": 16.67
     }
   ],
-  "Aksomati Prime Barrel": [
+  "輕靈月神雙槍 Prime 槍管": [
     {
       "type": "Relic",
       "relicName": "Lith B7",
@@ -97645,7 +97645,7 @@
       "chance": 20
     }
   ],
-  "Tipedo Prime Blueprint": [
+  "提佩多 Prime 藍圖": [
     {
       "type": "Relic",
       "relicName": "Lith B7",
@@ -97839,7 +97839,7 @@
       "chance": 16.67
     }
   ],
-  "Carrier Prime Cerebrum": [
+  "搬運者 Prime 頭部": [
     {
       "type": "Relic",
       "relicName": "Lith C1",
@@ -97985,7 +97985,7 @@
       "chance": 20
     }
   ],
-  "Kavasa Prime Band": [
+  "喀婆薩 Prime 庫狛項圈帶": [
     {
       "type": "Relic",
       "relicName": "Lith C1",
@@ -98155,7 +98155,7 @@
       "chance": 20
     }
   ],
-  "Nova Prime Neuroptics Blueprint": [
+  "Nova Prime 頭部神經光元 藍圖": [
     {
       "type": "Relic",
       "relicName": "Lith C1",
@@ -98253,7 +98253,7 @@
       "chance": 16.67
     }
   ],
-  "Caliban Prime Neuroptics Blueprint": [
+  "Caliban Prime 頭部神經光元 藍圖": [
     {
       "type": "Relic",
       "relicName": "Lith C13",
@@ -98327,7 +98327,7 @@
       "chance": 20
     }
   ],
-  "Dual Zoren Prime Blueprint": [
+  "佐倫雙斧 Prime 藍圖": [
     {
       "type": "Relic",
       "relicName": "Lith C13",
@@ -98449,7 +98449,7 @@
       "chance": 20
     }
   ],
-  "Gauss Prime Chassis Blueprint": [
+  "Gauss Prime 機體 藍圖": [
     {
       "type": "Relic",
       "relicName": "Lith C13",
@@ -98643,7 +98643,7 @@
       "chance": 16.67
     }
   ],
-  "Cedo Prime Blueprint": [
+  "席多 Prime 藍圖": [
     {
       "type": "Relic",
       "relicName": "Lith C14",
@@ -98717,7 +98717,7 @@
       "chance": 10
     }
   ],
-  "Perigale Prime Receiver": [
+  "肆飆 Prime 槍機": [
     {
       "type": "Relic",
       "relicName": "Lith C14",
@@ -98767,7 +98767,7 @@
       "chance": 20
     }
   ],
-  "Kestrel Prime Blade": [
+  "紅隼 Prime 刀刃": [
     {
       "type": "Relic",
       "relicName": "Lith C14",
@@ -98841,7 +98841,7 @@
       "chance": 16.67
     }
   ],
-  "Nami Skyla Prime Handle": [
+  "海波斯庫拉對劍 Prime 握柄": [
     {
       "type": "Relic",
       "relicName": "Lith C2",
@@ -98963,7 +98963,7 @@
       "chance": 20
     }
   ],
-  "Chroma Prime Neuroptics Blueprint": [
+  "Chroma Prime 頭部神經光元 藍圖": [
     {
       "type": "Relic",
       "relicName": "Lith C3",
@@ -99037,7 +99037,7 @@
       "chance": 10
     }
   ],
-  "Helios Prime Blueprint": [
+  "赫利俄斯 Prime 藍圖": [
     {
       "type": "Relic",
       "relicName": "Lith C3",
@@ -99231,7 +99231,7 @@
       "chance": 20
     }
   ],
-  "Silva & Aegis Prime Hilt": [
+  "席瓦 & 神盾 Prime 握柄": [
     {
       "type": "Relic",
       "relicName": "Lith C3",
@@ -99401,7 +99401,7 @@
       "chance": 16.67
     }
   ],
-  "Valkyr Prime Neuroptics Blueprint": [
+  "Valkyr Prime 頭部神經光元 藍圖": [
     {
       "type": "Relic",
       "relicName": "Lith C5",
@@ -99619,7 +99619,7 @@
       "chance": 20
     }
   ],
-  "Spira Prime Blueprint": [
+  "旋刃飛刀 Prime 藍圖": [
     {
       "type": "Relic",
       "relicName": "Lith C5",
@@ -99837,7 +99837,7 @@
       "chance": 16.67
     }
   ],
-  "Mesa Prime Blueprint": [
+  "Mesa Prime 藍圖": [
     {
       "type": "Relic",
       "relicName": "Lith C6",
@@ -100055,7 +100055,7 @@
       "chance": 16.67
     }
   ],
-  "Dethcube Prime Blueprint": [
+  "死亡魔方 Prime 藍圖": [
     {
       "type": "Relic",
       "relicName": "Lith D1",
@@ -100177,7 +100177,7 @@
       "chance": 10
     }
   ],
-  "Atlas Prime Blueprint": [
+  "Atlas Prime 藍圖": [
     {
       "type": "Relic",
       "relicName": "Lith D1",
@@ -100347,7 +100347,7 @@
       "chance": 16.67
     }
   ],
-  "Dethcube Prime Cerebrum": [
+  "死亡魔方 Prime 頭部": [
     {
       "type": "Relic",
       "relicName": "Lith D2",
@@ -100469,7 +100469,7 @@
       "chance": 10
     }
   ],
-  "Ivara Prime Neuroptics Blueprint": [
+  "Ivara Prime 頭部神經光元 藍圖": [
     {
       "type": "Relic",
       "relicName": "Lith D3",
@@ -100663,7 +100663,7 @@
       "chance": 16.67
     }
   ],
-  "Zakti Prime Barrel": [
+  "毒芽 Prime 槍管": [
     {
       "type": "Relic",
       "relicName": "Lith D4",
@@ -100857,7 +100857,7 @@
       "chance": 20
     }
   ],
-  "Mesa Prime Systems Blueprint": [
+  "Mesa Prime 系統 藍圖": [
     {
       "type": "Relic",
       "relicName": "Lith D5",
@@ -101003,7 +101003,7 @@
       "chance": 20
     }
   ],
-  "Redeemer Prime Blade": [
+  "救贖者 Prime 刀刃": [
     {
       "type": "Relic",
       "relicName": "Lith D5",
@@ -101245,7 +101245,7 @@
       "chance": 16.67
     }
   ],
-  "Nagantaka Prime Stock": [
+  "噬蛇弩 Prime 槍托": [
     {
       "type": "Relic",
       "relicName": "Lith D6",
@@ -101367,7 +101367,7 @@
       "chance": 20
     }
   ],
-  "Daikyu Prime Grip": [
+  "大久和弓 Prime 弓身": [
     {
       "type": "Relic",
       "relicName": "Lith D7",
@@ -101441,7 +101441,7 @@
       "chance": 10
     }
   ],
-  "Rhino Prime Chassis Blueprint": [
+  "Rhino Prime 機體 藍圖": [
     {
       "type": "Relic",
       "relicName": "Lith E1",
@@ -101515,7 +101515,7 @@
       "chance": 20
     }
   ],
-  "Boltor Prime Barrel": [
+  "螺釘步槍 Prime 槍管": [
     {
       "type": "Relic",
       "relicName": "Lith E1",
@@ -101589,7 +101589,7 @@
       "chance": 16.67
     }
   ],
-  "Epitaph Prime Receiver": [
+  "墓悼者 Prime 槍機": [
     {
       "type": "Relic",
       "relicName": "Lith E2",
@@ -101687,7 +101687,7 @@
       "chance": 10
     }
   ],
-  "Venato Prime Blueprint": [
+  "威拿托 Prime 藍圖": [
     {
       "type": "Relic",
       "relicName": "Lith E2",
@@ -101761,7 +101761,7 @@
       "chance": 20
     }
   ],
-  "Daikyu Prime Blueprint": [
+  "大久和弓 Prime 藍圖": [
     {
       "type": "Relic",
       "relicName": "Lith E2",
@@ -101883,7 +101883,7 @@
       "chance": 16.67
     }
   ],
-  "Glaive Prime Blueprint": [
+  "戰刃 Prime 藍圖": [
     {
       "type": "Relic",
       "relicName": "Lith G1",
@@ -101957,7 +101957,7 @@
       "chance": 10
     }
   ],
-  "Frost Prime Chassis Blueprint": [
+  "Frost Prime 機體 藍圖": [
     {
       "type": "Relic",
       "relicName": "Lith G1",
@@ -102031,7 +102031,7 @@
       "chance": 16.67
     }
   ],
-  "Reaper Prime Handle": [
+  "收割者 Prime 握柄": [
     {
       "type": "Relic",
       "relicName": "Lith G1",
@@ -102105,7 +102105,7 @@
       "chance": 16.67
     }
   ],
-  "Gunsen Prime Blade": [
+  "軍扇 Prime 刀刃": [
     {
       "type": "Relic",
       "relicName": "Lith G10",
@@ -102203,7 +102203,7 @@
       "chance": 10
     }
   ],
-  "Gyre Prime Neuroptics Blueprint": [
+  "Gyre Prime 頭部神經光元 藍圖": [
     {
       "type": "Relic",
       "relicName": "Lith G14",
@@ -102229,7 +102229,7 @@
       "chance": 10
     }
   ],
-  "Loki Prime Chassis Blueprint": [
+  "Loki Prime 機體 藍圖": [
     {
       "type": "Relic",
       "relicName": "Lith G2",
@@ -102279,7 +102279,7 @@
       "chance": 20
     }
   ],
-  "Frost Prime Systems Blueprint": [
+  "Frost Prime 系統 藍圖": [
     {
       "type": "Relic",
       "relicName": "Lith G2",
@@ -102353,7 +102353,7 @@
       "chance": 20
     }
   ],
-  "Bo Prime Blueprint": [
+  "玻之武杖 Prime 藍圖": [
     {
       "type": "Relic",
       "relicName": "Lith G2",
@@ -102403,7 +102403,7 @@
       "chance": 16.67
     }
   ],
-  "Wyrm Prime Cerebrum": [
+  "蛟龍 Prime 頭部": [
     {
       "type": "Relic",
       "relicName": "Lith G2",
@@ -102453,7 +102453,7 @@
       "chance": 16.67
     }
   ],
-  "Latron Prime Stock": [
+  "拉特昂 Prime 槍托": [
     {
       "type": "Relic",
       "relicName": "Lith G2",
@@ -102527,7 +102527,7 @@
       "chance": 16.67
     }
   ],
-  "Guandao Prime Handle": [
+  "關刀 Prime 握柄": [
     {
       "type": "Relic",
       "relicName": "Lith G3",
@@ -102649,7 +102649,7 @@
       "chance": 10
     }
   ],
-  "Titania Prime Neuroptics Blueprint": [
+  "Titania Prime 頭部神經光元 藍圖": [
     {
       "type": "Relic",
       "relicName": "Lith G4",
@@ -102843,7 +102843,7 @@
       "chance": 20
     }
   ],
-  "Grendel Prime Blueprint": [
+  "Grendel Prime 藍圖": [
     {
       "type": "Relic",
       "relicName": "Lith G8",
@@ -102965,7 +102965,7 @@
       "chance": 10
     }
   ],
-  "Oberon Prime Blueprint": [
+  "Oberon Prime 藍圖": [
     {
       "type": "Relic",
       "relicName": "Lith H2",
@@ -103135,7 +103135,7 @@
       "chance": 20
     }
   ],
-  "Hystrix Prime Receiver": [
+  "豪豬 Prime 槍機": [
     {
       "type": "Relic",
       "relicName": "Lith H6",
@@ -103281,7 +103281,7 @@
       "chance": 10
     }
   ],
-  "Ivara Prime Chassis Blueprint": [
+  "Ivara Prime 機體 藍圖": [
     {
       "type": "Relic",
       "relicName": "Lith I1",
@@ -103379,7 +103379,7 @@
       "chance": 10
     }
   ],
-  "Kompressa Prime Barrel": [
+  "漮浦薩 Prime 槍管": [
     {
       "type": "Relic",
       "relicName": "Lith K12",
@@ -103429,7 +103429,7 @@
       "chance": 10
     }
   ],
-  "Kogake Prime Gauntlet": [
+  "科加基 Prime 拳套": [
     {
       "type": "Relic",
       "relicName": "Lith K2",
@@ -103551,7 +103551,7 @@
       "chance": 10
     }
   ],
-  "Soma Prime Receiver": [
+  "月神 Prime 槍機": [
     {
       "type": "Relic",
       "relicName": "Lith K4",
@@ -103649,7 +103649,7 @@
       "chance": 20
     }
   ],
-  "Khora Prime Blueprint": [
+  "Khora Prime 藍圖": [
     {
       "type": "Relic",
       "relicName": "Lith K9",
@@ -103747,7 +103747,7 @@
       "chance": 10
     }
   ],
-  "Guandao Prime Blueprint": [
+  "關刀 Prime 藍圖": [
     {
       "type": "Relic",
       "relicName": "Lith K9",
@@ -103917,7 +103917,7 @@
       "chance": 20
     }
   ],
-  "Tekko Prime Blueprint": [
+  "鐵鉤手甲 Prime 藍圖": [
     {
       "type": "Relic",
       "relicName": "Lith L2",
@@ -104039,7 +104039,7 @@
       "chance": 20
     }
   ],
-  "Lavos Prime Systems Blueprint": [
+  "Lavos Prime 系統 藍圖": [
     {
       "type": "Relic",
       "relicName": "Lith L5",
@@ -104161,7 +104161,7 @@
       "chance": 10
     }
   ],
-  "Mag Prime Blueprint": [
+  "Mag Prime 藍圖": [
     {
       "type": "Relic",
       "relicName": "Lith M1",
@@ -104259,7 +104259,7 @@
       "chance": 10
     }
   ],
-  "Soma Prime Blueprint": [
+  "月神 Prime 藍圖": [
     {
       "type": "Relic",
       "relicName": "Lith M1",
@@ -104357,7 +104357,7 @@
       "chance": 16.67
     }
   ],
-  "Soma Prime Barrel": [
+  "月神 Prime 槍管": [
     {
       "type": "Relic",
       "relicName": "Lith M2",
@@ -104431,7 +104431,7 @@
       "chance": 16.67
     }
   ],
-  "Dakra Prime Handle": [
+  "達克拉 Prime 握柄": [
     {
       "type": "Relic",
       "relicName": "Lith M2",
@@ -104553,7 +104553,7 @@
       "chance": 16.67
     }
   ],
-  "Stradavar Prime Barrel": [
+  "斯特拉迪瓦 Prime 槍管": [
     {
       "type": "Relic",
       "relicName": "Lith M4",
@@ -104699,7 +104699,7 @@
       "chance": 20
     }
   ],
-  "Euphona Prime Barrel": [
+  "悅音 Prime 槍管": [
     {
       "type": "Relic",
       "relicName": "Lith M7",
@@ -104797,7 +104797,7 @@
       "chance": 20
     }
   ],
-  "Reaper Prime Blade": [
+  "收割者 Prime 刀刃": [
     {
       "type": "Relic",
       "relicName": "Lith M8",
@@ -104871,7 +104871,7 @@
       "chance": 20
     }
   ],
-  "Nova Prime Chassis Blueprint": [
+  "Nova Prime 機體 藍圖": [
     {
       "type": "Relic",
       "relicName": "Lith N1",
@@ -104969,7 +104969,7 @@
       "chance": 10
     }
   ],
-  "Ninkondi Prime Handle": [
+  "降靈追獵者 Prime 握柄": [
     {
       "type": "Relic",
       "relicName": "Lith N13",
@@ -105139,7 +105139,7 @@
       "chance": 10
     }
   ],
-  "Baruuk Prime Chassis Blueprint": [
+  "Baruuk Prime 機體 藍圖": [
     {
       "type": "Relic",
       "relicName": "Lith N15",
@@ -105333,7 +105333,7 @@
       "chance": 20
     }
   ],
-  "Trumna Prime Stock": [
+  "創痍者 Prime 槍托": [
     {
       "type": "Relic",
       "relicName": "Lith N16",
@@ -105479,7 +105479,7 @@
       "chance": 20
     }
   ],
-  "Nautilus Prime Blueprint": [
+  "鸚鵡螺 Prime 藍圖": [
     {
       "type": "Relic",
       "relicName": "Lith N17",
@@ -105577,7 +105577,7 @@
       "chance": 10
     }
   ],
-  "Alternox Prime Barrel": [
+  "交電步槍 Prime 槍管": [
     {
       "type": "Relic",
       "relicName": "Lith N18",
@@ -105627,7 +105627,7 @@
       "chance": 20
     }
   ],
-  "Quassus Prime Blueprint": [
+  "夸瑟 Prime 藍圖": [
     {
       "type": "Relic",
       "relicName": "Lith N18",
@@ -105797,7 +105797,7 @@
       "chance": 20
     }
   ],
-  "Nekros Prime Systems Blueprint": [
+  "Nekros Prime 系統 藍圖": [
     {
       "type": "Relic",
       "relicName": "Lith N2",
@@ -105943,7 +105943,7 @@
       "chance": 10
     }
   ],
-  "Oberon Prime Neuroptics Blueprint": [
+  "Oberon Prime 頭部神經光元 藍圖": [
     {
       "type": "Relic",
       "relicName": "Lith O1",
@@ -106065,7 +106065,7 @@
       "chance": 10
     }
   ],
-  "Ballistica Prime Receiver": [
+  "布里斯提卡 Prime 槍機": [
     {
       "type": "Relic",
       "relicName": "Lith P2",
@@ -106211,7 +106211,7 @@
       "chance": 20
     }
   ],
-  "Panthera Prime Barrel": [
+  "獵豹 Prime 槍管": [
     {
       "type": "Relic",
       "relicName": "Lith P3",
@@ -106333,7 +106333,7 @@
       "chance": 10
     }
   ],
-  "Phantasma Prime Barrel": [
+  "幻離子 Prime 槍管": [
     {
       "type": "Relic",
       "relicName": "Lith P8",
@@ -106431,7 +106431,7 @@
       "chance": 10
     }
   ],
-  "Quassus Prime Blade": [
+  "夸瑟 Prime 刀刃": [
     {
       "type": "Relic",
       "relicName": "Lith Q1",
@@ -106529,7 +106529,7 @@
       "chance": 10
     }
   ],
-  "Gyre Prime Blueprint": [
+  "Gyre Prime 藍圖": [
     {
       "type": "Relic",
       "relicName": "Lith Q3",
@@ -106579,7 +106579,7 @@
       "chance": 20
     }
   ],
-  "Afentis Prime Handle": [
+  "阿凡提 Prime 握柄": [
     {
       "type": "Relic",
       "relicName": "Lith Q3",
@@ -106605,7 +106605,7 @@
       "chance": 16.67
     }
   ],
-  "Revenant Prime Blueprint": [
+  "Revenant Prime 藍圖": [
     {
       "type": "Relic",
       "relicName": "Lith R2",
@@ -106751,7 +106751,7 @@
       "chance": 10
     }
   ],
-  "Stradavar Prime Blueprint": [
+  "斯特拉迪瓦 Prime 藍圖": [
     {
       "type": "Relic",
       "relicName": "Lith S10",
@@ -106897,7 +106897,7 @@
       "chance": 10
     }
   ],
-  "Strun Prime Blueprint": [
+  "斯特朗 Prime 藍圖": [
     {
       "type": "Relic",
       "relicName": "Lith S11",
@@ -107019,7 +107019,7 @@
       "chance": 10
     }
   ],
-  "Saryn Prime Chassis Blueprint": [
+  "Saryn Prime 機體 藍圖": [
     {
       "type": "Relic",
       "relicName": "Lith S17",
@@ -107141,7 +107141,7 @@
       "chance": 10
     }
   ],
-  "Styanax Prime Neuroptics Blueprint": [
+  "Styanax Prime 頭部神經光元 藍圖": [
     {
       "type": "Relic",
       "relicName": "Lith S18",
@@ -107167,7 +107167,7 @@
       "chance": 10
     }
   ],
-  "Silva & Aegis Prime Guard": [
+  "席瓦 & 神盾 Prime 護手": [
     {
       "type": "Relic",
       "relicName": "Lith S9",
@@ -107289,7 +107289,7 @@
       "chance": 10
     }
   ],
-  "Dual Keres Prime Handle": [
+  "凱瑞斯雙刀 Prime 握柄": [
     {
       "type": "Relic",
       "relicName": "Lith T10",
@@ -107411,7 +107411,7 @@
       "chance": 20
     }
   ],
-  "Tiberon Prime Stock": [
+  "狂鯊 Prime 槍托": [
     {
       "type": "Relic",
       "relicName": "Lith T2",
@@ -107509,7 +107509,7 @@
       "chance": 10
     }
   ],
-  "Tenora Prime Barrel": [
+  "雙簧管 Prime 槍管": [
     {
       "type": "Relic",
       "relicName": "Lith T5",
@@ -107655,7 +107655,7 @@
       "chance": 10
     }
   ],
-  "Vectis Prime Receiver": [
+  "守望者 Prime 槍機": [
     {
       "type": "Relic",
       "relicName": "Lith V10",
@@ -107729,7 +107729,7 @@
       "chance": 10
     }
   ],
-  "Voruna Prime Systems Blueprint": [
+  "Voruna Prime 系統 藍圖": [
     {
       "type": "Relic",
       "relicName": "Lith V11",
@@ -107803,7 +107803,7 @@
       "chance": 10
     }
   ],
-  "Caliban Prime Blueprint": [
+  "Caliban Prime 藍圖": [
     {
       "type": "Relic",
       "relicName": "Lith V11",
@@ -107925,7 +107925,7 @@
       "chance": 16.67
     }
   ],
-  "Vauban Prime Systems Blueprint": [
+  "Vauban Prime 系統 藍圖": [
     {
       "type": "Relic",
       "relicName": "Lith V2",
@@ -108023,7 +108023,7 @@
       "chance": 10
     }
   ],
-  "Vauban Prime Neuroptics Blueprint": [
+  "Vauban Prime 頭部神經光元 藍圖": [
     {
       "type": "Relic",
       "relicName": "Lith V7",
@@ -108145,7 +108145,7 @@
       "chance": 10
     }
   ],
-  "Carrier Prime Blueprint": [
+  "搬運者 Prime 藍圖": [
     {
       "type": "Relic",
       "relicName": "Lith V7",
@@ -108291,7 +108291,7 @@
       "chance": 16.67
     }
   ],
-  "Wisp Prime Chassis Blueprint": [
+  "Wisp Prime 機體 藍圖": [
     {
       "type": "Relic",
       "relicName": "Lith W3",
@@ -108413,7 +108413,7 @@
       "chance": 10
     }
   ],
-  "Xaku Prime Blueprint": [
+  "Xaku Prime 藍圖": [
     {
       "type": "Relic",
       "relicName": "Lith X1",
@@ -108487,7 +108487,7 @@
       "chance": 10
     }
   ],
-  "Zephyr Prime Systems Blueprint": [
+  "Zephyr Prime 系統 藍圖": [
     {
       "type": "Relic",
       "relicName": "Lith Z1",
@@ -108609,7 +108609,7 @@
       "chance": 10
     }
   ],
-  "Okina Prime Handle": [
+  "翁 Prime 握柄": [
     {
       "type": "Relic",
       "relicName": "Lith Z4",
@@ -108779,7 +108779,7 @@
       "chance": 20
     }
   ],
-  "Akarius Prime Blueprint": [
+  "阿利烏雙槍 Prime 藍圖": [
     {
       "type": "Relic",
       "relicName": "Meso A11",
@@ -108853,7 +108853,7 @@
       "chance": 10
     }
   ],
-  "Afentis Prime Blade": [
+  "阿凡提 Prime 刀刃": [
     {
       "type": "Relic",
       "relicName": "Meso A12",
@@ -108879,7 +108879,7 @@
       "chance": 10
     }
   ],
-  "Voruna Prime Neuroptics Blueprint": [
+  "Voruna Prime 頭部神經光元 藍圖": [
     {
       "type": "Relic",
       "relicName": "Meso A12",
@@ -108929,7 +108929,7 @@
       "chance": 20
     }
   ],
-  "Sarofang Prime Handle": [
+  "闇牙 Prime 握柄": [
     {
       "type": "Relic",
       "relicName": "Meso A12",
@@ -108979,7 +108979,7 @@
       "chance": 16.67
     }
   ],
-  "Perigale Prime Blueprint": [
+  "肆飆 Prime 藍圖": [
     {
       "type": "Relic",
       "relicName": "Meso A12",
@@ -109029,7 +109029,7 @@
       "chance": 16.67
     }
   ],
-  "Nidus Prime Systems Blueprint": [
+  "Nidus Prime 系統 藍圖": [
     {
       "type": "Relic",
       "relicName": "Meso A3",
@@ -109223,7 +109223,7 @@
       "chance": 16.67
     }
   ],
-  "Mag Prime Chassis Blueprint": [
+  "Mag Prime 機體 藍圖": [
     {
       "type": "Relic",
       "relicName": "Meso B1",
@@ -109321,7 +109321,7 @@
       "chance": 20
     }
   ],
-  "Ember Prime Chassis Blueprint": [
+  "Ember Prime 機體 藍圖": [
     {
       "type": "Relic",
       "relicName": "Meso B10",
@@ -109419,7 +109419,7 @@
       "chance": 16.67
     }
   ],
-  "Banshee Prime Chassis Blueprint": [
+  "Banshee Prime 機體 藍圖": [
     {
       "type": "Relic",
       "relicName": "Meso B2",
@@ -109517,7 +109517,7 @@
       "chance": 10
     }
   ],
-  "Scindo Prime Handle": [
+  "分裂斬斧 Prime 握柄": [
     {
       "type": "Relic",
       "relicName": "Meso C1",
@@ -109591,7 +109591,7 @@
       "chance": 20
     }
   ],
-  "Corvas Prime Barrel": [
+  "黑鴉 Prime 槍管": [
     {
       "type": "Relic",
       "relicName": "Meso C9",
@@ -109689,7 +109689,7 @@
       "chance": 10
     }
   ],
-  "Yareli Prime Blueprint": [
+  "Yareli Prime 藍圖": [
     {
       "type": "Relic",
       "relicName": "Meso D8",
@@ -109787,7 +109787,7 @@
       "chance": 20
     }
   ],
-  "Wyrm Prime Systems": [
+  "蛟龍 Prime 系統": [
     {
       "type": "Relic",
       "relicName": "Meso E1",
@@ -109837,7 +109837,7 @@
       "chance": 20
     }
   ],
-  "Equinox Prime Systems Blueprint": [
+  "Equinox Prime 系統 藍圖": [
     {
       "type": "Relic",
       "relicName": "Meso E2",
@@ -109959,7 +109959,7 @@
       "chance": 10
     }
   ],
-  "Sarofang Prime Blueprint": [
+  "闇牙 Prime 藍圖": [
     {
       "type": "Relic",
       "relicName": "Meso E7",
@@ -110009,7 +110009,7 @@
       "chance": 20
     }
   ],
-  "Daikyu Prime Upper Limb": [
+  "大久和弓 Prime 上弓臂": [
     {
       "type": "Relic",
       "relicName": "Meso E7",
@@ -110107,7 +110107,7 @@
       "chance": 20
     }
   ],
-  "Gyre Prime Systems Blueprint": [
+  "Gyre Prime 系統 藍圖": [
     {
       "type": "Relic",
       "relicName": "Meso E7",
@@ -110181,7 +110181,7 @@
       "chance": 16.67
     }
   ],
-  "Frost Prime Blueprint": [
+  "Frost Prime 藍圖": [
     {
       "type": "Relic",
       "relicName": "Meso F2",
@@ -110279,7 +110279,7 @@
       "chance": 10
     }
   ],
-  "Sicarus Prime Barrel": [
+  "暗殺者 Prime 槍管": [
     {
       "type": "Relic",
       "relicName": "Meso F2",
@@ -110353,7 +110353,7 @@
       "chance": 16.67
     }
   ],
-  "Ember Prime Neuroptics Blueprint": [
+  "Ember Prime 頭部神經光元 藍圖": [
     {
       "type": "Relic",
       "relicName": "Meso F3",
@@ -110451,7 +110451,7 @@
       "chance": 16.67
     }
   ],
-  "Boar Prime Blueprint": [
+  "野豬 Prime 藍圖": [
     {
       "type": "Relic",
       "relicName": "Meso F4",
@@ -110549,7 +110549,7 @@
       "chance": 16.67
     }
   ],
-  "Kestrel Prime Grip": [
+  "紅隼 Prime 握把": [
     {
       "type": "Relic",
       "relicName": "Meso K8",
@@ -110599,7 +110599,7 @@
       "chance": 10
     }
   ],
-  "Athodai Prime Blueprint": [
+  "厄索戴 Prime 藍圖": [
     {
       "type": "Relic",
       "relicName": "Meso L5",
@@ -110625,7 +110625,7 @@
       "chance": 16.67
     }
   ],
-  "Ankyros Prime Gauntlet": [
+  "甲龍雙拳 Prime 拳套": [
     {
       "type": "Relic",
       "relicName": "Meso M1",
@@ -110699,7 +110699,7 @@
       "chance": 16.67
     }
   ],
-  "Nyx Prime Neuroptics Blueprint": [
+  "Nyx Prime 頭部神經光元 藍圖": [
     {
       "type": "Relic",
       "relicName": "Meso N1",
@@ -110773,7 +110773,7 @@
       "chance": 10
     }
   ],
-  "Loki Prime Neuroptics Blueprint": [
+  "Loki Prime 頭部神經光元 藍圖": [
     {
       "type": "Relic",
       "relicName": "Meso O3",
@@ -110823,7 +110823,7 @@
       "chance": 16.67
     }
   ],
-  "Kestrel Prime Blueprint": [
+  "紅隼 Prime 藍圖": [
     {
       "type": "Relic",
       "relicName": "Meso P17",
@@ -110897,7 +110897,7 @@
       "chance": 20
     }
   ],
-  "Panthera Prime Receiver": [
+  "獵豹 Prime 槍機": [
     {
       "type": "Relic",
       "relicName": "Meso P2",
@@ -110971,7 +110971,7 @@
       "chance": 20
     }
   ],
-  "Rubico Prime Blueprint": [
+  "絕路 Prime 藍圖": [
     {
       "type": "Relic",
       "relicName": "Meso R1",
@@ -111093,7 +111093,7 @@
       "chance": 10
     }
   ],
-  "Tiberon Prime Barrel": [
+  "狂鯊 Prime 槍管": [
     {
       "type": "Relic",
       "relicName": "Meso T1",
@@ -111143,7 +111143,7 @@
       "chance": 20
     }
   ],
-  "Limbo Prime Blueprint": [
+  "Limbo Prime 藍圖": [
     {
       "type": "Relic",
       "relicName": "Meso T3",
@@ -111289,7 +111289,7 @@
       "chance": 20
     }
   ],
-  "Vadarya Prime Blueprint": [
+  "瓦達雅 Prime 藍圖": [
     {
       "type": "Relic",
       "relicName": "Meso V12",
@@ -111339,7 +111339,7 @@
       "chance": 10
     }
   ],
-  "Styanax Prime Chassis Blueprint": [
+  "Styanax Prime 機體 藍圖": [
     {
       "type": "Relic",
       "relicName": "Meso Y2",
@@ -111365,7 +111365,7 @@
       "chance": 20
     }
   ],
-  "Athodai Prime Barrel": [
+  "厄索戴 Prime 槍管": [
     {
       "type": "Relic",
       "relicName": "Neo A16",
@@ -111391,7 +111391,7 @@
       "chance": 10
     }
   ],
-  "Afentis Prime Barrel": [
+  "阿凡提 Prime 槍管": [
     {
       "type": "Relic",
       "relicName": "Neo C8",
@@ -111417,7 +111417,7 @@
       "chance": 20
     }
   ],
-  "Bo Prime Handle": [
+  "玻之武杖 Prime 握柄": [
     {
       "type": "Relic",
       "relicName": "Neo F1",
@@ -111467,7 +111467,7 @@
       "chance": 20
     }
   ],
-  "Styanax Prime Systems Blueprint": [
+  "Styanax Prime 系統 藍圖": [
     {
       "type": "Relic",
       "relicName": "Neo Y1",
@@ -111493,7 +111493,7 @@
       "chance": 20
     }
   ],
-  "Zhuge Prime Barrel": [
+  "諸葛連弩 Prime 槍管": [
     {
       "type": "Relic",
       "relicName": "Neo Z3",
@@ -111645,12 +111645,6 @@
       "relicName": "Requiem I",
       "state": "Radiant",
       "chance": 20
-    },
-    {
-      "type": "Relic",
-      "relicName": "Requiem undefined",
-      "state": "Intact",
-      "chance": 11
     }
   ],
   "Xata": [
@@ -111683,12 +111677,6 @@
       "relicName": "Requiem I",
       "state": "Radiant",
       "chance": 20
-    },
-    {
-      "type": "Relic",
-      "relicName": "Requiem undefined",
-      "state": "Intact",
-      "chance": 11
     }
   ],
   "Jahu": [
@@ -111883,7 +111871,7 @@
       "chance": 20
     }
   ],
-  "Exilus Weapon Adapter Blueprint": [
+  "武器特殊功能槽連接器 藍圖": [
     {
       "type": "Relic",
       "relicName": "Requiem I",
@@ -111979,12 +111967,6 @@
       "relicName": "Requiem IV",
       "state": "Radiant",
       "chance": 10
-    },
-    {
-      "type": "Relic",
-      "relicName": "Requiem undefined",
-      "state": "Intact",
-      "chance": 2
     }
   ],
   "1200X Kuva": [
@@ -112083,15 +112065,9 @@
       "relicName": "Requiem IV",
       "state": "Radiant",
       "chance": 16.67
-    },
-    {
-      "type": "Relic",
-      "relicName": "Requiem undefined",
-      "state": "Intact",
-      "chance": 25.33
     }
   ],
-  "Ayatan Amber Star": [
+  "阿耶檀識琥珀星": [
     {
       "type": "Relic",
       "relicName": "Requiem I",
@@ -112187,15 +112163,9 @@
       "relicName": "Requiem IV",
       "state": "Radiant",
       "chance": 16.67
-    },
-    {
-      "type": "Relic",
-      "relicName": "Requiem undefined",
-      "state": "Intact",
-      "chance": 25.33
     }
   ],
-  "Riven Sliver": [
+  "裂罅 MOD 碎片": [
     {
       "type": "Relic",
       "relicName": "Requiem I",
@@ -112291,12 +112261,6 @@
       "relicName": "Requiem IV",
       "state": "Radiant",
       "chance": 16.67
-    },
-    {
-      "type": "Relic",
-      "relicName": "Requiem undefined",
-      "state": "Intact",
-      "chance": 25.33
     }
   ]
 }

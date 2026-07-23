@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <title>Warframe 星圖檢索系統</title>
-  <!-- 🌟 引入外觀設定 -->
+  <link rel="stylesheet" href="style.css"> 
   <link rel="stylesheet" href="starchart.css">
 </head>
 <body>
@@ -13,7 +13,9 @@
     <h1>WARFRAME 星圖檢索系統</h1>
     <div id="sub-title">一般星圖</div>
     <div class="search-container" id="searchBoxContainer">
-      <input type="text" id="searchInput" placeholder="搜尋星球、節點名稱或任務類型..." autocomplete="off">
+      <input type="text" id="starSearch" class="search-input" placeholder="搜尋節點 (例如: Mot)..." autocomplete="off">
+      <!-- 🌟 這個選單容器一定要加！ -->
+      <div id="suggestionsBox" class="suggestions-box" style="display: none;"></div>
     </div>
   </div>
 
@@ -23,12 +25,14 @@
   <div id="grid"></div>
 
   <!-- 第二層：星球專屬大頁面 (預設隱藏) -->
-  <div id="planet-detail-view">
+  <!-- 🌟 幫你把遺失的開頭標籤補回來了，並加上最高寬度與置中保護！ -->
+  <div id="planet-detail-view" style="display: none; max-width: 1200px; margin: 0 auto; padding: 0 20px;">
+    
     <div class="planet-header">
       <img id="detail-img" src="" alt="星球圖片" onerror="this.style.display='none'">
       <div class="planet-header-text">
-        <h2 id="detail-name-tc">星球名稱</h2>
-        <p id="detail-name-en">Planet Name</p>
+        <h2 id="detail-name-tc"></h2>
+        <p id="detail-name-en"></p>
       </div>
     </div>
 
@@ -44,9 +48,10 @@
     
     <!-- 節點資料動態插入在這裡 -->
     <div class="nodes-grid" id="detail-nodes"></div>
-  </div>
+    
+  </div> <!-- 🌟 這個才是真正用來把 planet-detail-view 關起來的結尾！ -->
 
-  <!-- 🌟 先引入翻譯檔，再引入核心大腦 -->
+  <!-- 先引入翻譯檔，再引入核心大腦 -->
   <script src="translations.js"></script>
   <script src="starchart.js"></script>
 

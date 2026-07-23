@@ -19,7 +19,10 @@
         "levels": {
           "normal": "6 - 11",
           "steelPath": "106 - 111"
-        }
+        },
+        "planetEn": "Mercury",
+        "planetTc": "水星",
+        "drops": null
       },
       {
         "id": "SolNode130",
@@ -31,7 +34,10 @@
         "levels": {
           "normal": "6 - 11",
           "steelPath": "106 - 111"
-        }
+        },
+        "planetEn": "Mercury",
+        "planetTc": "水星",
+        "drops": null
       },
       {
         "id": "SolNode119",
@@ -43,7 +49,10 @@
         "levels": {
           "normal": "6 - 8",
           "steelPath": "106 - 108"
-        }
+        },
+        "planetEn": "Mercury",
+        "planetTc": "水星",
+        "drops": null
       },
       {
         "id": "SolNode12",
@@ -55,7 +64,10 @@
         "levels": {
           "normal": "7 - 9",
           "steelPath": "107 - 109"
-        }
+        },
+        "planetEn": "Mercury",
+        "planetTc": "水星",
+        "drops": null
       },
       {
         "id": "SolNode103",
@@ -67,7 +79,10 @@
         "levels": {
           "normal": "7 - 9",
           "steelPath": "107 - 109"
-        }
+        },
+        "planetEn": "Mercury",
+        "planetTc": "水星",
+        "drops": null
       },
       {
         "id": "SolNode28",
@@ -79,7 +94,10 @@
         "levels": {
           "normal": "8 - 10",
           "steelPath": "108 - 110"
-        }
+        },
+        "planetEn": "Mercury",
+        "planetTc": "水星",
+        "drops": null
       },
       {
         "id": "SolNode108",
@@ -91,7 +109,10 @@
         "levels": {
           "normal": "8 - 10",
           "steelPath": "108 - 110"
-        }
+        },
+        "planetEn": "Mercury",
+        "planetTc": "水星",
+        "drops": null
       },
       {
         "id": "SolNode223",
@@ -103,7 +124,10 @@
         "levels": {
           "normal": "8 - 10",
           "steelPath": "108 - 110"
-        }
+        },
+        "planetEn": "Mercury",
+        "planetTc": "水星",
+        "drops": null
       },
       {
         "id": "SolNode224",
@@ -115,7 +139,10 @@
         "levels": {
           "normal": "6 - 11",
           "steelPath": "106 - 111"
-        }
+        },
+        "planetEn": "Mercury",
+        "planetTc": "水星",
+        "drops": null
       },
       {
         "id": "SolNode225",
@@ -127,7 +154,10 @@
         "levels": {
           "normal": "8 - 10",
           "steelPath": "108 - 110"
-        }
+        },
+        "planetEn": "Mercury",
+        "planetTc": "水星",
+        "drops": null
       },
       {
         "id": "SolNode226",
@@ -139,7 +169,10 @@
         "levels": {
           "normal": "6 - 8",
           "steelPath": "106 - 108"
-        }
+        },
+        "planetEn": "Mercury",
+        "planetTc": "水星",
+        "drops": null
       },
       {
         "id": "MercuryHUB",
@@ -151,7 +184,10 @@
         "levels": {
           "normal": "和平區域",
           "steelPath": "和平區域"
-        }
+        },
+        "planetEn": "Mercury",
+        "planetTc": "水星",
+        "drops": null
       }
     ]
   },
@@ -175,7 +211,10 @@
         "levels": {
           "normal": "10 - 30",
           "steelPath": "110 - 130"
-        }
+        },
+        "planetEn": "Venus",
+        "planetTc": "金星",
+        "drops": null
       },
       {
         "id": "SolNode123",
@@ -187,7 +226,10 @@
         "levels": {
           "normal": "6 - 8",
           "steelPath": "106 - 108"
-        }
+        },
+        "planetEn": "Venus",
+        "planetTc": "金星",
+        "drops": null
       },
       {
         "id": "SolNode61",
@@ -199,7 +241,10 @@
         "levels": {
           "normal": "6 - 8",
           "steelPath": "106 - 108"
-        }
+        },
+        "planetEn": "Venus",
+        "planetTc": "金星",
+        "drops": null
       },
       {
         "id": "SolNode2",
@@ -211,7 +256,10 @@
         "levels": {
           "normal": "5 - 8",
           "steelPath": "105 - 108"
-        }
+        },
+        "planetEn": "Venus",
+        "planetTc": "金星",
+        "drops": null
       },
       {
         "id": "SolNode23",
@@ -223,7 +271,10 @@
         "levels": {
           "normal": "6 - 8",
           "steelPath": "106 - 108"
-        }
+        },
+        "planetEn": "Venus",
+        "planetTc": "金星",
+        "drops": null
       },
       {
         "id": "SolNode128",
@@ -235,7 +286,10 @@
         "levels": {
           "normal": "3 - 5",
           "steelPath": "103 - 105"
-        }
+        },
+        "planetEn": "Venus",
+        "planetTc": "金星",
+        "drops": null
       },
       {
         "id": "SolNode109",
@@ -247,7 +301,10 @@
         "levels": {
           "normal": "5 - 7",
           "steelPath": "105 - 107"
-        }
+        },
+        "planetEn": "Venus",
+        "planetTc": "金星",
+        "drops": null
       },
       {
         "id": "SolNode104",
@@ -259,7 +316,10 @@
         "levels": {
           "normal": "6 - 8",
           "steelPath": "106 - 108"
-        }
+        },
+        "planetEn": "Venus",
+        "planetTc": "金星",
+        "drops": null
       },
       {
         "id": "SolNode66",
@@ -271,7 +331,10 @@
         "levels": {
           "normal": "6 - 8",
           "steelPath": "106 - 108"
-        }
+        },
+        "planetEn": "Venus",
+        "planetTc": "金星",
+        "drops": null
       },
       {
         "id": "ClanNode1",
@@ -283,7 +346,10 @@
         "levels": {
           "normal": "8 - 18",
           "steelPath": "108 - 118"
-        }
+        },
+        "planetEn": "Venus",
+        "planetTc": "金星",
+        "drops": null
       },
       {
         "id": "SolNode107",
@@ -295,7 +361,10 @@
         "levels": {
           "normal": "5 - 7",
           "steelPath": "105 - 107"
-        }
+        },
+        "planetEn": "Venus",
+        "planetTc": "金星",
+        "drops": null
       },
       {
         "id": "SolNode22",
@@ -307,7 +376,10 @@
         "levels": {
           "normal": "3 - 7",
           "steelPath": "103 - 107"
-        }
+        },
+        "planetEn": "Venus",
+        "planetTc": "金星",
+        "drops": null
       },
       {
         "id": "SolNode101",
@@ -319,7 +391,10 @@
         "levels": {
           "normal": "3 - 7",
           "steelPath": "103 - 107"
-        }
+        },
+        "planetEn": "Venus",
+        "planetTc": "金星",
+        "drops": null
       },
       {
         "id": "ClanNode0",
@@ -331,7 +406,10 @@
         "levels": {
           "normal": "8 - 18",
           "steelPath": "108 - 118"
-        }
+        },
+        "planetEn": "Venus",
+        "planetTc": "金星",
+        "drops": null
       },
       {
         "id": "SolNode239",
@@ -343,7 +421,10 @@
         "levels": {
           "normal": "35 - 45",
           "steelPath": "135 - 145"
-        }
+        },
+        "planetEn": "Venus",
+        "planetTc": "金星",
+        "drops": null
       },
       {
         "id": "SolNode902",
@@ -355,7 +436,10 @@
         "levels": {
           "normal": "3 - 8",
           "steelPath": "103 - 108"
-        }
+        },
+        "planetEn": "Venus",
+        "planetTc": "金星",
+        "drops": null
       },
       {
         "id": "SolarisUnitedHub1",
@@ -367,7 +451,10 @@
         "levels": {
           "normal": "和平區域",
           "steelPath": "和平區域"
-        }
+        },
+        "planetEn": "Venus",
+        "planetTc": "金星",
+        "drops": null
       },
       {
         "id": "NokkoColony",
@@ -375,11 +462,14 @@
         "nameTc": "深礦",
         "type": "FREE ROAM",
         "typeTc": "自由探索",
-        "faction": "無",
+        "faction": "未知",
         "levels": {
           "normal": "30 - 40",
           "steelPath": "130 - 140"
-        }
+        },
+        "planetEn": "Venus",
+        "planetTc": "金星",
+        "drops": null
       },
       {
         "id": "VenusToMercuryJunction",
@@ -387,11 +477,14 @@
         "nameTc": "水星接合點",
         "type": "SOLAR RAIL JUNCTION",
         "typeTc": "星際航道接合點",
-        "faction": "無",
+        "faction": "未知",
         "levels": {
           "normal": "1 - 3",
           "steelPath": "101 - 103"
-        }
+        },
+        "planetEn": "Venus",
+        "planetTc": "金星",
+        "drops": null
       }
     ]
   },
@@ -415,7 +508,10 @@
         "levels": {
           "normal": "2 - 4",
           "steelPath": "102 - 104"
-        }
+        },
+        "planetEn": "Earth",
+        "planetTc": "地球",
+        "drops": null
       },
       {
         "id": "SolNode27",
@@ -427,7 +523,10 @@
         "levels": {
           "normal": "1 - 3",
           "steelPath": "101 - 103"
-        }
+        },
+        "planetEn": "Earth",
+        "planetTc": "地球",
+        "drops": null
       },
       {
         "id": "SolNode79",
@@ -439,7 +538,10 @@
         "levels": {
           "normal": "3 - 6",
           "steelPath": "103 - 106"
-        }
+        },
+        "planetEn": "Earth",
+        "planetTc": "地球",
+        "drops": null
       },
       {
         "id": "SolNode39",
@@ -451,7 +553,10 @@
         "levels": {
           "normal": "1 - 6",
           "steelPath": "101 - 106"
-        }
+        },
+        "planetEn": "Earth",
+        "planetTc": "地球",
+        "drops": null
       },
       {
         "id": "SolNode15",
@@ -463,7 +568,10 @@
         "levels": {
           "normal": "3 - 6",
           "steelPath": "103 - 106"
-        }
+        },
+        "planetEn": "Earth",
+        "planetTc": "地球",
+        "drops": null
       },
       {
         "id": "SolNode26",
@@ -475,7 +583,10 @@
         "levels": {
           "normal": "2 - 5",
           "steelPath": "102 - 105"
-        }
+        },
+        "planetEn": "Earth",
+        "planetTc": "地球",
+        "drops": null
       },
       {
         "id": "SolNode89",
@@ -487,7 +598,10 @@
         "levels": {
           "normal": "1 - 3",
           "steelPath": "101 - 103"
-        }
+        },
+        "planetEn": "Earth",
+        "planetTc": "地球",
+        "drops": null
       },
       {
         "id": "SolNode85",
@@ -499,7 +613,10 @@
         "levels": {
           "normal": "1 - 6",
           "steelPath": "101 - 106"
-        }
+        },
+        "planetEn": "Earth",
+        "planetTc": "地球",
+        "drops": null
       },
       {
         "id": "SolNode59",
@@ -511,7 +628,10 @@
         "levels": {
           "normal": "3 - 6",
           "steelPath": "103 - 106"
-        }
+        },
+        "planetEn": "Earth",
+        "planetTc": "地球",
+        "drops": null
       },
       {
         "id": "SolNode75",
@@ -523,7 +643,10 @@
         "levels": {
           "normal": "4 - 6",
           "steelPath": "104 - 106"
-        }
+        },
+        "planetEn": "Earth",
+        "planetTc": "地球",
+        "drops": null
       },
       {
         "id": "SolNode24",
@@ -535,7 +658,10 @@
         "levels": {
           "normal": "20 - 25",
           "steelPath": "120 - 125"
-        }
+        },
+        "planetEn": "Earth",
+        "planetTc": "地球",
+        "drops": null
       },
       {
         "id": "ClanNode2",
@@ -547,7 +673,10 @@
         "levels": {
           "normal": "6 - 16",
           "steelPath": "106 - 116"
-        }
+        },
+        "planetEn": "Earth",
+        "planetTc": "地球",
+        "drops": null
       },
       {
         "id": "SolNode903",
@@ -559,7 +688,10 @@
         "levels": {
           "normal": "1 - 6",
           "steelPath": "101 - 106"
-        }
+        },
+        "planetEn": "Earth",
+        "planetTc": "地球",
+        "drops": null
       },
       {
         "id": "ClanNode3",
@@ -571,7 +703,10 @@
         "levels": {
           "normal": "6 - 16",
           "steelPath": "106 - 116"
-        }
+        },
+        "planetEn": "Earth",
+        "planetTc": "地球",
+        "drops": null
       },
       {
         "id": "SolNode228",
@@ -583,7 +718,10 @@
         "levels": {
           "normal": "10 - 30",
           "steelPath": "110 - 130"
-        }
+        },
+        "planetEn": "Earth",
+        "planetTc": "地球",
+        "drops": null
       },
       {
         "id": "SolNode451",
@@ -591,11 +729,14 @@
         "nameTc": "Saya 的夢象",
         "type": "SHRINE DEFENSE",
         "typeTc": "祭壇防禦",
-        "faction": "無",
+        "faction": "未知",
         "levels": {
           "normal": "5 - 15",
           "steelPath": "105 - 115"
-        }
+        },
+        "planetEn": "Earth",
+        "planetTc": "地球",
+        "drops": null
       },
       {
         "id": "CetusHub4",
@@ -603,11 +744,14 @@
         "nameTc": "希圖斯",
         "type": "CONCLAVE",
         "typeTc": "中繼站 / 城鎮",
-        "faction": "無",
+        "faction": "未知",
         "levels": {
           "normal": "和平區域",
           "steelPath": "和平區域"
-        }
+        },
+        "planetEn": "Earth",
+        "planetTc": "地球",
+        "drops": null
       },
       {
         "id": "EarthToVenusJunction",
@@ -615,11 +759,14 @@
         "nameTc": "金星接合點",
         "type": "SOLAR RAIL JUNCTION",
         "typeTc": "星際航道接合點",
-        "faction": "無",
+        "faction": "未知",
         "levels": {
           "normal": "1 - 3",
           "steelPath": "101 - 103"
-        }
+        },
+        "planetEn": "Earth",
+        "planetTc": "地球",
+        "drops": null
       },
       {
         "id": "EarthToMarsJunction",
@@ -627,11 +774,14 @@
         "nameTc": "火星接合點",
         "type": "SOLAR RAIL JUNCTION",
         "typeTc": "星際航道接合點",
-        "faction": "無",
+        "faction": "未知",
         "levels": {
           "normal": "1 - 1",
           "steelPath": "101 - 101"
-        }
+        },
+        "planetEn": "Earth",
+        "planetTc": "地球",
+        "drops": null
       },
       {
         "id": "EarthHUB",
@@ -643,7 +793,25 @@
         "levels": {
           "normal": "和平區域",
           "steelPath": "和平區域"
-        }
+        },
+        "planetEn": "Earth",
+        "planetTc": "地球",
+        "drops": null
+      },
+      {
+        "id": "IronwakeHUB3",
+        "nameEn": "Iron Wake",
+        "nameTc": "鋼鐵守望",
+        "type": "CONCLAVE",
+        "typeTc": "中繼站 / 城鎮",
+        "faction": "未知",
+        "levels": {
+          "normal": "和平區域",
+          "steelPath": "和平區域"
+        },
+        "planetEn": "Earth",
+        "planetTc": "地球",
+        "drops": null
       }
     ]
   },
@@ -667,7 +835,10 @@
         "levels": {
           "normal": "15 - 20",
           "steelPath": "115 - 120"
-        }
+        },
+        "planetEn": "Mars",
+        "planetTc": "火星",
+        "drops": null
       },
       {
         "id": "SolNode113",
@@ -679,7 +850,10 @@
         "levels": {
           "normal": "8 - 10",
           "steelPath": "108 - 110"
-        }
+        },
+        "planetEn": "Mars",
+        "planetTc": "火星",
+        "drops": null
       },
       {
         "id": "SolNode46",
@@ -691,7 +865,10 @@
         "levels": {
           "normal": "8 - 12",
           "steelPath": "108 - 112"
-        }
+        },
+        "planetEn": "Mars",
+        "planetTc": "火星",
+        "drops": null
       },
       {
         "id": "SolNode68",
@@ -703,7 +880,10 @@
         "levels": {
           "normal": "11 - 13",
           "steelPath": "111 - 113"
-        }
+        },
+        "planetEn": "Mars",
+        "planetTc": "火星",
+        "drops": null
       },
       {
         "id": "SolNode58",
@@ -715,7 +895,10 @@
         "levels": {
           "normal": "8 - 12",
           "steelPath": "108 - 112"
-        }
+        },
+        "planetEn": "Mars",
+        "planetTc": "火星",
+        "drops": null
       },
       {
         "id": "SolNode106",
@@ -727,7 +910,10 @@
         "levels": {
           "normal": "8 - 13",
           "steelPath": "108 - 113"
-        }
+        },
+        "planetEn": "Mars",
+        "planetTc": "火星",
+        "drops": null
       },
       {
         "id": "SolNode41",
@@ -739,7 +925,10 @@
         "levels": {
           "normal": "9 - 11",
           "steelPath": "109 - 111"
-        }
+        },
+        "planetEn": "Mars",
+        "planetTc": "火星",
+        "drops": null
       },
       {
         "id": "SolNode14",
@@ -751,7 +940,10 @@
         "levels": {
           "normal": "11 - 13",
           "steelPath": "111 - 113"
-        }
+        },
+        "planetEn": "Mars",
+        "planetTc": "火星",
+        "drops": null
       },
       {
         "id": "SolNode16",
@@ -763,7 +955,10 @@
         "levels": {
           "normal": "9 - 11",
           "steelPath": "109 - 111"
-        }
+        },
+        "planetEn": "Mars",
+        "planetTc": "火星",
+        "drops": null
       },
       {
         "id": "SolNode45",
@@ -775,7 +970,10 @@
         "levels": {
           "normal": "10 - 12",
           "steelPath": "110 - 112"
-        }
+        },
+        "planetEn": "Mars",
+        "planetTc": "火星",
+        "drops": null
       },
       {
         "id": "SolNode36",
@@ -787,7 +985,10 @@
         "levels": {
           "normal": "10 - 12",
           "steelPath": "110 - 112"
-        }
+        },
+        "planetEn": "Mars",
+        "planetTc": "火星",
+        "drops": null
       },
       {
         "id": "ClanNode8",
@@ -799,7 +1000,10 @@
         "levels": {
           "normal": "10 - 20",
           "steelPath": "110 - 120"
-        }
+        },
+        "planetEn": "Mars",
+        "planetTc": "火星",
+        "drops": null
       },
       {
         "id": "SolNode99",
@@ -811,7 +1015,10 @@
         "levels": {
           "normal": "11 - 13",
           "steelPath": "111 - 113"
-        }
+        },
+        "planetEn": "Mars",
+        "planetTc": "火星",
+        "drops": null
       },
       {
         "id": "SolNode65",
@@ -823,7 +1030,10 @@
         "levels": {
           "normal": "9 - 12",
           "steelPath": "109 - 112"
-        }
+        },
+        "planetEn": "Mars",
+        "planetTc": "火星",
+        "drops": null
       },
       {
         "id": "ClanNode9",
@@ -835,7 +1045,10 @@
         "levels": {
           "normal": "10 - 20",
           "steelPath": "110 - 120"
-        }
+        },
+        "planetEn": "Mars",
+        "planetTc": "火星",
+        "drops": null
       },
       {
         "id": "SolNode11",
@@ -847,7 +1060,10 @@
         "levels": {
           "normal": "9 - 11",
           "steelPath": "109 - 111"
-        }
+        },
+        "planetEn": "Mars",
+        "planetTc": "火星",
+        "drops": null
       },
       {
         "id": "SolNode904",
@@ -859,7 +1075,10 @@
         "levels": {
           "normal": "8 - 13",
           "steelPath": "108 - 113"
-        }
+        },
+        "planetEn": "Mars",
+        "planetTc": "火星",
+        "drops": null
       },
       {
         "id": "SolNode450",
@@ -871,7 +1090,10 @@
         "levels": {
           "normal": "25 - 30",
           "steelPath": "125 - 130"
-        }
+        },
+        "planetEn": "Mars",
+        "planetTc": "火星",
+        "drops": null
       },
       {
         "id": "TradeHUB1",
@@ -883,7 +1105,10 @@
         "levels": {
           "normal": "和平區域",
           "steelPath": "和平區域"
-        }
+        },
+        "planetEn": "Mars",
+        "planetTc": "火星",
+        "drops": null
       },
       {
         "id": "MarsToCeresJunction",
@@ -891,11 +1116,14 @@
         "nameTc": "穀神星接合點",
         "type": "SOLAR RAIL JUNCTION",
         "typeTc": "星際航道接合點",
-        "faction": "無",
+        "faction": "未知",
         "levels": {
           "normal": "1 - 1",
           "steelPath": "101 - 101"
-        }
+        },
+        "planetEn": "Mars",
+        "planetTc": "火星",
+        "drops": null
       },
       {
         "id": "MarsToPhobosJunction",
@@ -903,11 +1131,14 @@
         "nameTc": "火衛一接合點",
         "type": "SOLAR RAIL JUNCTION",
         "typeTc": "星際航道接合點",
-        "faction": "無",
+        "faction": "未知",
         "levels": {
           "normal": "1 - 3",
           "steelPath": "101 - 103"
-        }
+        },
+        "planetEn": "Mars",
+        "planetTc": "火星",
+        "drops": null
       }
     ]
   },
@@ -931,7 +1162,10 @@
         "levels": {
           "normal": "30 - 35",
           "steelPath": "130 - 135"
-        }
+        },
+        "planetEn": "Jupiter",
+        "planetTc": "木星",
+        "drops": null
       },
       {
         "id": "SolNode88",
@@ -943,7 +1177,10 @@
         "levels": {
           "normal": "18 - 20",
           "steelPath": "118 - 120"
-        }
+        },
+        "planetEn": "Jupiter",
+        "planetTc": "木星",
+        "drops": null
       },
       {
         "id": "SolNode97",
@@ -955,7 +1192,10 @@
         "levels": {
           "normal": "17 - 19",
           "steelPath": "117 - 119"
-        }
+        },
+        "planetEn": "Jupiter",
+        "planetTc": "木星",
+        "drops": null
       },
       {
         "id": "SolNode126",
@@ -967,7 +1207,10 @@
         "levels": {
           "normal": "15 - 17",
           "steelPath": "115 - 117"
-        }
+        },
+        "planetEn": "Jupiter",
+        "planetTc": "木星",
+        "drops": null
       },
       {
         "id": "SolNode125",
@@ -979,7 +1222,10 @@
         "levels": {
           "normal": "15 - 20",
           "steelPath": "115 - 120"
-        }
+        },
+        "planetEn": "Jupiter",
+        "planetTc": "木星",
+        "drops": null
       },
       {
         "id": "SolNode100",
@@ -991,7 +1237,10 @@
         "levels": {
           "normal": "15 - 20",
           "steelPath": "115 - 120"
-        }
+        },
+        "planetEn": "Jupiter",
+        "planetTc": "木星",
+        "drops": null
       },
       {
         "id": "SolNode10",
@@ -1003,7 +1252,10 @@
         "levels": {
           "normal": "18 - 20",
           "steelPath": "118 - 120"
-        }
+        },
+        "planetEn": "Jupiter",
+        "planetTc": "木星",
+        "drops": null
       },
       {
         "id": "SolNode25",
@@ -1015,7 +1267,10 @@
         "levels": {
           "normal": "15 - 20",
           "steelPath": "115 - 120"
-        }
+        },
+        "planetEn": "Jupiter",
+        "planetTc": "木星",
+        "drops": null
       },
       {
         "id": "SolNode121",
@@ -1027,7 +1282,10 @@
         "levels": {
           "normal": "17 - 19",
           "steelPath": "117 - 119"
-        }
+        },
+        "planetEn": "Jupiter",
+        "planetTc": "木星",
+        "drops": null
       },
       {
         "id": "SolNode53",
@@ -1039,7 +1297,10 @@
         "levels": {
           "normal": "18 - 20",
           "steelPath": "118 - 120"
-        }
+        },
+        "planetEn": "Jupiter",
+        "planetTc": "木星",
+        "drops": null
       },
       {
         "id": "SolNode74",
@@ -1051,7 +1312,10 @@
         "levels": {
           "normal": "16 - 18",
           "steelPath": "116 - 118"
-        }
+        },
+        "planetEn": "Jupiter",
+        "planetTc": "木星",
+        "drops": null
       },
       {
         "id": "SolNode740",
@@ -1063,7 +1327,10 @@
         "levels": {
           "normal": "40 - 40",
           "steelPath": "140 - 140"
-        }
+        },
+        "planetEn": "Jupiter",
+        "planetTc": "木星",
+        "drops": null
       },
       {
         "id": "ClanNode4",
@@ -1075,7 +1342,10 @@
         "levels": {
           "normal": "20 - 30",
           "steelPath": "120 - 130"
-        }
+        },
+        "planetEn": "Jupiter",
+        "planetTc": "木星",
+        "drops": null
       },
       {
         "id": "SolNode73",
@@ -1087,7 +1357,10 @@
         "levels": {
           "normal": "16 - 18",
           "steelPath": "116 - 118"
-        }
+        },
+        "planetEn": "Jupiter",
+        "planetTc": "木星",
+        "drops": null
       },
       {
         "id": "SolNode905",
@@ -1099,7 +1372,10 @@
         "levels": {
           "normal": "15 - 20",
           "steelPath": "115 - 120"
-        }
+        },
+        "planetEn": "Jupiter",
+        "planetTc": "木星",
+        "drops": null
       },
       {
         "id": "ClanNode5",
@@ -1111,7 +1387,10 @@
         "levels": {
           "normal": "20 - 30",
           "steelPath": "120 - 130"
-        }
+        },
+        "planetEn": "Jupiter",
+        "planetTc": "木星",
+        "drops": null
       },
       {
         "id": "JupiterToEuropaJunction",
@@ -1119,11 +1398,14 @@
         "nameTc": "歐羅巴接合點",
         "type": "SOLAR RAIL JUNCTION",
         "typeTc": "星際航道接合點",
-        "faction": "無",
+        "faction": "未知",
         "levels": {
           "normal": "1 - 3",
           "steelPath": "101 - 103"
-        }
+        },
+        "planetEn": "Jupiter",
+        "planetTc": "木星",
+        "drops": null
       },
       {
         "id": "JupiterToSaturnJunction",
@@ -1131,11 +1413,14 @@
         "nameTc": "土星接合點",
         "type": "SOLAR RAIL JUNCTION",
         "typeTc": "星際航道接合點",
-        "faction": "無",
+        "faction": "未知",
         "levels": {
           "normal": "1 - 3",
           "steelPath": "101 - 103"
-        }
+        },
+        "planetEn": "Jupiter",
+        "planetTc": "木星",
+        "drops": null
       }
     ]
   },
@@ -1159,7 +1444,10 @@
         "levels": {
           "normal": "21 - 26",
           "steelPath": "121 - 126"
-        }
+        },
+        "planetEn": "Saturn",
+        "planetTc": "土星",
+        "drops": null
       },
       {
         "id": "SolNode19",
@@ -1171,7 +1459,10 @@
         "levels": {
           "normal": "23 - 25",
           "steelPath": "123 - 125"
-        }
+        },
+        "planetEn": "Saturn",
+        "planetTc": "土星",
+        "drops": null
       },
       {
         "id": "SolNode96",
@@ -1183,7 +1474,10 @@
         "levels": {
           "normal": "21 - 26",
           "steelPath": "121 - 126"
-        }
+        },
+        "planetEn": "Saturn",
+        "planetTc": "土星",
+        "drops": null
       },
       {
         "id": "SolNode67",
@@ -1195,7 +1489,10 @@
         "levels": {
           "normal": "21 - 23",
           "steelPath": "121 - 123"
-        }
+        },
+        "planetEn": "Saturn",
+        "planetTc": "土星",
+        "drops": null
       },
       {
         "id": "SolNode93",
@@ -1207,7 +1504,10 @@
         "levels": {
           "normal": "23 - 25",
           "steelPath": "123 - 125"
-        }
+        },
+        "planetEn": "Saturn",
+        "planetTc": "土星",
+        "drops": null
       },
       {
         "id": "SolNode32",
@@ -1219,7 +1519,10 @@
         "levels": {
           "normal": "24 - 26",
           "steelPath": "124 - 126"
-        }
+        },
+        "planetEn": "Saturn",
+        "planetTc": "土星",
+        "drops": null
       },
       {
         "id": "SolNode18",
@@ -1231,7 +1534,10 @@
         "levels": {
           "normal": "21 - 26",
           "steelPath": "121 - 126"
-        }
+        },
+        "planetEn": "Saturn",
+        "planetTc": "土星",
+        "drops": null
       },
       {
         "id": "SolNode20",
@@ -1243,7 +1549,10 @@
         "levels": {
           "normal": "22 - 24",
           "steelPath": "122 - 124"
-        }
+        },
+        "planetEn": "Saturn",
+        "planetTc": "土星",
+        "drops": null
       },
       {
         "id": "SolNode70",
@@ -1255,7 +1564,10 @@
         "levels": {
           "normal": "21 - 23",
           "steelPath": "121 - 123"
-        }
+        },
+        "planetEn": "Saturn",
+        "planetTc": "土星",
+        "drops": null
       },
       {
         "id": "SolNode31",
@@ -1267,7 +1579,10 @@
         "levels": {
           "normal": "22 - 24",
           "steelPath": "122 - 124"
-        }
+        },
+        "planetEn": "Saturn",
+        "planetTc": "土星",
+        "drops": null
       },
       {
         "id": "SolNode50",
@@ -1279,7 +1594,10 @@
         "levels": {
           "normal": "22 - 24",
           "steelPath": "122 - 124"
-        }
+        },
+        "planetEn": "Saturn",
+        "planetTc": "土星",
+        "drops": null
       },
       {
         "id": "SolNode82",
@@ -1291,7 +1609,10 @@
         "levels": {
           "normal": "24 - 26",
           "steelPath": "124 - 126"
-        }
+        },
+        "planetEn": "Saturn",
+        "planetTc": "土星",
+        "drops": null
       },
       {
         "id": "SolNode906",
@@ -1303,7 +1624,10 @@
         "levels": {
           "normal": "21 - 23",
           "steelPath": "121 - 123"
-        }
+        },
+        "planetEn": "Saturn",
+        "planetTc": "土星",
+        "drops": null
       },
       {
         "id": "ClanNode13",
@@ -1315,7 +1639,10 @@
         "levels": {
           "normal": "26 - 36",
           "steelPath": "126 - 136"
-        }
+        },
+        "planetEn": "Saturn",
+        "planetTc": "土星",
+        "drops": null
       },
       {
         "id": "ClanNode12",
@@ -1327,7 +1654,10 @@
         "levels": {
           "normal": "26 - 36",
           "steelPath": "126 - 136"
-        }
+        },
+        "planetEn": "Saturn",
+        "planetTc": "土星",
+        "drops": null
       },
       {
         "id": "SaturnToUranusJunction",
@@ -1335,11 +1665,14 @@
         "nameTc": "天王星接合點",
         "type": "SOLAR RAIL JUNCTION",
         "typeTc": "星際航道接合點",
-        "faction": "無",
+        "faction": "未知",
         "levels": {
           "normal": "1 - 3",
           "steelPath": "101 - 103"
-        }
+        },
+        "planetEn": "Saturn",
+        "planetTc": "土星",
+        "drops": null
       },
       {
         "id": "SaturnHUB",
@@ -1351,7 +1684,10 @@
         "levels": {
           "normal": "和平區域",
           "steelPath": "和平區域"
-        }
+        },
+        "planetEn": "Saturn",
+        "planetTc": "土星",
+        "drops": null
       }
     ]
   },
@@ -1375,7 +1711,10 @@
         "levels": {
           "normal": "25 - 27",
           "steelPath": "125 - 127"
-        }
+        },
+        "planetEn": "Uranus",
+        "planetTc": "天王星",
+        "drops": null
       },
       {
         "id": "SolNode105",
@@ -1387,7 +1726,10 @@
         "levels": {
           "normal": "27 - 29",
           "steelPath": "127 - 129"
-        }
+        },
+        "planetEn": "Uranus",
+        "planetTc": "天王星",
+        "drops": null
       },
       {
         "id": "SolNode64",
@@ -1399,7 +1741,10 @@
         "levels": {
           "normal": "24 - 29",
           "steelPath": "124 - 129"
-        }
+        },
+        "planetEn": "Uranus",
+        "planetTc": "天王星",
+        "drops": null
       },
       {
         "id": "SolNode69",
@@ -1411,7 +1756,10 @@
         "levels": {
           "normal": "24 - 29",
           "steelPath": "124 - 129"
-        }
+        },
+        "planetEn": "Uranus",
+        "planetTc": "天王星",
+        "drops": null
       },
       {
         "id": "SolNode83",
@@ -1423,7 +1771,10 @@
         "levels": {
           "normal": "27 - 29",
           "steelPath": "127 - 129"
-        }
+        },
+        "planetEn": "Uranus",
+        "planetTc": "天王星",
+        "drops": null
       },
       {
         "id": "SolNode98",
@@ -1435,7 +1786,10 @@
         "levels": {
           "normal": "26 - 28",
           "steelPath": "126 - 128"
-        }
+        },
+        "planetEn": "Uranus",
+        "planetTc": "天王星",
+        "drops": null
       },
       {
         "id": "SolNode9",
@@ -1447,7 +1801,10 @@
         "levels": {
           "normal": "27 - 29",
           "steelPath": "127 - 129"
-        }
+        },
+        "planetEn": "Uranus",
+        "planetTc": "天王星",
+        "drops": null
       },
       {
         "id": "SolNode60",
@@ -1459,7 +1816,10 @@
         "levels": {
           "normal": "25 - 27",
           "steelPath": "125 - 127"
-        }
+        },
+        "planetEn": "Uranus",
+        "planetTc": "天王星",
+        "drops": null
       },
       {
         "id": "SolNode114",
@@ -1471,7 +1831,10 @@
         "levels": {
           "normal": "27 - 29",
           "steelPath": "127 - 129"
-        }
+        },
+        "planetEn": "Uranus",
+        "planetTc": "天王星",
+        "drops": null
       },
       {
         "id": "ClanNode16",
@@ -1483,7 +1846,10 @@
         "levels": {
           "normal": "30 - 35",
           "steelPath": "130 - 135"
-        }
+        },
+        "planetEn": "Uranus",
+        "planetTc": "天王星",
+        "drops": null
       },
       {
         "id": "SolNode34",
@@ -1495,7 +1861,10 @@
         "levels": {
           "normal": "24 - 26",
           "steelPath": "124 - 126"
-        }
+        },
+        "planetEn": "Uranus",
+        "planetTc": "天王星",
+        "drops": null
       },
       {
         "id": "SolNode122",
@@ -1507,7 +1876,10 @@
         "levels": {
           "normal": "24 - 29",
           "steelPath": "124 - 129"
-        }
+        },
+        "planetEn": "Uranus",
+        "planetTc": "天王星",
+        "drops": null
       },
       {
         "id": "SolNode907",
@@ -1519,7 +1891,10 @@
         "levels": {
           "normal": "24 - 29",
           "steelPath": "124 - 129"
-        }
+        },
+        "planetEn": "Uranus",
+        "planetTc": "天王星",
+        "drops": null
       },
       {
         "id": "ClanNode17",
@@ -1531,7 +1906,10 @@
         "levels": {
           "normal": "25 - 35",
           "steelPath": "125 - 135"
-        }
+        },
+        "planetEn": "Uranus",
+        "planetTc": "天王星",
+        "drops": null
       },
       {
         "id": "UranusToNeptuneJunction",
@@ -1539,11 +1917,14 @@
         "nameTc": "海王星接合點",
         "type": "SOLAR RAIL JUNCTION",
         "typeTc": "星際航道接合點",
-        "faction": "無",
+        "faction": "未知",
         "levels": {
           "normal": "1 - 3",
           "steelPath": "101 - 103"
-        }
+        },
+        "planetEn": "Uranus",
+        "planetTc": "天王星",
+        "drops": null
       }
     ]
   },
@@ -1567,7 +1948,10 @@
         "levels": {
           "normal": "29 - 31",
           "steelPath": "129 - 131"
-        }
+        },
+        "planetEn": "Neptune",
+        "planetTc": "海王星",
+        "drops": null
       },
       {
         "id": "SolNode1",
@@ -1579,7 +1963,10 @@
         "levels": {
           "normal": "27 - 29",
           "steelPath": "127 - 129"
-        }
+        },
+        "planetEn": "Neptune",
+        "planetTc": "海王星",
+        "drops": null
       },
       {
         "id": "SolNode17",
@@ -1591,7 +1978,10 @@
         "levels": {
           "normal": "27 - 32",
           "steelPath": "127 - 132"
-        }
+        },
+        "planetEn": "Neptune",
+        "planetTc": "海王星",
+        "drops": null
       },
       {
         "id": "SolNode78",
@@ -1603,7 +1993,10 @@
         "levels": {
           "normal": "28 - 30",
           "steelPath": "128 - 130"
-        }
+        },
+        "planetEn": "Neptune",
+        "planetTc": "海王星",
+        "drops": null
       },
       {
         "id": "SolNode6",
@@ -1615,7 +2008,10 @@
         "levels": {
           "normal": "27 - 32",
           "steelPath": "127 - 132"
-        }
+        },
+        "planetEn": "Neptune",
+        "planetTc": "海王星",
+        "drops": null
       },
       {
         "id": "SolNode57",
@@ -1627,7 +2023,10 @@
         "levels": {
           "normal": "30 - 32",
           "steelPath": "130 - 132"
-        }
+        },
+        "planetEn": "Neptune",
+        "planetTc": "海王星",
+        "drops": null
       },
       {
         "id": "SolNode62",
@@ -1639,7 +2038,10 @@
         "levels": {
           "normal": "29 - 31",
           "steelPath": "129 - 131"
-        }
+        },
+        "planetEn": "Neptune",
+        "planetTc": "海王星",
+        "drops": null
       },
       {
         "id": "SolNode908",
@@ -1651,7 +2053,10 @@
         "levels": {
           "normal": "27 - 32",
           "steelPath": "127 - 132"
-        }
+        },
+        "planetEn": "Neptune",
+        "planetTc": "海王星",
+        "drops": null
       },
       {
         "id": "SolNode127",
@@ -1663,7 +2068,10 @@
         "levels": {
           "normal": "30 - 32",
           "steelPath": "130 - 132"
-        }
+        },
+        "planetEn": "Neptune",
+        "planetTc": "海王星",
+        "drops": null
       },
       {
         "id": "SolNode118",
@@ -1675,7 +2083,10 @@
         "levels": {
           "normal": "25 - 30",
           "steelPath": "125 - 130"
-        }
+        },
+        "planetEn": "Neptune",
+        "planetTc": "海王星",
+        "drops": null
       },
       {
         "id": "SolNode84",
@@ -1687,7 +2098,10 @@
         "levels": {
           "normal": "30 - 32",
           "steelPath": "130 - 132"
-        }
+        },
+        "planetEn": "Neptune",
+        "planetTc": "海王星",
+        "drops": null
       },
       {
         "id": "ClanNode20",
@@ -1699,7 +2113,10 @@
         "levels": {
           "normal": "30 - 40",
           "steelPath": "130 - 140"
-        }
+        },
+        "planetEn": "Neptune",
+        "planetTc": "海王星",
+        "drops": null
       },
       {
         "id": "ClanNode21",
@@ -1711,7 +2128,10 @@
         "levels": {
           "normal": "30 - 40",
           "steelPath": "130 - 140"
-        }
+        },
+        "planetEn": "Neptune",
+        "planetTc": "海王星",
+        "drops": null
       },
       {
         "id": "EventNode763",
@@ -1719,11 +2139,14 @@
         "nameTc": "《指數之場》：挑戰",
         "type": "ARENA",
         "typeTc": "競技場",
-        "faction": "無",
+        "faction": "未知",
         "levels": {
           "normal": "30 - 30",
           "steelPath": "130 - 130"
-        }
+        },
+        "planetEn": "Neptune",
+        "planetTc": "海王星",
+        "drops": null
       },
       {
         "id": "NeptuneToPlutoJunction",
@@ -1731,11 +2154,14 @@
         "nameTc": "冥王星接合點",
         "type": "SOLAR RAIL JUNCTION",
         "typeTc": "星際航道接合點",
-        "faction": "無",
+        "faction": "未知",
         "levels": {
           "normal": "1 - 3",
           "steelPath": "101 - 103"
-        }
+        },
+        "planetEn": "Neptune",
+        "planetTc": "海王星",
+        "drops": null
       }
     ]
   },
@@ -1760,7 +2186,10 @@
         "levels": {
           "normal": "34 - 38",
           "steelPath": "134 - 138"
-        }
+        },
+        "planetEn": "Pluto",
+        "planetTc": "冥王星",
+        "drops": null
       },
       {
         "id": "SolNode72",
@@ -1772,7 +2201,10 @@
         "levels": {
           "normal": "30 - 40",
           "steelPath": "130 - 140"
-        }
+        },
+        "planetEn": "Pluto",
+        "planetTc": "冥王星",
+        "drops": null
       },
       {
         "id": "SolNode48",
@@ -1784,7 +2216,10 @@
         "levels": {
           "normal": "34 - 38",
           "steelPath": "134 - 138"
-        }
+        },
+        "planetEn": "Pluto",
+        "planetTc": "冥王星",
+        "drops": null
       },
       {
         "id": "SolNode21",
@@ -1796,7 +2231,10 @@
         "levels": {
           "normal": "32 - 36",
           "steelPath": "132 - 136"
-        }
+        },
+        "planetEn": "Pluto",
+        "planetTc": "冥王星",
+        "drops": null
       },
       {
         "id": "SolNode76",
@@ -1808,7 +2246,10 @@
         "levels": {
           "normal": "30 - 34",
           "steelPath": "130 - 134"
-        }
+        },
+        "planetEn": "Pluto",
+        "planetTc": "冥王星",
+        "drops": null
       },
       {
         "id": "SolNode51",
@@ -1820,7 +2261,10 @@
         "levels": {
           "normal": "35 - 45",
           "steelPath": "135 - 145"
-        }
+        },
+        "planetEn": "Pluto",
+        "planetTc": "冥王星",
+        "drops": null
       },
       {
         "id": "SolNode38",
@@ -1832,7 +2276,10 @@
         "levels": {
           "normal": "30 - 34",
           "steelPath": "130 - 134"
-        }
+        },
+        "planetEn": "Pluto",
+        "planetTc": "冥王星",
+        "drops": null
       },
       {
         "id": "SolNode56",
@@ -1844,7 +2291,10 @@
         "levels": {
           "normal": "34 - 38",
           "steelPath": "134 - 138"
-        }
+        },
+        "planetEn": "Pluto",
+        "planetTc": "冥王星",
+        "drops": null
       },
       {
         "id": "SolNode43",
@@ -1856,7 +2306,10 @@
         "levels": {
           "normal": "30 - 40",
           "steelPath": "130 - 140"
-        }
+        },
+        "planetEn": "Pluto",
+        "planetTc": "冥王星",
+        "drops": null
       },
       {
         "id": "SolNode81",
@@ -1868,7 +2321,10 @@
         "levels": {
           "normal": "30 - 40",
           "steelPath": "130 - 140"
-        }
+        },
+        "planetEn": "Pluto",
+        "planetTc": "冥王星",
+        "drops": null
       },
       {
         "id": "ClanNode24",
@@ -1880,7 +2336,10 @@
         "levels": {
           "normal": "35 - 45",
           "steelPath": "135 - 145"
-        }
+        },
+        "planetEn": "Pluto",
+        "planetTc": "冥王星",
+        "drops": null
       },
       {
         "id": "SolNode102",
@@ -1892,7 +2351,10 @@
         "levels": {
           "normal": "32 - 36",
           "steelPath": "132 - 136"
-        }
+        },
+        "planetEn": "Pluto",
+        "planetTc": "冥王星",
+        "drops": null
       },
       {
         "id": "ClanNode25",
@@ -1904,7 +2366,10 @@
         "levels": {
           "normal": "35 - 45",
           "steelPath": "135 - 145"
-        }
+        },
+        "planetEn": "Pluto",
+        "planetTc": "冥王星",
+        "drops": null
       },
       {
         "id": "PlutoToErisJunction",
@@ -1912,23 +2377,14 @@
         "nameTc": "鬩神星接合點",
         "type": "SOLAR RAIL JUNCTION",
         "typeTc": "星際航道接合點",
-        "faction": "無",
+        "faction": "未知",
         "levels": {
           "normal": "1 - 1",
           "steelPath": "101 - 101"
-        }
-      },
-      {
-        "id": "ErisToSednaJunction",
-        "nameEn": "SEDNA JUNCTION",
-        "nameTc": "賽德娜接合點",
-        "type": "SOLAR RAIL JUNCTION",
-        "typeTc": "星際航道接合點",
-        "faction": "無",
-        "levels": {
-          "normal": "1 - 1",
-          "steelPath": "101 - 101"
-        }
+        },
+        "planetEn": "Pluto",
+        "planetTc": "冥王星",
+        "drops": null
       },
       {
         "id": "PlutoHUB",
@@ -1940,7 +2396,10 @@
         "levels": {
           "normal": "和平區域",
           "steelPath": "和平區域"
-        }
+        },
+        "planetEn": "Pluto",
+        "planetTc": "冥王星",
+        "drops": null
       }
     ]
   },
@@ -1964,7 +2423,10 @@
         "levels": {
           "normal": "12 - 14",
           "steelPath": "112 - 114"
-        }
+        },
+        "planetEn": "Ceres",
+        "planetTc": "穀神星",
+        "drops": null
       },
       {
         "id": "SolNode135",
@@ -1976,7 +2438,10 @@
         "levels": {
           "normal": "15 - 17",
           "steelPath": "115 - 117"
-        }
+        },
+        "planetEn": "Ceres",
+        "planetTc": "穀神星",
+        "drops": null
       },
       {
         "id": "SolNode132",
@@ -1988,7 +2453,10 @@
         "levels": {
           "normal": "12 - 14",
           "steelPath": "112 - 114"
-        }
+        },
+        "planetEn": "Ceres",
+        "planetTc": "穀神星",
+        "drops": null
       },
       {
         "id": "SolNode139",
@@ -2000,7 +2468,10 @@
         "levels": {
           "normal": "14 - 16",
           "steelPath": "114 - 116"
-        }
+        },
+        "planetEn": "Ceres",
+        "planetTc": "穀神星",
+        "drops": null
       },
       {
         "id": "SolNode141",
@@ -2012,7 +2483,10 @@
         "levels": {
           "normal": "14 - 16",
           "steelPath": "114 - 116"
-        }
+        },
+        "planetEn": "Ceres",
+        "planetTc": "穀神星",
+        "drops": null
       },
       {
         "id": "SolNode137",
@@ -2024,7 +2498,10 @@
         "levels": {
           "normal": "13 - 15",
           "steelPath": "113 - 115"
-        }
+        },
+        "planetEn": "Ceres",
+        "planetTc": "穀神星",
+        "drops": null
       },
       {
         "id": "SolNode140",
@@ -2036,7 +2513,10 @@
         "levels": {
           "normal": "13 - 15",
           "steelPath": "113 - 115"
-        }
+        },
+        "planetEn": "Ceres",
+        "planetTc": "穀神星",
+        "drops": null
       },
       {
         "id": "SolNode138",
@@ -2048,7 +2528,10 @@
         "levels": {
           "normal": "15 - 17",
           "steelPath": "115 - 117"
-        }
+        },
+        "planetEn": "Ceres",
+        "planetTc": "穀神星",
+        "drops": null
       },
       {
         "id": "SolNode144",
@@ -2060,7 +2543,10 @@
         "levels": {
           "normal": "14 - 16",
           "steelPath": "114 - 116"
-        }
+        },
+        "planetEn": "Ceres",
+        "planetTc": "穀神星",
+        "drops": null
       },
       {
         "id": "SolNode149",
@@ -2072,7 +2558,10 @@
         "levels": {
           "normal": "12 - 17",
           "steelPath": "112 - 117"
-        }
+        },
+        "planetEn": "Ceres",
+        "planetTc": "穀神星",
+        "drops": null
       },
       {
         "id": "SolNode147",
@@ -2084,7 +2573,10 @@
         "levels": {
           "normal": "12 - 17",
           "steelPath": "112 - 117"
-        }
+        },
+        "planetEn": "Ceres",
+        "planetTc": "穀神星",
+        "drops": null
       },
       {
         "id": "SolNode146",
@@ -2096,7 +2588,10 @@
         "levels": {
           "normal": "12 - 17",
           "steelPath": "112 - 117"
-        }
+        },
+        "planetEn": "Ceres",
+        "planetTc": "穀神星",
+        "drops": null
       },
       {
         "id": "ClanNode23",
@@ -2108,7 +2603,10 @@
         "levels": {
           "normal": "15 - 25",
           "steelPath": "115 - 125"
-        }
+        },
+        "planetEn": "Ceres",
+        "planetTc": "穀神星",
+        "drops": null
       },
       {
         "id": "ClanNode22",
@@ -2120,7 +2618,10 @@
         "levels": {
           "normal": "15 - 25",
           "steelPath": "115 - 125"
-        }
+        },
+        "planetEn": "Ceres",
+        "planetTc": "穀神星",
+        "drops": null
       }
     ]
   },
@@ -2144,7 +2645,10 @@
         "levels": {
           "normal": "32 - 36",
           "steelPath": "132 - 136"
-        }
+        },
+        "planetEn": "Eris",
+        "planetTc": "鬩神星",
+        "drops": null
       },
       {
         "id": "SolNode164",
@@ -2156,7 +2660,10 @@
         "levels": {
           "normal": "30 - 40",
           "steelPath": "130 - 140"
-        }
+        },
+        "planetEn": "Eris",
+        "planetTc": "鬩神星",
+        "drops": null
       },
       {
         "id": "SolNode162",
@@ -2168,7 +2675,10 @@
         "levels": {
           "normal": "32 - 36",
           "steelPath": "132 - 136"
-        }
+        },
+        "planetEn": "Eris",
+        "planetTc": "鬩神星",
+        "drops": null
       },
       {
         "id": "SolNode171",
@@ -2180,7 +2690,10 @@
         "levels": {
           "normal": "34 - 38",
           "steelPath": "134 - 138"
-        }
+        },
+        "planetEn": "Eris",
+        "planetTc": "鬩神星",
+        "drops": null
       },
       {
         "id": "SolNode167",
@@ -2192,7 +2705,10 @@
         "levels": {
           "normal": "34 - 38",
           "steelPath": "134 - 138"
-        }
+        },
+        "planetEn": "Eris",
+        "planetTc": "鬩神星",
+        "drops": null
       },
       {
         "id": "SolNode166",
@@ -2204,7 +2720,10 @@
         "levels": {
           "normal": "30 - 40",
           "steelPath": "130 - 140"
-        }
+        },
+        "planetEn": "Eris",
+        "planetTc": "鬩神星",
+        "drops": null
       },
       {
         "id": "SolNode173",
@@ -2216,7 +2735,10 @@
         "levels": {
           "normal": "34 - 38",
           "steelPath": "134 - 138"
-        }
+        },
+        "planetEn": "Eris",
+        "planetTc": "鬩神星",
+        "drops": null
       },
       {
         "id": "ClanNode18",
@@ -2228,7 +2750,10 @@
         "levels": {
           "normal": "35 - 45",
           "steelPath": "135 - 145"
-        }
+        },
+        "planetEn": "Eris",
+        "planetTc": "鬩神星",
+        "drops": null
       },
       {
         "id": "SolNode172",
@@ -2240,7 +2765,10 @@
         "levels": {
           "normal": "30 - 40",
           "steelPath": "130 - 140"
-        }
+        },
+        "planetEn": "Eris",
+        "planetTc": "鬩神星",
+        "drops": null
       },
       {
         "id": "ClanNode19",
@@ -2252,7 +2780,10 @@
         "levels": {
           "normal": "35 - 45",
           "steelPath": "135 - 145"
-        }
+        },
+        "planetEn": "Eris",
+        "planetTc": "鬩神星",
+        "drops": null
       },
       {
         "id": "SolNode175",
@@ -2264,7 +2795,10 @@
         "levels": {
           "normal": "30 - 34",
           "steelPath": "130 - 134"
-        }
+        },
+        "planetEn": "Eris",
+        "planetTc": "鬩神星",
+        "drops": null
       },
       {
         "id": "SolNode701",
@@ -2272,11 +2806,14 @@
         "nameTc": "Jordas 魔像刺殺",
         "type": "ASSASSINATION",
         "typeTc": "刺殺",
-        "faction": "無",
+        "faction": "未知",
         "levels": {
           "normal": "32 - 34",
           "steelPath": "132 - 134"
-        }
+        },
+        "planetEn": "Eris",
+        "planetTc": "鬩神星",
+        "drops": null
       },
       {
         "id": "SolNode705",
@@ -2284,11 +2821,29 @@
         "nameTc": "異融者 Alad V 刺殺",
         "type": "ASSASSINATION",
         "typeTc": "刺殺",
-        "faction": "無",
+        "faction": "未知",
         "levels": {
           "normal": "30 - 35",
           "steelPath": "130 - 135"
-        }
+        },
+        "planetEn": "Eris",
+        "planetTc": "鬩神星",
+        "drops": null
+      },
+      {
+        "id": "ErisToSednaJunction",
+        "nameEn": "SEDNA JUNCTION",
+        "nameTc": "賽德娜接合點",
+        "type": "SOLAR RAIL JUNCTION",
+        "typeTc": "星際航道接合點",
+        "faction": "未知",
+        "levels": {
+          "normal": "1 - 1",
+          "steelPath": "101 - 101"
+        },
+        "planetEn": "Eris",
+        "planetTc": "鬩神星",
+        "drops": null
       }
     ]
   },
@@ -2312,7 +2867,10 @@
         "levels": {
           "normal": "34 - 38",
           "steelPath": "134 - 138"
-        }
+        },
+        "planetEn": "Sedna",
+        "planetTc": "賽德娜",
+        "drops": null
       },
       {
         "id": "SolNode184",
@@ -2324,7 +2882,10 @@
         "levels": {
           "normal": "32 - 36",
           "steelPath": "132 - 136"
-        }
+        },
+        "planetEn": "Sedna",
+        "planetTc": "賽德娜",
+        "drops": null
       },
       {
         "id": "SolNode181",
@@ -2336,7 +2897,10 @@
         "levels": {
           "normal": "32 - 36",
           "steelPath": "132 - 136"
-        }
+        },
+        "planetEn": "Sedna",
+        "planetTc": "賽德娜",
+        "drops": null
       },
       {
         "id": "SolNode183",
@@ -2348,7 +2912,10 @@
         "levels": {
           "normal": "85 - 85",
           "steelPath": "185 - 185"
-        }
+        },
+        "planetEn": "Sedna",
+        "planetTc": "賽德娜",
+        "drops": null
       },
       {
         "id": "SolNode190",
@@ -2360,7 +2927,10 @@
         "levels": {
           "normal": "40 - 40",
           "steelPath": "140 - 140"
-        }
+        },
+        "planetEn": "Sedna",
+        "planetTc": "賽德娜",
+        "drops": null
       },
       {
         "id": "SolNode185",
@@ -2372,7 +2942,10 @@
         "levels": {
           "normal": "30 - 40",
           "steelPath": "130 - 140"
-        }
+        },
+        "planetEn": "Sedna",
+        "planetTc": "賽德娜",
+        "drops": null
       },
       {
         "id": "SolNode187",
@@ -2384,7 +2957,10 @@
         "levels": {
           "normal": "30 - 40",
           "steelPath": "130 - 140"
-        }
+        },
+        "planetEn": "Sedna",
+        "planetTc": "賽德娜",
+        "drops": null
       },
       {
         "id": "SolNode191",
@@ -2396,7 +2972,10 @@
         "levels": {
           "normal": "34 - 38",
           "steelPath": "134 - 138"
-        }
+        },
+        "planetEn": "Sedna",
+        "planetTc": "賽德娜",
+        "drops": null
       },
       {
         "id": "SolNode188",
@@ -2408,7 +2987,10 @@
         "levels": {
           "normal": "35 - 40",
           "steelPath": "135 - 140"
-        }
+        },
+        "planetEn": "Sedna",
+        "planetTc": "賽德娜",
+        "drops": null
       },
       {
         "id": "SolNode189",
@@ -2420,7 +3002,10 @@
         "levels": {
           "normal": "30 - 34",
           "steelPath": "130 - 134"
-        }
+        },
+        "planetEn": "Sedna",
+        "planetTc": "賽德娜",
+        "drops": null
       },
       {
         "id": "SolNode199",
@@ -2432,7 +3017,10 @@
         "levels": {
           "normal": "60 - 60",
           "steelPath": "160 - 160"
-        }
+        },
+        "planetEn": "Sedna",
+        "planetTc": "賽德娜",
+        "drops": null
       },
       {
         "id": "SolNode193",
@@ -2444,7 +3032,10 @@
         "levels": {
           "normal": "35 - 40",
           "steelPath": "135 - 140"
-        }
+        },
+        "planetEn": "Sedna",
+        "planetTc": "賽德娜",
+        "drops": null
       },
       {
         "id": "SolNode196",
@@ -2456,7 +3047,10 @@
         "levels": {
           "normal": "34 - 38",
           "steelPath": "134 - 138"
-        }
+        },
+        "planetEn": "Sedna",
+        "planetTc": "賽德娜",
+        "drops": null
       },
       {
         "id": "SolNode195",
@@ -2468,7 +3062,10 @@
         "levels": {
           "normal": "30 - 40",
           "steelPath": "130 - 140"
-        }
+        },
+        "planetEn": "Sedna",
+        "planetTc": "賽德娜",
+        "drops": null
       },
       {
         "id": "ClanNode14",
@@ -2480,7 +3077,10 @@
         "levels": {
           "normal": "35 - 45",
           "steelPath": "135 - 145"
-        }
+        },
+        "planetEn": "Sedna",
+        "planetTc": "賽德娜",
+        "drops": null
       },
       {
         "id": "ClanNode15",
@@ -2492,7 +3092,10 @@
         "levels": {
           "normal": "35 - 45",
           "steelPath": "135 - 145"
-        }
+        },
+        "planetEn": "Sedna",
+        "planetTc": "賽德娜",
+        "drops": null
       }
     ]
   },
@@ -2516,7 +3119,10 @@
         "levels": {
           "normal": "21 - 23",
           "steelPath": "121 - 123"
-        }
+        },
+        "planetEn": "Europa",
+        "planetTc": "歐羅巴",
+        "drops": null
       },
       {
         "id": "SolNode204",
@@ -2528,7 +3134,10 @@
         "levels": {
           "normal": "18 - 20",
           "steelPath": "118 - 120"
-        }
+        },
+        "planetEn": "Europa",
+        "planetTc": "歐羅巴",
+        "drops": null
       },
       {
         "id": "SolNode209",
@@ -2540,7 +3149,10 @@
         "levels": {
           "normal": "18 - 20",
           "steelPath": "118 - 120"
-        }
+        },
+        "planetEn": "Europa",
+        "planetTc": "歐羅巴",
+        "drops": null
       },
       {
         "id": "SolNode210",
@@ -2552,7 +3164,10 @@
         "levels": {
           "normal": "21 - 23",
           "steelPath": "121 - 123"
-        }
+        },
+        "planetEn": "Europa",
+        "planetTc": "歐羅巴",
+        "drops": null
       },
       {
         "id": "SolNode205",
@@ -2564,7 +3179,10 @@
         "levels": {
           "normal": "21 - 23",
           "steelPath": "121 - 123"
-        }
+        },
+        "planetEn": "Europa",
+        "planetTc": "歐羅巴",
+        "drops": null
       },
       {
         "id": "SolNode216",
@@ -2576,7 +3194,10 @@
         "levels": {
           "normal": "18 - 23",
           "steelPath": "118 - 123"
-        }
+        },
+        "planetEn": "Europa",
+        "planetTc": "歐羅巴",
+        "drops": null
       },
       {
         "id": "SolNode214",
@@ -2588,7 +3209,10 @@
         "levels": {
           "normal": "19 - 21",
           "steelPath": "119 - 121"
-        }
+        },
+        "planetEn": "Europa",
+        "planetTc": "歐羅巴",
+        "drops": null
       },
       {
         "id": "SolNode211",
@@ -2600,7 +3224,10 @@
         "levels": {
           "normal": "18 - 23",
           "steelPath": "118 - 123"
-        }
+        },
+        "planetEn": "Europa",
+        "planetTc": "歐羅巴",
+        "drops": null
       },
       {
         "id": "SolNode215",
@@ -2612,7 +3239,10 @@
         "levels": {
           "normal": "18 - 20",
           "steelPath": "118 - 120"
-        }
+        },
+        "planetEn": "Europa",
+        "planetTc": "歐羅巴",
+        "drops": null
       },
       {
         "id": "SolNode212",
@@ -2624,7 +3254,10 @@
         "levels": {
           "normal": "18 - 23",
           "steelPath": "118 - 123"
-        }
+        },
+        "planetEn": "Europa",
+        "planetTc": "歐羅巴",
+        "drops": null
       },
       {
         "id": "SolNode217",
@@ -2636,7 +3269,10 @@
         "levels": {
           "normal": "20 - 22",
           "steelPath": "120 - 122"
-        }
+        },
+        "planetEn": "Europa",
+        "planetTc": "歐羅巴",
+        "drops": null
       },
       {
         "id": "ClanNode6",
@@ -2648,7 +3284,10 @@
         "levels": {
           "normal": "23 - 33",
           "steelPath": "123 - 133"
-        }
+        },
+        "planetEn": "Europa",
+        "planetTc": "歐羅巴",
+        "drops": null
       },
       {
         "id": "SolNode220",
@@ -2660,7 +3299,10 @@
         "levels": {
           "normal": "20 - 22",
           "steelPath": "120 - 122"
-        }
+        },
+        "planetEn": "Europa",
+        "planetTc": "歐羅巴",
+        "drops": null
       },
       {
         "id": "ClanNode7",
@@ -2672,7 +3314,10 @@
         "levels": {
           "normal": "23 - 33",
           "steelPath": "123 - 133"
-        }
+        },
+        "planetEn": "Europa",
+        "planetTc": "歐羅巴",
+        "drops": null
       }
     ]
   },
@@ -2696,7 +3341,10 @@
         "levels": {
           "normal": "10 - 15",
           "steelPath": "110 - 115"
-        }
+        },
+        "planetEn": "Void",
+        "planetTc": "虛空",
+        "drops": null
       },
       {
         "id": "SolNode401",
@@ -2708,7 +3356,10 @@
         "levels": {
           "normal": "10 - 15",
           "steelPath": "110 - 115"
-        }
+        },
+        "planetEn": "Void",
+        "planetTc": "虛空",
+        "drops": null
       },
       {
         "id": "SolNode402",
@@ -2720,7 +3371,10 @@
         "levels": {
           "normal": "10 - 15",
           "steelPath": "110 - 115"
-        }
+        },
+        "planetEn": "Void",
+        "planetTc": "虛空",
+        "drops": null
       },
       {
         "id": "SolNode403",
@@ -2732,7 +3386,10 @@
         "levels": {
           "normal": "20 - 25",
           "steelPath": "120 - 125"
-        }
+        },
+        "planetEn": "Void",
+        "planetTc": "虛空",
+        "drops": null
       },
       {
         "id": "SolNode404",
@@ -2744,7 +3401,10 @@
         "levels": {
           "normal": "20 - 25",
           "steelPath": "120 - 125"
-        }
+        },
+        "planetEn": "Void",
+        "planetTc": "虛空",
+        "drops": null
       },
       {
         "id": "SolNode405",
@@ -2756,7 +3416,10 @@
         "levels": {
           "normal": "20 - 25",
           "steelPath": "120 - 125"
-        }
+        },
+        "planetEn": "Void",
+        "planetTc": "虛空",
+        "drops": null
       },
       {
         "id": "SolNode406",
@@ -2768,7 +3431,10 @@
         "levels": {
           "normal": "30 - 35",
           "steelPath": "130 - 135"
-        }
+        },
+        "planetEn": "Void",
+        "planetTc": "虛空",
+        "drops": null
       },
       {
         "id": "SolNode407",
@@ -2780,7 +3446,10 @@
         "levels": {
           "normal": "30 - 35",
           "steelPath": "130 - 135"
-        }
+        },
+        "planetEn": "Void",
+        "planetTc": "虛空",
+        "drops": null
       },
       {
         "id": "SolNode408",
@@ -2792,7 +3461,10 @@
         "levels": {
           "normal": "30 - 35",
           "steelPath": "130 - 135"
-        }
+        },
+        "planetEn": "Void",
+        "planetTc": "虛空",
+        "drops": null
       },
       {
         "id": "SolNode409",
@@ -2804,7 +3476,10 @@
         "levels": {
           "normal": "40 - 45",
           "steelPath": "140 - 145"
-        }
+        },
+        "planetEn": "Void",
+        "planetTc": "虛空",
+        "drops": null
       },
       {
         "id": "SolNode410",
@@ -2816,7 +3491,10 @@
         "levels": {
           "normal": "40 - 45",
           "steelPath": "140 - 145"
-        }
+        },
+        "planetEn": "Void",
+        "planetTc": "虛空",
+        "drops": null
       },
       {
         "id": "SolNode411",
@@ -2828,7 +3506,10 @@
         "levels": {
           "normal": "40 - 45",
           "steelPath": "140 - 145"
-        }
+        },
+        "planetEn": "Void",
+        "planetTc": "虛空",
+        "drops": null
       },
       {
         "id": "SolNode412",
@@ -2840,7 +3521,10 @@
         "levels": {
           "normal": "40 - 45",
           "steelPath": "140 - 145"
-        }
+        },
+        "planetEn": "Void",
+        "planetTc": "虛空",
+        "drops": null
       }
     ]
   },
@@ -2864,7 +3548,10 @@
         "levels": {
           "normal": "10 - 12",
           "steelPath": "110 - 112"
-        }
+        },
+        "planetEn": "Phobos",
+        "planetTc": "火衛一",
+        "drops": null
       },
       {
         "id": "SettlementNode3",
@@ -2876,7 +3563,10 @@
         "levels": {
           "normal": "10 - 15",
           "steelPath": "110 - 115"
-        }
+        },
+        "planetEn": "Phobos",
+        "planetTc": "火衛一",
+        "drops": null
       },
       {
         "id": "SettlementNode2",
@@ -2888,7 +3578,10 @@
         "levels": {
           "normal": "12 - 14",
           "steelPath": "112 - 114"
-        }
+        },
+        "planetEn": "Phobos",
+        "planetTc": "火衛一",
+        "drops": null
       },
       {
         "id": "SettlementNode12",
@@ -2900,7 +3593,10 @@
         "levels": {
           "normal": "13 - 15",
           "steelPath": "113 - 115"
-        }
+        },
+        "planetEn": "Phobos",
+        "planetTc": "火衛一",
+        "drops": null
       },
       {
         "id": "SettlementNode10",
@@ -2912,7 +3608,10 @@
         "levels": {
           "normal": "12 - 14",
           "steelPath": "112 - 114"
-        }
+        },
+        "planetEn": "Phobos",
+        "planetTc": "火衛一",
+        "drops": null
       },
       {
         "id": "SettlementNode15",
@@ -2924,7 +3623,10 @@
         "levels": {
           "normal": "11 - 13",
           "steelPath": "111 - 113"
-        }
+        },
+        "planetEn": "Phobos",
+        "planetTc": "火衛一",
+        "drops": null
       },
       {
         "id": "SettlementNode11",
@@ -2936,7 +3638,10 @@
         "levels": {
           "normal": "10 - 15",
           "steelPath": "110 - 115"
-        }
+        },
+        "planetEn": "Phobos",
+        "planetTc": "火衛一",
+        "drops": null
       },
       {
         "id": "SettlementNode14",
@@ -2948,7 +3653,10 @@
         "levels": {
           "normal": "11 - 13",
           "steelPath": "111 - 113"
-        }
+        },
+        "planetEn": "Phobos",
+        "planetTc": "火衛一",
+        "drops": null
       },
       {
         "id": "ClanNode10",
@@ -2960,7 +3668,10 @@
         "levels": {
           "normal": "15 - 25",
           "steelPath": "115 - 125"
-        }
+        },
+        "planetEn": "Phobos",
+        "planetTc": "火衛一",
+        "drops": null
       },
       {
         "id": "SettlementNode20",
@@ -2972,7 +3683,10 @@
         "levels": {
           "normal": "13 - 15",
           "steelPath": "113 - 115"
-        }
+        },
+        "planetEn": "Phobos",
+        "planetTc": "火衛一",
+        "drops": null
       },
       {
         "id": "ClanNode11",
@@ -2984,7 +3698,10 @@
         "levels": {
           "normal": "15 - 25",
           "steelPath": "115 - 125"
-        }
+        },
+        "planetEn": "Phobos",
+        "planetTc": "火衛一",
+        "drops": null
       }
     ]
   },
@@ -3008,7 +3725,10 @@
         "levels": {
           "normal": "12 - 14",
           "steelPath": "112 - 114"
-        }
+        },
+        "planetEn": "Deimos",
+        "planetTc": "火衛二",
+        "drops": null
       },
       {
         "id": "SolNode707",
@@ -3020,7 +3740,10 @@
         "levels": {
           "normal": "15 - 20",
           "steelPath": "115 - 120"
-        }
+        },
+        "planetEn": "Deimos",
+        "planetTc": "火衛二",
+        "drops": null
       },
       {
         "id": "SolNode708",
@@ -3032,7 +3755,10 @@
         "levels": {
           "normal": "13 - 15",
           "steelPath": "113 - 115"
-        }
+        },
+        "planetEn": "Deimos",
+        "planetTc": "火衛二",
+        "drops": null
       },
       {
         "id": "SolNode709",
@@ -3044,7 +3770,10 @@
         "levels": {
           "normal": "15 - 17",
           "steelPath": "115 - 117"
-        }
+        },
+        "planetEn": "Deimos",
+        "planetTc": "火衛二",
+        "drops": null
       },
       {
         "id": "SolNode710",
@@ -3056,7 +3785,10 @@
         "levels": {
           "normal": "14 - 16",
           "steelPath": "114 - 116"
-        }
+        },
+        "planetEn": "Deimos",
+        "planetTc": "火衛二",
+        "drops": null
       },
       {
         "id": "SolNode711",
@@ -3068,7 +3800,10 @@
         "levels": {
           "normal": "25 - 35",
           "steelPath": "125 - 135"
-        }
+        },
+        "planetEn": "Deimos",
+        "planetTc": "火衛二",
+        "drops": null
       },
       {
         "id": "SolNode712",
@@ -3080,7 +3815,10 @@
         "levels": {
           "normal": "20 - 25",
           "steelPath": "120 - 125"
-        }
+        },
+        "planetEn": "Deimos",
+        "planetTc": "火衛二",
+        "drops": null
       },
       {
         "id": "SolNode713",
@@ -3092,7 +3830,10 @@
         "levels": {
           "normal": "30 - 35",
           "steelPath": "130 - 135"
-        }
+        },
+        "planetEn": "Deimos",
+        "planetTc": "火衛二",
+        "drops": null
       },
       {
         "id": "SolNode229",
@@ -3104,7 +3845,10 @@
         "levels": {
           "normal": "15 - 30",
           "steelPath": "115 - 130"
-        }
+        },
+        "planetEn": "Deimos",
+        "planetTc": "火衛二",
+        "drops": null
       },
       {
         "id": "SolNode715",
@@ -3116,7 +3860,10 @@
         "levels": {
           "normal": "55 - 60",
           "steelPath": "155 - 160"
-        }
+        },
+        "planetEn": "Deimos",
+        "planetTc": "火衛二",
+        "drops": null
       },
       {
         "id": "SolNode716",
@@ -3128,7 +3875,10 @@
         "levels": {
           "normal": "55 - 60",
           "steelPath": "155 - 160"
-        }
+        },
+        "planetEn": "Deimos",
+        "planetTc": "火衛二",
+        "drops": null
       },
       {
         "id": "SolNode717",
@@ -3140,7 +3890,10 @@
         "levels": {
           "normal": "55 - 60",
           "steelPath": "155 - 160"
-        }
+        },
+        "planetEn": "Deimos",
+        "planetTc": "火衛二",
+        "drops": null
       },
       {
         "id": "SolNode718",
@@ -3152,7 +3905,10 @@
         "levels": {
           "normal": "55 - 60",
           "steelPath": "155 - 160"
-        }
+        },
+        "planetEn": "Deimos",
+        "planetTc": "火衛二",
+        "drops": null
       },
       {
         "id": "SolNode719",
@@ -3164,7 +3920,10 @@
         "levels": {
           "normal": "55 - 60",
           "steelPath": "155 - 160"
-        }
+        },
+        "planetEn": "Deimos",
+        "planetTc": "火衛二",
+        "drops": null
       },
       {
         "id": "SolNode721",
@@ -3176,7 +3935,10 @@
         "levels": {
           "normal": "55 - 60",
           "steelPath": "155 - 160"
-        }
+        },
+        "planetEn": "Deimos",
+        "planetTc": "火衛二",
+        "drops": null
       },
       {
         "id": "DeimosHub",
@@ -3188,7 +3950,10 @@
         "levels": {
           "normal": "和平區域",
           "steelPath": "和平區域"
-        }
+        },
+        "planetEn": "Deimos",
+        "planetTc": "火衛二",
+        "drops": null
       },
       {
         "id": "EntratiLabHub",
@@ -3200,7 +3965,10 @@
         "levels": {
           "normal": "和平區域",
           "steelPath": "和平區域"
-        }
+        },
+        "planetEn": "Deimos",
+        "planetTc": "火衛二",
+        "drops": null
       },
       {
         "id": "CeresToJupiterJunction",
@@ -3208,11 +3976,14 @@
         "nameTc": "木星接合點",
         "type": "SOLAR RAIL JUNCTION",
         "typeTc": "星際航道接合點",
-        "faction": "無",
+        "faction": "未知",
         "levels": {
           "normal": "1 - 3",
           "steelPath": "101 - 103"
-        }
+        },
+        "planetEn": "Deimos",
+        "planetTc": "火衛二",
+        "drops": null
       }
     ]
   },
@@ -3236,7 +4007,10 @@
         "levels": {
           "normal": "25 - 30",
           "steelPath": "125 - 130"
-        }
+        },
+        "planetEn": "Lua",
+        "planetTc": "月球",
+        "drops": null
       },
       {
         "id": "SolNode306",
@@ -3248,7 +4022,10 @@
         "levels": {
           "normal": "25 - 30",
           "steelPath": "125 - 130"
-        }
+        },
+        "planetEn": "Lua",
+        "planetTc": "月球",
+        "drops": null
       },
       {
         "id": "SolNode302",
@@ -3260,7 +4037,10 @@
         "levels": {
           "normal": "25 - 30",
           "steelPath": "125 - 130"
-        }
+        },
+        "planetEn": "Lua",
+        "planetTc": "月球",
+        "drops": null
       },
       {
         "id": "SolNode305",
@@ -3272,7 +4052,10 @@
         "levels": {
           "normal": "25 - 30",
           "steelPath": "125 - 130"
-        }
+        },
+        "planetEn": "Lua",
+        "planetTc": "月球",
+        "drops": null
       },
       {
         "id": "SolNode304",
@@ -3284,7 +4067,10 @@
         "levels": {
           "normal": "25 - 30",
           "steelPath": "125 - 130"
-        }
+        },
+        "planetEn": "Lua",
+        "planetTc": "月球",
+        "drops": null
       },
       {
         "id": "SolNode301",
@@ -3296,7 +4082,10 @@
         "levels": {
           "normal": "25 - 30",
           "steelPath": "125 - 130"
-        }
+        },
+        "planetEn": "Lua",
+        "planetTc": "月球",
+        "drops": null
       },
       {
         "id": "SolNode307",
@@ -3308,7 +4097,10 @@
         "levels": {
           "normal": "25 - 30",
           "steelPath": "125 - 130"
-        }
+        },
+        "planetEn": "Lua",
+        "planetTc": "月球",
+        "drops": null
       },
       {
         "id": "SolNode308",
@@ -3320,7 +4112,10 @@
         "levels": {
           "normal": "35 - 40",
           "steelPath": "135 - 140"
-        }
+        },
+        "planetEn": "Lua",
+        "planetTc": "月球",
+        "drops": null
       },
       {
         "id": "SolNode309",
@@ -3332,7 +4127,10 @@
         "levels": {
           "normal": "25 - 30",
           "steelPath": "125 - 130"
-        }
+        },
+        "planetEn": "Lua",
+        "planetTc": "月球",
+        "drops": null
       },
       {
         "id": "SolNode310",
@@ -3344,7 +4142,10 @@
         "levels": {
           "normal": "80 - 100",
           "steelPath": "180 - 200"
-        }
+        },
+        "planetEn": "Lua",
+        "planetTc": "月球",
+        "drops": null
       }
     ]
   },
@@ -3369,7 +4170,10 @@
         "levels": {
           "normal": "29 - 31",
           "steelPath": "129 - 131"
-        }
+        },
+        "planetEn": "Kuva Fortress",
+        "planetTc": "赤毒要塞",
+        "drops": null
       },
       {
         "id": "SolNode742",
@@ -3381,7 +4185,10 @@
         "levels": {
           "normal": "30 - 32",
           "steelPath": "130 - 132"
-        }
+        },
+        "planetEn": "Kuva Fortress",
+        "planetTc": "赤毒要塞",
+        "drops": null
       },
       {
         "id": "SolNode743",
@@ -3393,7 +4200,10 @@
         "levels": {
           "normal": "30 - 32",
           "steelPath": "130 - 132"
-        }
+        },
+        "planetEn": "Kuva Fortress",
+        "planetTc": "赤毒要塞",
+        "drops": null
       },
       {
         "id": "SolNode744",
@@ -3405,7 +4215,10 @@
         "levels": {
           "normal": "32 - 37",
           "steelPath": "132 - 137"
-        }
+        },
+        "planetEn": "Kuva Fortress",
+        "planetTc": "赤毒要塞",
+        "drops": null
       },
       {
         "id": "SolNode745",
@@ -3417,7 +4230,10 @@
         "levels": {
           "normal": "35 - 40",
           "steelPath": "135 - 140"
-        }
+        },
+        "planetEn": "Kuva Fortress",
+        "planetTc": "赤毒要塞",
+        "drops": null
       },
       {
         "id": "SolNode746",
@@ -3429,7 +4245,10 @@
         "levels": {
           "normal": "28 - 30",
           "steelPath": "128 - 130"
-        }
+        },
+        "planetEn": "Kuva Fortress",
+        "planetTc": "赤毒要塞",
+        "drops": null
       },
       {
         "id": "SolNode747",
@@ -3441,7 +4260,10 @@
         "levels": {
           "normal": "31 - 33",
           "steelPath": "131 - 133"
-        }
+        },
+        "planetEn": "Kuva Fortress",
+        "planetTc": "赤毒要塞",
+        "drops": null
       },
       {
         "id": "SolNode748",
@@ -3453,7 +4275,10 @@
         "levels": {
           "normal": "31 - 33",
           "steelPath": "131 - 133"
-        }
+        },
+        "planetEn": "Kuva Fortress",
+        "planetTc": "赤毒要塞",
+        "drops": null
       }
     ]
   },
@@ -3477,7 +4302,10 @@
         "levels": {
           "normal": "50 - 55",
           "steelPath": "150 - 155"
-        }
+        },
+        "planetEn": "Zariman",
+        "planetTc": "扎日曼",
+        "drops": null
       },
       {
         "id": "SolNode231",
@@ -3489,7 +4317,10 @@
         "levels": {
           "normal": "50 - 55",
           "steelPath": "150 - 155"
-        }
+        },
+        "planetEn": "Zariman",
+        "planetTc": "扎日曼",
+        "drops": null
       },
       {
         "id": "SolNode232",
@@ -3501,7 +4332,10 @@
         "levels": {
           "normal": "50 - 55",
           "steelPath": "150 - 155"
-        }
+        },
+        "planetEn": "Zariman",
+        "planetTc": "扎日曼",
+        "drops": null
       },
       {
         "id": "SolNode233",
@@ -3513,7 +4347,10 @@
         "levels": {
           "normal": "50 - 55",
           "steelPath": "150 - 155"
-        }
+        },
+        "planetEn": "Zariman",
+        "planetTc": "扎日曼",
+        "drops": null
       },
       {
         "id": "SolNode235",
@@ -3525,7 +4362,10 @@
         "levels": {
           "normal": "50 - 55",
           "steelPath": "150 - 155"
-        }
+        },
+        "planetEn": "Zariman",
+        "planetTc": "扎日曼",
+        "drops": null
       },
       {
         "id": "ZarimanHub",
@@ -3537,7 +4377,10 @@
         "levels": {
           "normal": "和平區域",
           "steelPath": "和平區域"
-        }
+        },
+        "planetEn": "Zariman",
+        "planetTc": "扎日曼",
+        "drops": null
       },
       {
         "id": "SolNode234",
@@ -3549,7 +4392,10 @@
         "levels": {
           "normal": "和平區域",
           "steelPath": "和平區域"
-        }
+        },
+        "planetEn": "Zariman",
+        "planetTc": "扎日曼",
+        "drops": null
       }
     ]
   },
@@ -3573,7 +4419,10 @@
         "levels": {
           "normal": "20 - 20",
           "steelPath": "120 - 120"
-        }
+        },
+        "planetEn": "Duviri",
+        "planetTc": "渡域",
+        "drops": null
       },
       {
         "id": "SolNode237",
@@ -3585,7 +4434,10 @@
         "levels": {
           "normal": "20 - 20",
           "steelPath": "120 - 120"
-        }
+        },
+        "planetEn": "Duviri",
+        "planetTc": "渡域",
+        "drops": null
       },
       {
         "id": "SolNode238",
@@ -3597,7 +4449,10 @@
         "levels": {
           "normal": "35 - 55",
           "steelPath": "135 - 155"
-        }
+        },
+        "planetEn": "Duviri",
+        "planetTc": "渡域",
+        "drops": null
       }
     ]
   },
@@ -3612,11 +4467,14 @@
         "nameTc": "傳承細胞收割",
         "type": "Legacyte Harvest",
         "typeTc": "傳承細胞收割",
-        "faction": "無",
+        "faction": "未知",
         "levels": {
           "normal": "65 - 70",
           "steelPath": "165 - 170"
-        }
+        },
+        "planetEn": "Höllvania",
+        "planetTc": "霍爾瓦尼亞",
+        "drops": null
       },
       {
         "id": "SolNode851",
@@ -3624,11 +4482,14 @@
         "nameTc": "地獄洗滌：清剿隊",
         "type": "SURVIVAL",
         "typeTc": "生存",
-        "faction": "無",
+        "faction": "未知",
         "levels": {
           "normal": "65 - 70",
           "steelPath": "165 - 170"
-        }
+        },
+        "planetEn": "Höllvania",
+        "planetTc": "霍爾瓦尼亞",
+        "drops": null
       },
       {
         "id": "SolNode852",
@@ -3636,11 +4497,14 @@
         "nameTc": "地獄洗滌：科腐者",
         "type": "SURVIVAL",
         "typeTc": "生存",
-        "faction": "無",
+        "faction": "未知",
         "levels": {
           "normal": "65 - 70",
           "steelPath": "165 - 170"
-        }
+        },
+        "planetEn": "Höllvania",
+        "planetTc": "霍爾瓦尼亞",
+        "drops": null
       },
       {
         "id": "SolNode853",
@@ -3648,11 +4512,14 @@
         "nameTc": "殲滅：清剿隊",
         "type": "EXTERMINATE",
         "typeTc": "殲滅",
-        "faction": "無",
+        "faction": "未知",
         "levels": {
           "normal": "65 - 70",
           "steelPath": "165 - 170"
-        }
+        },
+        "planetEn": "Höllvania",
+        "planetTc": "霍爾瓦尼亞",
+        "drops": null
       },
       {
         "id": "SolNode854",
@@ -3660,11 +4527,14 @@
         "nameTc": "殲滅：科腐者",
         "type": "EXTERMINATE",
         "typeTc": "殲滅",
-        "faction": "無",
+        "faction": "未知",
         "levels": {
           "normal": "65 - 70",
           "steelPath": "165 - 170"
-        }
+        },
+        "planetEn": "Höllvania",
+        "planetTc": "霍爾瓦尼亞",
+        "drops": null
       },
       {
         "id": "SolNode855",
@@ -3672,11 +4542,14 @@
         "nameTc": "對峙：小隊對戰",
         "type": "Faceoff",
         "typeTc": "對峙",
-        "faction": "無",
+        "faction": "未知",
         "levels": {
           "normal": "65 - 70",
           "steelPath": "165 - 170"
-        }
+        },
+        "planetEn": "Höllvania",
+        "planetTc": "霍爾瓦尼亞",
+        "drops": null
       },
       {
         "id": "SolNode856",
@@ -3684,11 +4557,14 @@
         "nameTc": "刺殺：H-09 戰車",
         "type": "ASSASSINATION",
         "typeTc": "刺殺",
-        "faction": "無",
+        "faction": "未知",
         "levels": {
           "normal": "65 - 70",
           "steelPath": "165 - 170"
-        }
+        },
+        "planetEn": "Höllvania",
+        "planetTc": "霍爾瓦尼亞",
+        "drops": null
       },
       {
         "id": "SolNode857",
@@ -3696,11 +4572,14 @@
         "nameTc": "對峙：小隊獨戰",
         "type": "Faceoff",
         "typeTc": "對峙",
-        "faction": "無",
+        "faction": "未知",
         "levels": {
           "normal": "65 - 70",
           "steelPath": "165 - 170"
-        }
+        },
+        "planetEn": "Höllvania",
+        "planetTc": "霍爾瓦尼亞",
+        "drops": null
       },
       {
         "id": "SolNode858",
@@ -3708,11 +4587,14 @@
         "nameTc": "至點廣場",
         "type": "DEFENSE",
         "typeTc": "防禦",
-        "faction": "無",
+        "faction": "未知",
         "levels": {
           "normal": "65 - 70",
           "steelPath": "165 - 170"
-        }
+        },
+        "planetEn": "Höllvania",
+        "planetTc": "霍爾瓦尼亞",
+        "drops": null
       },
       {
         "id": "1999Hub",
@@ -3720,11 +4602,14 @@
         "nameTc": "霍爾瓦尼亞中央購物中心",
         "type": "CONCLAVE",
         "typeTc": "中繼站 / 城鎮",
-        "faction": "無",
+        "faction": "未知",
         "levels": {
           "normal": "和平區域",
           "steelPath": "和平區域"
-        }
+        },
+        "planetEn": "Höllvania",
+        "planetTc": "霍爾瓦尼亞",
+        "drops": null
       }
     ]
   },
@@ -3739,11 +4624,14 @@
         "nameTc": "回憶：匈赫勒",
         "type": "The Perita Rebellion",
         "typeTc": "佩麗塔叛亂",
-        "faction": "無",
+        "faction": "未知",
         "levels": {
           "normal": "65 - 70",
           "steelPath": "165 - 170"
-        }
+        },
+        "planetEn": "Dark Refractory, Deimos",
+        "planetTc": "憶夢池（火衛二）",
+        "drops": null
       },
       {
         "id": "SolNode251",
@@ -3751,11 +4639,14 @@
         "nameTc": "回憶：肢節使",
         "type": "The Perita Rebellion",
         "typeTc": "佩麗塔叛亂",
-        "faction": "無",
+        "faction": "未知",
         "levels": {
           "normal": "65 - 70",
           "steelPath": "165 - 170"
-        }
+        },
+        "planetEn": "Dark Refractory, Deimos",
+        "planetTc": "憶夢池（火衛二）",
+        "drops": null
       },
       {
         "id": "SolNode252",
@@ -3763,11 +4654,14 @@
         "nameTc": "回憶：先鋒",
         "type": "The Perita Rebellion",
         "typeTc": "佩麗塔叛亂",
-        "faction": "無",
+        "faction": "未知",
         "levels": {
           "normal": "65 - 70",
           "steelPath": "165 - 170"
-        }
+        },
+        "planetEn": "Dark Refractory, Deimos",
+        "planetTc": "憶夢池（火衛二）",
+        "drops": null
       },
       {
         "id": "SolNode253",
@@ -3775,11 +4669,14 @@
         "nameTc": "爬降",
         "type": "The Descendia",
         "typeTc": "墮落淵獄",
-        "faction": "無",
+        "faction": "未知",
         "levels": {
           "normal": "65 - 65",
           "steelPath": "165 - 165"
-        }
+        },
+        "planetEn": "Dark Refractory, Deimos",
+        "planetTc": "憶夢池（火衛二）",
+        "drops": null
       },
       {
         "id": "SolNode254",
@@ -3787,11 +4684,14 @@
         "nameTc": "從瑪麗的庇護所爬降",
         "type": "The Descendia",
         "typeTc": "墮落淵獄",
-        "faction": "無",
+        "faction": "未知",
         "levels": {
           "normal": "72 - 72",
           "steelPath": "172 - 172"
-        }
+        },
+        "planetEn": "Dark Refractory, Deimos",
+        "planetTc": "憶夢池（火衛二）",
+        "drops": null
       },
       {
         "id": "SolNode255",
@@ -3799,11 +4699,14 @@
         "nameTc": "從里昂的庇護所爬降",
         "type": "The Descendia",
         "typeTc": "墮落淵獄",
-        "faction": "無",
+        "faction": "未知",
         "levels": {
           "normal": "79 - 79",
           "steelPath": "179 - 179"
-        }
+        },
+        "planetEn": "Dark Refractory, Deimos",
+        "planetTc": "憶夢池（火衛二）",
+        "drops": null
       },
       {
         "id": "SolNode256",
@@ -3811,11 +4714,14 @@
         "nameTc": "羅瑟的遺忘憶境",
         "type": "The Descendia",
         "typeTc": "墮落淵獄",
-        "faction": "無",
+        "faction": "未知",
         "levels": {
           "normal": "86 - 86",
           "steelPath": "186 - 186"
-        }
+        },
+        "planetEn": "Dark Refractory, Deimos",
+        "planetTc": "憶夢池（火衛二）",
+        "drops": null
       },
       {
         "id": "SolNode257",
@@ -3823,11 +4729,14 @@
         "nameTc": "有罪者",
         "type": "The Perita Rebellion",
         "typeTc": "佩麗塔叛亂",
-        "faction": "無",
+        "faction": "未知",
         "levels": {
           "normal": "165 - 170",
           "steelPath": "265 - 270"
-        }
+        },
+        "planetEn": "Dark Refractory, Deimos",
+        "planetTc": "憶夢池（火衛二）",
+        "drops": null
       }
     ]
   },
@@ -3854,11 +4763,14 @@
         "nameTc": "自由航區",
         "type": "SKIRMISH",
         "typeTc": "前哨戰",
-        "faction": "無",
+        "faction": "未知",
         "levels": {
           "normal": "1 - 1",
           "steelPath": "101 - 101"
-        }
+        },
+        "planetEn": "Earth Proxima",
+        "planetTc": "地球毗鄰星",
+        "drops": null
       },
       {
         "id": "CrewBattleNode502",
@@ -3870,7 +4782,10 @@
         "levels": {
           "normal": "15 - 20",
           "steelPath": "115 - 120"
-        }
+        },
+        "planetEn": "Earth Proxima",
+        "planetTc": "地球毗鄰星",
+        "drops": null
       },
       {
         "id": "CrewBattleNode509",
@@ -3882,7 +4797,10 @@
         "levels": {
           "normal": "20 - 28",
           "steelPath": "120 - 128"
-        }
+        },
+        "planetEn": "Earth Proxima",
+        "planetTc": "地球毗鄰星",
+        "drops": null
       },
       {
         "id": "CrewBattleNode518",
@@ -3894,7 +4812,10 @@
         "levels": {
           "normal": "21 - 26",
           "steelPath": "121 - 126"
-        }
+        },
+        "planetEn": "Earth Proxima",
+        "planetTc": "地球毗鄰星",
+        "drops": null
       },
       {
         "id": "CrewBattleNode519",
@@ -3906,7 +4827,10 @@
         "levels": {
           "normal": "24 - 30",
           "steelPath": "124 - 130"
-        }
+        },
+        "planetEn": "Earth Proxima",
+        "planetTc": "地球毗鄰星",
+        "drops": null
       },
       {
         "id": "CrewBattleNode522",
@@ -3918,7 +4842,10 @@
         "levels": {
           "normal": "29 - 36",
           "steelPath": "129 - 136"
-        }
+        },
+        "planetEn": "Earth Proxima",
+        "planetTc": "地球毗鄰星",
+        "drops": null
       }
     ]
   },
@@ -3949,7 +4876,10 @@
         "levels": {
           "normal": "17 - 20",
           "steelPath": "117 - 120"
-        }
+        },
+        "planetEn": "Venus Proxima",
+        "planetTc": "金星毗鄰星",
+        "drops": null
       },
       {
         "id": "CrewBattleNode513",
@@ -3961,7 +4891,10 @@
         "levels": {
           "normal": "21 - 24",
           "steelPath": "121 - 124"
-        }
+        },
+        "planetEn": "Venus Proxima",
+        "planetTc": "金星毗鄰星",
+        "drops": null
       },
       {
         "id": "CrewBattleNode515",
@@ -3973,7 +4906,10 @@
         "levels": {
           "normal": "22 - 25",
           "steelPath": "122 - 125"
-        }
+        },
+        "planetEn": "Venus Proxima",
+        "planetTc": "金星毗鄰星",
+        "drops": null
       },
       {
         "id": "CrewBattleNode514",
@@ -3985,7 +4921,10 @@
         "levels": {
           "normal": "23 - 26",
           "steelPath": "123 - 126"
-        }
+        },
+        "planetEn": "Venus Proxima",
+        "planetTc": "金星毗鄰星",
+        "drops": null
       },
       {
         "id": "CrewBattleNode503",
@@ -3997,7 +4936,10 @@
         "levels": {
           "normal": "15 - 18",
           "steelPath": "115 - 118"
-        }
+        },
+        "planetEn": "Venus Proxima",
+        "planetTc": "金星毗鄰星",
+        "drops": null
       },
       {
         "id": "CrewBattleNode512",
@@ -4009,7 +4951,10 @@
         "levels": {
           "normal": "19 - 22",
           "steelPath": "119 - 122"
-        }
+        },
+        "planetEn": "Venus Proxima",
+        "planetTc": "金星毗鄰星",
+        "drops": null
       }
     ]
   },
@@ -4040,7 +4985,10 @@
         "levels": {
           "normal": "55 - 60",
           "steelPath": "155 - 160"
-        }
+        },
+        "planetEn": "Saturn Proxima",
+        "planetTc": "土星毗鄰星",
+        "drops": null
       },
       {
         "id": "CrewBattleNode534",
@@ -4052,7 +5000,10 @@
         "levels": {
           "normal": "48 - 56",
           "steelPath": "148 - 156"
-        }
+        },
+        "planetEn": "Saturn Proxima",
+        "planetTc": "土星毗鄰星",
+        "drops": null
       },
       {
         "id": "CrewBattleNode533",
@@ -4064,7 +5015,10 @@
         "levels": {
           "normal": "54 - 60",
           "steelPath": "154 - 160"
-        }
+        },
+        "planetEn": "Saturn Proxima",
+        "planetTc": "土星毗鄰星",
+        "drops": null
       },
       {
         "id": "CrewBattleNode535",
@@ -4076,7 +5030,10 @@
         "levels": {
           "normal": "65 - 70",
           "steelPath": "165 - 170"
-        }
+        },
+        "planetEn": "Saturn Proxima",
+        "planetTc": "土星毗鄰星",
+        "drops": null
       },
       {
         "id": "CrewBattleNode530",
@@ -4088,7 +5045,10 @@
         "levels": {
           "normal": "70 - 75",
           "steelPath": "170 - 175"
-        }
+        },
+        "planetEn": "Saturn Proxima",
+        "planetTc": "土星毗鄰星",
+        "drops": null
       }
     ]
   },
@@ -4119,7 +5079,10 @@
         "levels": {
           "normal": "25 - 28",
           "steelPath": "125 - 128"
-        }
+        },
+        "planetEn": "Neptune Proxima",
+        "planetTc": "海王星毗鄰星",
+        "drops": null
       },
       {
         "id": "CrewBattleNode516",
@@ -4131,7 +5094,10 @@
         "levels": {
           "normal": "27 - 30",
           "steelPath": "127 - 130"
-        }
+        },
+        "planetEn": "Neptune Proxima",
+        "planetTc": "海王星毗鄰星",
+        "drops": null
       },
       {
         "id": "CrewBattleNode523",
@@ -4143,7 +5109,10 @@
         "levels": {
           "normal": "31 - 34",
           "steelPath": "131 - 134"
-        }
+        },
+        "planetEn": "Neptune Proxima",
+        "planetTc": "海王星毗鄰星",
+        "drops": null
       },
       {
         "id": "CrewBattleNode525",
@@ -4155,7 +5124,10 @@
         "levels": {
           "normal": "32 - 35",
           "steelPath": "132 - 135"
-        }
+        },
+        "planetEn": "Neptune Proxima",
+        "planetTc": "海王星毗鄰星",
+        "drops": null
       },
       {
         "id": "CrewBattleNode521",
@@ -4167,7 +5139,10 @@
         "levels": {
           "normal": "29 - 32",
           "steelPath": "129 - 132"
-        }
+        },
+        "planetEn": "Neptune Proxima",
+        "planetTc": "海王星毗鄰星",
+        "drops": null
       },
       {
         "id": "CrewBattleNode524",
@@ -4179,7 +5154,10 @@
         "levels": {
           "normal": "33 - 36",
           "steelPath": "133 - 136"
-        }
+        },
+        "planetEn": "Neptune Proxima",
+        "planetTc": "海王星毗鄰星",
+        "drops": null
       }
     ]
   },
@@ -4210,7 +5188,10 @@
         "levels": {
           "normal": "35 - 38",
           "steelPath": "135 - 138"
-        }
+        },
+        "planetEn": "Pluto Proxima",
+        "planetTc": "冥王星毗鄰星",
+        "drops": null
       },
       {
         "id": "CrewBattleNode527",
@@ -4222,7 +5203,10 @@
         "levels": {
           "normal": "37 - 40",
           "steelPath": "137 - 140"
-        }
+        },
+        "planetEn": "Pluto Proxima",
+        "planetTc": "冥王星毗鄰星",
+        "drops": null
       },
       {
         "id": "CrewBattleNode528",
@@ -4234,7 +5218,10 @@
         "levels": {
           "normal": "39 - 42",
           "steelPath": "139 - 142"
-        }
+        },
+        "planetEn": "Pluto Proxima",
+        "planetTc": "冥王星毗鄰星",
+        "drops": null
       },
       {
         "id": "CrewBattleNode531",
@@ -4246,7 +5233,10 @@
         "levels": {
           "normal": "40 - 43",
           "steelPath": "140 - 143"
-        }
+        },
+        "planetEn": "Pluto Proxima",
+        "planetTc": "冥王星毗鄰星",
+        "drops": null
       },
       {
         "id": "CrewBattleNode529",
@@ -4258,7 +5248,10 @@
         "levels": {
           "normal": "41 - 44",
           "steelPath": "141 - 144"
-        }
+        },
+        "planetEn": "Pluto Proxima",
+        "planetTc": "冥王星毗鄰星",
+        "drops": null
       },
       {
         "id": "CrewBattleNode536",
@@ -4270,7 +5263,10 @@
         "levels": {
           "normal": "43 - 46",
           "steelPath": "143 - 146"
-        }
+        },
+        "planetEn": "Pluto Proxima",
+        "planetTc": "冥王星毗鄰星",
+        "drops": null
       }
     ]
   },
@@ -4301,7 +5297,10 @@
         "levels": {
           "normal": "80 - 90",
           "steelPath": "180 - 190"
-        }
+        },
+        "planetEn": "Veil Proxima",
+        "planetTc": "面紗毗鄰星",
+        "drops": null
       },
       {
         "id": "CrewBattleNode555",
@@ -4313,7 +5312,10 @@
         "levels": {
           "normal": "80 - 90",
           "steelPath": "180 - 190"
-        }
+        },
+        "planetEn": "Veil Proxima",
+        "planetTc": "面紗毗鄰星",
+        "drops": null
       },
       {
         "id": "CrewBattleNode554",
@@ -4325,7 +5327,10 @@
         "levels": {
           "normal": "80 - 90",
           "steelPath": "180 - 190"
-        }
+        },
+        "planetEn": "Veil Proxima",
+        "planetTc": "面紗毗鄰星",
+        "drops": null
       },
       {
         "id": "CrewBattleNode553",
@@ -4337,7 +5342,10 @@
         "levels": {
           "normal": "80 - 90",
           "steelPath": "180 - 190"
-        }
+        },
+        "planetEn": "Veil Proxima",
+        "planetTc": "面紗毗鄰星",
+        "drops": null
       },
       {
         "id": "CrewBattleNode538",
@@ -4349,7 +5357,10 @@
         "levels": {
           "normal": "45 - 49",
           "steelPath": "145 - 149"
-        }
+        },
+        "planetEn": "Veil Proxima",
+        "planetTc": "面紗毗鄰星",
+        "drops": null
       },
       {
         "id": "CrewBattleNode539",
@@ -4361,7 +5372,10 @@
         "levels": {
           "normal": "48 - 52",
           "steelPath": "148 - 152"
-        }
+        },
+        "planetEn": "Veil Proxima",
+        "planetTc": "面紗毗鄰星",
+        "drops": null
       },
       {
         "id": "CrewBattleNode540",
@@ -4373,7 +5387,10 @@
         "levels": {
           "normal": "51 - 55",
           "steelPath": "151 - 155"
-        }
+        },
+        "planetEn": "Veil Proxima",
+        "planetTc": "面紗毗鄰星",
+        "drops": null
       },
       {
         "id": "CrewBattleNode541",
@@ -4385,7 +5402,10 @@
         "levels": {
           "normal": "54 - 58",
           "steelPath": "154 - 158"
-        }
+        },
+        "planetEn": "Veil Proxima",
+        "planetTc": "面紗毗鄰星",
+        "drops": null
       },
       {
         "id": "CrewBattleNode542",
@@ -4397,7 +5417,10 @@
         "levels": {
           "normal": "55 - 59",
           "steelPath": "155 - 159"
-        }
+        },
+        "planetEn": "Veil Proxima",
+        "planetTc": "面紗毗鄰星",
+        "drops": null
       },
       {
         "id": "CrewBattleNode543",
@@ -4405,11 +5428,66 @@
         "nameTc": "撒謎星雲",
         "type": "SPY",
         "typeTc": "間諜",
-        "faction": "無",
+        "faction": "未知",
         "levels": {
           "normal": "57 - 60",
           "steelPath": "157 - 160"
-        }
+        },
+        "planetEn": "Veil Proxima",
+        "planetTc": "面紗毗鄰星",
+        "drops": null
+      }
+    ]
+  },
+  "Uranus Proxima": {
+    "nameEn": "Uranus Proxima",
+    "nameTc": "天王星毗鄰星",
+    "drops": [],
+    "nodes": [
+      {
+        "id": "JadeShadows2HUB",
+        "nameEn": "Pontis Tower",
+        "nameTc": "龐堤斯塔",
+        "type": "CONCLAVE",
+        "typeTc": "中繼站 / 城鎮",
+        "faction": "未知",
+        "levels": {
+          "normal": "和平區域",
+          "steelPath": "和平區域"
+        },
+        "planetEn": "Uranus Proxima",
+        "planetTc": "天王星毗鄰星",
+        "drops": null
+      },
+      {
+        "id": "CrewBattleNode561",
+        "nameEn": "Scoria's Angel",
+        "nameTc": "火燼天使",
+        "type": "SKIRMISH + ASSASSINATE",
+        "typeTc": "前哨戰 + 刺殺",
+        "faction": "未知",
+        "levels": {
+          "normal": "65 - 70",
+          "steelPath": "165 - 170"
+        },
+        "planetEn": "Uranus Proxima",
+        "planetTc": "天王星毗鄰星",
+        "drops": null
+      },
+      {
+        "id": "CrewBattleNode560",
+        "nameEn": "The Kuva Wytch",
+        "nameTc": "赤毒魔女",
+        "type": "SKIRMISH + ASSASSINATE",
+        "typeTc": "前哨戰 + 刺殺",
+        "faction": "未知",
+        "levels": {
+          "normal": "65 - 70",
+          "steelPath": "165 - 170"
+        },
+        "planetEn": "Uranus Proxima",
+        "planetTc": "天王星毗鄰星",
+        "drops": null
       }
     ]
   }

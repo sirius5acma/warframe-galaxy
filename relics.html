@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <title>Warframe 虛空遺物系統</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="relics.css">
+</head>
+<body>
+
+  <!-- 🌟 常駐左上角的返回按鈕 -->
+  <div class="back-btn" id="backBtn" onclick="handleBack()">&#8592; 返回樞紐</div>
+
+  <h1>WARFRAME 虛空遺物系統</h1>
+  <div id="sub-title" style="text-align:center; color:#38bdf8; letter-spacing:3px; margin-bottom:20px;">一般遺物</div>
+
+  <!-- 搜尋與分類按鈕區塊 -->
+  <div class="controls" id="controlsArea">
+    <div class="search-container">
+      <input type="text" id="relicSearch" class="search-input" placeholder="搜尋遺物名稱 (例如: Lith V1)..." autocomplete="off">
+      <div id="suggestionsBox" class="suggestions-box" style="display: none;"></div>
+    </div>
+    
+    <!-- 🌟 關鍵修改：加上 primary-filters，讓 JS 可以精準抓到這排按鈕，不跟下面的精煉按鈕打架 -->
+    <div class="filters primary-filters">
+      <button class="filter-btn active" data-era="All">全部</button>
+      <button class="filter-btn" data-era="Lith">古紀 (Lith)</button>
+      <button class="filter-btn" data-era="Meso">前紀 (Meso)</button>
+      <button class="filter-btn" data-era="Neo">中紀 (Neo)</button>
+      <button class="filter-btn" data-era="Axi">後紀 (Axi)</button>
+      <button class="filter-btn" data-era="Requiem">鎮魂 (Requiem)</button>
+    </div>
+
+    <div class="status-filters" style="display: flex; gap: 10px; margin-top: 15px;">
+      <button class="status-btn active" data-status="All">所有狀態</button>
+      <button class="status-btn" data-status="可掉落" style="color: #10b981; border-color: #10b981;">可掉落</button>
+      <button class="status-btn" data-status="入庫" style="color: #64748b; border-color: #64748b;">入庫</button>
+    </div>
+  </div>
+
+  <!-- 第一層：主星圖 (網格) -->
+  <div id="grid" class="grid-container"></div>
+
+  <!-- 第二層：遺物專屬大頁面 (預設隱藏) -->
+  <div id="relic-detail-view" style="display: none; max-width: 900px; margin: 0 auto; padding: 0 20px 40px 20px;">
+    
+    <!-- 圖片跟標題融合區塊 -->
+    <div class="relic-header" style="display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid #334155; padding-bottom: 20px; margin-bottom: 25px; margin-top: 20px;">
+      
+      <div style="display: flex; align-items: center; gap: 15px;">
+        <img id="detail-relic-img" src="" alt="Relic" style="width: 70px; height: 70px;" onerror="this.style.display='none'">
+        <h2 id="detail-relic-title" style="margin: 0; font-size: 2.2rem; text-shadow: 0 2px 10px rgba(0,0,0,0.5);">
+          <!-- JS 會把文字變成 [後紀 A1] 塞進來 -->
+        </h2>
+      </div>
+
+      <div id="detail-relic-status" style="padding: 6px 16px; border-radius: 12px; font-size: 15px;"></div>
+    </div>
+    
+    <div class="relic-body">
+        <!-- 遺物精煉選擇器 -->
+        <div class="refinement-group">
+            <button class="filter-btn active" onclick="changeRefinement('intact', this)">完整</button>
+            <button class="filter-btn" onclick="changeRefinement('exceptional', this)">優良</button>
+            <button class="filter-btn" onclick="changeRefinement('flawless', this)">無瑕</button>
+            <button class="filter-btn" onclick="changeRefinement('radiant', this)">光輝</button>
+        </div>
+
+      <h3 style="color: #94a3b8; margin-bottom: 15px; font-weight: normal;">內容物掉落機率</h3>
+      <div id="detail-rewards-list">
+        <!-- JS 會把 6 個掉落物塞在這裡 -->
+      </div>
+    </div>
+
+  </div>
+
+  <script src="translations.js"></script>
+  <script src="relics.js"></script>
+</body>
+</html>

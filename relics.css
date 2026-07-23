@@ -1,0 +1,55 @@
+/* =========================
+   relics.css (虛空遺物專屬樣式)
+   ========================= */
+
+/* 真實遺物圖片的樣式 */
+.relic-img {
+  width: 90px;
+  height: 90px;
+  object-fit: contain;
+  margin-bottom: 15px;
+  /* 根據不同紀元，我們會在 JS 裡動態加上發光陰影 */
+  transition: transform 0.3s ease;
+}
+
+.card:hover .relic-img {
+  transform: scale(1.1); /* 滑鼠游標移過去時，遺物會稍微放大 */
+}
+
+/* 🌟 掉落物清單卡片樣式 */
+.reward-item {
+  display: flex; 
+  justify-content: space-between; 
+  padding: 16px 20px;
+  border-bottom: 1px solid #1e293b; 
+  align-items: center;
+  background: rgba(255, 255, 255, 0.03);
+  margin-bottom: 8px;
+  border-radius: 8px;
+  transition: background 0.2s, transform 0.1s;
+}
+
+/* 預留給未來點擊跳轉的互動特效 */
+.reward-item:hover {
+  background: rgba(255, 255, 255, 0.08);
+  cursor: pointer; 
+  transform: translateX(5px);
+}
+
+.reward-name { 
+  font-size: 17px; 
+  font-weight: 500; 
+  letter-spacing: 1px;
+}
+
+.reward-chance { 
+  font-size: 15px; 
+  font-weight: bold;
+}
+
+.refinement-group{
+  display: flex;
+  justify-content: center; /* 強制讓按鈕在容器內水平置中 */
+  width: 100%; /* 確保容器有撐滿可用空間 */
+  gap: 16px; 
+}

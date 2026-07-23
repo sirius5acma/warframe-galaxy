@@ -27,14 +27,13 @@ const planetOrder = {
 
 async function init() {
   try {
-    // 🌟 1. 拋棄遠端連線，直接讀取本地算好的極輕量化 Index
     const response = await fetch(URL_PLANET_INDEX);
     if (!response.ok) throw new Error('無法載入星球資料，請確認 data 資料夾是否存在。');
     const planetData = await response.json();
 
-    document.getElementById('loader').style.display = 'none';
+    const loader = document.getElementById('loader');
+    if (loader) loader.style.display = 'none';
 
-    // 🌟 2. 輕鬆將處理好的星球分類
     Object.values(planetData).forEach(planet => {
       let baseName = planet.nameEn.replace(' Proxima', '');
       let imgKey = baseName === 'Veil' ? 'Veil' : baseName;
@@ -47,7 +46,6 @@ async function init() {
       }
     });
 
-    // 排序邏輯保持不變
     const sortFn = (a, b) => {
       let aBase = a.nameEn.toLowerCase().replace(' proxima', '');
       let bBase = b.nameEn.toLowerCase().replace(' proxima', '');
@@ -60,34 +58,61 @@ async function init() {
     normalPlanetsArray.sort(sortFn);
     proximaPlanetsArray.sort(sortFn);
 
-    // 初始渲染
     renderGrid(normalPlanetsArray);
 
   } catch (err) {
     console.error(err);
-    document.getElementById('loader').innerText = '載入失敗，請檢查檔案路徑。';
+    const loader = document.getElementById('loader');
+    if (loader) loader.innerText = '載入失敗，請檢查檔案路徑。';
   }
 }
 
 function handleBack() {
   if (currentView === 'detail') {
       currentView = previousView;
-      document.getElementById('planet-detail-view').style.display = 'none';
-      document.getElementById('grid').style.display = 'grid';
-      document.getElementById('searchBoxContainer').style.display = 'block';
       
-      if (currentView === 'normal') {
-          document.getElementById('backBtn').innerHTML = '&#8592; 返回樞紐';
-          document.getElementById('sub-title').innerText = '一般星圖';
-      } else {
-          document.getElementById('backBtn').innerHTML = '&#8592; 返回一般星圖';
-          document.getElementById('sub-title').innerText = '九重天 (銳捷號星圖)';
+      // 🌟 已修正為 starSearch
+      const searchInput = document.getElementById('starSearch');
+      if (searchInput) {
+          searchInput.value = '';
       }
+
+      const detailView = document.getElementById('planet-detail-view');
+      const grid = document.getElementById('grid');
+      const searchBoxContainer = document.getElementById('searchBoxContainer');
+      const searchContainer = document.getElementById('search-container'); 
+      
+      if (detailView) detailView.style.display = 'none';
+      if (grid) grid.style.display = 'grid';
+      if (searchBoxContainer) searchBoxContainer.style.display = 'block';
+      if (searchContainer) searchContainer.style.display = 'block';
+      
+      const backBtn = document.getElementById('backBtn');
+      const subTitle = document.getElementById('sub-title');
+
+      if (currentView === 'normal') {
+          if (backBtn) backBtn.innerHTML = '&#8592; 返回樞紐';
+          if (subTitle) subTitle.innerText = '一般星圖';
+      } else {
+          if (backBtn) backBtn.innerHTML = '&#8592; 返回一般星圖';
+          if (subTitle) subTitle.innerText = '九重天 (銳捷號星圖)';
+      }
+      
+      const activeArray = currentView === 'normal' ? normalPlanetsArray : proximaPlanetsArray;
+      renderGrid(activeArray);
+      
   } else if (currentView === 'proxima') {
       currentView = 'normal';
-      document.getElementById('backBtn').innerHTML = '&#8592; 返回樞紐';
-      document.getElementById('sub-title').innerText = '一般星圖';
-      document.getElementById('searchInput').value = '';
+      
+      const backBtn = document.getElementById('backBtn');
+      const subTitle = document.getElementById('sub-title');
+      // 🌟 已修正為 starSearch
+      const searchInput = document.getElementById('starSearch');
+
+      if (backBtn) backBtn.innerHTML = '&#8592; 返回樞紐';
+      if (subTitle) subTitle.innerText = '一般星圖';
+      if (searchInput) searchInput.value = '';
+      
       renderGrid(normalPlanetsArray);
   } else {
       window.location.href = 'index.html'; 
@@ -96,6 +121,8 @@ function handleBack() {
 
 function renderGrid(planetsToRender) {
   const grid = document.getElementById('grid');
+  if (!grid) return;
+  
   grid.innerHTML = ''; 
   
   if (planetsToRender.length === 0) {
@@ -107,7 +134,6 @@ function renderGrid(planetsToRender) {
     const card = document.createElement('div');
     card.className = 'card';
     
-    // 🌟 不管三七二十一，全部強制用「英文名稱.png」去找圖！
     const imgHtml = `<img src="images/planets/${planet.nameEn}.png" class="planet-img" onerror="this.outerHTML='<div class=\\'planet-placeholder\\'>無圖片</div>';">`;
     
     card.innerHTML = `
@@ -133,9 +159,16 @@ function renderGrid(planetsToRender) {
       
       rjCard.onclick = () => {
           currentView = 'proxima';
-          document.getElementById('backBtn').innerHTML = '&#8592; 返回一般星圖';
-          document.getElementById('sub-title').innerText = '九重天 (銳捷號星圖)';
-          document.getElementById('searchInput').value = '';
+          
+          const backBtn = document.getElementById('backBtn');
+          const subTitle = document.getElementById('sub-title');
+          // 🌟 已修正為 starSearch
+          const searchInput = document.getElementById('starSearch');
+
+          if (backBtn) backBtn.innerHTML = '&#8592; 返回一般星圖';
+          if (subTitle) subTitle.innerText = '九重天 (銳捷號星圖)';
+          if (searchInput) searchInput.value = '';
+          
           renderGrid(proximaPlanetsArray);
       };
       grid.appendChild(rjCard);
@@ -146,78 +179,129 @@ function openPlanetDetail(planet) {
   previousView = currentView;
   currentView = 'detail';
   
-  document.getElementById('grid').style.display = 'none';
-  document.getElementById('searchBoxContainer').style.display = 'none';
+  const grid = document.getElementById('grid');
+  const searchBoxContainer = document.getElementById('searchBoxContainer');
+  const searchContainer = document.getElementById('search-container'); 
+  const planetDetailView = document.getElementById('planet-detail-view');
   
-  document.getElementById('backBtn').innerHTML = previousView === 'normal' ? '&#8592; 返回一般星圖' : '&#8592; 返回銳捷號星圖';
-  document.getElementById('sub-title').innerText = '星域詳細資訊';
+  if (grid) grid.style.display = 'none';
+  if (searchBoxContainer) searchBoxContainer.style.display = 'none';
+  if (searchContainer) searchContainer.style.display = 'none';
+  if (planetDetailView) planetDetailView.style.display = 'block';
 
-  document.getElementById('planet-detail-view').style.display = 'block';
+  const backBtn = document.getElementById('backBtn');
+  const subTitle = document.getElementById('sub-title');
+  if (backBtn) backBtn.innerHTML = previousView === 'normal' ? '&#8592; 返回一般星圖' : '&#8592; 返回銳捷號星圖';
+  if (subTitle) subTitle.innerText = '星域詳細資訊';
 
   const detailImg = document.getElementById('detail-img');
-  if (planet.imgUrl) {
-    detailImg.src = planet.imgUrl;
+  if (detailImg) {
+    detailImg.src = `images/planets/${planet.nameEn}.png`; 
     detailImg.style.display = 'block';
-  } else {
-    detailImg.style.display = 'none';
   }
-  document.getElementById('detail-name-tc').innerText = planet.nameTc;
-  document.getElementById('detail-name-en').innerText = planet.nameEn;
-  document.getElementById('detail-node-count').innerText = planet.nodes.length;
 
-  // 🌟 3. 常規資源現在已經內建在星球資料裡，直接拿來用
+  const nameTcEl = document.getElementById('detail-name-tc');
+  const nameEnEl = document.getElementById('detail-name-en');
+  if (nameTcEl) nameTcEl.innerText = planet.nameTc;
+  if (nameEnEl) nameEnEl.innerText = planet.nameEn;
+
   const dropsContainer = document.getElementById('detail-drops');
-  dropsContainer.innerHTML = '';
-  
-  if (planet.drops && planet.drops.length > 0) {
-    planet.drops.forEach(dropName => {
-      dropsContainer.innerHTML += `<div class="drop-item">${dropName}</div>`;
-    });
-  } else {
-    dropsContainer.innerHTML = `<div style="color: #a0aec0; font-style: italic;">本星域無常規資源紀錄。</div>`;
+  if (dropsContainer) {
+    dropsContainer.innerHTML = '';
+    if (planet.drops && planet.drops.length > 0) {
+      planet.drops.forEach(dropName => {
+        dropsContainer.innerHTML += `<div class="drop-item">${dropName}</div>`;
+      });
+    } else {
+      dropsContainer.innerHTML = `<div style="color: #a0aec0; font-style: italic;">本星域無常規資源紀錄。</div>`;
+    }
   }
   
-  // 🌟 4. 渲染節點：現在自帶怪物等級與唯一 ID！
   const nodesContainer = document.getElementById('detail-nodes');
+  if (!nodesContainer) return; 
+
   nodesContainer.innerHTML = '';
   
-  // 🌟 1. 建立有背景圖的白名單 (只針對你有抓圖的節點)
-  const HAS_BG_NODES = ["希圖斯", "福爾圖娜", "魔裔禁地", "蛹巖", "鋼鐵守望", "解剖聖堂", "亡骸殿", "寢區", "霍爾瓦尼亞中央購物中心"];
+  const NODE_BGS = {
+    "希圖斯": "Cetus.png",
+    "夜靈平野": "Plains of Eidolon.png", 
+    "福爾圖娜": "Fortuna.png",
+    "奧布山谷": "Orb Vallis.png",        
+    "魔裔禁地": "Cambion Drift.png",
+    "亡骸殿": "Necralisk.png",
+    "蛹巖": "Chrysalith.png",
+    "鋼鐵守望": "Iron Wake.png",
+    "解剖聖堂": "Sanctum Anatomica.png",
+    "寢區": "Dormizone.png",
+    "霍爾瓦尼亞中央購物中心": "Hollvania.png"
+  };
 
-  planet.nodes.sort((a, b) => a.nameTc.localeCompare(b.nameTc)).forEach(node => {
+  const nodes = planet.nodes || [];
+  const nodeCountEl = document.getElementById('detail-node-count');
+  if (nodeCountEl) nodeCountEl.innerText = nodes.length;
+
+  nodes.sort((a, b) => {
+    const safeNameA = (a.nameTc || a.nameEn || '').trim();
+    const safeNameB = (b.nameTc || b.nameEn || '').trim();
+
+    const getPriority = (node, name) => {
+      if (NODE_BGS[name]) return 1; 
+      if (name.includes('接合點') || (node.typeTc && node.typeTc.includes('接合點'))) return 3; 
+      return 2; 
+    };
+
+    const priorityA = getPriority(a, safeNameA);
+    const priorityB = getPriority(b, safeNameB);
+
+    if (priorityA !== priorityB) return priorityA - priorityB;
+
+    const getLevel = (node) => {
+      if (!node.levels || node.levels.normal === "和平區域") return 0;
+      const match = node.levels.normal.match(/(\d+)/);
+      return match ? parseInt(match[1], 10) : 999;
+    };
+
+    const lvlA = getLevel(a);
+    const lvlB = getLevel(b);
+
+    if (lvlA !== lvlB) return lvlA - lvlB;
+
+    return safeNameA.localeCompare(safeNameB);
+
+  }).forEach(node => {
     
-    // 🛡️ 2. 判斷是否為和平區域
-    const isPeaceful = node.levels.normal === "和平區域";
+    const isPeaceful = node.levels && node.levels.normal === "和平區域";
 
     const typeBadgeHtml = isPeaceful 
       ? "" 
-      : `<span class="node-type">${node.typeTc}</span>`;
+      : `<span class="node-type">${node.typeTc || node.type}</span>`;
       
     const levelTextHtml = isPeaceful 
       ? "" 
-      : `<span style="color: #a0aec0; font-size: 0.9em; float: right;">等級: ${node.levels.normal}</span>`;
+      : `<span style="color: #a0aec0; font-size: 0.9em; float: right;">等級: ${node.levels ? node.levels.normal : '未知'}</span>`;
 
-    // 🛡️ 3. 處理背景圖邏輯
     let bgStyle = "";
-    if (HAS_BG_NODES.includes(node.nameTc)) {
+    const safeNameTc = (node.nameTc || '').trim();
+    const bgFileName = NODE_BGS[safeNameTc]; 
+
+    if (bgFileName) {
       bgStyle = `
-        background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.6)), url('images/nodes/${node.nameEn}.jpg'); 
+        background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.7)), url('images/nodes/${bgFileName}'); 
         background-size: cover; 
         background-position: center; 
         color: white; 
-        border-color: rgba(255, 255, 255, 0.2);
+        border-color: rgba(255, 255, 255, 0.3);
       `;
     }
 
-    // 🛡️ 4. 輸出 HTML (將 bgStyle 塞入最外層的 style 屬性)
     nodesContainer.innerHTML += `
       <div class="node-card" data-id="${node.id}" style="${bgStyle}">
         <div class="node-name">
-          <span>${node.nameTc}</span>
+          <span>${node.nameTc || node.nameEn}</span>
           ${typeBadgeHtml}
         </div>
         <div class="node-faction">
-          <span style="color: #ef4444;">派系：${translateUI(node.faction)}</span>
+          <span style="color: #ef4444;">派系：${node.faction}</span>
           ${levelTextHtml}
         </div>
       </div>
@@ -225,21 +309,122 @@ function openPlanetDetail(planet) {
   });
 }
 
-document.getElementById('searchInput').addEventListener('input', (e) => {
-  const term = e.target.value.toLowerCase().trim();
+function applyStarChartFilters() {
+  // 🌟 已修正為 starSearch
+  const searchInput = document.getElementById('starSearch');
+  const term = searchInput ? searchInput.value.toLowerCase().trim() : '';
   const activeArray = currentView === 'normal' ? normalPlanetsArray : proximaPlanetsArray;
 
   const filtered = activeArray.filter(planet => {
-    if (planet.nameEn.toLowerCase().includes(term) || planet.nameTc.toLowerCase().includes(term)) return true;
-    return planet.nodes.some(node => 
-      node.nameTc.toLowerCase().includes(term) || 
-      node.nameEn.toLowerCase().includes(term) ||
-      node.type.toLowerCase().includes(term) || 
-      node.faction.toLowerCase().includes(term)
+    if (planet.nameEn.toLowerCase().includes(term) || (planet.nameTc && planet.nameTc.toLowerCase().includes(term))) return true;
+    return (planet.nodes || []).some(node => 
+      (node.nameTc && node.nameTc.toLowerCase().includes(term)) || 
+      (node.nameEn && node.nameEn.toLowerCase().includes(term)) ||
+      (node.type && node.type.toLowerCase().includes(term)) || 
+      (node.faction && node.faction.toLowerCase().includes(term))
     );
   });
   renderGrid(filtered);
-});
+}
+
+// 🌟 已修正為 starSearch
+// 🌟 已修正為 starSearch
+const searchInput = document.getElementById('starSearch');
+const suggestionsBox = document.getElementById('suggestionsBox');
+
+if (searchInput) {
+  searchInput.addEventListener('input', (e) => {
+    const term = e.target.value.toLowerCase().trim();
+    applyStarChartFilters(); 
+
+    if (!suggestionsBox) return;
+
+    if (!term) {
+      suggestionsBox.style.display = 'none';
+      searchInput.style.borderRadius = '25px';
+      return;
+    }
+
+    const activeArray = currentView === 'normal' ? normalPlanetsArray : proximaPlanetsArray;
+    
+    // 🌟 改變作法：用 Map 記錄「節點名稱」對應的「星球資料」
+    const matchedNodesMap = new Map(); 
+    const matchedPlanets = [];
+
+    activeArray.forEach(planet => {
+      const safePlanetEn = (planet.nameEn || '').toLowerCase();
+      const safePlanetTc = (planet.nameTc || '').toLowerCase();
+
+      if (safePlanetEn.includes(term) || safePlanetTc.includes(term)) {
+        matchedPlanets.push(planet);
+      }
+
+      (planet.nodes || []).forEach(node => {
+        const safeNodeTc = (node.nameTc || '').toLowerCase();
+        const safeNodeEn = (node.nameEn || '').toLowerCase();
+        if (safeNodeTc.includes(term) || safeNodeEn.includes(term)) {
+          const nodeName = node.nameTc || node.nameEn;
+          // 把節點名稱當作 Key，這顆星球的完整資料當作 Value 存起來
+          if (!matchedNodesMap.has(nodeName)) {
+            matchedNodesMap.set(nodeName, planet);
+          }
+        }
+      });
+    });
+
+    // 格式化資料
+    let nodeSuggestions = Array.from(matchedNodesMap.entries()).map(([nodeName, planetData]) => ({
+      type: 'node',
+      title: nodeName,
+      // 🌟 貼心小優化：右邊的灰色小字會提示這個節點在哪顆星球
+      subTitle: `節點 (${planetData.nameTc || planetData.nameEn})`, 
+      originalData: planetData // 🌟 把星球資料帶上！
+    }));
+
+    let planetSuggestions = matchedPlanets.map(p => ({
+      type: 'planet',
+      title: p.nameTc || p.nameEn,
+      subTitle: '星域',
+      originalData: p
+    }));
+
+    nodeSuggestions = nodeSuggestions.slice(0, 5);
+    planetSuggestions = planetSuggestions.slice(0, 5);
+
+    const finalMatches = [...nodeSuggestions, ...planetSuggestions];
+
+    if (finalMatches.length === 0) {
+      suggestionsBox.style.display = 'none';
+      searchInput.style.borderRadius = '25px';
+      return;
+    }
+
+    suggestionsBox.innerHTML = '';
+    finalMatches.forEach(match => {
+      const item = document.createElement('div');
+      item.className = 'suggestion-item';
+
+      item.innerHTML = `
+        <strong style="color: #ffdf73; letter-spacing: 1px;">${match.title}</strong>
+        <span style="color: #a0aec0; font-size: 0.85em;">${match.subTitle}</span>
+      `;
+
+      item.onclick = () => {
+        searchInput.value = match.title;
+        suggestionsBox.style.display = 'none';
+        searchInput.style.borderRadius = '25px';
+
+        // 🌟 關鍵修改：現在不管是點「節點」還是點「星域」，通通直接跳轉進去該星球的詳細頁面！
+        openPlanetDetail(match.originalData);
+      };
+
+      suggestionsBox.appendChild(item);
+    });
+
+    suggestionsBox.style.display = 'block';
+    searchInput.style.borderRadius = '15px 15px 0 0';
+  });
+}
 
 // 執行初始化
 init();

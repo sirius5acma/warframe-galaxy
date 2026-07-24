@@ -266,5 +266,20 @@ if (searchInput) {
   });
 }
 
+// 🌟 點擊空白處自動收起搜尋選單
+document.addEventListener('click', (e) => {
+  const searchContainer = document.querySelector('.search-container');
+  const suggestionsBox = document.getElementById('suggestionsBox');
+  const searchInput = document.querySelector('.search-input'); // 抓取輸入框以恢復圓角
+
+  // 如果點擊的目標不在搜尋區塊內，且選單是打開的，就關閉它
+  if (searchContainer && suggestionsBox && !searchContainer.contains(e.target)) {
+    suggestionsBox.style.display = 'none';
+    if (searchInput) {
+      searchInput.style.borderRadius = '25px'; // 恢復原本的膠囊圓角
+    }
+  }
+});
+
 // 執行
 init();

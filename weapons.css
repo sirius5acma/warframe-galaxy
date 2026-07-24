@@ -1,0 +1,106 @@
+/* =========================================
+   武器專屬卡片樣式與懸停特效
+========================================= */
+
+.card {
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 220px;
+}
+
+/* 卡片正面：預設狀態 */
+.card-front {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    transition: all 0.3s ease;
+}
+
+/* 武器圖片預設稍微壓扁一點，讓卡片不要太長 */
+.weapon-img {
+    width: 90%;
+    height: 100px;
+    object-fit: contain;
+    margin-bottom: 10px;
+}
+
+/* 滑鼠懸停時：正面圖文變暗並模糊，把焦點讓給後面的資訊 */
+.card:hover .card-front {
+    opacity: 0.15;
+    filter: blur(2px);
+}
+
+/* 覆蓋層：武器類型與段位限制 */
+.card-info-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(15, 23, 42, 0.7); /* 透出底下的深藍背景 */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+    box-sizing: border-box;
+    
+    /* 核心魔法：滑鼠移開時瞬間消失 (0s 延遲) */
+    opacity: 0;
+    pointer-events: none; 
+    transition: opacity 0.2s ease 0s; 
+}
+
+/* 滑鼠懸停時：資訊層浮現 */
+.card:hover .card-info-overlay {
+    opacity: 1;
+    /* 核心魔法：滑鼠放上去，等待 0.25s 才浮現，避免閃爍 */
+    transition: opacity 0.3s ease 0.25s; 
+}
+
+/* 詳細頁面的數值方塊 */
+.stat-box {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid #334155;
+    padding: 15px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.stat-label {
+    color: #94a3b8;
+    font-size: 0.85em;
+    margin-bottom: 8px;
+}
+
+.stat-value {
+    color: #ffdf73;
+    font-size: 1.3em;
+    font-weight: bold;
+}
+
+/* =========================================
+   頂部控制區 (搜尋框與分類按鈕) 置中排版
+========================================= */
+
+.controls {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* 強制上下區塊置中 */
+  gap: 20px;           /* 搜尋框跟按鈕的間距 */
+  margin-bottom: 30px;
+  width: 100%;
+}
+
+.filters {
+  display: flex;
+  justify-content: center; /* 強制裡面的按鈕置中 */
+  gap: 10px;
+  flex-wrap: wrap;         /* 如果按鈕太多會自動換行，不會破版 */
+  margin-top: 5px;
+}

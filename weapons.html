@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <title>Warframe 武器圖鑑系統</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="weapons.css">
+</head>
+<body>
+
+  <!-- 常駐左上角的返回按鈕 -->
+  <div class="top-bar">
+    <div class="back-btn" id="backBtn" onclick="handleBack()">&#8592; 返回樞紐</div>
+  </div>
+
+  <h1>WARFRAME 武器圖鑑系統</h1>
+  <div id="sub-title" style="text-align:center; color:#38bdf8; letter-spacing:3px; margin-bottom:20px;">軍械庫</div>
+
+  <!-- 搜尋與分類按鈕區塊 -->
+  <div class="controls" id="controlsArea">
+    <div class="search-container">
+      <input type="text" id="weaponSearch" class="search-input" placeholder="搜尋武器名稱或類型 (例如: 突擊步槍)..." autocomplete="off">
+      <div id="suggestionsBox" class="suggestions-box" style="display: none;"></div>
+    </div>
+    
+    <!-- 大分類頁籤 -->
+    <div class="filters primary-filters">
+      <button class="filter-btn active" data-category="All">全部</button>
+      <button class="filter-btn" data-category="主武器">主武器</button>
+      <button class="filter-btn" data-category="次要武器">次要武器</button>
+      <button class="filter-btn" data-category="近戰武器">近戰武器</button>
+    </div>
+  </div>
+
+  <!-- 第一層：主網格 (顯示武器卡片) -->
+  <div id="grid" class="grid-container"></div>
+
+  <!-- 第二層：武器專屬詳細頁面 (預設隱藏) -->
+  <div id="weapon-detail-view" style="display: none;">
+    <div class="profile-section">
+      <!-- 武器圖片 (我們給它加一點陰影讓立體感更強) -->
+      <img id="detail-weapon-img" src="" alt="Weapon" style="max-width: 400px; height: 150px; object-fit: contain; margin-bottom: 30px; filter: drop-shadow(0 10px 15px rgba(0,0,0,0.5));" onerror="this.style.display='none'">
+      
+      <!-- 標題區 -->
+      <h1 id="detail-weapon-title-tc" class="detail-main-title"></h1>
+      <p id="detail-weapon-title-en" class="detail-sub-title"></p>
+      
+      <!-- 徽章區 (類型與段位) -->
+      <div class="badge-container">
+        <span class="badge" id="detail-weapon-type"></span>
+        <span class="badge" id="detail-weapon-mr"></span>
+      </div>
+
+      <!-- 描述區 -->
+      <div id="detail-weapon-desc" class="detail-desc"></div>
+
+      <!-- 數值面板 -->
+      <div class="section-title" id="detail-stats-title">🟢 核心面板數值</div>
+      <div class="stats-grid" id="detail-stats-grid">
+        <!-- JS 會動態塞入 .stat-card 方塊 -->
+      </div>
+    </div>
+  </div>
+
+  <script src="weapons.js"></script>
+</body>
+</html>

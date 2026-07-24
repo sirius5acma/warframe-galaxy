@@ -2,13 +2,14 @@ import fs from 'fs';
 import crypto from 'crypto';
 
 // 🌟 核心資料庫
-const URL_SOL_NODES = 'https://raw.githubusercontent.com/wfcd/warframe-worldstate-data/master/data/solNodes.json'; // 降級為輔助 (補派系用)
+const URL_SOL_NODES = 'https://raw.githubusercontent.com/wfcd/warframe-worldstate-data/master/data/solNodes.json'; 
 const URL_DROPS = 'https://raw.githubusercontent.com/wfcd/warframe-drop-data/master/data/all.json';
 const URL_I18N = 'https://raw.githubusercontent.com/wfcd/warframe-items/master/data/json/i18n.json';
 const URL_REGIONS = 'https://raw.githubusercontent.com/calamity-inc/warframe-public-export-plus/master/ExportRegions.json';
 const URL_DICT_TC = 'https://raw.githubusercontent.com/calamity-inc/warframe-public-export-plus/master/dict.tc.json';
 const URL_DICT_EN = 'https://raw.githubusercontent.com/calamity-inc/warframe-public-export-plus/master/dict.en.json';
 const URL_ITEMS_RELICS = 'https://raw.githubusercontent.com/wfcd/warframe-items/master/data/json/Relics.json';
+const URL_WEAPONS = 'https://api.warframestat.us/weapons';
 
 // 🗑️ 垃圾過濾名單
 const JUNK_FILTER = [
@@ -58,22 +59,24 @@ async function fetchJson(url) {
 }
 
 async function build() {
-  console.log('🚀 [1/5] 啟動 2.0 系統：從底層解包資料庫提取世界藍圖...');
+  console.log('🚀 [1/6] 啟動 2.0 系統：從底層解包資料庫提取世界藍圖...');
   
-  const [solNodesRes, dropsRes, i18nRes, regionsRes, tcRes, enRes, itemsRelicsRes] = await Promise.all([
+  const [solNodesRes, dropsRes, i18nRes, regionsRes, tcRes, enRes, itemsRelicsRes, weaponsRes] = await Promise.all([
     fetchJson(URL_SOL_NODES),
     fetchJson(URL_DROPS),
     fetchJson(URL_I18N),
     fetchJson(URL_REGIONS),
     fetchJson(URL_DICT_TC), 
     fetchJson(URL_DICT_EN), 
-    fetchJson(URL_ITEMS_RELICS)
+    fetchJson(URL_ITEMS_RELICS),
+    fetchJson(URL_WEAPONS)
   ]);
 
-  console.log('🛡️ [2/5] 執行指紋比對...');
+  console.log('🛡️ [2/6] 執行指紋比對...');
   const hash = crypto.createHash('md5');
   hash.update(regionsRes.text); 
   hash.update(dropsRes.text);
+  hash.update(weaponsRes.text); 
   const currentHash = hash.digest('hex');
 
   if (fs.existsSync('last_hash.txt') && currentHash === fs.readFileSync('last_hash.txt', 'utf8')) {
@@ -86,83 +89,66 @@ async function build() {
   const tcData = tcRes.data || {};
   const enData = enRes.data || {};
   const itemsRelicsData = itemsRelicsRes.data || [];
+  const weaponsEnData = weaponsRes.data || [];
 
-  // 🌟 預先宣告所有圖鑑變數
   const nodeIndex = {};
   const planetIndex = {};
   const itemIndex = {};
   const relicIndex = {};
+  const formattedWeapons = []; 
 
-// ==========================================
-  // 🌟 翻譯橋樑核心：建立反向英文字典 (英文名稱 ➡️ 底層 ID)
   // ==========================================
+  // 🌟 物品與武器專用翻譯橋樑
+  // ==========================================
+  const normalizeString = (str) => {
+    return str.replace(/['’]/g, "").replace(/[\r\n]+/g, " ").replace(/\s+/g, ' ').trim().toLowerCase();
+  };
+
   const enNameToIdMap = {};
   Object.entries(enData).forEach(([id, enString]) => {
-    // 為了確保比對精準度，將英文轉全小寫並去掉前後空白當作 Key
-    const safeKey = enString.trim().toLowerCase();
-    
-    // 解決 WFCD 掉落表有時會把 Blueprint 縮寫或加上的問題
+    const safeKey = normalizeString(enString);
     enNameToIdMap[safeKey] = id;
-    
-    // 額外防護：有些官方英文有包含 " Blueprint"，有些沒有，建立雙重對照
     if (!safeKey.endsWith(' blueprint')) {
-      enNameToIdMap[`${safeKey} blueprint`] = id; // WFCD 掉落表很愛自己加上 Blueprint
+      enNameToIdMap[`${safeKey} blueprint`] = id; 
     }
   });
 
-  // 🛠️ 小工具 1：星圖專用翻譯器 (給 ExportRegions 用的，直接吃 ID)
-  const getLang = (key, langData) => {
-    if (!key) return null;
-    return langData[key] || langData[key.toLowerCase()] || null;
+  const translateText = (engText) => {
+    if (!engText) return engText;
+    const searchKey = normalizeString(engText);
+    const targetId = enNameToIdMap[searchKey];
+    if (targetId && tcData[targetId]) {
+      return tcData[targetId];
+    }
+    return engText;
   };
-  
-  // 🛠️ 小工具 2：物品專用翻譯器 (純 ID 驅動！)
+
   const translateItem = (itemNameEn) => {
     if (!itemNameEn) return itemNameEn;
-    
-    const searchKey = itemNameEn.trim().toLowerCase();
-    
-    // 1. 拿著英文去反向字典找「底層 ID」
+    const searchKey = normalizeString(itemNameEn);
     const targetId = enNameToIdMap[searchKey];
-
-    // 2. 如果找到 ID，而且繁中字典裡也有這個 ID，就直接拿中文出來用！
     if (targetId && tcData[targetId]) {
-      // 官方的繁中翻譯如果沒有加上藍圖，我們可以視情況補上
       let finalTc = tcData[targetId];
       if (searchKey.includes('blueprint') && !finalTc.includes('藍圖')) {
         finalTc += ' 藍圖';
       }
       return finalTc;
     }
-
-    // 3. 萬一真的找不到 (極少數例外或活動物品)，才退回原本的英文
     return itemNameEn;
   };
 
-  // 🛠️ 小工具 3：從輔助資料庫(solNodes)建立派系對照表
   const factionMap = {};
   Object.values(solNodes).forEach(node => {
     if (node.value && node.enemy) {
-      // 提取 "(Earth) Coba" 裡面的 "Coba" 轉小寫來當 Key
       const match = node.value.match(/^(.*?)\s*\(/);
       const n = match ? match[1].trim().toLowerCase() : node.value.toLowerCase();
       factionMap[n] = node.enemy;
     }
   });
 
-
-  console.log('⚙️ [3/5] 正在以 ExportRegions 為核心，精準重建星圖與 ID 矩陣...');
-  
-  // 🛡️ 彈性讀取：不管外面有沒有包著 ExportRegions 標籤都能抓到
+  console.log('⚙️ [3/6] 正在以 ExportRegions 為核心，精準重建星圖與 ID 矩陣...');
   let regionsObj = regionsRes.data.ExportRegions || regionsRes.data;
   
-  // 🛡️ 終極防呆：如果抓回來的資料是空的，印出明確錯誤並提早下班，絕不當機！
-  if (!regionsObj || Object.keys(regionsObj).length === 0) {
-    console.error("❌ 嚴重錯誤：星圖資料庫抓取失敗！可能是網址失效或網路問題，請檢查 URL_REGIONS。");
-    return;
-  }
-
-  // 🛡️ 版本相容：萬一哪天官方把物件改成了陣列 (Array)，自動幫它轉回用 ID 當 Key 的物件
   if (Array.isArray(regionsObj)) {
     const tempObj = {};
     regionsObj.forEach(region => {
@@ -172,27 +158,53 @@ async function build() {
     regionsObj = tempObj;
   }
   
-  // 🌟 合併迴圈：一次搞定 ID 主鍵建置、過濾、翻譯與歸類
+  // 🌟 這裡開始就是修復好的星圖 ID 查詢系統
   Object.entries(regionsObj).forEach(([internalId, region]) => {
     if (region.hidden === true) return;
     if (!region.name || !region.systemName || !region.missionName) return;
 
-    let enNodeName = getLang(region.name, enData) || region.name;
-    let tcNodeName = getLang(region.name, tcData) || enNodeName;
-    
-    let enPlanetName = getLang(region.systemName, enData) || region.systemName;
-    let tcPlanetName = getLang(region.systemName, tcData) || enPlanetName;
-    
-    let enMissionType = getLang(region.missionName, enData) || region.missionName;
-    let tcMissionType = getLang(region.missionName, tcData) || enMissionType;
+    // 直接拿 ID 去字典拿翻譯
+    const getExactLang = (id, langDict) => {
+      let text = langDict[id] || id;
+      if (text.includes('/')) text = text.split('/').pop().replace('_SPACE', ' Proxima');
+      return text;
+    };
 
-    if (enPlanetName === "Veil") {
-      enPlanetName = "Veil Proxima";
-      tcPlanetName = "面紗毗鄰星";
+    let enNodeName = getExactLang(region.name, enData);
+    let tcNodeName = getExactLang(region.name, tcData);
+    
+    let enPlanetName = getExactLang(region.systemName, enData);
+    let tcPlanetName = getExactLang(region.systemName, tcData);
+    
+    let enMissionType = getExactLang(region.missionName, enData);
+    let tcMissionType = getExactLang(region.missionName, tcData);
+
+    // 終極覆寫字典 (相容舊版圖片名稱)
+    const planetOverrides = {
+      "KuvaFortress": { en: "Kuva Fortress", tc: "赤毒要塞" },
+      "Fortress": { en: "Kuva Fortress", tc: "赤毒要塞" },
+      "SolarMapDeimosName": { en: "Dark Refractory, Deimos", tc: "憶夢池 (火衛二)" },
+      "Deimos": { en: "Deimos", tc: "火衛二" }, 
+      "1999MapName": { en: "Höllvania", tc: "霍爾瓦尼亞" },
+      "Zariman": { en: "Zariman", tc: "扎日曼" },
+      "Duviri": { en: "Duviri", tc: "渡域" },
+      "DeepSpace Proxima": { en: "Veil Proxima", tc: "面紗毗鄰星" },
+      "Veil": { en: "Veil Proxima", tc: "面紗毗鄰星" },
+      "Moon": { en: "Lua", tc: "月球" }
+    };
+
+    if (planetOverrides[enPlanetName]) {
+      tcPlanetName = planetOverrides[enPlanetName].tc;
+      enPlanetName = planetOverrides[enPlanetName].en;
+    }
+
+    if (enPlanetName.includes('Proxima')) {
+       if (!tcPlanetName.includes('毗鄰星')) {
+         tcPlanetName = tcPlanetName.replace(' Proxima', '') + '毗鄰星';
+       }
     }
 
     const faction = factionMap[enNodeName.toLowerCase()] || "未知";
-
     const minLvl = region.minEnemyLevel || 0;
     const maxLvl = region.maxEnemyLevel || 0;
     const isPeaceful = (minLvl === 0 && maxLvl === 0);
@@ -201,14 +213,12 @@ async function build() {
       .some(attr => attr && (attr.includes('Archwing') || attr.includes('SpaceBattles')));
 
     let finalTypeTc = tcMissionType || enMissionType;
-    if (isPeaceful) {
-      finalTypeTc = "中繼站 / 城鎮";
-    } else if (isArchwing) {
-      finalTypeTc = `${finalTypeTc} (Archwing)`; 
-    }
+    if (isPeaceful) finalTypeTc = "中繼站 / 城鎮";
+    else if (isArchwing) finalTypeTc = `${finalTypeTc} (Archwing)`; 
 
+    // ✅ 這裡就是剛剛撞名的 nodeData，現在已經是唯一且正確的版本了
     const nodeData = {
-      id: internalId, // 🌟 核心 ID 綁定
+      id: internalId, 
       nameEn: enNodeName,
       nameTc: tcNodeName,
       type: enMissionType,
@@ -220,12 +230,11 @@ async function build() {
       },
       planetEn: enPlanetName, 
       planetTc: tcPlanetName, 
-      drops: null // 先預留空位
+      drops: null 
     };
 
     nodeIndex[internalId] = nodeData;
 
-    // 歸類到星球索引
     if (!planetIndex[enPlanetName]) {
       planetIndex[enPlanetName] = {
         nameEn: enPlanetName,
@@ -237,7 +246,6 @@ async function build() {
     planetIndex[enPlanetName].nodes.push(nodeData);
   });
 
-  // 🌟 建立尋找橋樑，塞入掉落表
   const nameToIdMap = {};
   Object.keys(nodeIndex).forEach(id => {
     const node = nodeIndex[id];
@@ -257,7 +265,7 @@ async function build() {
     }
   }
 
-  console.log('⚙️ [4/5] 重建掉落物與遺物索引...');
+  console.log('⚙️ [4/6] 重建掉落物與遺物索引...');
   const addItemSource = (itemNameEn, sourceObj) => {
     if (JUNK_FILTER.some(junk => itemNameEn.includes(junk))) return;
     const itemNameTc = translateItem(itemNameEn);
@@ -308,14 +316,10 @@ async function build() {
 
       if (relic.state === 'Intact') {
         let realStatus = vaultedMap[relicFullName] || '可掉落';
-        if (tier === 'Requiem') {
-          realStatus = '可掉落'; 
-        }
+        if (tier === 'Requiem') realStatus = '可掉落'; 
 
         let displayName = name;
-        if (name.toUpperCase() === 'ETERNA') {
-          displayName = '永恆';
-        }
+        if (name.toUpperCase() === 'ETERNA') displayName = '永恆';
 
         relicIndex[relicFullName] = {
           name: displayName, 
@@ -331,13 +335,63 @@ async function build() {
     });
   }
 
-  console.log('📦 [5/5] 封裝並寫入本地資料庫...');
+  console.log('⚔️ [5/6] 正在以「本地字典」提取並精準翻譯武器資料庫...');
+  const validWeaponCategories = ["Primary", "Secondary", "Melee"];
+  
+  const WEAPON_TYPE_MAP = {
+    "Rifle": "步槍", "Sniper Rifle": "狙擊槍", "Bow": "弓", "Shotgun": "霰彈槍",
+    "Launcher": "發射器", "Crossbow": "弩", "Speargun": "標槍", "Pistol": "手槍",
+    "Dual Pistols": "雙手槍", "Shotgun Sidearm": "副手霰彈槍", "Throwing": "投擲武器",
+    "Sword": "劍", "Dual Swords": "雙劍", "Nikana": "侍刃", "Two-Handed Nikana": "雙手侍刃",
+    "Scythe": "鐮刀", "Polearm": "長柄武器", "Staff": "棍", "Heavy Blade": "巨刃",
+    "Hammer": "錘", "Dagger": "匕首", "Dual Daggers": "雙匕首", "Fist": "拳套",
+    "Sparring": "搏擊", "Glaive": "戰刃", "Gunblade": "槍刃", "Whip": "鞭",
+    "Sword and Shield": "劍與盾", "Tonfa": "拐刃", "Nunchaku": "雙截棍", "Rapier": "細劍",
+    "Claws": "爪", "Blade and Whip": "劍鞭", "Warfan": "戰扇", "Assault Saw": "突擊鋸",
+    "Arm Cannon": "手臂加農砲"
+  };
+
+  weaponsEnData.forEach(enWeapon => {
+    if (!validWeaponCategories.includes(enWeapon.category)) return;
+
+    const tcName = translateText(enWeapon.name);
+    const tcType = WEAPON_TYPE_MAP[enWeapon.type] || translateText(enWeapon.type) || enWeapon.type;
+    const tcDesc = translateText(enWeapon.description);
+
+    let categoryTc = "";
+    if (enWeapon.category === "Primary") categoryTc = "主武器";
+    else if (enWeapon.category === "Secondary") categoryTc = "次要武器";
+    else if (enWeapon.category === "Melee") categoryTc = "近戰武器";
+
+    const stats = {
+      critChance: enWeapon.criticalChance ? parseFloat((enWeapon.criticalChance * 100).toFixed(1)) : 0,
+      critMultiplier: enWeapon.criticalMultiplier || 0,
+      statusChance: enWeapon.procChance ? parseFloat((enWeapon.procChance * 100).toFixed(1)) : 0,
+      totalDamage: enWeapon.totalDamage || 0
+    };
+
+    formattedWeapons.push({
+      id: enWeapon.name.toLowerCase().replace(/\s+/g, '_').replace(/-/g, '_'),
+      nameTc: tcName,
+      nameEn: enWeapon.name,
+      category: categoryTc,
+      type: tcType,      
+      mr: enWeapon.masteryReq || 0,
+      description: tcDesc, 
+      stats: stats,
+      imageName: enWeapon.imageName,
+      relics: [] 
+    });
+  });
+
+  console.log('📦 [6/6] 封裝並寫入本地資料庫...');
   const dataDir = './data';
   if (!fs.existsSync(dataDir)) fs.mkdirSync(dataDir);
   fs.writeFileSync(`${dataDir}/planetIndex.json`, JSON.stringify(planetIndex, null, 2));
   fs.writeFileSync(`${dataDir}/nodeIndex.json`, JSON.stringify(nodeIndex, null, 2));
   fs.writeFileSync(`${dataDir}/itemIndex.json`, JSON.stringify(itemIndex, null, 2));
   fs.writeFileSync(`${dataDir}/relicIndex.json`, JSON.stringify(Object.values(relicIndex), null, 2));
+  fs.writeFileSync(`${dataDir}/weaponsIndex.json`, JSON.stringify(formattedWeapons, null, 2)); 
   fs.writeFileSync('last_hash.txt', currentHash);
 
   console.log('🎉 系統 2.0 升級完成！資料庫淨化完畢，純 ID 架構已正式啟動！');

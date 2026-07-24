@@ -4,12 +4,14 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Warframe 裝備圖鑑</title>
+  <!-- 🌟 呼叫我們整理好的共用 CSS -->
+  <link rel="stylesheet" href="style.css">
   <script src="https://cdn.jsdelivr.net/npm/force-graph"></script>
   <style>
+    /* 🌟 保留全站與戰甲頁面專屬的特殊排版 */
     body {
       margin: 0;
       padding: 0;
-      /* 虛空深淵底色 */
       background-color: #07080a;
       background-image: radial-gradient(circle at 50% 0%, #12151c 0%, #07080a 80%);
       color: #fdfbf7;
@@ -30,20 +32,17 @@
       gap: 40px;
     }
 
-    /* 🌟 結合 A 的斜切角 + B 的半透明深色底 */
-    .profile-section, .graph-section {
+    /* 圖表區塊需要保留原本的金屬切角外框 */
+    .graph-section {
       display: flex;
       flex-direction: column;
       background-color: rgba(12, 14, 18, 0.9);
       padding: 40px;
-      /* A 的魔法：切角 */
       clip-path: polygon(30px 0, 100% 0, 100% calc(100% - 30px), calc(100% - 30px) 100%, 0 100%, 0 30px);
-      /* 因為 clip-path 會切掉邊框，我們改用內陰影營造金色質感 */
       box-shadow: inset 0 0 20px rgba(197, 160, 89, 0.1);
     }
 
-    .profile-section { align-items: center; }
-
+    /* 戰甲圖片專屬設定 */
     #wf-image {
       max-width: 300px;
       height: auto;
@@ -52,101 +51,9 @@
       filter: drop-shadow(0 0 25px rgba(255, 223, 115, 0.25));
     }
 
-    /* 🌟 結合 A 的大寫字距 + B 的金色漸層 */
-    #item-name {
-      font-size: 3.5rem;
-      font-weight: 300;
-      text-transform: uppercase;
-      letter-spacing: 6px;
-      background: linear-gradient(to bottom, #fff7db 0%, #d4af37 100%);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      margin: 0 0 5px 0;
-      filter: drop-shadow(0 0 8px rgba(212, 175, 55, 0.3));
-    }
-
-    #item-subtitle {
-      font-size: 0.95rem;
-      letter-spacing: 3px;
-      text-transform: uppercase;
-      color: #a69062;
-      margin: 0 0 30px 0;
-    }
-
-    .badge-container { display: flex; gap: 15px; justify-content: center; margin-bottom: 30px; }
-
-    .badge {
-      background-color: rgba(197, 160, 89, 0.05);
-      /* 保留切角 */
-      clip-path: polygon(10px 0, 100% 0, 100% calc(100% - 10px), calc(100% - 10px) 100%, 0 100%, 0 10px);
-      padding: 6px 15px;
-      font-size: 0.8rem;
-      text-transform: uppercase;
-      letter-spacing: 2px;
-      color: #ffdf73;
-      border-left: 2px solid #c5a059; /* 用單邊線條代替全邊框 */
-      border-right: 2px solid #c5a059;
-    }
-
-    #item-desc {
-      line-height: 1.9;
-      color: #d1cbbd;
-      font-size: 1.05rem;
-      text-align: center;
-      width: 100%;
-      margin-bottom: 40px;
-      font-weight: 300;
-    }
-
-    .section-title, .graph-title {
-      width: 100%;
-      font-size: 1.1rem;
-      color: #fdfbf7;
-      margin: 20px 0 15px 0;
-      padding-left: 15px;
-      text-align: left;
-      text-transform: uppercase;
-      letter-spacing: 3px;
-      font-weight: 400;
-      border-left: 3px solid #d4af37; /* B的顏色 + A的排版 */
-    }
-
-    /* 🌟 數據方塊：斜切角 + 金色高光 */
-    .stats-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
-      gap: 15px;
-      width: 100%;
-      margin-bottom: 40px;
-    }
-
-    .stat-card {
-      background-color: rgba(255, 255, 255, 0.02);
-      padding: 20px 10px;
-      text-align: center;
-      clip-path: polygon(15px 0, 100% 0, 100% calc(100% - 15px), calc(100% - 15px) 100%, 0 100%, 0 15px);
-      border-left: 2px solid rgba(197, 160, 89, 0.5);
-      transition: all 0.3s ease;
-    }
-    
-    .stat-card:hover {
-      background-color: rgba(212, 175, 55, 0.08);
-      border-left-color: #d4af37;
-    }
-
-    .stat-title {
-      font-size: 0.75rem;
-      color: #a69062;
-      margin-bottom: 10px;
-      text-transform: uppercase;
-      letter-spacing: 2px;
-    }
-
-    .stat-value {
-      font-size: 2.2rem;
-      font-weight: 300;
-      color: #fdfbf7;
-    }
+    /* =========================================
+       以下為戰甲專屬樣式 (技能、折疊面板、圖表)
+    ========================================= */
 
     /* 🌟 技能列表 */
     .abilities-list {
@@ -177,6 +84,7 @@
       width: 50px; height: 50px; opacity: 0.95; 
       filter: drop-shadow(0 0 6px rgba(255, 223, 115, 0.4)); 
     }
+    
     .ability-icon-placeholder {
       width: 50px; height: 50px; display: flex; align-items: center; justify-content: center;
       background-color: rgba(212, 175, 55, 0.05);
@@ -274,23 +182,28 @@
   <div class="container">
     <div class="profile-section">
       <img id="wf-image" src="" alt="Warframe Image" style="display: none;">
-      <h1 id="item-name">載入中...</h1>
-      <p id="item-subtitle">讀取星系資料庫...</p>
+      
+      <!-- 🌟 在這裡補上通用 class，讓它吃到 style.css 的字體魔法 -->
+      <h1 id="item-name" class="detail-main-title">載入中...</h1>
+      <p id="item-subtitle" class="detail-sub-title">讀取星系資料庫...</p>
       
       <div class="badge-container">
         <span class="badge" id="item-type">類型</span>
         <span class="badge" id="item-mr">段位限制</span>
       </div>
 
-      <div id="item-desc">請稍候...</div>
+      <div id="item-desc" class="detail-desc">請稍候...</div>
 
+      <!-- 🌟 共用的小標題 class -->
       <div class="section-title">🟢 基礎體質</div>
       <div class="stats-grid" id="stats-grid">
-        </div>
+        <!-- JS 動態生成 -->
+      </div>
 
       <div class="section-title">✨ 戰甲技能</div>
       <div class="abilities-list" id="abilities-list">
-        </div>
+        <!-- JS 動態生成 -->
+      </div>
 
       <div class="accordion-container">
         <button class="accordion">🔴 進階配卡 (Modding)</button>
@@ -307,7 +220,8 @@
 
     <!-- 關聯配方圖 -->
     <div class="graph-section">
-      <h2 class="graph-title">製造配方關聯圖</h2> <!-- 👈 標題在這裡 -->
+      <!-- 🌟 把 graph-title 換成 section-title，保持統一 -->
+      <h2 class="section-title">製造配方關聯圖</h2> 
       <div id="graph-container">
         <div id="loader">正在建構配方圖...</div>
         <div id="zoom-controls">
@@ -317,6 +231,7 @@
         <div id="graph"></div>
       </div>
     </div>
+  </div>
 
   <script src="app.js"></script>
   

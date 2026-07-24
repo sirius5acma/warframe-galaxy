@@ -131,15 +131,21 @@ function renderGrid(planetsToRender) {
   }
 
   planetsToRender.forEach(planet => {
+    // 🌟 自動分類守門員：一般星圖不顯示毗鄰星，九重天只顯示毗鄰星
+    const isProxima = planet.nameEn.includes('Proxima');
+    if (currentView === 'normal' && isProxima) return;
+    if (currentView === 'proxima' && !isProxima) return;
+
     const card = document.createElement('div');
     card.className = 'card';
     
+    // 直接使用編譯好的 nameEn 抓圖，完全不用再取代空白！
     const imgHtml = `<img src="images/planets/${planet.nameEn}.png" class="planet-img" onerror="this.outerHTML='<div class=\\'planet-placeholder\\'>無圖片</div>';">`;
     
     card.innerHTML = `
       ${imgHtml}
-      <div class="card-title">${planet.nameTc}</div>
-      <div class="card-subtitle">${planet.nameEn}</div>
+      <div class="card-title" style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis; width: 100%; box-sizing: border-box; padding: 0 10px;">${planet.nameTc}</div>
+      <div class="card-subtitle" style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis; width: 100%; box-sizing: border-box; padding: 0 10px;">${planet.nameEn}</div>
       <div class="card-subtitle" style="color: #10b981; margin-top: 15px;">${planet.nodes ? planet.nodes.length : 0} 個節點</div>
     `;
     
@@ -162,14 +168,14 @@ function renderGrid(planetsToRender) {
           
           const backBtn = document.getElementById('backBtn');
           const subTitle = document.getElementById('sub-title');
-          // 🌟 已修正為 starSearch
           const searchInput = document.getElementById('starSearch');
 
           if (backBtn) backBtn.innerHTML = '&#8592; 返回一般星圖';
           if (subTitle) subTitle.innerText = '九重天 (銳捷號星圖)';
           if (searchInput) searchInput.value = '';
           
-          renderGrid(proximaPlanetsArray);
+          // 直接把所有資料丟進去，守門員會自動濾出九重天
+          renderGrid(planetData); 
       };
       grid.appendChild(rjCard);
   }
